@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" ?>
+<QBXML>
+  <QBXMLMsgsRs>
+    <InvoiceQueryRs statusCode="0" statusSeverity="Info" statusMessage="Status OK">
+      <InvoiceRet>
+        <TxnID>C58C0-1502980785</TxnID>
+        <TimeCreated>2017-08-17T08:39:45-06:00</TimeCreated>
+        <TimeModified>2017-08-17T08:39:46-06:00</TimeModified>
+        <EditSequence>1502980786</EditSequence>
+        <TxnNumber>98619</TxnNumber>
+        <CustomerRef>
+          <ListID>8000144B-1458767877</ListID>
+          <FullName>APM Terminals Moin S.A:Pavas</FullName>
+        </CustomerRef>
+        <ARAccountRef>
+          <ListID>8000002C-1284497193</ListID>
+          <FullName>Accounts Receivable</FullName>
+        </ARAccountRef>
+        <TemplateRef>
+          <ListID>80000016-1353681137</ListID>
+          <FullName>Juturna Invoice</FullName>
+        </TemplateRef>
+        <TxnDate>2017-08-17</TxnDate>
+        <RefNumber>31693</RefNumber>
+        <BillAddress>
+          <Addr1>APM Terminals Moin S.A</Addr1>
+          <Addr2>Pavas Oficentro La Virgen Edificio 4</Addr2>
+          <Addr3>piso 1, Departamento de IT - &amp; en</Addr3>
+          <Addr4>Edificio 2 sotano</Addr4>
+          <City>Pavas San Jose</City>
+        </BillAddress>
+        <BillAddressBlock>
+          <Addr1>APM Terminals Moin S.A</Addr1>
+          <Addr2>Pavas Oficentro La Virgen Edificio 4</Addr2>
+          <Addr3>piso 1, Departamento de IT - &amp; en</Addr3>
+          <Addr4>Edificio 2 sotano</Addr4>
+          <Addr5>Pavas San Jose</Addr5>
+        </BillAddressBlock>
+        <ShipAddress>
+          <Addr1>APM Terminals Moin S.A</Addr1>
+          <Addr2>Pavas Oficentro La Virgen Edificio 4</Addr2>
+          <Addr3>piso 1, Departamento de IT - &amp; en</Addr3>
+          <Addr4>Edificio 2 sotano</Addr4>
+          <City>Pavas San Jose</City>
+        </ShipAddress>
+        <ShipAddressBlock>
+          <Addr1>APM Terminals Moin S.A</Addr1>
+          <Addr2>Pavas Oficentro La Virgen Edificio 4</Addr2>
+          <Addr3>piso 1, Departamento de IT - &amp; en</Addr3>
+          <Addr4>Edificio 2 sotano</Addr4>
+          <Addr5>Pavas San Jose</Addr5>
+        </ShipAddressBlock>
+        <IsPending>false</IsPending>
+        <IsFinanceCharge>false</IsFinanceCharge>
+        <DueDate>2017-08-17</DueDate>
+        <SalesRepRef>
+          <ListID>8000000F-1360881194</ListID>
+          <FullName>JPQ</FullName>
+        </SalesRepRef>
+        <ShipDate>2017-08-17</ShipDate>
+        <Subtotal>34.00</Subtotal>
+        <ItemSalesTaxRef>
+          <ListID>8000002B-1286236692</ListID>
+          <FullName>CR Sales Tax</FullName>
+        </ItemSalesTaxRef>
+        <SalesTaxPercentage>13.00</SalesTaxPercentage>
+        <SalesTaxTotal>0.00</SalesTaxTotal>
+        <AppliedAmount>0.00</AppliedAmount>
+        <BalanceRemaining>34.00</BalanceRemaining>
+        <CurrencyRef>
+          <ListID>80000096-1284491573</ListID>
+          <FullName>US Dollar</FullName>
+        </CurrencyRef>
+        <ExchangeRate>1</ExchangeRate>
+        <BalanceRemainingInHomeCurrency>34.00</BalanceRemainingInHomeCurrency>
+        <IsPaid>false</IsPaid>
+        <IsToBePrinted>false</IsToBePrinted>
+        <IsToBeEmailed>true</IsToBeEmailed>
+        <CustomerSalesTaxCodeRef>
+          <ListID>80000001-1284491570</ListID>
+          <FullName>Tax</FullName>
+        </CustomerSalesTaxCodeRef>
+        <InvoiceLineRet>
+          <TxnLineID>C58C2-1502980785</TxnLineID>
+          <ItemRef>
+            <ListID>800006A0-1380573134</ListID>
+            <FullName>BWC Lease Monthly R</FullName>
+          </ItemRef>
+          <Desc>
+            Monthly Service Charge - Bottle Free Cooler
+            (Cargo por Servicio Mensual - Dispensador Enfriador y Calentador de Agua libre de botellas)
+          </Desc>
+          <Quantity>1</Quantity>
+          <Rate>34.00</Rate>
+          <Amount>34.00</Amount>
+          <SalesTaxCodeRef>
+            <ListID>80000002-1284491570</ListID>
+            <FullName>Non</FullName>
+          </SalesTaxCodeRef>
+        </InvoiceLineRet>
+        <DataExtRet>
+          <OwnerID>0</OwnerID>
+          <DataExtName>Latitude</DataExtName>
+          <DataExtType>STR255TYPE</DataExtType>
+          <DataExtValue>9.936995</DataExtValue>
+        </DataExtRet>
+        <DataExtRet>
+          <OwnerID>0</OwnerID>
+          <DataExtName>Longitude</DataExtName>
+          <DataExtType>STR255TYPE</DataExtType>
+          <DataExtValue>-83.041548</DataExtValue>
+        </DataExtRet>
+        <DataExtRet>
+          <OwnerID>0</OwnerID>
+          <DataExtName>Cedula</DataExtName>
+          <DataExtType>STR255TYPE</DataExtType>
+          <DataExtValue>3-101-641075</DataExtValue>
+        </DataExtRet>
+      </InvoiceRet>
+    </InvoiceQueryRs>
+  </QBXMLMsgsRs>
+</QBXML>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?qbxml version="13.0"?>
+<QBXML>
+<QBXMLMsgsRq onError="stopOnError">
+<ItemQueryRq>
+  <ListID >800006D5-1396304831</ListID>
+  <ListID >800006A0-1380573134</ListID>
+  <IncludeRetElement >Name</IncludeRetElement>
+  <IncludeRetElement >ListID</IncludeRetElement>
+  <OwnerID>0</OwnerID>
+</ItemQueryRq>
+</QBXMLMsgsRq>
+</QBXML>

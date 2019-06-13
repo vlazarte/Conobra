@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="doQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramethers" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="doQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="doQueryResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="err" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="importFromCsv">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="csv" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="importFromCsvResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="importFromCsvResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="err" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="addRecord">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="list" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="addRecordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="addRecordResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="err" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="edditRecord">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="list" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="recordID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="edditRecordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="edditRecordResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="err" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="doQuerySoapIn">
+    <wsdl:part name="parameters" element="tns:doQuery" />
+  </wsdl:message>
+  <wsdl:message name="doQuerySoapOut">
+    <wsdl:part name="parameters" element="tns:doQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="importFromCsvSoapIn">
+    <wsdl:part name="parameters" element="tns:importFromCsv" />
+  </wsdl:message>
+  <wsdl:message name="importFromCsvSoapOut">
+    <wsdl:part name="parameters" element="tns:importFromCsvResponse" />
+  </wsdl:message>
+  <wsdl:message name="addRecordSoapIn">
+    <wsdl:part name="parameters" element="tns:addRecord" />
+  </wsdl:message>
+  <wsdl:message name="addRecordSoapOut">
+    <wsdl:part name="parameters" element="tns:addRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="edditRecordSoapIn">
+    <wsdl:part name="parameters" element="tns:edditRecord" />
+  </wsdl:message>
+  <wsdl:message name="edditRecordSoapOut">
+    <wsdl:part name="parameters" element="tns:edditRecordResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WServiceSoap">
+    <wsdl:operation name="doQuery">
+      <wsdl:input message="tns:doQuerySoapIn" />
+      <wsdl:output message="tns:doQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="importFromCsv">
+      <wsdl:input message="tns:importFromCsvSoapIn" />
+      <wsdl:output message="tns:importFromCsvSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="addRecord">
+      <wsdl:input message="tns:addRecordSoapIn" />
+      <wsdl:output message="tns:addRecordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="edditRecord">
+      <wsdl:input message="tns:edditRecordSoapIn" />
+      <wsdl:output message="tns:edditRecordSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WServiceSoap" type="tns:WServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="doQuery">
+      <soap:operation soapAction="http://tempuri.org/doQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="importFromCsv">
+      <soap:operation soapAction="http://tempuri.org/importFromCsv" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addRecord">
+      <soap:operation soapAction="http://tempuri.org/addRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="edditRecord">
+      <soap:operation soapAction="http://tempuri.org/edditRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WServiceSoap12" type="tns:WServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="doQuery">
+      <soap12:operation soapAction="http://tempuri.org/doQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="importFromCsv">
+      <soap12:operation soapAction="http://tempuri.org/importFromCsv" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addRecord">
+      <soap12:operation soapAction="http://tempuri.org/addRecord" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="edditRecord">
+      <soap12:operation soapAction="http://tempuri.org/edditRecord" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WService">
+    <wsdl:port name="WServiceSoap" binding="tns:WServiceSoap">
+      <soap:address location="http://localhost:49349/WService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WServiceSoap12" binding="tns:WServiceSoap12">
+      <soap12:address location="http://localhost:49349/WService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

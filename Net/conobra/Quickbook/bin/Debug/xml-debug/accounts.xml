@@ -1,0 +1,5487 @@
+<?xml version="1.0" ?>
+<QBXML>
+<QBXMLMsgsRs>
+<AccountQueryRs requestID="1" statusCode="0" statusSeverity="Info" statusMessage="Status OK">
+<AccountRet>
+<ListID>80000004-1409831415</ListID>
+<TimeCreated>2014-09-04T04:50:15-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:00-08:00</TimeModified>
+<EditSequence>1409832420</EditSequence>
+<Name>Caja mn</Name>
+<FullName>Caja mn</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>Bank</AccountType>
+<AccountNumber>1001</AccountNumber>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>NotApplicable</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000005-1409831415</ListID>
+<TimeCreated>2014-09-04T04:50:15-08:00</TimeCreated>
+<TimeModified>2014-09-04T06:08:41-08:00</TimeModified>
+<EditSequence>1409836121</EditSequence>
+<Name>Caja me</Name>
+<FullName>Caja me</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>Bank</AccountType>
+<AccountNumber>1002</AccountNumber>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>NotApplicable</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000096-1409831347</ListID>
+<FullName>US Dollar</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000006-1409831415</ListID>
+<TimeCreated>2014-09-04T04:50:15-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:00-08:00</TimeModified>
+<EditSequence>1409832420</EditSequence>
+<Name>Bancos mn</Name>
+<FullName>Bancos mn</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>Bank</AccountType>
+<AccountNumber>1005</AccountNumber>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>NotApplicable</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000007-1409831415</ListID>
+<TimeCreated>2014-09-04T04:50:15-08:00</TimeCreated>
+<TimeModified>2014-09-19T15:56:12-08:00</TimeModified>
+<EditSequence>1409832420</EditSequence>
+<Name>Banco BISA MN Cta. 349589-001-4</Name>
+<FullName>Bancos mn:Banco BISA MN Cta. 349589-001-4</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>80000006-1409831415</ListID>
+<FullName>Bancos mn</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Bank</AccountType>
+<AccountNumber>100501</AccountNumber>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>NotApplicable</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000012F-1410884301</ListID>
+<TimeCreated>2014-09-16T09:18:21-08:00</TimeCreated>
+<TimeModified>2014-09-16T09:19:35-08:00</TimeModified>
+<EditSequence>1410884375</EditSequence>
+<Name>BANCO MN * CARGA SALDO INICIAL</Name>
+<FullName>BANCO MN * CARGA SALDO INICIAL</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>Bank</AccountType>
+<AccountNumber>100509</AccountNumber>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>NotApplicable</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000008-1409831415</ListID>
+<TimeCreated>2014-09-04T04:50:15-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:59:38-08:00</TimeModified>
+<EditSequence>1409835578</EditSequence>
+<Name>Bancos me</Name>
+<FullName>Bancos me</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>Bank</AccountType>
+<AccountNumber>1006</AccountNumber>
+<Desc>Bancos me</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>-93584.36</TotalBalance>
+<CashFlowClassification>NotApplicable</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000096-1409831347</ListID>
+<FullName>US Dollar</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000009-1409831415</ListID>
+<TimeCreated>2014-09-04T04:50:15-08:00</TimeCreated>
+<TimeModified>2014-09-11T07:20:07-08:00</TimeModified>
+<EditSequence>1409835588</EditSequence>
+<Name>Banco BISA ME Cta. 349589-201-7</Name>
+<FullName>Bancos me:Banco BISA ME Cta. 349589-201-7</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>80000008-1409831415</ListID>
+<FullName>Bancos me</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Bank</AccountType>
+<AccountNumber>100601</AccountNumber>
+<Balance>-93584.36</Balance>
+<TotalBalance>-93584.36</TotalBalance>
+<CashFlowClassification>NotApplicable</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000096-1409831347</ListID>
+<FullName>US Dollar</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000130-1410884349</ListID>
+<TimeCreated>2014-09-16T09:19:09-08:00</TimeCreated>
+<TimeModified>2014-09-16T09:19:09-08:00</TimeModified>
+<EditSequence>1410884349</EditSequence>
+<Name>BANCO ME*CARGA SALDO INCIAL</Name>
+<FullName>BANCO ME*CARGA SALDO INCIAL</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>Bank</AccountType>
+<AccountNumber>100609</AccountNumber>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>NotApplicable</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000033-1409831347</ListID>
+<FullName>Euro</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000000A-1409831415</ListID>
+<TimeCreated>2014-09-04T04:50:15-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:00-08:00</TimeModified>
+<EditSequence>1409832420</EditSequence>
+<Name>Remesas en Transito mn</Name>
+<FullName>Remesas en Transito mn</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>Bank</AccountType>
+<AccountNumber>1011</AccountNumber>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>NotApplicable</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000000B-1409831415</ListID>
+<TimeCreated>2014-09-04T04:50:15-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:59:59-08:00</TimeModified>
+<EditSequence>1409835599</EditSequence>
+<Name>Remesas en Tr&#225;nsito me</Name>
+<FullName>Remesas en Tr&#225;nsito me</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>Bank</AccountType>
+<AccountNumber>1012</AccountNumber>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>NotApplicable</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000096-1409831347</ListID>
+<FullName>US Dollar</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000000C-1409831415</ListID>
+<TimeCreated>2014-09-04T04:50:15-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:00-08:00</TimeModified>
+<EditSequence>1409832420</EditSequence>
+<Name>Fondo Fijo</Name>
+<FullName>Fondo Fijo</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>Bank</AccountType>
+<AccountNumber>1021</AccountNumber>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>NotApplicable</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000000D-1409831415</ListID>
+<TimeCreated>2014-09-04T04:50:15-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:00-08:00</TimeModified>
+<EditSequence>1409832420</EditSequence>
+<Name>Reposicion Fondo Fijo</Name>
+<FullName>Reposicion Fondo Fijo</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>Bank</AccountType>
+<AccountNumber>1022</AccountNumber>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>NotApplicable</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000000E-1409831415</ListID>
+<TimeCreated>2014-09-04T04:50:15-08:00</TimeCreated>
+<TimeModified>2014-09-19T15:56:17-08:00</TimeModified>
+<EditSequence>1409832420</EditSequence>
+<Name>Fondo Fijo Administracion</Name>
+<FullName>Reposicion Fondo Fijo:Fondo Fijo Administracion</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>8000000D-1409831415</ListID>
+<FullName>Reposicion Fondo Fijo</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Bank</AccountType>
+<AccountNumber>102201</AccountNumber>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>NotApplicable</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000000F-1409831415</ListID>
+<TimeCreated>2014-09-04T04:50:15-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:00-08:00</TimeModified>
+<EditSequence>1409832420</EditSequence>
+<Name>Fondo Fijo Produccion</Name>
+<FullName>Reposicion Fondo Fijo:Fondo Fijo Produccion</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>8000000D-1409831415</ListID>
+<FullName>Reposicion Fondo Fijo</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Bank</AccountType>
+<AccountNumber>102202</AccountNumber>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>NotApplicable</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000010-1409831415</ListID>
+<TimeCreated>2014-09-04T04:50:15-08:00</TimeCreated>
+<TimeModified>2014-09-19T16:04:16-08:00</TimeModified>
+<EditSequence>1409832420</EditSequence>
+<Name>Cuentas por Cobrar mn</Name>
+<FullName>Cuentas por Cobrar mn</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>AccountsReceivable</AccountType>
+<AccountNumber>1101</AccountNumber>
+<Desc>Cuentas por Cobrar mn</Desc>
+<Balance>1111000.00</Balance>
+<TotalBalance>1111000.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000011-1409831415</ListID>
+<TimeCreated>2014-09-04T04:50:15-08:00</TimeCreated>
+<TimeModified>2014-09-11T07:20:07-08:00</TimeModified>
+<EditSequence>1409835609</EditSequence>
+<Name>Cuentas por Cobrar me</Name>
+<FullName>Cuentas por Cobrar me</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>AccountsReceivable</AccountType>
+<AccountNumber>1102</AccountNumber>
+<Desc>Cuentas por Cobrar me</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000096-1409831347</ListID>
+<FullName>US Dollar</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000012B-1410446794</ListID>
+<TimeCreated>2014-09-11T07:46:34-08:00</TimeCreated>
+<TimeModified>2014-09-11T07:46:34-08:00</TimeModified>
+<EditSequence>1410446794</EditSequence>
+<Name>Cuentas Cias. Relacionadas mn</Name>
+<FullName>Cuentas Cias. Relacionadas mn</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>1105</AccountNumber>
+<Desc>Cuentas con Cias. Relacionadas mn</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000012A-1410446708</ListID>
+<TimeCreated>2014-09-11T07:45:08-08:00</TimeCreated>
+<TimeModified>2014-09-11T07:45:08-08:00</TimeModified>
+<EditSequence>1410446708</EditSequence>
+<Name>Cuentas Cias. Relacionadas me</Name>
+<FullName>Cuentas Cias. Relacionadas me</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>1106</AccountNumber>
+<Desc>Cuentas con Cias. Relacionadas me</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000012C-1410447036</ListID>
+<TimeCreated>2014-09-11T07:50:36-08:00</TimeCreated>
+<TimeModified>2014-09-11T11:01:08-08:00</TimeModified>
+<EditSequence>1410447077</EditSequence>
+<Name>Anticip. Proveedores / Contr mn</Name>
+<FullName>Anticip. Proveedores / Contr mn</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>1107</AccountNumber>
+<Desc>Anticipos a Proveedores  y Contratistas mn</Desc>
+<Balance>17529.80</Balance>
+<TotalBalance>17529.80</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000129-1410446660</ListID>
+<TimeCreated>2014-09-11T07:44:20-08:00</TimeCreated>
+<TimeModified>2014-09-11T07:44:20-08:00</TimeModified>
+<EditSequence>1410446660</EditSequence>
+<Name>Anticip. Proveedores / Contr me</Name>
+<FullName>Anticip. Proveedores / Contr me</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>1108</AccountNumber>
+<Desc>Anticipos a Proveedores y Contratistas me</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000128-1410446585</ListID>
+<TimeCreated>2014-09-11T07:43:05-08:00</TimeCreated>
+<TimeModified>2014-09-11T07:43:05-08:00</TimeModified>
+<EditSequence>1410446585</EditSequence>
+<Name>Financiamiento a Proveedores mn</Name>
+<FullName>Financiamiento a Proveedores mn</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>1109</AccountNumber>
+<Desc>Financiamiento a Proveedores mn</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000127-1410446555</ListID>
+<TimeCreated>2014-09-11T07:42:35-08:00</TimeCreated>
+<TimeModified>2014-09-11T07:42:35-08:00</TimeModified>
+<EditSequence>1410446555</EditSequence>
+<Name>Financiamiento a Proveedores me</Name>
+<FullName>Financiamiento a Proveedores me</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>1110</AccountNumber>
+<Desc>Financiamiento a Proveedores me</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000011B-1410359099</ListID>
+<TimeCreated>2014-09-10T07:24:59-08:00</TimeCreated>
+<TimeModified>2014-09-19T15:56:29-08:00</TimeModified>
+<EditSequence>1410361650</EditSequence>
+<Name>Cr&#233;dito Fiscal IVA 13%</Name>
+<FullName>Cr&#233;dito Fiscal IVA 13%</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>1111</AccountNumber>
+<Desc>Cr&#233;dito Fiscal IVA 13%</Desc>
+<Balance>11465.58</Balance>
+<TotalBalance>11465.58</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000011C-1410361326</ListID>
+<TimeCreated>2014-09-10T08:02:06-08:00</TimeCreated>
+<TimeModified>2014-09-19T15:56:14-08:00</TimeModified>
+<EditSequence>1410361326</EditSequence>
+<Name>Cr&#233;dito Fiscal IVA Diferido</Name>
+<FullName>Cr&#233;dito Fiscal IVA Diferido</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>1112</AccountNumber>
+<Desc>Cr&#233;dito Fiscal IVA Diferido</Desc>
+<Balance>14632.29</Balance>
+<TotalBalance>14632.29</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000011D-1410361364</ListID>
+<TimeCreated>2014-09-10T08:02:44-08:00</TimeCreated>
+<TimeModified>2014-09-10T08:02:44-08:00</TimeModified>
+<EditSequence>1410361364</EditSequence>
+<Name>Certificados de Devoluci&#243;n Impo</Name>
+<FullName>Certificados de Devoluci&#243;n Impo</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>1113</AccountNumber>
+<Desc>Certificados de Devoluci&#243;n Impositiva</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000011E-1410361408</ListID>
+<TimeCreated>2014-09-10T08:03:28-08:00</TimeCreated>
+<TimeModified>2014-09-10T08:03:28-08:00</TimeModified>
+<EditSequence>1410361408</EditSequence>
+<Name>Impuesto a las Utilidades</Name>
+<FullName>Impuesto a las Utilidades</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>1114</AccountNumber>
+<Desc>Impuesto a las Utilidades</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000011F-1410361444</ListID>
+<TimeCreated>2014-09-10T08:04:04-08:00</TimeCreated>
+<TimeModified>2014-09-10T08:04:04-08:00</TimeModified>
+<EditSequence>1410361444</EditSequence>
+<Name>Anticipo AA-IUE</Name>
+<FullName>Anticipo AA-IUE</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>1115</AccountNumber>
+<Desc>Anticipo AA-IUE</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000120-1410361474</ListID>
+<TimeCreated>2014-09-10T08:04:34-08:00</TimeCreated>
+<TimeModified>2014-09-10T08:04:34-08:00</TimeModified>
+<EditSequence>1410361474</EditSequence>
+<Name>I.U.E por Compensar</Name>
+<FullName>I.U.E por Compensar</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>1118</AccountNumber>
+<Desc>I.U.E por Compensar</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000121-1410361516</ListID>
+<TimeCreated>2014-09-10T08:05:16-08:00</TimeCreated>
+<TimeModified>2014-09-10T08:05:16-08:00</TimeModified>
+<EditSequence>1410361516</EditSequence>
+<Name>Regalias Anticipadas</Name>
+<FullName>Regalias Anticipadas</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>1120</AccountNumber>
+<Desc>Regalias Anticipadas</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000122-1410361555</ListID>
+<TimeCreated>2014-09-10T08:05:55-08:00</TimeCreated>
+<TimeModified>2014-09-10T08:05:55-08:00</TimeModified>
+<EditSequence>1410361555</EditSequence>
+<Name>Otras Cuentas por Cobrar mn</Name>
+<FullName>Otras Cuentas por Cobrar mn</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>1150</AccountNumber>
+<Desc>Otras Cuentas por Cobrar mn</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000119-1410268495</ListID>
+<TimeCreated>2014-09-09T06:14:55-08:00</TimeCreated>
+<TimeModified>2014-09-11T07:52:15-08:00</TimeModified>
+<EditSequence>1410447135</EditSequence>
+<Name>Fondos sin Depositar</Name>
+<FullName>Fondos sin Depositar</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<SpecialAccountType>UndepositedFunds</SpecialAccountType>
+<AccountNumber>12000</AccountNumber>
+<Desc>Funds received, but not yet deposited to a bank account</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>NotApplicable</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000001F-1409831415</ListID>
+<TimeCreated>2014-09-04T04:50:15-08:00</TimeCreated>
+<TimeModified>2014-09-19T15:56:44-08:00</TimeModified>
+<EditSequence>1409832420</EditSequence>
+<Name>Fondos a Rendir mn</Name>
+<FullName>Fondos a Rendir mn</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>1201</AccountNumber>
+<Desc>Fondos a Rendir mn</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000020-1409831415</ListID>
+<TimeCreated>2014-09-04T04:50:15-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:00-08:00</TimeModified>
+<EditSequence>1409832420</EditSequence>
+<Name>Gainor Garnica</Name>
+<FullName>Fondos a Rendir mn:Gainor Garnica</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>8000001F-1409831415</ListID>
+<FullName>Fondos a Rendir mn</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>120101</AccountNumber>
+<Desc>Gainor Garnica</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000021-1409831415</ListID>
+<TimeCreated>2014-09-04T04:50:15-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:00-08:00</TimeModified>
+<EditSequence>1409832420</EditSequence>
+<Name>Renan Jimenez</Name>
+<FullName>Fondos a Rendir mn:Renan Jimenez</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>8000001F-1409831415</ListID>
+<FullName>Fondos a Rendir mn</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>120102</AccountNumber>
+<Desc>Renan Jimenez</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000022-1409831415</ListID>
+<TimeCreated>2014-09-04T04:50:15-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:00-08:00</TimeModified>
+<EditSequence>1409832420</EditSequence>
+<Name>Jaime Torrez</Name>
+<FullName>Fondos a Rendir mn:Jaime Torrez</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>8000001F-1409831415</ListID>
+<FullName>Fondos a Rendir mn</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>120103</AccountNumber>
+<Desc>Jaime Torrez</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000023-1409831415</ListID>
+<TimeCreated>2014-09-04T04:50:15-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:00-08:00</TimeModified>
+<EditSequence>1409832420</EditSequence>
+<Name>Sandra Arroyo</Name>
+<FullName>Fondos a Rendir mn:Sandra Arroyo</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>8000001F-1409831415</ListID>
+<FullName>Fondos a Rendir mn</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>120104</AccountNumber>
+<Desc>Sandra Arroyo</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000024-1409831415</ListID>
+<TimeCreated>2014-09-04T04:50:15-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:00-08:00</TimeModified>
+<EditSequence>1409832420</EditSequence>
+<Name>Rodny Navarro</Name>
+<FullName>Fondos a Rendir mn:Rodny Navarro</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>8000001F-1409831415</ListID>
+<FullName>Fondos a Rendir mn</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>120105</AccountNumber>
+<Desc>Rodny Navarro</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000025-1409831415</ListID>
+<TimeCreated>2014-09-04T04:50:15-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:08:06-08:00</TimeModified>
+<EditSequence>1409832486</EditSequence>
+<Name>Franklin Huanca</Name>
+<FullName>Fondos a Rendir mn:Franklin Huanca</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>8000001F-1409831415</ListID>
+<FullName>Fondos a Rendir mn</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>120106</AccountNumber>
+<Desc>Franklin Huanca</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000026-1409831415</ListID>
+<TimeCreated>2014-09-04T04:50:15-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:00-08:00</TimeModified>
+<EditSequence>1409832420</EditSequence>
+<Name>Varios</Name>
+<FullName>Fondos a Rendir mn:Varios</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>8000001F-1409831415</ListID>
+<FullName>Fondos a Rendir mn</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>120149</AccountNumber>
+<Desc>Varios</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000027-1409831415</ListID>
+<TimeCreated>2014-09-04T04:50:15-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:00-08:00</TimeModified>
+<EditSequence>1409832420</EditSequence>
+<Name>Fondos a Rendir me</Name>
+<FullName>Fondos a Rendir me</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>1202</AccountNumber>
+<Desc>Fondos a Rendir me</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000028-1409831415</ListID>
+<TimeCreated>2014-09-04T04:50:15-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:00-08:00</TimeModified>
+<EditSequence>1409832420</EditSequence>
+<Name>Cuentas con el Personal mn</Name>
+<FullName>Cuentas con el Personal mn</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>1203</AccountNumber>
+<Desc>Cuentas con el Personal mn</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000029-1409831415</ListID>
+<TimeCreated>2014-09-04T04:50:15-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:00-08:00</TimeModified>
+<EditSequence>1409832420</EditSequence>
+<Name>Renan Jimenez</Name>
+<FullName>Cuentas con el Personal mn:Renan Jimenez</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>80000028-1409831415</ListID>
+<FullName>Cuentas con el Personal mn</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>120301</AccountNumber>
+<Desc>Renan Jimenez</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000002A-1409831415</ListID>
+<TimeCreated>2014-09-04T04:50:15-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:00-08:00</TimeModified>
+<EditSequence>1409832420</EditSequence>
+<Name>Varios</Name>
+<FullName>Cuentas con el Personal mn:Varios</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>80000028-1409831415</ListID>
+<FullName>Cuentas con el Personal mn</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>120302</AccountNumber>
+<Desc>Varios</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000002B-1409831415</ListID>
+<TimeCreated>2014-09-04T04:50:15-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:00-08:00</TimeModified>
+<EditSequence>1409832420</EditSequence>
+<Name>Cuentas con el Personal me</Name>
+<FullName>Cuentas con el Personal me</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>1204</AccountNumber>
+<Desc>Cuentas con el Personal me</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000002C-1409831415</ListID>
+<TimeCreated>2014-09-04T04:50:15-08:00</TimeCreated>
+<TimeModified>2014-09-09T07:40:30-08:00</TimeModified>
+<EditSequence>1409832420</EditSequence>
+<Name>Concentrados Mina</Name>
+<FullName>Concentrados Mina</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<SpecialAccountType>InventoryAssets</SpecialAccountType>
+<AccountNumber>1301</AccountNumber>
+<Desc>Concentrados Mina</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000002D-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:00-08:00</TimeModified>
+<EditSequence>1409832420</EditSequence>
+<Name>Concentrados Materia Prima</Name>
+<FullName>Concentrados Materia Prima</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>1302</AccountNumber>
+<Desc>Concentrados Materia Prima</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>772317.32</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000002E-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:00-08:00</TimeModified>
+<EditSequence>1409832420</EditSequence>
+<Name>Concentrados de Wolfram</Name>
+<FullName>Concentrados Materia Prima:Concentrados de Wolfram</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>8000002D-1409831416</ListID>
+<FullName>Concentrados Materia Prima</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>130201</AccountNumber>
+<Desc>Concentrados de Wolfram</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000002F-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-19T15:59:35-08:00</TimeModified>
+<EditSequence>1409832420</EditSequence>
+<Name>Concentrados de Scheelita</Name>
+<FullName>Concentrados Materia Prima:Concentrados de Scheelita</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>8000002D-1409831416</ListID>
+<FullName>Concentrados Materia Prima</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>130202</AccountNumber>
+<Desc>Concentrados de Scheelita</Desc>
+<Balance>-25125.00</Balance>
+<TotalBalance>-25125.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000030-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-19T11:54:52-08:00</TimeModified>
+<EditSequence>1409832420</EditSequence>
+<Name>Concentrados Complejo</Name>
+<FullName>Concentrados Materia Prima:Concentrados Complejo</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>8000002D-1409831416</ListID>
+<FullName>Concentrados Materia Prima</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>130203</AccountNumber>
+<Desc>Concentrados Complejo</Desc>
+<Balance>797442.32</Balance>
+<TotalBalance>797442.32</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000031-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:01-08:00</TimeModified>
+<EditSequence>1409832421</EditSequence>
+<Name>Concentrados en Proceso</Name>
+<FullName>Concentrados en Proceso</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>1303</AccountNumber>
+<Desc>Concentrados en Proceso</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000032-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:01-08:00</TimeModified>
+<EditSequence>1409832421</EditSequence>
+<Name>Concentrados Exportacion</Name>
+<FullName>Concentrados Exportacion</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>1304</AccountNumber>
+<Desc>Concentrados para Exportacion</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000033-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:01-08:00</TimeModified>
+<EditSequence>1409832421</EditSequence>
+<Name>Concentrados de Wolfram</Name>
+<FullName>Concentrados Exportacion:Concentrados de Wolfram</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>80000032-1409831416</ListID>
+<FullName>Concentrados Exportacion</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>130401</AccountNumber>
+<Desc>Concentrados de Wolfram</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000034-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:01-08:00</TimeModified>
+<EditSequence>1409832421</EditSequence>
+<Name>Concentrados de Scheelita</Name>
+<FullName>Concentrados Exportacion:Concentrados de Scheelita</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>80000032-1409831416</ListID>
+<FullName>Concentrados Exportacion</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>130402</AccountNumber>
+<Desc>Concentrados de Scheelita</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000035-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:01-08:00</TimeModified>
+<EditSequence>1409832421</EditSequence>
+<Name>Concentrados en Tr&#225;nsito</Name>
+<FullName>Concentrados en Tr&#225;nsito</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>1309</AccountNumber>
+<Desc>Concentrados en Tr&#225;nsito</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000036-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-10T08:19:02-08:00</TimeModified>
+<EditSequence>1410362342</EditSequence>
+<Name>Materiales e Insumos Producci&#243;n</Name>
+<FullName>Materiales e Insumos Producci&#243;n</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>1311</AccountNumber>
+<Desc>Materiales e Insumos de produccion</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000037-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-10T08:19:15-08:00</TimeModified>
+<EditSequence>1410362355</EditSequence>
+<Name>Materiales e Insumos Laboratori</Name>
+<FullName>Materiales e Insumos Laboratori</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>1312</AccountNumber>
+<Desc>Materiales e Insumos de Laboratorio</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000038-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-10T08:19:32-08:00</TimeModified>
+<EditSequence>1410362372</EditSequence>
+<Name>Materiales y Equipos Cooperativ</Name>
+<FullName>Materiales y Equipos Cooperativ</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>1321</AccountNumber>
+<Desc>Materiales y Equipos para Cooperativas</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000039-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:01-08:00</TimeModified>
+<EditSequence>1409832421</EditSequence>
+<Name>Inventarios en Tr&#225;nsito</Name>
+<FullName>Inventarios en Tr&#225;nsito</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentAsset</AccountType>
+<AccountNumber>1325</AccountNumber>
+<Desc>Inventarios en Tr&#225;nsito</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000040-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-04T06:30:33-08:00</TimeModified>
+<EditSequence>1409837433</EditSequence>
+<Name>Inmuebles</Name>
+<FullName>Inmuebles</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>FixedAsset</AccountType>
+<AccountNumber>1501</AccountNumber>
+<Desc>Inmuebles</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000041-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-04T06:30:45-08:00</TimeModified>
+<EditSequence>1409837445</EditSequence>
+<Name>Instalaciones</Name>
+<FullName>Instalaciones</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>FixedAsset</AccountType>
+<AccountNumber>1502</AccountNumber>
+<Desc>Instalaciones</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000042-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-04T06:30:53-08:00</TimeModified>
+<EditSequence>1409837453</EditSequence>
+<Name>Maquinaria y Equipo</Name>
+<FullName>Maquinaria y Equipo</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>FixedAsset</AccountType>
+<AccountNumber>1503</AccountNumber>
+<Desc>Maquinaria y Equipo</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000043-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-04T06:31:02-08:00</TimeModified>
+<EditSequence>1409837462</EditSequence>
+<Name>Veh&#237;culos</Name>
+<FullName>Veh&#237;culos</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>FixedAsset</AccountType>
+<AccountNumber>1504</AccountNumber>
+<Desc>Veh&#237;culos</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000044-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:01-08:00</TimeModified>
+<EditSequence>1409832421</EditSequence>
+<Name>Herramientas</Name>
+<FullName>Herramientas</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>FixedAsset</AccountType>
+<AccountNumber>1505</AccountNumber>
+<Desc>Herramientas</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000045-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-10T14:16:50-08:00</TimeModified>
+<EditSequence>1409832421</EditSequence>
+<Name>Muebles y Equipos de Oficina</Name>
+<FullName>Muebles y Equipos de Oficina</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>FixedAsset</AccountType>
+<AccountNumber>1506</AccountNumber>
+<Desc>Muebles y Equipos de Oficina</Desc>
+<Balance>5655.00</Balance>
+<TotalBalance>5655.00</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000046-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:01-08:00</TimeModified>
+<EditSequence>1409832421</EditSequence>
+<Name>Equipos de Computaci&#243;n y Comuni</Name>
+<FullName>Equipos de Computaci&#243;n y Comuni</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>FixedAsset</AccountType>
+<AccountNumber>1508</AccountNumber>
+<Desc>Equipos de Computaci&#243;n y Comunicaci&#243;n</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000070-1409832285</ListID>
+<TimeCreated>2014-09-04T05:04:45-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:01-08:00</TimeModified>
+<EditSequence>1409832421</EditSequence>
+<Name>Depreciaci&#243;n Acum. Instalacione</Name>
+<FullName>Depreciaci&#243;n Acum. Instalacione</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>FixedAsset</AccountType>
+<AccountNumber>1522</AccountNumber>
+<Desc>Depreciaci&#243;n Acumulada Instalaciones</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000071-1409832285</ListID>
+<TimeCreated>2014-09-04T05:04:45-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:01-08:00</TimeModified>
+<EditSequence>1409832421</EditSequence>
+<Name>Depreciaci&#243;n Acum. Maquinaria y</Name>
+<FullName>Depreciaci&#243;n Acum. Maquinaria y</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>FixedAsset</AccountType>
+<AccountNumber>1523</AccountNumber>
+<Desc>Depreciaci&#243;n Acumulada Maquinaria y Equipo</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000072-1409832285</ListID>
+<TimeCreated>2014-09-04T05:04:45-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:01-08:00</TimeModified>
+<EditSequence>1409832421</EditSequence>
+<Name>Depreciaci&#243;n Acum Veh&#237;culos</Name>
+<FullName>Depreciaci&#243;n Acum Veh&#237;culos</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>FixedAsset</AccountType>
+<AccountNumber>1524</AccountNumber>
+<Desc>Depreciaci&#243;n Acumulada Veh&#237;culos</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000073-1409832285</ListID>
+<TimeCreated>2014-09-04T05:04:45-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:01-08:00</TimeModified>
+<EditSequence>1409832421</EditSequence>
+<Name>Depreciaci&#243;n Acum Herramientas</Name>
+<FullName>Depreciaci&#243;n Acum Herramientas</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>FixedAsset</AccountType>
+<AccountNumber>1525</AccountNumber>
+<Desc>Depreciaci&#243;n Acumulada Herramientas</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000074-1409832285</ListID>
+<TimeCreated>2014-09-04T05:04:45-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:01-08:00</TimeModified>
+<EditSequence>1409832421</EditSequence>
+<Name>Depreciaci&#243;n Acum Muebles y Equ</Name>
+<FullName>Depreciaci&#243;n Acum Muebles y Equ</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>FixedAsset</AccountType>
+<AccountNumber>1526</AccountNumber>
+<Desc>Depreciaci&#243;n Acumulada Muebles y Equipos de Oficina</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000075-1409832285</ListID>
+<TimeCreated>2014-09-04T05:04:45-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:01-08:00</TimeModified>
+<EditSequence>1409832421</EditSequence>
+<Name>Depreciaci&#243;n Acum. Equipos de C</Name>
+<FullName>Depreciaci&#243;n Acum. Equipos de C</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>FixedAsset</AccountType>
+<AccountNumber>1528</AccountNumber>
+<Desc>Depreciaci&#243;n Acumulada Equipos de Computaci&#243;n y Comunicaci&#243;n</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000003A-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-04T06:01:35-08:00</TimeModified>
+<EditSequence>1409835695</EditSequence>
+<Name>Gastos Pagados por Adelantado</Name>
+<FullName>Gastos Pagados por Adelantado</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherAsset</AccountType>
+<AccountNumber>1401</AccountNumber>
+<Desc>Gastos Pagados por Adelantado</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000003B-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-04T06:01:54-08:00</TimeModified>
+<EditSequence>1409835714</EditSequence>
+<Name>Gastos de Organizaci&#243;n</Name>
+<FullName>Gastos de Organizaci&#243;n</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherAsset</AccountType>
+<AccountNumber>1405</AccountNumber>
+<Desc>Gastos de Organizaci&#243;n</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000003C-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-04T06:02:54-08:00</TimeModified>
+<EditSequence>1409835774</EditSequence>
+<Name>Amortizaci&#243;n Gastos de Organiza</Name>
+<FullName>Amortizaci&#243;n Gastos de Organiza</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherAsset</AccountType>
+<AccountNumber>1406</AccountNumber>
+<Desc>Amortizaci&#243;n Gastos de Organizaci&#243;n</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000003D-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-04T06:03:35-08:00</TimeModified>
+<EditSequence>1409835815</EditSequence>
+<Name>Gastos Legales y Judiciales</Name>
+<FullName>Gastos Legales y Judiciales</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherAsset</AccountType>
+<AccountNumber>1411</AccountNumber>
+<Desc>Gastos Legales y Judiciales</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000003E-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-04T06:03:55-08:00</TimeModified>
+<EditSequence>1409835835</EditSequence>
+<Name>Amortizaci&#243;n Gastos Legales y J</Name>
+<FullName>Amortizaci&#243;n Gastos Legales y J</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherAsset</AccountType>
+<AccountNumber>1412</AccountNumber>
+<Desc>Amortizaci&#243;n Gastos Legales y Judiciales</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000003F-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-04T06:04:11-08:00</TimeModified>
+<EditSequence>1409835851</EditSequence>
+<Name>Dep&#243;sitos en Garant&#237;a</Name>
+<FullName>Dep&#243;sitos en Garant&#237;a</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherAsset</AccountType>
+<AccountNumber>1419</AccountNumber>
+<Desc>Dep&#243;sitos en Garant&#237;a</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000004D-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-10T08:23:12-08:00</TimeModified>
+<EditSequence>1410362592</EditSequence>
+<Name>Planta Santa Rita</Name>
+<FullName>Planta Santa Rita</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherAsset</AccountType>
+<AccountNumber>1531</AccountNumber>
+<Desc>Planta Santa Rita</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>36856.24</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000004E-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-10T08:24:26-08:00</TimeModified>
+<EditSequence>1410362666</EditSequence>
+<Name>Maquinaria y Equipo OA</Name>
+<FullName>Planta Santa Rita:Maquinaria y Equipo OA</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>8000004D-1409831416</ListID>
+<FullName>Planta Santa Rita</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherAsset</AccountType>
+<AccountNumber>153101</AccountNumber>
+<Desc>Maquinaria y Equipo</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000004F-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-10T08:24:33-08:00</TimeModified>
+<EditSequence>1410362673</EditSequence>
+<Name>Veh&#237;culos Otros activos</Name>
+<FullName>Planta Santa Rita:Veh&#237;culos Otros activos</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>8000004D-1409831416</ListID>
+<FullName>Planta Santa Rita</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherAsset</AccountType>
+<AccountNumber>153102</AccountNumber>
+<Desc>Veh&#237;culos</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000050-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-10T08:24:40-08:00</TimeModified>
+<EditSequence>1410362680</EditSequence>
+<Name>Equipos de Computaci&#243;n y ComOac</Name>
+<FullName>Planta Santa Rita:Equipos de Computaci&#243;n y ComOac</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>8000004D-1409831416</ListID>
+<FullName>Planta Santa Rita</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherAsset</AccountType>
+<AccountNumber>153103</AccountNumber>
+<Desc>Equipos de Computaci&#243;n y Comunicaci&#243;n</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000051-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-10T08:24:47-08:00</TimeModified>
+<EditSequence>1410362687</EditSequence>
+<Name>Construcciones</Name>
+<FullName>Planta Santa Rita:Construcciones</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>8000004D-1409831416</ListID>
+<FullName>Planta Santa Rita</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherAsset</AccountType>
+<AccountNumber>153104</AccountNumber>
+<Desc>Construcciones</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000052-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-11T11:47:42-08:00</TimeModified>
+<EditSequence>1410362693</EditSequence>
+<Name>Estudios y Consultorias</Name>
+<FullName>Planta Santa Rita:Estudios y Consultorias</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>8000004D-1409831416</ListID>
+<FullName>Planta Santa Rita</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherAsset</AccountType>
+<AccountNumber>153105</AccountNumber>
+<Desc>Estudios y Consultorias</Desc>
+<Balance>15889.24</Balance>
+<TotalBalance>15889.24</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000053-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-10T11:28:14-08:00</TimeModified>
+<EditSequence>1410362702</EditSequence>
+<Name>Refaccion Instalaciones</Name>
+<FullName>Planta Santa Rita:Refaccion Instalaciones</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>8000004D-1409831416</ListID>
+<FullName>Planta Santa Rita</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherAsset</AccountType>
+<AccountNumber>153106</AccountNumber>
+<Desc>Refaccion Instalaciones</Desc>
+<Balance>20967.00</Balance>
+<TotalBalance>20967.00</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000054-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-10T08:25:08-08:00</TimeModified>
+<EditSequence>1410362708</EditSequence>
+<Name>Red Internet</Name>
+<FullName>Planta Santa Rita:Red Internet</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>8000004D-1409831416</ListID>
+<FullName>Planta Santa Rita</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherAsset</AccountType>
+<AccountNumber>153107</AccountNumber>
+<Desc>Red Internet</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000055-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-10T08:25:15-08:00</TimeModified>
+<EditSequence>1410362715</EditSequence>
+<Name>Estadia Tecnicos</Name>
+<FullName>Planta Santa Rita:Estadia Tecnicos</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>8000004D-1409831416</ListID>
+<FullName>Planta Santa Rita</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherAsset</AccountType>
+<AccountNumber>153108</AccountNumber>
+<Desc>Estadia Tecnicos</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000056-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-10T08:25:53-08:00</TimeModified>
+<EditSequence>1410362753</EditSequence>
+<Name>Acciones Telefonicas</Name>
+<FullName>Acciones Telefonicas</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherAsset</AccountType>
+<AccountNumber>1601</AccountNumber>
+<Desc>Acciones Telefonicas</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000057-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-10T08:26:02-08:00</TimeModified>
+<EditSequence>1410362762</EditSequence>
+<Name>Inversiones en Cias. Relacionad</Name>
+<FullName>Inversiones en Cias. Relacionad</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherAsset</AccountType>
+<AccountNumber>1605</AccountNumber>
+<Desc>Inversiones en Cias. Relacionadas</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000058-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-10T08:26:10-08:00</TimeModified>
+<EditSequence>1410362770</EditSequence>
+<Name>Otras Inversiones</Name>
+<FullName>Otras Inversiones</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherAsset</AccountType>
+<AccountNumber>1608</AccountNumber>
+<Desc>Otras Inversiones</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000059-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-10T08:26:19-08:00</TimeModified>
+<EditSequence>1410362779</EditSequence>
+<Name>Derecho de llave</Name>
+<FullName>Derecho de llave</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherAsset</AccountType>
+<AccountNumber>1701</AccountNumber>
+<Desc>Derecho de llave</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000005A-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-10T08:26:26-08:00</TimeModified>
+<EditSequence>1410362786</EditSequence>
+<Name>Amortizaci&#243;n de Derecho de llav</Name>
+<FullName>Amortizaci&#243;n de Derecho de llav</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherAsset</AccountType>
+<AccountNumber>1702</AccountNumber>
+<Desc>Amortizaci&#243;n de Derecho de llave</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000005B-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-10T08:26:39-08:00</TimeModified>
+<EditSequence>1410362799</EditSequence>
+<Name>Software y Licencias</Name>
+<FullName>Software y Licencias</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherAsset</AccountType>
+<AccountNumber>1705</AccountNumber>
+<Desc>Software y Licencias</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000005C-1409831416</ListID>
+<TimeCreated>2014-09-04T04:50:16-08:00</TimeCreated>
+<TimeModified>2014-09-10T08:27:02-08:00</TimeModified>
+<EditSequence>1410362822</EditSequence>
+<Name>Amortizacion Software y Licenci</Name>
+<FullName>Amortizacion Software y Licenci</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherAsset</AccountType>
+<AccountNumber>1706</AccountNumber>
+<Desc>Amortizacion Software y Licencias</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Investing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000076-1409832421</ListID>
+<TimeCreated>2014-09-04T05:07:01-08:00</TimeCreated>
+<TimeModified>2014-09-12T12:26:52-08:00</TimeModified>
+<EditSequence>1409832421</EditSequence>
+<Name>Cuentas por Pagar mn</Name>
+<FullName>Cuentas por Pagar mn</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>AccountsPayable</AccountType>
+<AccountNumber>2001</AccountNumber>
+<Desc>Cuentas por Pagar mn</Desc>
+<Balance>203934.30</Balance>
+<TotalBalance>203934.30</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000010F-1409832908</ListID>
+<TimeCreated>2014-09-04T05:15:08-08:00</TimeCreated>
+<TimeModified>2014-10-10T08:00:58-08:00</TimeModified>
+<EditSequence>1409837818</EditSequence>
+<Name>Cuentas por Pagar USD</Name>
+<FullName>Cuentas por Pagar USD</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>AccountsPayable</AccountType>
+<SpecialAccountType>AccountsPayable</SpecialAccountType>
+<AccountNumber>2003</AccountNumber>
+<Desc>Unpaid or unapplied vendor bills or credits</Desc>
+<Balance>45157.64</Balance>
+<TotalBalance>45157.64</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000096-1409831347</ListID>
+<FullName>US Dollar</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000077-1409832421</ListID>
+<TimeCreated>2014-09-04T05:07:01-08:00</TimeCreated>
+<TimeModified>2014-09-10T08:28:03-08:00</TimeModified>
+<EditSequence>1410362883</EditSequence>
+<Name>Retenciones por pagar</Name>
+<FullName>Retenciones por pagar</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>2002</AccountNumber>
+<Desc>Cuentas por Pagar me</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>-140460.40</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000078-1409832421</ListID>
+<TimeCreated>2014-09-04T05:07:01-08:00</TimeCreated>
+<TimeModified>2014-10-10T08:00:58-08:00</TimeModified>
+<EditSequence>1410363540</EditSequence>
+<Name>Ret. Compra Mineral - C.N.S.</Name>
+<FullName>Retenciones por pagar:Ret. Compra Mineral - C.N.S.</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>80000077-1409832421</ListID>
+<FullName>Retenciones por pagar</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>200201</AccountNumber>
+<Desc>Ret. en Compra Mineral - C.N.S.</Desc>
+<Balance>-172010.00</Balance>
+<TotalBalance>-172010.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000124-1410363883</ListID>
+<TimeCreated>2014-09-10T08:44:43-08:00</TimeCreated>
+<TimeModified>2014-09-10T08:44:43-08:00</TimeModified>
+<EditSequence>1410363883</EditSequence>
+<Name>Ret Compra Mineral - COMIBOL</Name>
+<FullName>Retenciones por pagar:Ret Compra Mineral - COMIBOL</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>80000077-1409832421</ListID>
+<FullName>Retenciones por pagar</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>200202</AccountNumber>
+<Desc>Ret Compra Mineral - COMIBOL</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000007A-1409832421</ListID>
+<TimeCreated>2014-09-04T05:07:01-08:00</TimeCreated>
+<TimeModified>2014-09-10T08:39:18-08:00</TimeModified>
+<EditSequence>1410363558</EditSequence>
+<Name>Ret. Compra Mineral - FENCOMIN</Name>
+<FullName>Retenciones por pagar:Ret. Compra Mineral - FENCOMIN</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>80000077-1409832421</ListID>
+<FullName>Retenciones por pagar</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>200203</AccountNumber>
+<Desc>Ret. en Compra Mineral - FENCOMIN</Desc>
+<Balance>2466.76</Balance>
+<TotalBalance>2466.76</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000007B-1409832421</ListID>
+<TimeCreated>2014-09-04T05:07:01-08:00</TimeCreated>
+<TimeModified>2014-09-10T08:39:39-08:00</TimeModified>
+<EditSequence>1410363579</EditSequence>
+<Name>Ret. Compra Mineral - FED.DPTAL</Name>
+<FullName>Retenciones por pagar:Ret. Compra Mineral - FED.DPTAL</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>80000077-1409832421</ListID>
+<FullName>Retenciones por pagar</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>200204</AccountNumber>
+<Desc>Ret. en Compra Mineral - FED. DPTAL.</Desc>
+<Balance>3083.42</Balance>
+<TotalBalance>3083.42</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000007C-1409832421</ListID>
+<TimeCreated>2014-09-04T05:07:01-08:00</TimeCreated>
+<TimeModified>2014-09-10T08:40:07-08:00</TimeModified>
+<EditSequence>1410363607</EditSequence>
+<Name>Ret. Compra Mineral - Administr</Name>
+<FullName>Retenciones por pagar:Ret. Compra Mineral - Administr</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>80000077-1409832421</ListID>
+<FullName>Retenciones por pagar</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>200205</AccountNumber>
+<Desc>Ret. en Compra Mineral - Administraci&#243;n</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000007D-1409832421</ListID>
+<TimeCreated>2014-09-04T05:07:01-08:00</TimeCreated>
+<TimeModified>2014-09-10T08:41:28-08:00</TimeModified>
+<EditSequence>1410363688</EditSequence>
+<Name>Ret. Compra Mineral - Com.Rio B</Name>
+<FullName>Retenciones por pagar:Ret. Compra Mineral - Com.Rio B</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>80000077-1409832421</ListID>
+<FullName>Retenciones por pagar</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>200206</AccountNumber>
+<Desc>Ret. en Compra Mineral - Comunidad Rio Blanco</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000079-1409832421</ListID>
+<TimeCreated>2014-09-04T05:07:01-08:00</TimeCreated>
+<TimeModified>2014-09-10T08:43:16-08:00</TimeModified>
+<EditSequence>1410363796</EditSequence>
+<Name>Ret. Compra Mineral Comibol A F</Name>
+<FullName>Retenciones por pagar:Ret. Compra Mineral Comibol A F</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>80000077-1409832421</ListID>
+<FullName>Retenciones por pagar</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>200207</AccountNumber>
+<Desc>Ret. en Compra Mineral - Comibol Activo Fijo</Desc>
+<Balance>5987.20</Balance>
+<TotalBalance>5987.20</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000007E-1409832421</ListID>
+<TimeCreated>2014-09-04T05:07:01-08:00</TimeCreated>
+<TimeModified>2014-09-10T08:43:47-08:00</TimeModified>
+<EditSequence>1410363827</EditSequence>
+<Name>Ret. Compra Mineral - Emp.Met V</Name>
+<FullName>Retenciones por pagar:Ret. Compra Mineral - Emp.Met V</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>80000077-1409832421</ListID>
+<FullName>Retenciones por pagar</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>200208</AccountNumber>
+<Desc>Ret. en Compra Mineral - Emp. Met. Vinto</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000007F-1409832421</ListID>
+<TimeCreated>2014-09-04T05:07:01-08:00</TimeCreated>
+<TimeModified>2014-09-19T12:35:44-08:00</TimeModified>
+<EditSequence>1409837874</EditSequence>
+<Name>Canon 2% CA</Name>
+<FullName>Retenciones por pagar:Canon 2% CA</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>80000077-1409832421</ListID>
+<FullName>Retenciones por pagar</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<SpecialAccountType>SalesTaxPayable</SpecialAccountType>
+<AccountNumber>200209</AccountNumber>
+<Desc>Canon 2% CA</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000080-1409832421</ListID>
+<TimeCreated>2014-09-04T05:07:01-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:01-08:00</TimeModified>
+<EditSequence>1409832421</EditSequence>
+<Name>Ret. en Compra Mineral - Otros</Name>
+<FullName>Retenciones por pagar:Ret. en Compra Mineral - Otros</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>80000077-1409832421</ListID>
+<FullName>Retenciones por pagar</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>200210</AccountNumber>
+<Desc>Ret. en Compra Mineral - Otros</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000116-1409841553</ListID>
+<TimeCreated>2014-09-04T07:39:13-08:00</TimeCreated>
+<TimeModified>2014-09-04T13:53:51-08:00</TimeModified>
+<EditSequence>1409841553</EditSequence>
+<Name>Ret. Laboratorio por pagar</Name>
+<FullName>Retenciones por pagar:Ret. Laboratorio por pagar</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>80000077-1409832421</ListID>
+<FullName>Retenciones por pagar</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>200211</AccountNumber>
+<Balance>348.00</Balance>
+<TotalBalance>348.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000114-1409840864</ListID>
+<TimeCreated>2014-09-04T07:27:44-08:00</TimeCreated>
+<TimeModified>2014-09-04T13:53:51-08:00</TimeModified>
+<EditSequence>1409840864</EditSequence>
+<Name>Regalia Minera por Pagar</Name>
+<FullName>Retenciones por pagar:Regalia Minera por Pagar</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>80000077-1409832421</ListID>
+<FullName>Retenciones por pagar</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>20200</AccountNumber>
+<Balance>19664.22</Balance>
+<TotalBalance>19664.22</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000081-1409832421</ListID>
+<TimeCreated>2014-09-04T05:07:01-08:00</TimeCreated>
+<TimeModified>2014-09-12T09:01:05-08:00</TimeModified>
+<EditSequence>1409832421</EditSequence>
+<Name>Proveedores y Contr. mn</Name>
+<FullName>Proveedores y Contr. mn</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>2005</AccountNumber>
+<Desc>Proveedores y Contratistas mn</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000082-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Proveedores y Contr. me</Name>
+<FullName>Proveedores y Contr. me</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>2006</AccountNumber>
+<Desc>Proveedores y Contratistas me</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000083-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Cuentas con Cias. Rel. mn</Name>
+<FullName>Cuentas con Cias. Rel. mn</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>2009</AccountNumber>
+<Desc>Cuentas con Cias. Relacionadas mn</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000084-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Cuentas con Cias. Rel. Me</Name>
+<FullName>Cuentas con Cias. Rel. Me</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>2010</AccountNumber>
+<Desc>Cuentas con Cias. Relacionadas me</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000085-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Kennametal Inc.</Name>
+<FullName>Cuentas con Cias. Rel. Me:Kennametal Inc.</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>80000084-1409832422</ListID>
+<FullName>Cuentas con Cias. Rel. Me</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>201001</AccountNumber>
+<Desc>Kennametal Inc.</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000086-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Kennametal Luxemburgo</Name>
+<FullName>Cuentas con Cias. Rel. Me:Kennametal Luxemburgo</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>80000084-1409832422</ListID>
+<FullName>Cuentas con Cias. Rel. Me</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>201002</AccountNumber>
+<Desc>Kennametal Luxemburgo</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000087-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Sueldos y Jornales por Pagar</Name>
+<FullName>Sueldos y Jornales por Pagar</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>2101</AccountNumber>
+<Desc>Sueldos y Jornales por Pagar</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000088-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Aportes Patronales por Pagar</Name>
+<FullName>Aportes Patronales por Pagar</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>2103</AccountNumber>
+<Desc>Aportes Patronales por Pagar</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000111-1409838117</ListID>
+<TimeCreated>2014-09-04T06:41:57-08:00</TimeCreated>
+<TimeModified>2014-09-04T06:41:57-08:00</TimeModified>
+<EditSequence>1409838117</EditSequence>
+<Name>Patronal CPS 10%</Name>
+<FullName>Aportes Patronales por Pagar:Patronal CPS 10%</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>80000088-1409832422</ListID>
+<FullName>Aportes Patronales por Pagar</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>210301</AccountNumber>
+<Desc>Patronal CPS 10%</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000112-1409838144</ListID>
+<TimeCreated>2014-09-04T06:42:24-08:00</TimeCreated>
+<TimeModified>2014-09-04T06:42:24-08:00</TimeModified>
+<EditSequence>1409838144</EditSequence>
+<Name>Patronal Provivienda 2%</Name>
+<FullName>Aportes Patronales por Pagar:Patronal Provivienda 2%</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>80000088-1409832422</ListID>
+<FullName>Aportes Patronales por Pagar</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>210302</AccountNumber>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000008A-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T06:39:27-08:00</TimeModified>
+<EditSequence>1409837967</EditSequence>
+<Name>Patronal AFP 1,71%</Name>
+<FullName>Aportes Patronales por Pagar:Patronal AFP 1,71%</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>80000088-1409832422</ListID>
+<FullName>Aportes Patronales por Pagar</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>210303</AccountNumber>
+<Desc>Patronal AFP 1,71%</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000008B-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T06:40:25-08:00</TimeModified>
+<EditSequence>1409838025</EditSequence>
+<Name>Patronal Solidario 3%</Name>
+<FullName>Aportes Patronales por Pagar:Patronal Solidario 3%</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>80000088-1409832422</ListID>
+<FullName>Aportes Patronales por Pagar</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>210304</AccountNumber>
+<Desc>Patronal Solidario 3%</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000008C-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Ret. Laborales por Pagar</Name>
+<FullName>Ret. Laborales por Pagar</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>2104</AccountNumber>
+<Desc>Retenciones Laborales por Pagar</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000008D-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Laboral AFP 12,21%</Name>
+<FullName>Ret. Laborales por Pagar:Laboral AFP 12,21%</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>8000008C-1409832422</ListID>
+<FullName>Ret. Laborales por Pagar</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>210401</AccountNumber>
+<Desc>Laboral AFP 12,21%</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000008F-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Laboral Nacional Solidario</Name>
+<FullName>Ret. Laborales por Pagar:Laboral Nacional Solidario</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>8000008C-1409832422</ListID>
+<FullName>Ret. Laborales por Pagar</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>210403</AccountNumber>
+<Desc>Laboral Nacional Solidario</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000090-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Aguinaldos por Pagar</Name>
+<FullName>Aguinaldos por Pagar</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>2106</AccountNumber>
+<Desc>Aguinaldos por Pagar</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000091-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Primas por Pagar</Name>
+<FullName>Primas por Pagar</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>2107</AccountNumber>
+<Desc>Primas por Pagar</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000092-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Beneficios Sociales por Pagar</Name>
+<FullName>Beneficios Sociales por Pagar</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>2108</AccountNumber>
+<Desc>Beneficios Sociales por Pagar</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000118-1410189671</ListID>
+<TimeCreated>2014-09-08T08:21:11-08:00</TimeCreated>
+<TimeModified>2014-09-22T08:39:03-08:00</TimeModified>
+<EditSequence>1410189671</EditSequence>
+<Name>Debito Fiscal IVA</Name>
+<FullName>Debito Fiscal IVA</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>2201</AccountNumber>
+<Balance>144430.00</Balance>
+<TotalBalance>144430.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000094-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-22T08:39:03-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>IT por Pagar</Name>
+<FullName>IT por Pagar</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>2202</AccountNumber>
+<Desc>IT por Pagar</Desc>
+<Balance>33330.00</Balance>
+<TotalBalance>33330.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000095-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>RCIVA por Pagar</Name>
+<FullName>RCIVA por Pagar</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>2203</AccountNumber>
+<Desc>RCIVA por Pagar</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000096-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-19T15:56:17-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Retencion IUE Servicios 12,5%</Name>
+<FullName>Retencion IUE Servicios 12,5%</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>2204</AccountNumber>
+<Desc>Retencion IUE Servicios 12,5%</Desc>
+<Balance>593.65</Balance>
+<TotalBalance>593.65</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000097-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-10T14:54:11-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Retencion IUE Bienes 5%</Name>
+<FullName>Retencion IUE Bienes 5%</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>2205</AccountNumber>
+<Desc>Retencion IUE Bienes 5%</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000098-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-19T15:56:17-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Retencion IT 3%</Name>
+<FullName>Retencion IT 3%</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>2211</AccountNumber>
+<Desc>Retencion IT 3%</Desc>
+<Balance>142.49</Balance>
+<TotalBalance>142.49</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000099-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-11T11:47:42-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>IUE BE 12,5%</Name>
+<FullName>IUE BE 12,5%</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>2212</AccountNumber>
+<Desc>IUE BE 12,5%</Desc>
+<Balance>1684.32</Balance>
+<TotalBalance>1684.32</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000009A-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Patentes Por Pagar</Name>
+<FullName>Patentes Por Pagar</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>2214</AccountNumber>
+<Desc>Patentes Por Pagar</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000009B-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Impuestos a las Propiedades</Name>
+<FullName>Impuestos a las Propiedades</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>2221</AccountNumber>
+<Desc>Impuestos a las Propiedades</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000009C-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Impuestos a los Veh&#237;culos</Name>
+<FullName>Impuestos a los Veh&#237;culos</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>2222</AccountNumber>
+<Desc>Impuestos a los Veh&#237;culos</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000009D-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Regal&#237;as por Pagar</Name>
+<FullName>Regal&#237;as por Pagar</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>2231</AccountNumber>
+<Desc>Regal&#237;as por Pagar</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000009E-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Provisi&#243;n para Gastos</Name>
+<FullName>Provisi&#243;n para Gastos</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>2301</AccountNumber>
+<Desc>Provisi&#243;n para Gastos</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000009F-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Provisi&#243;n para Aguinaldos</Name>
+<FullName>Provisi&#243;n para Aguinaldos</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>2311</AccountNumber>
+<Desc>Provisi&#243;n para Aguinaldos</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000A0-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Provisi&#243;n para Primas</Name>
+<FullName>Provisi&#243;n para Primas</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>2312</AccountNumber>
+<Desc>Provisi&#243;n para Primas</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000A1-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Otras Provisiones</Name>
+<FullName>Otras Provisiones</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>2329</AccountNumber>
+<Desc>Otras Provisiones</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000A2-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Obligaciones Financieras</Name>
+<FullName>Obligaciones Financieras</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>2401</AccountNumber>
+<Desc>Obligaciones Financieras</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000A3-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T06:55:38-08:00</TimeModified>
+<EditSequence>1409838938</EditSequence>
+<Name>Pr&#233;stamo Kennametal Inc.</Name>
+<FullName>Obligaciones Financieras:Pr&#233;stamo Kennametal Inc.</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000A2-1409832422</ListID>
+<FullName>Obligaciones Financieras</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>240101</AccountNumber>
+<Desc>Kennametal Inc.</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000A4-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T06:55:23-08:00</TimeModified>
+<EditSequence>1409838923</EditSequence>
+<Name>Kennametal Luxemburgo</Name>
+<FullName>Obligaciones Financieras:Kennametal Luxemburgo</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000A2-1409832422</ListID>
+<FullName>Obligaciones Financieras</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>240102</AccountNumber>
+<Desc>Kennametal Luxemburgo</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000A5-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T06:55:31-08:00</TimeModified>
+<EditSequence>1409838931</EditSequence>
+<Name>Intereses y Comisiones por Paga</Name>
+<FullName>Obligaciones Financieras:Intereses y Comisiones por Paga</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000A2-1409832422</ListID>
+<FullName>Obligaciones Financieras</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>OtherCurrentLiability</AccountType>
+<AccountNumber>240103</AccountNumber>
+<Desc>Intereses y Comisiones por Pagar</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Operating</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000A6-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Prestamos por Pagar LP</Name>
+<FullName>Prestamos por Pagar LP</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>LongTermLiability</AccountType>
+<AccountNumber>2501</AccountNumber>
+<Desc>Pr&#233;stamos por Pagar LP</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Financing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000A7-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Kennametal Inc.</Name>
+<FullName>Prestamos por Pagar LP:Kennametal Inc.</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000A6-1409832422</ListID>
+<FullName>Prestamos por Pagar LP</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>LongTermLiability</AccountType>
+<AccountNumber>250101</AccountNumber>
+<Desc>Kennametal Inc.</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Financing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000A8-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Kennametal Luxemburgo</Name>
+<FullName>Prestamos por Pagar LP:Kennametal Luxemburgo</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000A6-1409832422</ListID>
+<FullName>Prestamos por Pagar LP</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>LongTermLiability</AccountType>
+<AccountNumber>250102</AccountNumber>
+<Desc>Kennametal Luxemburgo</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Financing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000A9-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Indemnizaciones al Personal</Name>
+<FullName>Indemnizaciones al Personal</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>LongTermLiability</AccountType>
+<AccountNumber>2602</AccountNumber>
+<Desc>Indemnizaciones al Personal</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Financing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000110-1409838117</ListID>
+<TimeCreated>2014-09-04T06:41:57-08:00</TimeCreated>
+<TimeModified>2014-09-09T09:47:20-08:00</TimeModified>
+<EditSequence>1410281240</EditSequence>
+<Name>Cuenta de apertura de saldos</Name>
+<FullName>Cuenta de apertura de saldos</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>Equity</AccountType>
+<SpecialAccountType>OpeningBalanceEquity</SpecialAccountType>
+<AccountNumber>3000</AccountNumber>
+<Desc>Opening balances during setup post to this account. The balance of this account should be zero after completing your setup</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Financing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000AA-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Capital</Name>
+<FullName>Capital</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>Equity</AccountType>
+<AccountNumber>3001</AccountNumber>
+<Desc>Capital</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Financing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000AB-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Ajuste de Capital</Name>
+<FullName>Ajuste de Capital</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>Equity</AccountType>
+<AccountNumber>3002</AccountNumber>
+<Desc>Ajuste de Capital</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Financing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000AC-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Reserva Legal</Name>
+<FullName>Reserva Legal</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>Equity</AccountType>
+<AccountNumber>3005</AccountNumber>
+<Desc>Reserva Legal</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Financing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000AD-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Reserva Revaluo Tecnico</Name>
+<FullName>Reserva Revaluo Tecnico</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>Equity</AccountType>
+<AccountNumber>3006</AccountNumber>
+<Desc>Reserva Revaluo Tecnico</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Financing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000AE-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Ajuste Reserva</Name>
+<FullName>Ajuste Reserva</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>Equity</AccountType>
+<AccountNumber>3007</AccountNumber>
+<Desc>Ajuste Reserva</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Financing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000AF-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Resultados Acumulados</Name>
+<FullName>Resultados Acumulados</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>Equity</AccountType>
+<AccountNumber>3010</AccountNumber>
+<Desc>Resultados Acumulados</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Financing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000B0-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Resultados del Periodo</Name>
+<FullName>Resultados del Periodo</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>Equity</AccountType>
+<AccountNumber>3011</AccountNumber>
+<Desc>Resultados del Periodo</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Financing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000B1-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Ajuste Resultados</Name>
+<FullName>Ajuste Resultados</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>Equity</AccountType>
+<AccountNumber>3012</AccountNumber>
+<Desc>Ajuste Resultados</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Financing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000123-1410363147</ListID>
+<TimeCreated>2014-09-10T08:32:27-08:00</TimeCreated>
+<TimeModified>2014-09-10T08:32:27-08:00</TimeModified>
+<EditSequence>1410363147</EditSequence>
+<Name>Retained Earnings</Name>
+<FullName>Retained Earnings</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>Equity</AccountType>
+<SpecialAccountType>RetainedEarnings</SpecialAccountType>
+<AccountNumber>32000</AccountNumber>
+<Desc>Undistributed earnings of the corporation</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>Financing</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000126-1410443410</ListID>
+<TimeCreated>2014-09-11T06:50:10-08:00</TimeCreated>
+<TimeModified>2014-09-11T06:50:10-08:00</TimeModified>
+<EditSequence>1410443410</EditSequence>
+<Name>Uncategorized Income</Name>
+<FullName>Uncategorized Income</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>Income</AccountType>
+<SpecialAccountType>UncategorizedIncome</SpecialAccountType>
+<AccountNumber>49900</AccountNumber>
+<Desc>Income not categorized elsewhere</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000B2-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Ventas</Name>
+<FullName>Ventas</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>Income</AccountType>
+<AccountNumber>6010</AccountNumber>
+<Balance>0.00</Balance>
+<TotalBalance>966570.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000B3-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-22T08:39:03-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Concentrados</Name>
+<FullName>Ventas:Concentrados</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000B2-1409832422</ListID>
+<FullName>Ventas</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Income</AccountType>
+<AccountNumber>6011</AccountNumber>
+<Desc>Concentrados</Desc>
+<Balance>966570.00</Balance>
+<TotalBalance>966570.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000B4-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-19T12:35:44-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Servicios</Name>
+<FullName>Ventas:Servicios</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000B2-1409832422</ListID>
+<FullName>Ventas</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Income</AccountType>
+<AccountNumber>6012</AccountNumber>
+<Desc>Servicios</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000B5-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Equipo Minero</Name>
+<FullName>Ventas:Equipo Minero</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000B2-1409832422</ListID>
+<FullName>Ventas</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Income</AccountType>
+<AccountNumber>6013</AccountNumber>
+<Desc>Equipo Minero</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000125-1410364110</ListID>
+<TimeCreated>2014-09-10T08:48:30-08:00</TimeCreated>
+<TimeModified>2014-09-10T08:48:30-08:00</TimeModified>
+<EditSequence>1410364110</EditSequence>
+<Name>Cost of Goods Sold</Name>
+<FullName>Cost of Goods Sold</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>CostOfGoodsSold</AccountType>
+<SpecialAccountType>CostOfGoodsSold</SpecialAccountType>
+<AccountNumber>50000</AccountNumber>
+<Desc>Costs of items purchased and then sold to customers</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000B6-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Costo de Ventas</Name>
+<FullName>Costo de Ventas</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>CostOfGoodsSold</AccountType>
+<AccountNumber>6020</AccountNumber>
+<Balance>0.00</Balance>
+<TotalBalance>37399.75</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000B7-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-19T15:59:35-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Costo de Concentrados</Name>
+<FullName>Costo de Ventas:Costo de Concentrados</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000B6-1409832422</ListID>
+<FullName>Costo de Ventas</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>CostOfGoodsSold</AccountType>
+<AccountNumber>6021</AccountNumber>
+<Desc>Costo de Ventas Concentrados</Desc>
+<Balance>37399.75</Balance>
+<TotalBalance>37399.75</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000B8-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Costo de Servicios</Name>
+<FullName>Costo de Ventas:Costo de Servicios</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000B6-1409832422</ListID>
+<FullName>Costo de Ventas</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>CostOfGoodsSold</AccountType>
+<AccountNumber>6022</AccountNumber>
+<Desc>Costo de Servicios</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000B9-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Costo de Equipos Mineros</Name>
+<FullName>Costo de Ventas:Costo de Equipos Mineros</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000B6-1409832422</ListID>
+<FullName>Costo de Ventas</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>CostOfGoodsSold</AccountType>
+<AccountNumber>6023</AccountNumber>
+<Desc>Costo de Equipos Mineros</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000BA-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T06:57:59-08:00</TimeModified>
+<EditSequence>1409839079</EditSequence>
+<Name>Gasto por Planillas</Name>
+<FullName>Gasto por Planillas</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>66000</AccountNumber>
+<Desc>Payroll expenses</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000093-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T06:58:22-08:00</TimeModified>
+<EditSequence>1409839102</EditSequence>
+<Name>Gastos por Categorizar</Name>
+<FullName>Gastos por Categorizar</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>Expense</AccountType>
+<SpecialAccountType>UncategorizedExpenses</SpecialAccountType>
+<AccountNumber>69800</AccountNumber>
+<Desc>Expenses not categorized elsewhere</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000BB-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Gastos Operativos</Name>
+<FullName>Gastos Operativos</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7000</AccountNumber>
+<Desc>Operativos</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>93388.08</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000BC-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-10T13:15:26-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Sacos de Mineria</Name>
+<FullName>Gastos Operativos:Sacos de Mineria</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000BB-1409832422</ListID>
+<FullName>Gastos Operativos</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7001</AccountNumber>
+<Desc>Sacos de Mineria</Desc>
+<Balance>68940.71</Balance>
+<TotalBalance>68940.71</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000BD-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-10T15:08:19-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Materiales y Suministros</Name>
+<FullName>Gastos Operativos:Materiales y Suministros</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000BB-1409832422</ListID>
+<FullName>Gastos Operativos</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7002</AccountNumber>
+<Desc>Materiales y Suministros</Desc>
+<Balance>4357.40</Balance>
+<TotalBalance>4357.40</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000BE-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Combustibles y Lubricantes</Name>
+<FullName>Gastos Operativos:Combustibles y Lubricantes</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000BB-1409832422</ListID>
+<FullName>Gastos Operativos</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7003</AccountNumber>
+<Desc>Combustibles y Lubricantes</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000BF-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Repuestos y Accesorios</Name>
+<FullName>Gastos Operativos:Repuestos y Accesorios</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000BB-1409832422</ListID>
+<FullName>Gastos Operativos</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7004</AccountNumber>
+<Desc>Repuestos y Accesorios</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000C0-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-10T14:37:17-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Mantenimiento Maquinaria</Name>
+<FullName>Gastos Operativos:Mantenimiento Maquinaria</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000BB-1409832422</ListID>
+<FullName>Gastos Operativos</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7011</AccountNumber>
+<Desc>Mantenimiento Maquinaria</Desc>
+<Balance>2192.40</Balance>
+<TotalBalance>2192.40</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000C1-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-19T15:56:44-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Mantenimiento Vehiculo</Name>
+<FullName>Gastos Operativos:Mantenimiento Vehiculo</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000BB-1409832422</ListID>
+<FullName>Gastos Operativos</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7012</AccountNumber>
+<Desc>Mantenimiento Vehiculo</Desc>
+<Balance>7830.00</Balance>
+<TotalBalance>7830.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000C2-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-10T14:54:11-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Arriendos sitios</Name>
+<FullName>Gastos Operativos:Arriendos sitios</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000BB-1409832422</ListID>
+<FullName>Gastos Operativos</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7022</AccountNumber>
+<Desc>Arriendos sitios</Desc>
+<Balance>6090.00</Balance>
+<TotalBalance>6090.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000C3-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Alquiler de Equipos y Maquinari</Name>
+<FullName>Gastos Operativos:Alquiler de Equipos y Maquinari</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000BB-1409832422</ListID>
+<FullName>Gastos Operativos</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7031</AccountNumber>
+<Desc>Alquiler de Equipos y Maquinaria</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000C4-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-11T07:13:57-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Servicios de Transporte Mineral</Name>
+<FullName>Gastos Operativos:Servicios de Transporte Mineral</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000BB-1409832422</ListID>
+<FullName>Gastos Operativos</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7032</AccountNumber>
+<Desc>Servicios de Transporte Mineral</Desc>
+<Balance>3977.57</Balance>
+<TotalBalance>3977.57</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000C5-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Laboratorios y Muestras</Name>
+<FullName>Gastos Operativos:Laboratorios y Muestras</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000BB-1409832422</ListID>
+<FullName>Gastos Operativos</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7041</AccountNumber>
+<Desc>Laboratorios y Muestras</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000C6-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Alquiler Veh&#237;culos</Name>
+<FullName>Gastos Operativos:Alquiler Veh&#237;culos</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000BB-1409832422</ListID>
+<FullName>Gastos Operativos</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7051</AccountNumber>
+<Desc>Alquiler Veh&#237;culos</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000C7-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Mantenimiento de Caminos</Name>
+<FullName>Gastos Operativos:Mantenimiento de Caminos</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000BB-1409832422</ListID>
+<FullName>Gastos Operativos</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7061</AccountNumber>
+<Desc>Mantenimiento de Caminos</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000C8-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-19T15:56:12-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Gastos de viaje</Name>
+<FullName>Gastos Operativos:Gastos de viaje</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000BB-1409832422</ListID>
+<FullName>Gastos Operativos</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7071</AccountNumber>
+<Desc>Gastos de viaje</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000C9-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Gastos por Servicios B&#225;sicos</Name>
+<FullName>Gastos por Servicios B&#225;sicos</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7100</AccountNumber>
+<Desc>Servicios B&#225;sicos</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>16464.75</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000CA-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Energ&#237;a</Name>
+<FullName>Gastos por Servicios B&#225;sicos:Energ&#237;a</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000C9-1409832422</ListID>
+<FullName>Gastos por Servicios B&#225;sicos</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7101</AccountNumber>
+<Desc>Energ&#237;a</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000CB-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Gas</Name>
+<FullName>Gastos por Servicios B&#225;sicos:Gas</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000C9-1409832422</ListID>
+<FullName>Gastos por Servicios B&#225;sicos</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7102</AccountNumber>
+<Desc>Gas</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000CC-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Comunicaciones</Name>
+<FullName>Gastos por Servicios B&#225;sicos:Comunicaciones</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000C9-1409832422</ListID>
+<FullName>Gastos por Servicios B&#225;sicos</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7103</AccountNumber>
+<Desc>Comunicaciones</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000CD-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Agua</Name>
+<FullName>Gastos por Servicios B&#225;sicos:Agua</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000C9-1409832422</ListID>
+<FullName>Gastos por Servicios B&#225;sicos</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7104</AccountNumber>
+<Desc>Agua</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000CE-1409832422</ListID>
+<TimeCreated>2014-09-04T05:07:02-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:02-08:00</TimeModified>
+<EditSequence>1409832422</EditSequence>
+<Name>Seguridad</Name>
+<FullName>Gastos por Servicios B&#225;sicos:Seguridad</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000C9-1409832422</ListID>
+<FullName>Gastos por Servicios B&#225;sicos</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7107</AccountNumber>
+<Desc>Seguridad</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000CF-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-10T14:45:45-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Limpieza</Name>
+<FullName>Gastos por Servicios B&#225;sicos:Limpieza</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000C9-1409832422</ListID>
+<FullName>Gastos por Servicios B&#225;sicos</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7108</AccountNumber>
+<Desc>Limpieza</Desc>
+<Balance>16464.75</Balance>
+<TotalBalance>16464.75</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000D0-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Gastos por Servicios Personales</Name>
+<FullName>Gastos por Servicios Personales</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7200</AccountNumber>
+<Desc>Servicios Personales</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>22548.98</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000D1-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Sueldos y Salarios</Name>
+<FullName>Gastos por Servicios Personales:Sueldos y Salarios</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000D0-1409832423</ListID>
+<FullName>Gastos por Servicios Personales</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7201</AccountNumber>
+<Desc>Sueldos y Salarios</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000D2-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Trabajos Extraordinarios</Name>
+<FullName>Gastos por Servicios Personales:Trabajos Extraordinarios</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000D0-1409832423</ListID>
+<FullName>Gastos por Servicios Personales</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7202</AccountNumber>
+<Desc>Trabajos Extraordinarios</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000D3-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-11T11:03:15-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Servicios de Terceros</Name>
+<FullName>Gastos por Servicios Personales:Servicios de Terceros</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000D0-1409832423</ListID>
+<FullName>Gastos por Servicios Personales</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7211</AccountNumber>
+<Desc>Servicios de Terceros</Desc>
+<Balance>3373.86</Balance>
+<TotalBalance>3373.86</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000D4-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Aportes Patronales</Name>
+<FullName>Gastos por Servicios Personales:Aportes Patronales</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000D0-1409832423</ListID>
+<FullName>Gastos por Servicios Personales</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7221</AccountNumber>
+<Desc>Aportes Patronales</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000D5-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Cargas y Beneficios Sociales</Name>
+<FullName>Gastos por Servicios Personales:Cargas y Beneficios Sociales</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000D0-1409832423</ListID>
+<FullName>Gastos por Servicios Personales</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7222</AccountNumber>
+<Desc>Cargas y Beneficios Sociales</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000D6-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Aguinaldos</Name>
+<FullName>Gastos por Servicios Personales:Aguinaldos</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000D0-1409832423</ListID>
+<FullName>Gastos por Servicios Personales</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7223</AccountNumber>
+<Desc>Aguinaldos</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000D7-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Primas</Name>
+<FullName>Gastos por Servicios Personales:Primas</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000D0-1409832423</ListID>
+<FullName>Gastos por Servicios Personales</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7224</AccountNumber>
+<Desc>Primas</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000D8-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Seguros - Personas</Name>
+<FullName>Gastos por Servicios Personales:Seguros - Personas</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000D0-1409832423</ListID>
+<FullName>Gastos por Servicios Personales</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7226</AccountNumber>
+<Desc>Seguros - Personas</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000D9-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-19T15:56:17-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Refrigerios al Personal</Name>
+<FullName>Gastos por Servicios Personales:Refrigerios al Personal</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000D0-1409832423</ListID>
+<FullName>Gastos por Servicios Personales</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7228</AccountNumber>
+<Desc>Refrigerios al Personal</Desc>
+<Balance>673.38</Balance>
+<TotalBalance>673.38</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000DA-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-10T14:03:22-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Ropa de Trabajo y Seguridad Ind</Name>
+<FullName>Gastos por Servicios Personales:Ropa de Trabajo y Seguridad Ind</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000D0-1409832423</ListID>
+<FullName>Gastos por Servicios Personales</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7231</AccountNumber>
+<Desc>Ropa de Trabajo y Seguridad Industrial</Desc>
+<Balance>14973.74</Balance>
+<TotalBalance>14973.74</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000DB-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-11T10:54:52-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Subsidios</Name>
+<FullName>Gastos por Servicios Personales:Subsidios</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000D0-1409832423</ListID>
+<FullName>Gastos por Servicios Personales</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7232</AccountNumber>
+<Desc>Subsidios</Desc>
+<Balance>3528.00</Balance>
+<TotalBalance>3528.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000DC-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-10T14:54:11-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Atenciones al Personal</Name>
+<FullName>Gastos por Servicios Personales:Atenciones al Personal</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000D0-1409832423</ListID>
+<FullName>Gastos por Servicios Personales</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7233</AccountNumber>
+<Desc>Atenciones al Personal</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000DD-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Capacitacion</Name>
+<FullName>Gastos por Servicios Personales:Capacitacion</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000D0-1409832423</ListID>
+<FullName>Gastos por Servicios Personales</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7235</AccountNumber>
+<Desc>Capacitacion</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000DE-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T07:00:27-08:00</TimeModified>
+<EditSequence>1409839227</EditSequence>
+<Name>Gastos por Estructura</Name>
+<FullName>Gastos por Estructura</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7300</AccountNumber>
+<Balance>0.00</Balance>
+<TotalBalance>2236.88</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000DF-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-12T12:26:52-08:00</TimeModified>
+<EditSequence>1409839367</EditSequence>
+<Name>Alquiler Oficinas</Name>
+<FullName>Gastos por Estructura:Alquiler Oficinas</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000DE-1409832423</ListID>
+<FullName>Gastos por Estructura</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7301</AccountNumber>
+<Desc>Alquiler Oficinas</Desc>
+<Balance>1116.67</Balance>
+<TotalBalance>1116.67</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000E0-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-10T15:02:17-08:00</TimeModified>
+<EditSequence>1409839376</EditSequence>
+<Name>Seguros - Bienes</Name>
+<FullName>Gastos por Estructura:Seguros - Bienes</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000DE-1409832423</ListID>
+<FullName>Gastos por Estructura</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7311</AccountNumber>
+<Desc>Seguros - Bienes</Desc>
+<Balance>1120.21</Balance>
+<TotalBalance>1120.21</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000E1-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T07:03:09-08:00</TimeModified>
+<EditSequence>1409839389</EditSequence>
+<Name>Otros Seguros</Name>
+<FullName>Gastos por Estructura:Otros Seguros</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000DE-1409832423</ListID>
+<FullName>Gastos por Estructura</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7313</AccountNumber>
+<Desc>Otros Seguros</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000E2-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T07:03:18-08:00</TimeModified>
+<EditSequence>1409839398</EditSequence>
+<Name>Mantenimiento Oficinas</Name>
+<FullName>Gastos por Estructura:Mantenimiento Oficinas</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000DE-1409832423</ListID>
+<FullName>Gastos por Estructura</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7315</AccountNumber>
+<Desc>Mantenimiento Oficinas</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000E3-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T07:03:30-08:00</TimeModified>
+<EditSequence>1409839410</EditSequence>
+<Name>Cuotas Asociaciones</Name>
+<FullName>Gastos por Estructura:Cuotas Asociaciones</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000DE-1409832423</ListID>
+<FullName>Gastos por Estructura</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7321</AccountNumber>
+<Desc>Cuotas Asociaciones</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000E4-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T07:03:39-08:00</TimeModified>
+<EditSequence>1409839419</EditSequence>
+<Name>Materiales y &#250;tiles de Oficina</Name>
+<FullName>Gastos por Estructura:Materiales y &#250;tiles de Oficina</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000DE-1409832423</ListID>
+<FullName>Gastos por Estructura</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7331</AccountNumber>
+<Desc>Materiales y &#250;tiles de Oficina</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000E5-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T07:03:49-08:00</TimeModified>
+<EditSequence>1409839429</EditSequence>
+<Name>Mensajer&#237;a y Correos</Name>
+<FullName>Gastos por Estructura:Mensajer&#237;a y Correos</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000DE-1409832423</ListID>
+<FullName>Gastos por Estructura</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7332</AccountNumber>
+<Desc>Mensajer&#237;a y Correos</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000E6-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Gastos por Depreciaci&#243;n</Name>
+<FullName>Gastos por Depreciaci&#243;n</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7400</AccountNumber>
+<Desc>Depreciaciones</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000E7-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Instalaciones</Name>
+<FullName>Gastos por Depreciaci&#243;n:Instalaciones</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000E6-1409832423</ListID>
+<FullName>Gastos por Depreciaci&#243;n</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7402</AccountNumber>
+<Desc>Instalaciones</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000E8-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Maquinaria y Equipo</Name>
+<FullName>Gastos por Depreciaci&#243;n:Maquinaria y Equipo</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000E6-1409832423</ListID>
+<FullName>Gastos por Depreciaci&#243;n</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7403</AccountNumber>
+<Desc>Maquinaria y Equipo</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000E9-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Veh&#237;culos</Name>
+<FullName>Gastos por Depreciaci&#243;n:Veh&#237;culos</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000E6-1409832423</ListID>
+<FullName>Gastos por Depreciaci&#243;n</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7404</AccountNumber>
+<Desc>Veh&#237;culos</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000EA-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Herramientas</Name>
+<FullName>Gastos por Depreciaci&#243;n:Herramientas</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000E6-1409832423</ListID>
+<FullName>Gastos por Depreciaci&#243;n</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7405</AccountNumber>
+<Desc>Herramientas</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000EB-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Muebles y Equipos de Oficina</Name>
+<FullName>Gastos por Depreciaci&#243;n:Muebles y Equipos de Oficina</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000E6-1409832423</ListID>
+<FullName>Gastos por Depreciaci&#243;n</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7406</AccountNumber>
+<Desc>Muebles y Equipos de Oficina</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000EC-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Equipos de Computaci&#243;n y Comuni</Name>
+<FullName>Gastos por Depreciaci&#243;n:Equipos de Computaci&#243;n y Comuni</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000E6-1409832423</ListID>
+<FullName>Gastos por Depreciaci&#243;n</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7408</AccountNumber>
+<Desc>Equipos de Computaci&#243;n y Comunicaci&#243;n</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000ED-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Mejoras en Propiedades</Name>
+<FullName>Gastos por Depreciaci&#243;n:Mejoras en Propiedades</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000E6-1409832423</ListID>
+<FullName>Gastos por Depreciaci&#243;n</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7421</AccountNumber>
+<Desc>Mejoras en Propiedades</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000EE-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Gastos por Honorarios Profesion</Name>
+<FullName>Gastos por Honorarios Profesion</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7500</AccountNumber>
+<Desc>Gastos y Honorarios Profesionales</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>678.17</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000EF-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-12T09:05:46-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Gastos Legales y Notariales</Name>
+<FullName>Gastos por Honorarios Profesion:Gastos Legales y Notariales</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000EE-1409832423</ListID>
+<FullName>Gastos por Honorarios Profesion</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7501</AccountNumber>
+<Desc>Gastos Legales y Notariales</Desc>
+<Balance>678.17</Balance>
+<TotalBalance>678.17</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000F0-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Honorarios Abogados</Name>
+<FullName>Gastos por Honorarios Profesion:Honorarios Abogados</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000EE-1409832423</ListID>
+<FullName>Gastos por Honorarios Profesion</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7502</AccountNumber>
+<Desc>Honorarios profesionales Abogados</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000F1-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Honorarios Auditores</Name>
+<FullName>Gastos por Honorarios Profesion:Honorarios Auditores</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000EE-1409832423</ListID>
+<FullName>Gastos por Honorarios Profesion</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7505</AccountNumber>
+<Desc>Honorarios profesionales Auditores</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000F2-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-09T07:16:33-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Gastos Tributarios</Name>
+<FullName>Gastos Tributarios</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7600</AccountNumber>
+<Desc>Tributarios</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>33330.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000F3-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Derechos de Exportaci&#243;n</Name>
+<FullName>Gastos Tributarios:Derechos de Exportaci&#243;n</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000F2-1409832423</ListID>
+<FullName>Gastos Tributarios</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7601</AccountNumber>
+<Desc>Derechos de Exportaci&#243;n</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000F4-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Regalias</Name>
+<FullName>Gastos Tributarios:Regalias</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000F2-1409832423</ListID>
+<FullName>Gastos Tributarios</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7602</AccountNumber>
+<Desc>Regalias</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000F5-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Tasas y Patentes</Name>
+<FullName>Gastos Tributarios:Tasas y Patentes</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000F2-1409832423</ListID>
+<FullName>Gastos Tributarios</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7611</AccountNumber>
+<Desc>Tasas y Patentes</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000F6-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-22T08:39:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Impuestos a las Transacciones</Name>
+<FullName>Gastos Tributarios:Impuestos a las Transacciones</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000F2-1409832423</ListID>
+<FullName>Gastos Tributarios</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7621</AccountNumber>
+<Desc>Impuestos a las Transacciones</Desc>
+<Balance>33330.00</Balance>
+<TotalBalance>33330.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000F7-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T07:00:06-08:00</TimeModified>
+<EditSequence>1409839206</EditSequence>
+<Name>Impuesto Transacciones Financie</Name>
+<FullName>Gastos Tributarios:Impuesto Transacciones Financie</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000F2-1409832423</ListID>
+<FullName>Gastos Tributarios</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7622</AccountNumber>
+<Desc>Impuesto a las Transacciones Financieras</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000F8-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Impuesto a las Propiedades</Name>
+<FullName>Gastos Tributarios:Impuesto a las Propiedades</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000F2-1409832423</ListID>
+<FullName>Gastos Tributarios</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7631</AccountNumber>
+<Desc>Impuesto a las Propiedades</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000F9-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Impuesto a los Veh&#237;culos</Name>
+<FullName>Gastos Tributarios:Impuesto a los Veh&#237;culos</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000F2-1409832423</ListID>
+<FullName>Gastos Tributarios</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7632</AccountNumber>
+<Desc>Impuesto a los Veh&#237;culos</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000FA-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Impuesto a las Utilidades</Name>
+<FullName>Gastos Tributarios:Impuesto a las Utilidades</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000F2-1409832423</ListID>
+<FullName>Gastos Tributarios</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7641</AccountNumber>
+<Desc>Impuesto a las Utilidades</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000FB-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Cuota Adicional a las Utilidade</Name>
+<FullName>Gastos Tributarios:Cuota Adicional a las Utilidade</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000F2-1409832423</ListID>
+<FullName>Gastos Tributarios</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7642</AccountNumber>
+<Desc>Cuota Adicional a las Utilidades</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000FC-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Gastos Financieros</Name>
+<FullName>Gastos Financieros</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7700</AccountNumber>
+<Desc>Financieros</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000FD-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Gastos y Comisiones Bancarias</Name>
+<FullName>Gastos Financieros:Gastos y Comisiones Bancarias</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000FC-1409832423</ListID>
+<FullName>Gastos Financieros</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7701</AccountNumber>
+<Desc>Gastos y Comisiones Bancarias</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>800000FE-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Intereses</Name>
+<FullName>Gastos Financieros:Intereses</FullName>
+<IsActive>true</IsActive>
+<ParentRef>
+<ListID>800000FC-1409832423</ListID>
+<FullName>Gastos Financieros</FullName>
+</ParentRef>
+<Sublevel>1</Sublevel>
+<AccountType>Expense</AccountType>
+<AccountNumber>7702</AccountNumber>
+<Desc>Intereses</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000100-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Ingresos no Operativos</Name>
+<FullName>Ingresos no Operativos</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherIncome</AccountType>
+<AccountNumber>7888</AccountNumber>
+<Desc>Ingresos no Operativos</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000115-1409840939</ListID>
+<TimeCreated>2014-09-04T07:28:59-08:00</TimeCreated>
+<TimeModified>2014-09-11T07:13:57-08:00</TimeModified>
+<EditSequence>1410364059</EditSequence>
+<Name>Diferencias de Cambio</Name>
+<FullName>Diferencias de Cambio</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherExpense</AccountType>
+<SpecialAccountType>ExchangeGainLoss</SpecialAccountType>
+<AccountNumber>7705</AccountNumber>
+<Desc>Diferencias de Cambio</Desc>
+<Balance>3.51</Balance>
+<TotalBalance>3.51</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000102-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Egresos no Operativos</Name>
+<FullName>Egresos no Operativos</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherExpense</AccountType>
+<AccountNumber>7889</AccountNumber>
+<Desc>Egresos no Operativos</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000103-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Donaciones a Comunidades</Name>
+<FullName>Donaciones a Comunidades</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherExpense</AccountType>
+<AccountNumber>7890</AccountNumber>
+<Desc>Donaciones a Comunidades</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000104-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Gastos no Deducibles</Name>
+<FullName>Gastos no Deducibles</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherExpense</AccountType>
+<AccountNumber>7891</AccountNumber>
+<Desc>Gastos no Deducibles</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000012E-1410531138</ListID>
+<TimeCreated>2014-09-12T07:12:18-08:00</TimeCreated>
+<TimeModified>2014-09-19T15:56:17-08:00</TimeModified>
+<EditSequence>1410531138</EditSequence>
+<Name>CF No Deducible</Name>
+<FullName>CF No Deducible</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherExpense</AccountType>
+<AccountNumber>7892</AccountNumber>
+<Balance>101.33</Balance>
+<TotalBalance>101.33</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000105-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Ajuste por Inflaci&#243;n y Tenencia</Name>
+<FullName>Ajuste por Inflaci&#243;n y Tenencia</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherExpense</AccountType>
+<AccountNumber>7911</AccountNumber>
+<Desc>Ajuste por Inflaci&#243;n y Tenencia de Bienes</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000106-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-04T05:07:03-08:00</TimeModified>
+<EditSequence>1409832423</EditSequence>
+<Name>Transferencia al Costo</Name>
+<FullName>Transferencia al Costo</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>OtherExpense</AccountType>
+<AccountNumber>7999</AccountNumber>
+<Desc>Transferencia al Costo</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>None</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000107-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-09T09:47:40-08:00</TimeModified>
+<EditSequence>1410281260</EditSequence>
+<Name>Cotizaciones</Name>
+<FullName>Cotizaciones</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>NonPosting</AccountType>
+<SpecialAccountType>Estimates</SpecialAccountType>
+<AccountNumber>90000</AccountNumber>
+<Desc>Estimates for jobs or projects. Customer proposals for work to be done, or items to be sold upon customer acceptance of the estimate</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>NotApplicable</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000108-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-09T09:48:06-08:00</TimeModified>
+<EditSequence>1410281286</EditSequence>
+<Name>Ordenes de compra</Name>
+<FullName>Ordenes de compra</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>NonPosting</AccountType>
+<SpecialAccountType>PurchaseOrders</SpecialAccountType>
+<AccountNumber>90100</AccountNumber>
+<Desc>Purchase orders specifying items ordered from vendors</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>NotApplicable</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>80000109-1409832423</ListID>
+<TimeCreated>2014-09-04T05:07:03-08:00</TimeCreated>
+<TimeModified>2014-09-09T09:48:20-08:00</TimeModified>
+<EditSequence>1410281300</EditSequence>
+<Name>Ordenes de Venta/Servicio</Name>
+<FullName>Ordenes de Venta/Servicio</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>NonPosting</AccountType>
+<AccountNumber>90200</AccountNumber>
+<Desc>Orders from customers to be filled, work to be performed, or items to be shipped</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>NotApplicable</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+<AccountRet>
+<ListID>8000012D-1410450801</ListID>
+<TimeCreated>2014-09-11T08:53:21-08:00</TimeCreated>
+<TimeModified>2014-09-11T08:53:21-08:00</TimeModified>
+<EditSequence>1410450801</EditSequence>
+<Name>Sales Orders</Name>
+<FullName>Sales Orders</FullName>
+<IsActive>true</IsActive>
+<Sublevel>0</Sublevel>
+<AccountType>NonPosting</AccountType>
+<SpecialAccountType>SalesOrders</SpecialAccountType>
+<AccountNumber>90201</AccountNumber>
+<Desc>Orders from customers to be filled, work to be performed, or items to be shipped</Desc>
+<Balance>0.00</Balance>
+<TotalBalance>0.00</TotalBalance>
+<CashFlowClassification>NotApplicable</CashFlowClassification>
+<CurrencyRef>
+<ListID>80000012-1409831347</ListID>
+<FullName>Bolivian Bolivianos</FullName>
+</CurrencyRef>
+</AccountRet>
+</AccountQueryRs>
+</QBXMLMsgsRs>
+</QBXML>

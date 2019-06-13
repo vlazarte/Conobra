@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" ?>
+<QBXML>
+  <QBXMLMsgsRs>
+    <CustomerQueryRs statusCode="0" statusSeverity="Info" statusMessage="Status OK">
+      <CustomerRet>
+        <ListID>8000144B-1458767877</ListID>
+        <TimeCreated>2016-03-23T15:17:57-06:00</TimeCreated>
+        <TimeModified>2017-08-17T08:50:17-06:00</TimeModified>
+        <EditSequence>1476970171</EditSequence>
+        <Name>Pavas</Name>
+        <FullName>APM Terminals Moin S.A:Pavas</FullName>
+        <IsActive>true</IsActive>
+        <ParentRef>
+          <ListID>800013B8-1456435153</ListID>
+          <FullName>APM Terminals Moin S.A</FullName>
+        </ParentRef>
+        <Sublevel>1</Sublevel>
+        <CompanyName>APM Terminals Moin S.A</CompanyName>
+        <FirstName>Priscilla</FirstName>
+        <LastName>Priscilla Morales</LastName>
+        <BillAddress>
+          <Addr1>APM Terminals Moin S.A</Addr1>
+          <Addr2>Pavas Oficentro La Virgen Edificio 4</Addr2>
+          <Addr3>piso 1, Departamento de IT - &amp; en</Addr3>
+          <Addr4>Edificio 2 sotano</Addr4>
+          <City>Pavas San Jose</City>
+        </BillAddress>
+        <BillAddressBlock>
+          <Addr1>APM Terminals Moin S.A</Addr1>
+          <Addr2>Pavas Oficentro La Virgen Edificio 4</Addr2>
+          <Addr3>piso 1, Departamento de IT - &amp; en</Addr3>
+          <Addr4>Edificio 2 sotano</Addr4>
+          <Addr5>Pavas San Jose</Addr5>
+        </BillAddressBlock>
+        <ShipAddress>
+          <Addr1>APM Terminals Moin S.A</Addr1>
+          <Addr2>Pavas Oficentro La Virgen Edificio 4</Addr2>
+          <Addr3>piso 1, Departamento de IT - &amp; en</Addr3>
+          <Addr4>Edificio 2 sotano</Addr4>
+          <City>Pavas San Jose</City>
+        </ShipAddress>
+        <ShipAddressBlock>
+          <Addr1>APM Terminals Moin S.A</Addr1>
+          <Addr2>Pavas Oficentro La Virgen Edificio 4</Addr2>
+          <Addr3>piso 1, Departamento de IT - &amp; en</Addr3>
+          <Addr4>Edificio 2 sotano</Addr4>
+          <Addr5>Pavas San Jose</Addr5>
+        </ShipAddressBlock>
+        <ShipToAddress>
+          <Name>Ship To 1</Name>
+          <Addr1>APM Terminals Moin S.A</Addr1>
+          <Addr2>Eduardo Montero</Addr2>
+          <Addr3>Apartamentos Parque Caribe</Addr3>
+          <City>Moin, Limon</City>
+          <DefaultShipTo>false</DefaultShipTo>
+        </ShipToAddress>
+        <ShipToAddress>
+          <Name>Ship To 2</Name>
+          <Addr1>APM Terminals Moin S.A</Addr1>
+          <Addr2>Pavas Oficentro La Virgen Edificio 4</Addr2>
+          <Addr3>piso 1, Departamento de IT - &amp; en</Addr3>
+          <Addr4>Edificio 2 sotano</Addr4>
+          <City>Pavas San Jose</City>
+          <DefaultShipTo>true</DefaultShipTo>
+        </ShipToAddress>
+        <Phone>Priscilla Morales</Phone>
+        <Email>Stephanny.Ramirez@apmterminals.com;Dayana.Ruiz@Apmterminals.com;eduardo.montero@apmterminals.com;jose.antonio.lopez@apmterminals.com</Email>
+        <Cc> stephanny.ramirez@apmterminals.com;Nancy.Diaz@apmterminals.com</Cc>
+        <AdditionalContactRef>
+          <ContactName>Main Phone</ContactName>
+          <ContactValue>Priscilla Morales</ContactValue>
+        </AdditionalContactRef>
+        <AdditionalContactRef>
+          <ContactName>Work Phone</ContactName>
+          <ContactValue>2520 6570 &#150; 70217759 Claudeth Downs</ContactValue>
+        </AdditionalContactRef>
+        <AdditionalContactRef>
+          <ContactName>Main Email</ContactName>
+          <ContactValue>Stephanny.Ramirez@apmterminals.com;Dayana.Ruiz@Apmterminals.com;eduardo.montero@apmterminals.com;jose.antonio.lopez@apmterminals.com</ContactValue>
+        </AdditionalContactRef>
+        <AdditionalContactRef>
+          <ContactName>CC Email</ContactName>
+          <ContactValue> stephanny.ramirez@apmterminals.com;Nancy.Diaz@apmterminals.com</ContactValue>
+        </AdditionalContactRef>
+        <CustomerTypeRef>
+          <ListID>8000000B-1446153383</ListID>
+          <FullName>TRAMITE FACTURA FISICA</FullName>
+        </CustomerTypeRef>
+        <SalesRepRef>
+          <ListID>8000000F-1360881194</ListID>
+          <FullName>JPQ</FullName>
+        </SalesRepRef>
+        <Balance>1462.00</Balance>
+        <TotalBalance>1462.00</TotalBalance>
+        <SalesTaxCodeRef>
+          <ListID>80000001-1284491570</ListID>
+          <FullName>Tax</FullName>
+        </SalesTaxCodeRef>
+        <ItemSalesTaxRef>
+          <ListID>8000002B-1286236692</ListID>
+          <FullName>CR Sales Tax</FullName>
+        </ItemSalesTaxRef>
+        <AccountNumber>10002558</AccountNumber>
+        <JobStatus>None</JobStatus>
+        <PreferredDeliveryMethod>Email</PreferredDeliveryMethod>
+        <CurrencyRef>
+          <ListID>80000096-1284491573</ListID>
+          <FullName>US Dollar</FullName>
+        </CurrencyRef>
+        <DataExtRet>
+          <OwnerID>0</OwnerID>
+          <DataExtName>Latitude</DataExtName>
+          <DataExtType>STR255TYPE</DataExtType>
+          <DataExtValue>9.936995</DataExtValue>
+        </DataExtRet>
+        <DataExtRet>
+          <OwnerID>0</OwnerID>
+          <DataExtName>Longitude</DataExtName>
+          <DataExtType>STR255TYPE</DataExtType>
+          <DataExtValue>-83.041548</DataExtValue>
+        </DataExtRet>
+        <DataExtRet>
+          <OwnerID>0</OwnerID>
+          <DataExtName>Cedula</DataExtName>
+          <DataExtType>STR255TYPE</DataExtType>
+          <DataExtValue>3-101-641075</DataExtValue>
+        </DataExtRet>
+      </CustomerRet>
+
+    </CustomerQueryRs>
+  </QBXMLMsgsRs>
+</QBXML>

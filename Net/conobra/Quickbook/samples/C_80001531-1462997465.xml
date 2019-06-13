@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" ?>
+<QBXML>
+  <QBXMLMsgsRs>
+    <CustomerQueryRs statusCode="0" statusSeverity="Info" statusMessage="Status OK">
+      <CustomerRet>
+        <ListID>80001531-1462997465</ListID>
+        <TimeCreated>2016-05-11T14:11:05-06:00</TimeCreated>
+        <TimeModified>2017-08-17T08:50:17-06:00</TimeModified>
+        <EditSequence>1473175115</EditSequence>
+        <Name>Asociaci&#243;n Solidarista de Empleados de Di</Name>
+        <FullName>Asociaci&#243;n Solidarista de Empleados de Di</FullName>
+        <IsActive>true</IsActive>
+        <Sublevel>0</Sublevel>
+        <CompanyName>ASEDAGRO</CompanyName>
+        <FirstName>Cristina</FirstName>
+        <LastName>D&#237;az Barrantes</LastName>
+        <BillAddress>
+          <Addr1>Asociaci&#243;n Solidarista de Empleados de</Addr1>
+          <Addr2>Distribuidora Agrocomercial y Afines</Addr2>
+          <Addr3>Zona franca BES, edificio principal, en</Addr3>
+          <Addr4>Distribuidora Agrocomercial</Addr4>
+          <City>El Coyol, Alajuela</City>
+        </BillAddress>
+        <BillAddressBlock>
+          <Addr1>Asociaci&#243;n Solidarista de Empleados de</Addr1>
+          <Addr2>Distribuidora Agrocomercial y Afines</Addr2>
+          <Addr3>Zona franca BES, edificio principal, en</Addr3>
+          <Addr4>Distribuidora Agrocomercial</Addr4>
+          <Addr5>El Coyol, Alajuela</Addr5>
+        </BillAddressBlock>
+        <ShipAddress>
+          <Addr1>Asociaci&#243;n Solidarista de Empleados de</Addr1>
+          <Addr2>Distribuidora Agrocomercial y Afines</Addr2>
+          <Addr3>Zona franca BES, edificio principal, en</Addr3>
+          <Addr4>Distribuidora Agrocomercial</Addr4>
+          <City>El Coyol, Alajuela</City>
+        </ShipAddress>
+        <ShipAddressBlock>
+          <Addr1>Asociaci&#243;n Solidarista de Empleados de</Addr1>
+          <Addr2>Distribuidora Agrocomercial y Afines</Addr2>
+          <Addr3>Zona franca BES, edificio principal, en</Addr3>
+          <Addr4>Distribuidora Agrocomercial</Addr4>
+          <Addr5>El Coyol, Alajuela</Addr5>
+        </ShipAddressBlock>
+        <ShipToAddress>
+          <Name>Ship To 2</Name>
+          <Addr1>Asociaci&#243;n Solidarista de Empleados de</Addr1>
+          <Addr2>En la ruta 27 se desv&#237;a en la entrada que</Addr2>
+          <Addr3>dice Cascajal de Orotina del desv&#237;o de</Addr3>
+          <Addr4>esta salida son 800 metros noroeste</Addr4>
+          <City>Ceiba, Orotina, Alajuela</City>
+          <DefaultShipTo>false</DefaultShipTo>
+        </ShipToAddress>
+        <ShipToAddress>
+          <Name>Ship To 1</Name>
+          <Addr1>Asociaci&#243;n Solidarista de Empleados de</Addr1>
+          <Addr2>Distribuidora Agrocomercial y Afines</Addr2>
+          <Addr3>Zona franca BES, edificio principal, en</Addr3>
+          <Addr4>Distribuidora Agrocomercial</Addr4>
+          <City>El Coyol, Alajuela</City>
+          <DefaultShipTo>true</DefaultShipTo>
+        </ShipToAddress>
+        <Phone>2494-9800 ext 9710 Cr</Phone>
+        <Email>administracion@aseaglo.com</Email>
+        <AdditionalContactRef>
+          <ContactName>Main Phone</ContactName>
+          <ContactValue>2494-9800 ext 9710 Cristina</ContactValue>
+        </AdditionalContactRef>
+        <AdditionalContactRef>
+          <ContactName>Main Email</ContactName>
+          <ContactValue>administracion@aseaglo.com</ContactValue>
+        </AdditionalContactRef>
+        <TermsRef>
+          <ListID>80000019-1457127513</ListID>
+          <FullName>CONTADO</FullName>
+        </TermsRef>
+        <SalesRepRef>
+          <ListID>80000011-1366047378</ListID>
+          <FullName>JMA</FullName>
+        </SalesRepRef>
+        <Balance>630.00</Balance>
+        <TotalBalance>1190.00</TotalBalance>
+        <SalesTaxCodeRef>
+          <ListID>80000001-1284491570</ListID>
+          <FullName>Tax</FullName>
+        </SalesTaxCodeRef>
+        <ItemSalesTaxRef>
+          <ListID>8000002B-1286236692</ListID>
+          <FullName>CR Sales Tax</FullName>
+        </ItemSalesTaxRef>
+        <AccountNumber>10002697</AccountNumber>
+        <JobStatus>None</JobStatus>
+        <PreferredDeliveryMethod>Email</PreferredDeliveryMethod>
+        <CurrencyRef>
+          <ListID>80000096-1284491573</ListID>
+          <FullName>US Dollar</FullName>
+        </CurrencyRef>
+        <DataExtRet>
+          <OwnerID>0</OwnerID>
+          <DataExtName>Latitude</DataExtName>
+          <DataExtType>STR255TYPE</DataExtType>
+          <DataExtValue>9.99429</DataExtValue>
+        </DataExtRet>
+        <DataExtRet>
+          <OwnerID>0</OwnerID>
+          <DataExtName>Longitude</DataExtName>
+          <DataExtType>STR255TYPE</DataExtType>
+          <DataExtValue>-84.255044</DataExtValue>
+        </DataExtRet>
+        <DataExtRet>
+          <OwnerID>0</OwnerID>
+          <DataExtName>Cedula</DataExtName>
+          <DataExtType>STR255TYPE</DataExtType>
+          <DataExtValue>3-002-071316</DataExtValue>
+        </DataExtRet>
+      </CustomerRet>
+
+    </CustomerQueryRs>
+  </QBXMLMsgsRs>
+</QBXML>

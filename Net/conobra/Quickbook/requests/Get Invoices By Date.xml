@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?qbxml version="13.0"?>
+<QBXML>
+<QBXMLMsgsRq onError="stopOnError">
+<InvoiceQueryRq>
+<ModifiedDateRangeFilter>
+	<FromModifiedDate>2017-08-17T00:00:00</FromModifiedDate>
+	<ToModifiedDate>2017-08-17T23:59:59</ToModifiedDate>
+</ModifiedDateRangeFilter>
+<IncludeRetElement >RefNumber</IncludeRetElement>
+<IncludeRetElement >TimeModified</IncludeRetElement>
+<OwnerID>0</OwnerID>
+</InvoiceQueryRq >
+</QBXMLMsgsRq>
+</QBXML>

@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SmartQuickbook.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="qbook_app_name" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SmartStrategy - Quickbook Connector v2.4</Value>
+    </Setting>
+    <Setting Name="qbook_file" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="qbook_production" Type="System.String" Scope="User">
+      <Value Profile="(Default)">b4f16ca3cd7d_</Value>
+    </Setting>
+    <Setting Name="SmartQuickbook_wClient_WService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:49349/WService.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

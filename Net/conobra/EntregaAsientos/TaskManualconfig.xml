@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<root>
+  <proceso id="1">
+    <nombre>Project from Quickbook</nombre>
+    <entrada tipo="quickbook">
+      <quickbook></quickbook>
+      <quickbase>
+        <access_token>0823871b4f16ca3cd7d6f6259690ca20</access_token>
+        <parametros>
+          <p field="B">NOMBRE</p>
+          <p field="45">CI</p>
+          <p field="45">CI</p>
+          <p field="45">CI</p>
+        </parametros>
+      </quickbase>
+    </entrada>
+
+    <acciones>
+      <accion id="cust001" tipo="add_quickbook">
+        <nombre>Crear Jobs</nombre>
+        <quickbook_tabla>Customer</quickbook_tabla>
+        <parametros>          
+          <p field="ParentRef/FullName" type="Customer" required="true">FullName</p>
+          <p field="Name" required="true">NOMBRE</p>          
+          <p field="IsActive" required="false">IsActive</p>
+          <p field="CompanyName" required="false">COMPANYNAME</p>
+          <p field="CurrencyRef/FullName" type ="Currency" required="false">CurrencyRef</p>
+          <p field="RecordIDProyecto" key="true">RECORD_ID</p>
+          <p field="JobStartDate" type="DateTime" required="false">JobStartDate</p>
+          <p field="JobDesc" required="false">JobDesc</p>
+        </parametros>
+        <respuestas>
+          <respuesta tipo="import_quickbase" categoria="Save">
+            <access_token>tokenRespuesta</access_token>
+            <parametros>
+              <p field="1" key="true">RECORD_ID</p>
+              <p field="2" >ListID</p>
+            </parametros>
+          </respuesta>
+          <respuesta tipo="import_quickbase" categoria="Log">
+            <access_token>8fc1a0edf52f44ba5cb7c7809613cbdd</access_token>
+            <parametros>            
+              <p field="6" key="true">ACCION</p>
+              <p field="7" >SEND</p>
+              <p field="8" >RECIVED</p>
+              <p field="9" >SUCCESS</p>
+            </parametros>
+          </respuesta>
+        </respuestas>        
+      </accion>
+    </acciones>
+    
+
+    <ejecucion tipo="intervalo">
+      <intervalo tipo="segundo">30</intervalo>
+      <fecha_unica>2019-04-09</fecha_unica>
+    </ejecucion>
+
+  </proceso>
+  <proceso id="2">
+    <nombre>Proyect Class to Quickbook</nombre>
+
+    <entrada tipo="quickbase">
+      <quickbook></quickbook>
+      <quickbase>
+        <access_token>89bb73b8911978456775bfebfaa945c6</access_token>
+        <parametros>
+          <p field="B">NOMBRE</p>
+          <p field="45">CI</p>
+          <p field="45">CI</p>
+          <p field="45">CI</p>
+        </parametros>
+      </quickbase>
+    </entrada>
+
+    <acciones>
+      <accion id="cust001" tipo="add_quickbook">
+        <nombre>Crear Proyecto Class</nombre>
+        <quickbook_tabla>Class</quickbook_tabla>
+        <parametros>
+          <p field="RECORD_ID" required="true" key="true">RECORD_ID</p>
+          <p field="FullName" required="true">FullName</p>          
+          <p field="IsActive" required="false">IsActive</p>          
+        </parametros>
+        <respuestas>
+          <respuesta tipo="import_quickbase" categoria="Save">
+            <access_token>3a847e17ba9e87559ad0bb71fac10a3e</access_token>
+            <parametros>              
+              <p field="1" key="true">RECORD_ID</p>              
+              <p field="2" >ListID</p>              
+            </parametros>
+          </respuesta>  .
+          <respuesta tipo="import_quickbase" categoria="Save">
+            <access_token>3a847e17ba9e87559ad0bb71fac10002</access_token>
+            <parametros>
+              <p field="1" >ListID</p>
+              <p field="2" >FullName</p>
+              <p field="3" >FullName</p>
+            </parametros>
+          </respuesta>
+          <respuesta tipo="import_quickbase" categoria="Log">
+            <access_token>8fc1a0edf52f44ba5cb7c7809613cbdd</access_token>
+            <parametros>
+              <p field="6" key="true">ACCION</p>
+              <p field="7" >SEND</p>
+              <p field="8" >RECIVED</p>
+              <p field="9" >SUCCESS</p>
+            </parametros>
+          </respuesta>
+        </respuestas>
+
+      </accion>
+    </acciones>
+
+
+    <ejecucion tipo="intervalo">
+      <intervalo tipo="segundo">40</intervalo>
+      <fecha_unica>2019-04-09</fecha_unica>
+    </ejecucion>
+
+  </proceso>
+</root>

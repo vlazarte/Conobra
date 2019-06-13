@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?qbxml version="13.0"?>
+<QBXML>
+<QBXMLMsgsRq onError="stopOnError">
+  <CustomerQueryRq >
+    <ListID  >80001536-1463086562</ListID>
+    <ListID  >800016C3-1474047648</ListID>
+    <ListID  >8000144B-1458767877</ListID>
+    <ListID  >8000153D-1463421731</ListID>
+    <ListID  >80001540-1463493071</ListID>
+    <ListID  >8000153E-1463430995</ListID>
+    <ListID  >80001531-1462997465</ListID>
+    <ListID  >80001524-1462559029</ListID>
+    <OwnerID>0</OwnerID>
+</CustomerQueryRq  >
+</QBXMLMsgsRq>
+</QBXML>

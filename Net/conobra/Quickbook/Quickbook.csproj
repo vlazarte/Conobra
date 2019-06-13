@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{893EC25D-C93C-489F-82E8-3DE0E9580967}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Quickbook</RootNamespace>
+    <AssemblyName>Quickbook</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\EntregaAsientos\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Interop.QBXMLRP2, Version=13.0.0.23, Culture=neutral, PublicKeyToken=31d8aec643e18259">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\Asientos\Asientos\bin\Debug\Interop.QBXMLRP2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract.cs" />
+    <Compile Include="Account.cs" />
+    <Compile Include="AdditionalContactRef.cs" />
+    <Compile Include="Address.cs" />
+    <Compile Include="AssetAccount.cs" />
+    <Compile Include="Bill.cs" />
+    <Compile Include="BillExpenseLine.cs" />
+    <Compile Include="BillingRateRef.cs" />
+    <Compile Include="BillItemLine.cs" />
+    <Compile Include="Class.cs" />
+    <Compile Include="COGSAccount.cs" />
+    <Compile Include="ARAccount.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="ContactsRet.cs" />
+    <Compile Include="ItemPayment.cs" />
+    <Compile Include="PrefillAccountRef.cs" />
+    <Compile Include="SalesReceiptLineGroup.cs" />
+    <Compile Include="SalesReceiptLine.cs" />
+    <Compile Include="DepositToAccount.cs" />
+    <Compile Include="CustomerMsg.cs" />
+    <Compile Include="PaymentMethod.cs" />
+    <Compile Include="SalesReceipt.cs" />
+    <Compile Include="CreditMemoLineGroup.cs" />
+    <Compile Include="CreditMemoLine.cs" />
+    <Compile Include="CreditMemo.cs" />
+    <Compile Include="InventorySite.cs" />
+    <Compile Include="CustomerSalesTaxCode.cs" />
+    <Compile Include="Report.cs" />
+    <Compile Include="SalesTaxCodeRef.cs" />
+    <Compile Include="SalesTaxReturnRef.cs" />
+    <Compile Include="ShipAdress.cs" />
+    <Compile Include="ShipMethod.cs" />
+    <Compile Include="TaxOnPurchasesAccountRef.cs" />
+    <Compile Include="TaxOnSalesAccountRef.cs" />
+    <Compile Include="Template.cs" />
+    <Compile Include="Invoice.cs" />
+    <Compile Include="InvoiceLine.cs" />
+    <Compile Include="InvoiceLineGroup.cs" />
+    <Compile Include="TaxVendor.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="ItemGroupLine.cs" />
+    <Compile Include="ItemGroup.cs" />
+    <Compile Include="ItemSubtotal.cs" />
+    <Compile Include="ItemOtherCharge.cs" />
+    <Compile Include="ItemInventoryAssembly.cs" />
+    <Compile Include="ItemInventoryAssemblyLine.cs" />
+    <Compile Include="ItemNonInventory.cs" />
+    <Compile Include="ItemInventory.cs" />
+    <Compile Include="ExpenseAccount.cs" />
+    <Compile Include="IncomeAccount.cs" />
+    <Compile Include="ItemService.cs" />
+    <Compile Include="Currency.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="CustomerType.cs" />
+    <Compile Include="DataEx.cs" />
+    <Compile Include="ItemAbstract.cs" />
+    <Compile Include="ItemDiscount.cs" />
+    <Compile Include="ItemSalesTax.cs" />
+    <Compile Include="JobType.cs" />
+    <Compile Include="PreferredPaymentMethod.cs" />
+    <Compile Include="PrefVendor.cs" />
+    <Compile Include="PriceLevel.cs" />
+    <Compile Include="SalesOrderLine.cs" />
+    <Compile Include="SalesOrder.cs" />
+    <Compile Include="SalesRep.cs" />
+    <Compile Include="SalesTaxCode.cs" />
+    <Compile Include="Terms.cs" />
+    <Compile Include="TermsRef.cs" />
+    <Compile Include="TransactionLine.cs" />
+    <Compile Include="UnitOfMeasureSet.cs" />
+    <Compile Include="VendorAddress.cs" />
+    <Compile Include="VendorCredit.cs" />
+    <Compile Include="Functions.cs" />
+    <Compile Include="Journal.cs" />
+    <Compile Include="JournalLine.cs" />
+    <Compile Include="Connector.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test.cs" />
+    <Compile Include="Vars.cs" />
+    <Compile Include="Vendor.cs" />
+    <Compile Include="VendorTypeRef.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="requests\Get Currency Lists.xml" />
+    <Content Include="requests\Get Items By ListID.xml" />
+    <Content Include="requests\Get List of Terms.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="requests\Get Customer By ListID.xml" />
+    <Content Include="requests\Get Invoice By RefNumber.xml" />
+    <Content Include="requests\Get Invoices By Date.xml" />
+    <Content Include="samples\SR.xml" />
+    <Content Include="samples\CurrencyList.xml" />
+    <Content Include="samples\C_800016C3-1474047648.xml" />
+    <Content Include="samples\C_8000144B-1458767877.xml" />
+    <Content Include="samples\C_8000153D-1463421731.xml" />
+    <Content Include="samples\C_80001540-1463493071.xml" />
+    <Content Include="samples\C_8000153E-1463430995.xml" />
+    <Content Include="samples\C_80001531-1462997465.xml" />
+    <Content Include="samples\C_80001524-1462559029.xml" />
+    <Content Include="samples\ItemList.xml" />
+    <Content Include="samples\I_32247.xml" />
+    <Content Include="samples\I_32292.xml" />
+    <Content Include="samples\I_32283.xml" />
+    <Content Include="samples\TermsList.xml" />
+    <Content Include="samples\C_80001536-1463086562.xml" />
+    <Content Include="samples\I_32265.xml" />
+    <Content Include="samples\I_31693.xml" />
+    <Content Include="samples\I_32256.xml" />
+    <Content Include="samples\InvoiceList.xml" />
+    <Content Include="samples\I_32274.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="samples\I_31515.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="def\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

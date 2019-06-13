@@ -1,0 +1,928 @@
+<?xml version="1.0" ?>
+<QBXML>
+<QBXMLMsgsRs>
+<VendorQueryRs requestID="1" statusCode="0" statusSeverity="Info" statusMessage="Status OK">
+<VendorRet>
+<ListID>80000024-1409832674</ListID>
+<Name>ALDOMAR ROMAN GAMBOA DU</Name>
+<IsActive>true</IsActive>
+<FirstName>BALDOMAR ROMAN GAMBOA DU</FirstName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>TIPO MINERAL</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>SCHELITA</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000059-1410386374</ListID>
+<Name>AON BOLIVIA S.A.</Name>
+<IsActive>true</IsActive>
+<CompanyName>AON BOLIVIA S.A.</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+</VendorRet>
+<VendorRet>
+<ListID>8000005E-1410458538</ListID>
+<Name>ASISCO S.R.L.</Name>
+<IsActive>true</IsActive>
+<CompanyName>ASISCO S.R.L.</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>NIT</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>173552026</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>8000006E-1412363501</ListID>
+<Name>BISA SEGUROS Y REASEGUROS S.A.</Name>
+<IsActive>true</IsActive>
+<CompanyName>BISA SEGUROS Y REASEGUROS S.A.</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>NIT</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>1020655027</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000079-1412974123</ListID>
+<Name>BOLIVIANA CIACRUZ DE SEGUROS Y REASEGUROS</Name>
+<IsActive>true</IsActive>
+<CompanyName>BOLIVIANA CIACRUZ DE SEGUROS Y REASEGUROS</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+</VendorRet>
+<VendorRet>
+<ListID>80000062-1410533169</ListID>
+<Name>C.R. &amp; F. ROJAS ABOGADOS S.R.L.</Name>
+<IsActive>true</IsActive>
+<CompanyName>C.R. &amp; F. ROJAS ABOGADOS S.R.L.</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+</VendorRet>
+<VendorRet>
+<ListID>8000004D-1410359621</ListID>
+<Name>CAROLA BORDA BECKRICH</Name>
+<IsActive>true</IsActive>
+<CompanyName>CAROLA BORDA BECKRICH</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>NIT</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>122924010</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000065-1411479803</ListID>
+<Name>COOP MINERAAURIFERA FLOR DE COHARIA LTDA</Name>
+<IsActive>true</IsActive>
+<CompanyName>COOP MINERAAURIFERA FLOR DE COHARIA LTDA</CompanyName>
+<FirstName>CARLOS</FirstName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>NIT</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>265020021</DataExtValue>
+</DataExtRet>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>NIM / CEDULA</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>02-0765-06</DataExtValue>
+</DataExtRet>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>TIPO MINERAL</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>SCHEELITA</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000002-1409832672</ListID>
+<Name>COOP. MINERA SANTIAGO DE CHURUMANI LTDA..</Name>
+<IsActive>true</IsActive>
+<FirstName>ZENOVIA POMA CHOQUE HUAN</FirstName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>TIPO MINERAL</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>SCHELITA</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000025-1409832674</ListID>
+<Name>COOPERATIVA  MINERA AURIFERA UNION SUERT</Name>
+<IsActive>true</IsActive>
+<FirstName>RAMIRO HERIBERTO FLORES</FirstName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>TIPO MINERAL</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>WOLFRAM</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000026-1409832674</ListID>
+<Name>COOPERATIVA CHICOTE GRANDE LAPIANI</Name>
+<IsActive>true</IsActive>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+</VendorRet>
+<VendorRet>
+<ListID>80000027-1409832674</ListID>
+<Name>COOPERATIVA M. AURIFERA UNIFICADA TRES</Name>
+<IsActive>true</IsActive>
+<FirstName>LUIS SILVA ZONCO</FirstName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>TIPO MINERAL</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>SCHELITA</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000028-1409832674</ListID>
+<Name>COOPERATIVA MINERA  AURIFERA SAN JUANDE</Name>
+<IsActive>true</IsActive>
+<FirstName>ADRIAN QUISPE QUISPE</FirstName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>TIPO MINERAL</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>WOLFRAM</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000029-1409832674</ListID>
+<Name>COOPERATIVA MINERA  CHICOTE GRANDE LA AG</Name>
+<IsActive>true</IsActive>
+<FirstName>DAVID ARTEAGA MOSQUERA</FirstName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>TIPO MINERAL</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>WOLFRAM</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>8000002A-1409832674</ListID>
+<Name>COOPERATIVA MINERA  SAN ANTONIO DE CANAV</Name>
+<IsActive>true</IsActive>
+<FirstName>JACOBO QUISPE ACHOCALLA</FirstName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>TIPO MINERAL</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>COMPLEJO</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>8000002B-1409832674</ListID>
+<Name>COOPERATIVA MINERA  URANIA Ltda..</Name>
+<IsActive>true</IsActive>
+<FirstName>DAMASO MAMANI MAMANI</FirstName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>TIPO MINERAL</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>COMPLEJO</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>8000002C-1409832674</ListID>
+<Name>COOPERATIVA MINERA ASCENCION LTD</Name>
+<IsActive>true</IsActive>
+<FirstName>GROVER BAUTISTA CHAMBI</FirstName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>TIPO MINERAL</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>WOLFRAM</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>8000002D-1409832674</ListID>
+<Name>COOPERATIVA MINERA AURIFERA  EL TRIUNFO</Name>
+<IsActive>true</IsActive>
+<FirstName>CARLOS ARCE ALVAREZ</FirstName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>TIPO MINERAL</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>SCHELITA</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>8000002E-1409832674</ListID>
+<Name>COOPERATIVA MINERA BOLSA NEGRA LTD</Name>
+<IsActive>true</IsActive>
+<FirstName>ANGEL JAUREGUI ESPINAL</FirstName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>NIT</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>11</DataExtValue>
+</DataExtRet>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>TIPO MINERAL</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>WOLFRAM</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>8000002F-1409832674</ListID>
+<Name>COOPERATIVA MINERA CHICOTE GRANDE</Name>
+<IsActive>true</IsActive>
+<FirstName>MAXIMO FLORES ARTEAGA</FirstName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>TIPO MINERAL</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>WOLFRAM</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000030-1409832674</ListID>
+<Name>COOPERATIVA MINERA CHOROLQUE  LTD</Name>
+<IsActive>true</IsActive>
+<FirstName>ANGEL SALDIVAR CAZON</FirstName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>TIPO MINERAL</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>WOLFRAM</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000031-1409832674</ListID>
+<Name>COOPERATIVA MINERA EL PROGRESO KAMI  LTD</Name>
+<IsActive>true</IsActive>
+<FirstName>TEOFILO APAZA CABEZAS</FirstName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>TIPO MINERAL</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>WOLFRAM</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000032-1409832674</ListID>
+<Name>COOPERATIVA MINERA EL TRIUNFO LTDA.</Name>
+<IsActive>true</IsActive>
+<FirstName>TORIBIO HUANCA QUEA</FirstName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>TIPO MINERAL</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>SCHELITA</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000033-1409832674</ListID>
+<Name>COOPERATIVA MINERA FORTALEZA 6 DE MARZ</Name>
+<IsActive>true</IsActive>
+<FirstName>JUAN OSCO JUSTO</FirstName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>TIPO MINERAL</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>COMPLEJO</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000034-1409832674</ListID>
+<Name>COOPERATIVA MINERA LIBERTAD  LTDA..</Name>
+<IsActive>true</IsActive>
+<FirstName>GREGORIO LAURA CONDORI</FirstName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>TIPO MINERAL</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>COMPLEJO</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000035-1409832674</ListID>
+<Name>COOPERATIVA MINERA LITORAL LTDA..</Name>
+<IsActive>true</IsActive>
+<FirstName>NATALIO CORDOVA LUNA</FirstName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>TIPO MINERAL</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>COMPLEJO</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000036-1409832674</ListID>
+<Name>COOPERATIVA MINERA LOCATARIOS TASNA  LTD</Name>
+<IsActive>true</IsActive>
+<FirstName>CECILIO CHAMBI  AYALA</FirstName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>TIPO MINERAL</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>WOLFRAM</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000037-1409832674</ListID>
+<Name>COOPERATIVA MINERA NEVADO BLANCO LTDA..</Name>
+<IsActive>true</IsActive>
+<FirstName>DAMIAN CHALLCO MAMANI</FirstName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>TIPO MINERAL</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>COMPLEJO</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000038-1409832674</ListID>
+<Name>COOPERATIVA MINERA NUEVA ESTRELLA  LTDA..</Name>
+<IsActive>true</IsActive>
+<FirstName>CARLOS QUISPE HUASCO</FirstName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>TIPO MINERAL</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>SCHELITA</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000039-1409832674</ListID>
+<Name>COOPERATIVA MINERA PACUNI CHICO LTD</Name>
+<IsActive>true</IsActive>
+<FirstName>VANESSA VERAMENDI CHOQUE</FirstName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>TIPO MINERAL</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>WOLFRAM</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>8000003A-1409832674</ListID>
+<Name>COOPERATIVA MINERA REY SALVADORA   LTDA..</Name>
+<IsActive>true</IsActive>
+<FirstName>FAVIO ANTONIO MOLLINEDO</FirstName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>TIPO MINERAL</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>COMPLEJO</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>8000003B-1409832674</ListID>
+<Name>COOPERATIVA MINERA SIGLO X</Name>
+<IsActive>true</IsActive>
+<FirstName>BENITO OJEDA CHOQUE</FirstName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>TIPO MINERAL</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>WOLFRAM</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>8000003C-1409832674</ListID>
+<Name>COOPERATIVA MINERA TAMI&#209;ANI  LTD</Name>
+<IsActive>true</IsActive>
+<FirstName>NELZON ZURITA COLQUE</FirstName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>TIPO MINERAL</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>WOLFRAM</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>8000003D-1409832674</ListID>
+<Name>COOPERATIVA MINERA TRADICIONAL PONGO LTD</Name>
+<IsActive>true</IsActive>
+<FirstName>FELIX COPA QUISPE</FirstName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>TIPO MINERAL</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>COMPLEJO</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>8000003E-1409832674</ListID>
+<Name>COOPERATIVA MINERA UNION TOTORA RECONQUI</Name>
+<IsActive>true</IsActive>
+<FirstName>BENEDICTA HUANCA MALLEA</FirstName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>TIPO MINERAL</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>WOLFRAM</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>8000003F-1409832674</ListID>
+<Name>COOPERATIVA NUEVA SOLEDAD LTDA.</Name>
+<IsActive>true</IsActive>
+<FirstName>LORENZO QUISPE CHOQUE</FirstName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>TIPO MINERAL</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>SCHELITA</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000040-1409832674</ListID>
+<Name>COOPERATIVA NUEVO AMANECER LLOJA LTD</Name>
+<IsActive>true</IsActive>
+<FirstName>GUNDER FRANCIA SEPULVEDA</FirstName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>TIPO MINERAL</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>COMPLEJO</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>8000006B-1412279450</ListID>
+<Name>CORIMEX LTDA.</Name>
+<IsActive>true</IsActive>
+<CompanyName>CORIMEX LTDA.</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+</VendorRet>
+<VendorRet>
+<ListID>80000053-1410382056</ListID>
+<Name>COSIM</Name>
+<IsActive>true</IsActive>
+<CompanyName>COSIM</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+</VendorRet>
+<VendorRet>
+<ListID>80000058-1410385938</ListID>
+<Name>CRISTINA MONASTERIOS DE ADUVIRI</Name>
+<IsActive>true</IsActive>
+<CompanyName>CRISTINA MONASTERIOS DE ADUVIRI</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>NIT</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>2473060017</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>8000005D-1410458153</ListID>
+<Name>CUBA RENT A CAR S.R.L.</Name>
+<IsActive>true</IsActive>
+<CompanyName>CUBA RENT A CAR S.R.L.</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>NIT</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>120275022</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000074-1412879939</ListID>
+<Name>DAVID JESUS VILLCA MARTINEZ</Name>
+<IsActive>true</IsActive>
+<CompanyName>DAVID JESUS VILLCA MARTINEZ</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>NIT</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>2440149019</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>8000005C-1410456469</ListID>
+<Name>EBA</Name>
+<IsActive>true</IsActive>
+<CompanyName>EBA</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>NIT</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>168206024</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000069-1412278509</ListID>
+<Name>ECOLOGIA Y EMPRESA S.R.L.</Name>
+<IsActive>true</IsActive>
+<CompanyName>ECOLOGIA Y EMPRESA S.R.L.</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>NIT</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>1020363023</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000051-1410377122</ListID>
+<Name>ELISEO CAMPA&#209;A LOZA</Name>
+<IsActive>true</IsActive>
+<CompanyName>ELISEO CAMPA&#209;A LOZA</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>NIT</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>4951145014</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>8000004E-1410360036</ListID>
+<Name>EMALT</Name>
+<IsActive>true</IsActive>
+<CompanyName>EMALT</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+</VendorRet>
+<VendorRet>
+<ListID>80000041-1409832674</ListID>
+<Name>EMPRESA MINERA PUEBLO VIEJO-ORLANDO DELG</Name>
+<IsActive>true</IsActive>
+<FirstName>ORLANDO DELGADO BORGES</FirstName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>TIPO MINERAL</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>WOLFRAM</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000042-1409832674</ListID>
+<Name>EMPRESA MINERA REMIGIO EMIR SRL..</Name>
+<IsActive>true</IsActive>
+<FirstName>ZENON MIRANDA MASSI</FirstName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>TIPO MINERAL</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>WOLFRAM</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000043-1409832674</ListID>
+<Name>EMPRESA MUNICIPALIDAD DE ASEO DE EL ALTO</Name>
+<IsActive>true</IsActive>
+<CompanyName>EMPRESA MUNICIPALIDAD DE ASEO DE EL ALTO</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>NIT</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>1001589021</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000044-1409832674</ListID>
+<Name>EMPRESA NACIONAL DE TELECOMUNICACIONES</Name>
+<IsActive>true</IsActive>
+<CompanyName>EMPRESA NACIONAL DE TELECOMUNICACIONES</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>NIT</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>1020703023</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000055-1410383709</ListID>
+<Name>FADEMET</Name>
+<IsActive>true</IsActive>
+<CompanyName>FADEMET</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+</VendorRet>
+<VendorRet>
+<ListID>80000045-1409832674</ListID>
+<Name>FLORA LOPEZ DE NINA</Name>
+<IsActive>true</IsActive>
+<CompanyName>FLORA LOPEZ DE NINA</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>NIT</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>2193295019</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>8000006F-1412370238</ListID>
+<Name>G4S BOLIVIA S.A.</Name>
+<IsActive>true</IsActive>
+<CompanyName>G4S BOLIVIA S.A.</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+</VendorRet>
+<VendorRet>
+<ListID>80000075-1412883061</ListID>
+<Name>GREGORIA CONDORI HERRERA</Name>
+<IsActive>true</IsActive>
+<CompanyName>GREGORIA CONDORI HERRERA</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>NIT</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>4818824012</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000054-1410382901</ListID>
+<Name>HERGO LTDA.</Name>
+<IsActive>true</IsActive>
+<CompanyName>HERGO LTDA.</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>NIT</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>1000991026</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000001-1409832672</ListID>
+<Name>IBMETRO</Name>
+<IsActive>true</IsActive>
+<CompanyName>IBMETRO</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>NIT</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>120353023</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000004-1409832673</ListID>
+<Name>Impuestos Nacionales</Name>
+<IsActive>true</IsActive>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+</VendorRet>
+<VendorRet>
+<ListID>80000046-1409832674</ListID>
+<Name>JOSE OSCAR BELLOTA CORNEJO.</Name>
+<IsActive>true</IsActive>
+<FirstName>JOSE OSCAR BELLOTA CORNE</FirstName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>TIPO MINERAL</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>SCHELITA</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>8000004F-1410373044</ListID>
+<Name>KANSAS S.R.L.</Name>
+<IsActive>true</IsActive>
+<CompanyName>KANSAS S.R.L.</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>NIT</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>159306026</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000057-1410384970</ListID>
+<Name>MABEL MONICA CORREA COLLARANI</Name>
+<IsActive>true</IsActive>
+<CompanyName>MABEL MONICA CORREA COLLARANI</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>NIT</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>3118573013</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000047-1409832674</ListID>
+<Name>MARCELINO AQUINO CRUZ</Name>
+<IsActive>true</IsActive>
+<CompanyName>MARCELINO AQUINO CRUZ</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>NIT</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>3501240012</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>8000006A-1412279115</ListID>
+<Name>MARCELO ANDRES MONJE AMBONI</Name>
+<IsActive>true</IsActive>
+<CompanyName>MARCELO ANDRES MONJE AMBONI</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>NIT</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>4332688018</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>8000006C-1412341206</ListID>
+<Name>MODESTO GUARACHI*FADEMET</Name>
+<IsActive>true</IsActive>
+<CompanyName>MODESTO GUARACHI*FADEMET</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>NIT</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>5470305018</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000077-1412968710</ListID>
+<Name>PATRICIA ALFEREZ RAMOS</Name>
+<IsActive>true</IsActive>
+<CompanyName>PATRICIA ALFEREZ RAMOS</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+</VendorRet>
+<VendorRet>
+<ListID>8000005A-1410386681</ListID>
+<Name>PRAXAIR</Name>
+<IsActive>true</IsActive>
+<CompanyName>PRAXAIR</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+</VendorRet>
+<VendorRet>
+<ListID>80000064-1410549862</ListID>
+<Name>ROBERT MARTIN</Name>
+<IsActive>true</IsActive>
+<CompanyName>ROBERT MARTIN</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+</VendorRet>
+<VendorRet>
+<ListID>80000049-1409832674</ListID>
+<Name>SIN</Name>
+<IsActive>true</IsActive>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+</VendorRet>
+<VendorRet>
+<ListID>80000078-1412968765</ListID>
+<Name>SINTEC S.R.L.</Name>
+<IsActive>true</IsActive>
+<CompanyName>SINTEC S.R.L.</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>NIT</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>1006251025</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>8000005F-1410461088</ListID>
+<Name>SMART STRATEGY S.A.</Name>
+<IsActive>true</IsActive>
+<CompanyName>SMART STRATEGY S.A.</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+</VendorRet>
+<VendorRet>
+<ListID>8000006D-1412342767</ListID>
+<Name>SOFIA NINA QUISPE*FORCE INST</Name>
+<IsActive>true</IsActive>
+<CompanyName>SOFIA NINA QUISPE*FORCE INST</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+</VendorRet>
+<VendorRet>
+<ListID>80000052-1410379596</ListID>
+<Name>SOLUCIONES INTEGRALES S.A.</Name>
+<IsActive>true</IsActive>
+<CompanyName>SOLUCIONES INTEGRALES S.A.</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>NIT</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>1006235022</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000050-1410376543</ListID>
+<Name>SUBSIDIOS</Name>
+<IsActive>true</IsActive>
+<CompanyName>SUBSIDIOS</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+</VendorRet>
+<VendorRet>
+<ListID>80000071-1412720047</ListID>
+<Name>TELECEL S.A.</Name>
+<IsActive>true</IsActive>
+<CompanyName>TELECEL S.A.</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>NIT</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>1020255020</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>80000056-1410384593</ListID>
+<Name>THE DUBLINER S.R.L.</Name>
+<IsActive>true</IsActive>
+<CompanyName>THE DUBLINER S.R.L.</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>NIT</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>180962023</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>8000004A-1409832674</ListID>
+<Name>TOMO BENJAMIN FUJIMOTO SUZUKI</Name>
+<IsActive>true</IsActive>
+<CompanyName>TOMO BENJAMIN FUJIMOTO SUZUKI</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>NIT</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>427929016</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>8000004B-1409832674</ListID>
+<Name>TRANSPORTES BOLIVIA</Name>
+<IsActive>true</IsActive>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+</VendorRet>
+<VendorRet>
+<ListID>80000073-1412872301</ListID>
+<Name>VICENTA GOMEZ VDA. DE FLORES</Name>
+<IsActive>true</IsActive>
+<CompanyName>VICENTA GOMEZ VDA. DE FLORES</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>NIT</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>2613921013</DataExtValue>
+</DataExtRet>
+</VendorRet>
+<VendorRet>
+<ListID>8000004C-1410358590</ListID>
+<Name>YOSETTE CARLA URE&#209;A MERIDA</Name>
+<IsActive>true</IsActive>
+<CompanyName>YOSETTE CARLA URE&#209;A MERIDA</CompanyName>
+<IsVendorEligibleFor1099>false</IsVendorEligibleFor1099>
+<DataExtRet>
+<OwnerID>0</OwnerID>
+<DataExtName>NIT</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>4748007010</DataExtValue>
+</DataExtRet>
+</VendorRet>
+</VendorQueryRs>
+</QBXMLMsgsRs>
+</QBXML>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" ?>
+<QBXML>
+  <QBXMLMsgsRs>
+    <ItemQueryRs statusCode="0" statusSeverity="Info" statusMessage="Status OK">
+      <ItemServiceRet>
+        <ListID>800006A0-1380573134</ListID>
+        <Name>BWC Lease Monthly R</Name>
+      </ItemServiceRet>
+      <ItemInventoryRet>
+        <ListID>800006D5-1396304831</ListID>
+        <Name>45MJH1A1S</Name>
+      </ItemInventoryRet>
+    </ItemQueryRs>
+  </QBXMLMsgsRs>
+</QBXML>

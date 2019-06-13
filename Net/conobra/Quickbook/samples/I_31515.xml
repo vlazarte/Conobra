@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" ?>
+<QBXML>
+  <QBXMLMsgsRs>
+    <InvoiceQueryRs statusCode="0" statusSeverity="Info" statusMessage="Status OK">
+      <InvoiceRet>
+        <TxnID>A434-1639585460</TxnID>
+        <TimeCreated>2021-12-15T10:24:20-06:00</TimeCreated>
+        <TimeModified>2021-12-15T14:23:22-06:00</TimeModified>
+        <EditSequence>1639599802</EditSequence>
+        <TxnNumber>1352</TxnNumber>
+        <CustomerRef>
+          <ListID>760000-1049233436</ListID>
+          <FullName>Retail Homeowners:Custom Order - Bonita Garrett</FullName>
+        </CustomerRef>
+        <ClassRef>
+          <ListID>30002-1026828078</ListID>
+          <FullName>Custom Pool Systems</FullName>
+        </ClassRef>
+        <ARAccountRef>
+          <ListID>50001-896816252</ListID>
+          <FullName>Accounts Receivable</FullName>
+        </ARAccountRef>
+        <TemplateRef>
+          <ListID>E0000-1040957647</ListID>
+          <FullName>Invoice from Proposal/Estimate</FullName>
+        </TemplateRef>
+        <TxnDate>2021-12-15</TxnDate>
+        <RefNumber>71104</RefNumber>
+        <BillAddress>
+          <Addr1>Bonita Garrett</Addr1>
+          <Addr2>111 French Rd.</Addr2>
+          <City>Fremont</City>
+          <State>CA</State>
+          <PostalCode>94588</PostalCode>
+        </BillAddress>
+        <BillAddressBlock>
+          <Addr1>Bonita Garrett</Addr1>
+          <Addr2>111 French Rd.</Addr2>
+          <Addr3>Fremont, CA  94588</Addr3>
+        </BillAddressBlock>
+        <ShipAddress>
+          <Addr1>Bonita Garrett</Addr1>
+          <Addr2>111 French Rd.</Addr2>
+          <City>Fremont</City>
+          <State>CA</State>
+          <PostalCode>94588</PostalCode>
+        </ShipAddress>
+        <ShipAddressBlock>
+          <Addr1>Bonita Garrett</Addr1>
+          <Addr2>111 French Rd.</Addr2>
+          <Addr3>Fremont, CA  94588</Addr3>
+        </ShipAddressBlock>
+        <IsPending>false</IsPending>
+        <IsFinanceCharge>false</IsFinanceCharge>
+        <DueDate>2021-12-15</DueDate>
+        <ShipDate>2021-12-15</ShipDate>
+        <Subtotal>18000.00</Subtotal>
+        <ItemSalesTaxRef>
+          <ListID>80000091-1639581798</ListID>
+          <FullName>16%</FullName>
+        </ItemSalesTaxRef>
+        <SalesTaxPercentage>16.00</SalesTaxPercentage>
+        <SalesTaxTotal>2880.00</SalesTaxTotal>
+        <AppliedAmount>-20880.00</AppliedAmount>
+        <BalanceRemaining>0.00</BalanceRemaining>
+        <IsPaid>true</IsPaid>
+        <CustomerMsgRef>
+          <ListID>40000-1049237419</ListID>
+          <FullName>We appreciate this opportunity!</FullName>
+        </CustomerMsgRef>
+        <IsToBePrinted>false</IsToBePrinted>
+        <IsToBeEmailed>false</IsToBeEmailed>
+        <Other>03/31/08</Other>
+        <InvoiceLineRet>
+          <TxnLineID>A436-1639585460</TxnLineID>
+          <ItemRef>
+            <ListID>6F0003-1049234090</ListID>
+            <FullName>Custom Work</FullName>
+          </ItemRef>
+          <Desc>Custom pool and custom cover</Desc>
+          <Quantity>1</Quantity>
+          <Rate>18000.00</Rate>
+          <ClassRef>
+            <ListID>30002-1026828078</ListID>
+            <FullName>Custom Pool Systems</FullName>
+          </ClassRef>
+          <Amount>18000.00</Amount>
+          <SalesTaxCodeRef>
+            <ListID>10000-1011136881</ListID>
+            <FullName>Tax</FullName>
+          </SalesTaxCodeRef>
+        </InvoiceLineRet>
+        <DataExtRet>
+          <OwnerID>0</OwnerID>
+          <DataExtName># DE OPORTUNIDAD</DataExtName>
+          <DataExtType>STR255TYPE</DataExtType>
+          <DataExtValue>OPOR-334</DataExtValue>
+        </DataExtRet>
+        <DataExtRet>
+          <OwnerID>0</OwnerID>
+          <DataExtName>Other</DataExtName>
+          <DataExtType>STR255TYPE</DataExtType>
+          <DataExtValue>03/31/08</DataExtValue>
+        </DataExtRet>
+      </InvoiceRet>
+    </InvoiceQueryRs>
+  </QBXMLMsgsRs>
+</QBXML>

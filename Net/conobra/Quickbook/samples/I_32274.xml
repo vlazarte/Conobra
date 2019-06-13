@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" ?>
+<QBXML>
+  <QBXMLMsgsRs>
+    <InvoiceQueryRs statusCode="0" statusSeverity="Info" statusMessage="Status OK">
+      <InvoiceRet>
+        <TxnID>C6244-1502980887</TxnID>
+        <TimeCreated>2017-08-17T08:41:27-06:00</TimeCreated>
+        <TimeModified>2017-08-17T08:41:27-06:00</TimeModified>
+        <EditSequence>1502980887</EditSequence>
+        <TxnNumber>99200</TxnNumber>
+        <CustomerRef>
+          <ListID>80001536-1463086562</ListID>
+          <FullName>Corporacion Importadora de Vehiculos Afin</FullName>
+        </CustomerRef>
+        <ARAccountRef>
+          <ListID>8000002C-1284497193</ListID>
+          <FullName>Accounts Receivable</FullName>
+        </ARAccountRef>
+        <TemplateRef>
+          <ListID>80000016-1353681137</ListID>
+          <FullName>Juturna Invoice</FullName>
+        </TemplateRef>
+        <TxnDate>2017-08-16</TxnDate>
+        <RefNumber>32274</RefNumber>
+        <BillAddress>
+          <Addr1>Corporacion Importadora de Vehiculos Afin</Addr1>
+          <Addr2>Andrea Mondol</Addr2>
+          <City>400 Norte de la iglesia</City>
+          <State>DE</State>
+          <Note>San Jose</Note>
+        </BillAddress>
+        <BillAddressBlock>
+          <Addr1>Corporacion Importadora de Vehiculos Afin</Addr1>
+          <Addr2>Andrea Mondol</Addr2>
+          <Addr3>400 Norte de la iglesia de San Sebastian</Addr3>
+          <Addr4>San Jose</Addr4>
+        </BillAddressBlock>
+        <ShipAddress>
+          <Addr1>Corporacion Importadora de Vehiculos Afin</Addr1>
+          <Addr2>Andrea Mondol</Addr2>
+          <City>400 Norte de la iglesia</City>
+          <State>DE</State>
+          <Note>San Jose</Note>
+        </ShipAddress>
+        <ShipAddressBlock>
+          <Addr1>Corporacion Importadora de Vehiculos Afin</Addr1>
+          <Addr2>Andrea Mondol</Addr2>
+          <Addr3>400 Norte de la iglesia de San Sebastian</Addr3>
+          <Addr4>San Jose</Addr4>
+        </ShipAddressBlock>
+        <IsPending>false</IsPending>
+        <IsFinanceCharge>false</IsFinanceCharge>
+        <DueDate>2017-08-16</DueDate>
+        <SalesRepRef>
+          <ListID>80000022-1461078473</ListID>
+          <FullName>JF</FullName>
+        </SalesRepRef>
+        <ShipDate>2017-08-16</ShipDate>
+        <Subtotal>35.00</Subtotal>
+        <ItemSalesTaxRef>
+          <ListID>8000002B-1286236692</ListID>
+          <FullName>CR Sales Tax</FullName>
+        </ItemSalesTaxRef>
+        <SalesTaxPercentage>13.00</SalesTaxPercentage>
+        <SalesTaxTotal>0.00</SalesTaxTotal>
+        <AppliedAmount>0.00</AppliedAmount>
+        <BalanceRemaining>35.00</BalanceRemaining>
+        <CurrencyRef>
+          <ListID>80000096-1284491573</ListID>
+          <FullName>US Dollar</FullName>
+        </CurrencyRef>
+        <ExchangeRate>1</ExchangeRate>
+        <BalanceRemainingInHomeCurrency>35.00</BalanceRemainingInHomeCurrency>
+        <IsPaid>false</IsPaid>
+        <IsToBePrinted>false</IsToBePrinted>
+        <IsToBeEmailed>true</IsToBeEmailed>
+        <CustomerSalesTaxCodeRef>
+          <ListID>80000001-1284491570</ListID>
+          <FullName>Tax</FullName>
+        </CustomerSalesTaxCodeRef>
+        <InvoiceLineRet>
+          <TxnLineID>C6246-1502980887</TxnLineID>
+          <ItemRef>
+            <ListID>800006A0-1380573134</ListID>
+            <FullName>BWC Lease Monthly R</FullName>
+          </ItemRef>
+          <Desc>
+            Monthly Service Charge - Bottle Free Cooler
+            (Cargo por Servicio Mensual - Dispensador Enfriador y Calentador de Agua libre de botellas)
+          </Desc>
+          <Quantity>1</Quantity>
+          <Rate>35.00</Rate>
+          <Amount>35.00</Amount>
+          <SalesTaxCodeRef>
+            <ListID>80000002-1284491570</ListID>
+            <FullName>Non</FullName>
+          </SalesTaxCodeRef>
+        </InvoiceLineRet>
+        <DataExtRet>
+          <OwnerID>0</OwnerID>
+          <DataExtName>Latitude</DataExtName>
+          <DataExtType>STR255TYPE</DataExtType>
+          <DataExtValue>9.91542</DataExtValue>
+        </DataExtRet>
+        <DataExtRet>
+          <OwnerID>0</OwnerID>
+          <DataExtName>Longitude</DataExtName>
+          <DataExtType>STR255TYPE</DataExtType>
+          <DataExtValue>-84.084726</DataExtValue>
+        </DataExtRet>
+        <DataExtRet>
+          <OwnerID>0</OwnerID>
+          <DataExtName>Cedula</DataExtName>
+          <DataExtType>STR255TYPE</DataExtType>
+          <DataExtValue>3-101-424610</DataExtValue>
+        </DataExtRet>
+      </InvoiceRet>
+    </InvoiceQueryRs>
+  </QBXMLMsgsRs>
+</QBXML>

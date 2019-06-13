@@ -1,0 +1,433 @@
+<?xml version="1.0" standalone="yes"?>
+<root>
+  <access id="0823871b4f16ca3cd7d6f6259690ca20">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>doquery</type>
+    <dbid>bn8txn2we</dbid>
+    <query></query>
+    <qid>-1</qid>
+    <clist>674.6.903.902.642.909.3.487.6</clist>
+    <params>
+    </params>
+    <response>      
+      <p fid="674" >ParentRef</p>
+      <p fid="6" >NOMBRE</p>
+      <p fid="903" >FULLNAME</p>
+      <p fid="902" >ISACTIVE</p>
+      <p fid="642" >COMPANYNAME</p>
+      <p fid="909" >CurrencyRef</p>
+      <p fid="3" >RECORDIDPROYECTO</p>
+      <p fid="487" type="Date">JobStartDate</p>
+      <p fid="6" >JobDesc</p>
+    </response>
+  </access>
+  <access id="tokenRespuesta">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bn8txn2we</dbid>
+    <query></query>
+    <qid>-1</qid>
+    <clist>3.748</clist>
+    <params>
+    </params>
+  </access>
+  <access id="8fc1a0edf52f44ba5cb7c7809613cbdd">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bpnfcmsej</dbid>
+    <query>-1</query>
+    <qid>-1</qid>
+    <clist>6.7.8.9</clist>
+    <params>
+    </params>
+
+  </access>
+  <access id="89bb73b8911978456775bfebfaa945c6">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>doquery</type>
+    <dbid>bn8txn2we</dbid>
+    <query>{'931'.EX.''}</query>
+    <qid>-1</qid>
+    <clist>3.6</clist>
+    <params>
+    </params>
+    <response>
+      <p fid="3" >RECORDIDPROYECTO</p>
+      <p fid="6" >FullName</p>
+    </response>
+  </access>
+  <access id="3a847e17ba9e87559ad0bb71fac10a3e">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bn8txn2we</dbid>
+    <query>-1</query>
+    <qid>-1</qid>
+    <clist>3.931</clist>
+    <params>
+      <p fid="3">Record_ID</p>
+      <p fid="931">ListID</p>
+    </params>
+  </access>
+
+  <access id="3a847e17ba9e87559ad0bb71fac10002">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bpgsf8p78</dbid>
+    <query>-1</query>
+    <qid>-1</qid>
+    <clist>17.6.7</clist>
+    <params>
+      <p field="17">ListID</p>
+      <p field="6">FullName</p>
+      <p field="7">FullName</p>
+    </params>
+  </access>
+  
+  <!--para el proceso 3-->
+  <access id="89bb73b8911978456775bfebfaa910002">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>doquery</type>
+    <dbid>bn8txn2we</dbid>
+    <query>{'931'.XEX.''}AND{'915'.EX.''} </query>
+    <qid>-1</qid>
+    <clist>3.914.931</clist>
+    <params>
+    </params>
+    <response>
+      <p fid="3" >RECORDIDPROYECTO</p>
+      <p fid="914" >FullName</p>
+      <p fid="931">ParentRef</p>
+    </response>
+  </access>
+
+  <access id="3a847e17ba9e87559ad0bb71fac10003">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bn8txn2we</dbid>
+    <query>-1</query>
+    <qid>-1</qid>
+    <clist>3.915</clist>
+    <params>
+      <p fid="3">Record_ID</p>
+      <p fid="915">ListID</p>
+    </params>
+  </access>
+
+  <!--3a847e17ba9e87559ad0bb71fac10002, se repite esta respuesta-->
+
+
+  <!--para el proceso 4-->
+  <access id="89bb73b8911978456775bfebfaa910003">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>doquery</type>
+    <dbid>bn8txn2we</dbid>
+    <query>{'931'.XEX.''}AND{'917'.EX.''} </query>
+    <qid>-1</qid>
+    <clist>3.916.931</clist>
+    <params>
+    </params>
+    <response>
+      <p fid="3" >RECORDIDPROYECTO</p>
+      <p fid="916" >FullName</p>
+      <p fid="931">ParentRef</p>
+    </response>
+  </access>
+
+  <access id="3a847e17ba9e87559ad0bb71fac10004">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bn8txn2we</dbid>
+    <query>-1</query>
+    <qid>-1</qid>
+    <clist>3.917</clist>
+    <params>
+      <p fid="3">Record_ID</p>
+      <p fid="917">ListID</p>
+    </params>
+  </access>
+
+  <!--3a847e17ba9e87559ad0bb71fac10002, se repite esta respuesta-->
+
+  <!--para el proceso 5-->
+  <access id="89bb73b8911978456775bfebfaa910004">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>doquery</type>
+    <dbid>bn8txn2we</dbid>
+    <query>{'931'.XEX.''}AND{'919'.EX.''} </query>
+    <qid>-1</qid>
+    <clist>3.918.931</clist>
+    <params>
+    </params>
+    <response>
+      <p fid="3" >RECORDIDPROYECTO</p>
+      <p fid="918" >FullName</p>
+      <p fid="931">ParentRef</p>
+    </response>
+  </access>
+
+  <access id="3a847e17ba9e87559ad0bb71fac10005">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bn8txn2we</dbid>
+    <query>-1</query>
+    <qid>-1</qid>
+    <clist>3.919</clist>
+    <params>
+      <p fid="3">Record_ID</p>
+      <p fid="919">ListID</p>
+    </params>
+  </access>
+
+  <!--3a847e17ba9e87559ad0bb71fac10002, se repite esta respuesta-->
+
+  <!--para el proceso 6-->
+  <access id="89bb73b8911978456775bfebfaa910005">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>doquery</type>
+    <dbid>bn8txn2we</dbid>
+    <query>{'931'.XEX.''}AND{'921'.EX.''} </query>
+    <qid>-1</qid>
+    <clist>3.920.931</clist>
+    <params>
+    </params>
+    <response>
+      <p fid="3" >RECORDIDPROYECTO</p>
+      <p fid="920" >FullName</p>
+      <p fid="931">ParentRef</p>
+    </response>
+  </access>
+
+  <access id="3a847e17ba9e87559ad0bb71fac10006">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bn8txn2we</dbid>
+    <query>-1</query>
+    <qid>-1</qid>
+    <clist>3.921</clist>
+    <params>
+      <p fid="3">Record_ID</p>
+      <p fid="921">ListID</p>
+    </params>
+  </access>
+
+  <!--3a847e17ba9e87559ad0bb71fac10002, se repite esta respuesta-->
+
+  <!--para el proceso 7-->
+  <access id="89bb73b8911978456775bfebfaa910006">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>doquery</type>
+    <dbid>bn8txn2we</dbid>
+    <query>{'931'.XEX.''}AND{'923'.EX.''}AND{'892'.EX.'1'} </query>
+    <qid>-1</qid>
+    <clist>3.922.931</clist>
+    <params>
+    </params>
+    <response>
+      <p fid="3" >RECORDIDPROYECTO</p>
+      <p fid="922" >FullName</p>
+      <p fid="931">ParentRef</p>
+    </response>
+  </access>
+
+  <access id="3a847e17ba9e87559ad0bb71fac10007">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bn8txn2we</dbid>
+    <query>-1</query>
+    <qid>-1</qid>
+    <clist>3.923</clist>
+    <params>
+      <p fid="3">Record_ID</p>
+      <p fid="923">ListID</p>
+    </params>
+  </access>
+
+  <!--3a847e17ba9e87559ad0bb71fac10002, se repite esta respuesta-->
+
+  <access id="88691a754ef51c3f739a48f5b7b9ea22">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>doquery</type>
+    <dbid>bn8txn28h</dbid>
+    <query>{51.XEX.''}</query>
+    <qid>23</qid>
+    <clist>3.6.7.11.51</clist> <!--45.76-->
+    <params>
+    </params>
+    <response>      
+      <p fid="3" >RECORDID</p>
+      <p fid="6" >NOMBREPROVEEDOR</p>
+      <!--<p fid="45" >ALIAS</p>
+      <p fid="76" >CEDULAJURIDICA</p>-->
+      <p fid="7" >TELEFONO</p>
+      <p fid="11" >MAIL</p>
+      <p fid="51" >QUICKBOOKID</p>      
+    </response>
+  </access>
+
+
+  <access id="3a847e17ba9e87559ad0bb71fac10007">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bn8txn2we</dbid>
+    <query>-1</query>
+    <qid>-1</qid>
+    <clist>3.923</clist>
+    <params>
+      <p fid="3">Record_ID</p>
+      <p fid="923">ListID</p>
+    </params>
+  </access>
+  <!--Proceso manual Cargar Clases-->
+   <access id="3a847e17ba9e87559ad0bb71fac10008">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bpnv724uz</dbid>
+    <query>-1</query>
+    <qid>-1</qid>
+    <clist>11.6.12</clist>
+    <params>
+      <p field="11">QuickBook_ListID</p>
+      <p field="6">Nombre Clase</p>
+      <p field="12">QuickBook_ParentRef</p>
+    </params>
+  </access>
+  <access id="3a847e17ba9e87559ad0bb71fac10009">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>doquery</type>
+    <dbid>bpnv724uz</dbid>
+    <query>{11.XEX.''}</query>
+    <qid>-1</qid>
+    <clist>3.11</clist>
+    <params>
+    </params>
+    <response>
+      <p fid="3" >RecordID</p>
+      <p fid="11" >ListID</p>            
+    </response>
+  </access>
+  <!--Proceso 8 quickbook-->
+  <access id="0823871b4f16ca3cd7d6f6259690c001">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>doquery</type>
+    <dbid>bpnv724uz</dbid>
+    <query></query>
+    <qid>-1</qid>
+    <clist>3.11.6.12</clist>
+    <params>
+    </params>
+    <response>
+      <p fid="3" >RecordID</p>
+      <p fid="11" >ListID</p>
+      <p fid="6" >NombreClase</p>
+      <p fid="12" >ParentRef</p>      
+    </response>
+  </access>
+<!--toupdate-->
+  <access id="0823871b4f16ca3cd7d6f6259690c002">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bpnv724uz</dbid>
+    <query>{11.XEX.''}</query>
+    <qid>-1</qid>
+    <clist>3.11.6.12</clist>
+    <params>
+      <p field="3">RecordID</p>
+      <p field="11">ListID</p>
+      <p field="6">NombreClase</p>
+      <p field="12">ParentRef</p>
+    </params>
+  </access>
+  <!--Repite el 3a847e17ba9e87559ad0bb71fac10008 para crear-->
+
+
+  <!--Proceso manual Cargar Proveedores-->
+  <access id="3a847e17ba9e87559ad0bb71fac10010">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bn8txn28h</dbid>
+    <query></query>
+    <qid>-1</qid>
+    <clist>6.45.76.7.11.51</clist>
+    <params>      
+      <p field="6">Nombre</p>
+      <p field="45">alias</p>
+      <p field="76">Cedula</p>
+      <p field="7">Telefono</p>
+      <p field="11">Correo</p>
+      <p field="51">QuickbookID</p>
+    </params>
+  </access>
+  <access id="3a847e17ba9e87559ad0bb71fac10011">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>doquery</type>
+    <dbid>bn8txn28h</dbid>
+    <query>{51.XEX.''}</query>
+    <qid>-1</qid>
+    <clist>3.51</clist>
+    <params>
+    </params>
+    <response>
+      <p fid="3" >RecordID</p>
+      <p fid="51" >ListID</p>      
+    </response>
+  </access>
+
+  <access id="3a847e17ba9e87559ad0bb71fac10013">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>doquery</type>
+    <dbid>bn8txn28h</dbid>
+    <query>{51.EX.''}</query>
+    <qid>-1</qid>
+    <clist>3.6</clist>
+    <params>
+    </params>
+    <response>
+      <p fid="3" >RecordID</p>
+      <p fid="6" >Nombre</p>
+    </response>
+  </access>
+
+  <access id="3a847e17ba9e87559ad0bb71fac10012">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bpnv724uz</dbid>
+    <query>-1</query>
+    <qid>-1</qid>
+    <clist>3.6.45.76.7.11.51</clist>
+    <params>
+      <p field="3">RecordID</p>
+      <p field="6">Nombre</p>
+      <p field="45">alias</p>
+      <p field="76">Cedula</p>
+      <p field="7">Telefono</p>
+      <p field="11">Correo</p>
+      <p field="51">QuickbookID</p>
+    </params>
+  </access>
+</root>

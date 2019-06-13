@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" ?>
+<QBXML>
+  <QBXMLMsgsRs>
+    <InvoiceQueryRs statusCode="0" statusSeverity="Info" statusMessage="Status OK">
+      <InvoiceRet>
+        <TimeModified>2017-08-17T08:38:27-06:00</TimeModified>
+        <RefNumber>32274</RefNumber>
+      </InvoiceRet>
+      <InvoiceRet>
+        <TimeModified>2017-08-17T08:38:29-06:00</TimeModified>
+        <RefNumber>31515</RefNumber>
+      </InvoiceRet>
+      <InvoiceRet>
+        <TimeModified>2017-08-17T08:40:12-06:00</TimeModified>
+        <RefNumber>31693</RefNumber>
+      </InvoiceRet>
+      <InvoiceRet>
+        <TimeModified>2017-08-17T08:40:13-06:00</TimeModified>
+        <RefNumber>32265</RefNumber>
+      </InvoiceRet>
+      <InvoiceRet>
+        <TimeModified>2017-08-17T08:40:13-06:00</TimeModified>
+        <RefNumber>32256</RefNumber>
+      </InvoiceRet>
+      <InvoiceRet>
+        <TimeModified>2017-08-17T08:40:13-06:00</TimeModified>
+        <RefNumber>32247</RefNumber>
+      </InvoiceRet>
+      <InvoiceRet>
+        <TimeModified>2017-08-17T08:40:13-06:00</TimeModified>
+        <RefNumber>32292</RefNumber>
+      </InvoiceRet>
+      <InvoiceRet>
+        <TimeModified>2017-08-17T08:40:13-06:00</TimeModified>
+        <RefNumber>32283</RefNumber>
+      </InvoiceRet>
+    </InvoiceQueryRs>
+  </QBXMLMsgsRs>
+</QBXML>

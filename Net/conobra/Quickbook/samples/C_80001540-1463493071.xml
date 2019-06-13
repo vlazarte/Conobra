@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" ?>
+<QBXML>
+  <QBXMLMsgsRs>
+    <CustomerQueryRs statusCode="0" statusSeverity="Info" statusMessage="Status OK">
+      <CustomerRet>
+        <ListID>80001540-1463493071</ListID>
+        <TimeCreated>2016-05-17T07:51:11-06:00</TimeCreated>
+        <TimeModified>2017-08-17T08:50:19-06:00</TimeModified>
+        <EditSequence>1473355742</EditSequence>
+        <Name>JONCE S.A</Name>
+        <FullName>JONCE S.A</FullName>
+        <IsActive>true</IsActive>
+        <Sublevel>0</Sublevel>
+        <CompanyName>JONCE S.A</CompanyName>
+        <FirstName>Marlene</FirstName>
+        <LastName>Fajardo</LastName>
+        <BillAddress>
+          <Addr1>JONCE S.A</Addr1>
+          <Addr2>Marlene Fajardo</Addr2>
+          <Addr3>En Barrio Chumico contiguo al Abastecedor</Addr3>
+          <Addr4>Kriss.</Addr4>
+          <City>Santa Cruz, Guanacaste.</City>
+        </BillAddress>
+        <BillAddressBlock>
+          <Addr1>JONCE S.A</Addr1>
+          <Addr2>Marlene Fajardo</Addr2>
+          <Addr3>En Barrio Chumico contiguo al Abastecedor</Addr3>
+          <Addr4>Kriss.</Addr4>
+          <Addr5>Santa Cruz, Guanacaste.</Addr5>
+        </BillAddressBlock>
+        <ShipAddress>
+          <Addr1>JONCE S.A</Addr1>
+          <Addr2>Marlene Fajardo</Addr2>
+          <Addr3>En Barrio Chumico contiguo al Abastecedor</Addr3>
+          <Addr4>Kriss.</Addr4>
+          <City>Santa Cruz, Guanacaste.</City>
+        </ShipAddress>
+        <ShipAddressBlock>
+          <Addr1>JONCE S.A</Addr1>
+          <Addr2>Marlene Fajardo</Addr2>
+          <Addr3>En Barrio Chumico contiguo al Abastecedor</Addr3>
+          <Addr4>Kriss.</Addr4>
+          <Addr5>Santa Cruz, Guanacaste.</Addr5>
+        </ShipAddressBlock>
+        <ShipToAddress>
+          <Name>Ship To 1</Name>
+          <Addr1>JONCE S.A</Addr1>
+          <Addr2>Marlene Fajardo</Addr2>
+          <Addr3>En Barrio Chumico contiguo al Abastecedor</Addr3>
+          <Addr4>Kriss.</Addr4>
+          <City>Santa Cruz, Guanacaste.</City>
+          <DefaultShipTo>true</DefaultShipTo>
+        </ShipToAddress>
+        <Phone>2680-4763</Phone>
+        <Email>gasolinerasantacruz@gmail.com</Email>
+        <AdditionalContactRef>
+          <ContactName>Main Phone</ContactName>
+          <ContactValue>2680-4763</ContactValue>
+        </AdditionalContactRef>
+        <AdditionalContactRef>
+          <ContactName>Main Email</ContactName>
+          <ContactValue>gasolinerasantacruz@gmail.com</ContactValue>
+        </AdditionalContactRef>
+        <CustomerTypeRef>
+          <ListID>80000011-1457103728</ListID>
+          <FullName>NORMAL</FullName>
+        </CustomerTypeRef>
+        <TermsRef>
+          <ListID>80000019-1457127513</ListID>
+          <FullName>CONTADO</FullName>
+        </TermsRef>
+        <SalesRepRef>
+          <ListID>8000001F-1411140749</ListID>
+          <FullName>ALG</FullName>
+        </SalesRepRef>
+        <Balance>315.00</Balance>
+        <TotalBalance>315.00</TotalBalance>
+        <SalesTaxCodeRef>
+          <ListID>80000001-1284491570</ListID>
+          <FullName>Tax</FullName>
+        </SalesTaxCodeRef>
+        <ItemSalesTaxRef>
+          <ListID>8000002B-1286236692</ListID>
+          <FullName>CR Sales Tax</FullName>
+        </ItemSalesTaxRef>
+        <AccountNumber>10002708</AccountNumber>
+        <JobStatus>None</JobStatus>
+        <PreferredDeliveryMethod>Email</PreferredDeliveryMethod>
+        <CurrencyRef>
+          <ListID>80000096-1284491573</ListID>
+          <FullName>US Dollar</FullName>
+        </CurrencyRef>
+        <DataExtRet>
+          <OwnerID>0</OwnerID>
+          <DataExtName>Latitude</DataExtName>
+          <DataExtType>STR255TYPE</DataExtType>
+          <DataExtValue>10.226167</DataExtValue>
+        </DataExtRet>
+        <DataExtRet>
+          <OwnerID>0</OwnerID>
+          <DataExtName>Longitude</DataExtName>
+          <DataExtType>STR255TYPE</DataExtType>
+          <DataExtValue>-85.539744</DataExtValue>
+        </DataExtRet>
+        <DataExtRet>
+          <OwnerID>0</OwnerID>
+          <DataExtName>Cedula</DataExtName>
+          <DataExtType>STR255TYPE</DataExtType>
+          <DataExtValue>3101-654979</DataExtValue>
+        </DataExtRet>
+      </CustomerRet>
+
+    </CustomerQueryRs>
+  </QBXMLMsgsRs>
+</QBXML>

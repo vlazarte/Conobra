@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" ?>
+<QBXML>
+  <QBXMLMsgsRs>
+    <CustomerQueryRs statusCode="0" statusSeverity="Info" statusMessage="Status OK">
+      <CustomerRet>
+        <ListID>800016C3-1474047648</ListID>
+        <TimeCreated>2016-09-16T11:40:48-06:00</TimeCreated>
+        <TimeModified>2017-08-18T14:41:48-06:00</TimeModified>
+        <EditSequence>1475004741</EditSequence>
+        <Name>Gym City</Name>
+        <FullName>Gym City</FullName>
+        <IsActive>true</IsActive>
+        <Sublevel>0</Sublevel>
+        <CompanyName>Ronny Carlos Ramirez Segura</CompanyName>
+        <FirstName>Ronny Carlos</FirstName>
+        <LastName>Ramirez Segura</LastName>
+        <BillAddress>
+          <Addr1>Ronny Carlos Ramirez Segura</Addr1>
+          <Addr2>Frente a Ferreteria Palmares.</Addr2>
+        </BillAddress>
+        <BillAddressBlock>
+          <Addr1>Ronny Carlos Ramirez Segura</Addr1>
+          <Addr2>Frente a Ferreteria Palmares.</Addr2>
+        </BillAddressBlock>
+        <ShipAddress>
+          <Addr1>Ronny Carlos Ramirez Segura</Addr1>
+          <Addr2>Frente a Ferreteria Palmares.</Addr2>
+        </ShipAddress>
+        <ShipAddressBlock>
+          <Addr1>Ronny Carlos Ramirez Segura</Addr1>
+          <Addr2>Frente a Ferreteria Palmares.</Addr2>
+        </ShipAddressBlock>
+        <ShipToAddress>
+          <Name>Ship To 1</Name>
+          <Addr1>Ronny Carlos Ramirez Segura</Addr1>
+          <Addr2>Frente a Ferreteria Palmares.</Addr2>
+          <DefaultShipTo>true</DefaultShipTo>
+        </ShipToAddress>
+        <Phone> 8963 0701</Phone>
+        <Email>carlosraseg@hotmail.com</Email>
+        <AdditionalContactRef>
+          <ContactName>Main Phone</ContactName>
+          <ContactValue> 8963 0701</ContactValue>
+        </AdditionalContactRef>
+        <AdditionalContactRef>
+          <ContactName>Main Email</ContactName>
+          <ContactValue>carlosraseg@hotmail.com</ContactValue>
+        </AdditionalContactRef>
+        <CustomerTypeRef>
+          <ListID>80000011-1457103728</ListID>
+          <FullName>NORMAL</FullName>
+        </CustomerTypeRef>
+        <TermsRef>
+          <ListID>80000019-1457127513</ListID>
+          <FullName>CONTADO</FullName>
+        </TermsRef>
+        <SalesRepRef>
+          <ListID>80000022-1461078473</ListID>
+          <FullName>JF</FullName>
+        </SalesRepRef>
+        <Balance>1851.74</Balance>
+        <TotalBalance>1851.74</TotalBalance>
+        <SalesTaxCodeRef>
+          <ListID>80000001-1284491570</ListID>
+          <FullName>Tax</FullName>
+        </SalesTaxCodeRef>
+        <ItemSalesTaxRef>
+          <ListID>8000002B-1286236692</ListID>
+          <FullName>CR Sales Tax</FullName>
+        </ItemSalesTaxRef>
+        <AccountNumber>10002847</AccountNumber>
+        <JobStatus>None</JobStatus>
+        <PreferredDeliveryMethod>Email</PreferredDeliveryMethod>
+        <CurrencyRef>
+          <ListID>80000096-1284491573</ListID>
+          <FullName>US Dollar</FullName>
+        </CurrencyRef>
+        <DataExtRet>
+          <OwnerID>0</OwnerID>
+          <DataExtName>Latitude</DataExtName>
+          <DataExtType>STR255TYPE</DataExtType>
+          <DataExtValue>9.319680</DataExtValue>
+        </DataExtRet>
+        <DataExtRet>
+          <OwnerID>0</OwnerID>
+          <DataExtName>Longitude</DataExtName>
+          <DataExtType>STR255TYPE</DataExtType>
+          <DataExtValue>-83.665613</DataExtValue>
+        </DataExtRet>
+        <DataExtRet>
+          <OwnerID>0</OwnerID>
+          <DataExtName>Cedula</DataExtName>
+          <DataExtType>STR255TYPE</DataExtType>
+          <DataExtValue>1-1266-365</DataExtValue>
+        </DataExtRet>
+      </CustomerRet>
+
+    </CustomerQueryRs>
+  </QBXMLMsgsRs>
+</QBXML>

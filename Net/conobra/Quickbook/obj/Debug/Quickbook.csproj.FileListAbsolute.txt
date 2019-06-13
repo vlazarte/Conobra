@@ -1,0 +1,66 @@
+G:\Victor\Clientes\SmartStrategy\Kennametal\EntregaAsientos\Quickbook\bin\Debug\Quickbook.dll
+G:\Victor\Clientes\SmartStrategy\Kennametal\EntregaAsientos\Quickbook\bin\Debug\Quickbook.pdb
+G:\Victor\Clientes\SmartStrategy\Kennametal\EntregaAsientos\EntregaAsientos\bin\Debug\Quickbook.dll
+G:\Victor\Clientes\SmartStrategy\Kennametal\EntregaAsientos\EntregaAsientos\bin\Debug\Quickbook.pdb
+G:\Victor\Clientes\SmartStrategy\Kennametal\EntregaAsientos\Quickbook\obj\Debug\ResolveAssemblyReference.cache
+G:\Victor\Clientes\SmartStrategy\Kennametal\EntregaAsientos\Quickbook\obj\Debug\Quickbook.dll
+G:\Victor\Clientes\SmartStrategy\Kennametal\EntregaAsientos\Quickbook\obj\Debug\Quickbook.pdb
+D:\Clientes\SmartStrategy\Kennametal\Entrega Asientos\EntregaAsientos\bin\Debug\Quickbook.dll
+D:\Clientes\SmartStrategy\Kennametal\Entrega Asientos\EntregaAsientos\bin\Debug\Quickbook.pdb
+D:\Clientes\SmartStrategy\Kennametal\Entrega Asientos\Quickbook\obj\Debug\Quickbook.csprojResolveAssemblyReference.cache
+D:\Clientes\SmartStrategy\Kennametal\Entrega Asientos\Quickbook\obj\Debug\Quickbook.dll
+D:\Clientes\SmartStrategy\Kennametal\Entrega Asientos\Quickbook\obj\Debug\Quickbook.pdb
+E:\Clientes\SmartStrategy\Kennametal\Entrega Asientos\EntregaAsientos\bin\Debug\Quickbook.dll
+E:\Clientes\SmartStrategy\Kennametal\Entrega Asientos\EntregaAsientos\bin\Debug\Quickbook.pdb
+E:\Clientes\SmartStrategy\Kennametal\Entrega Asientos\Quickbook\obj\Debug\Quickbook.csprojResolveAssemblyReference.cache
+E:\Clientes\SmartStrategy\Kennametal\Entrega Asientos\Quickbook\obj\Debug\Quickbook.dll
+E:\Clientes\SmartStrategy\Kennametal\Entrega Asientos\Quickbook\obj\Debug\Quickbook.pdb
+E:\Clientes\SmartStrategy\Juturna\Integracion\EntregaAsientos\bin\Debug\Quickbook.dll
+E:\Clientes\SmartStrategy\Juturna\Integracion\EntregaAsientos\bin\Debug\Quickbook.pdb
+E:\Clientes\SmartStrategy\Juturna\Integracion\Quickbook\obj\Debug\Quickbook.dll
+E:\Clientes\SmartStrategy\Juturna\Integracion\Quickbook\obj\Debug\Quickbook.pdb
+E:\Clientes\SmartStrategy\Juturna\Integracion\Quickbook\obj\Debug\Quickbook.csprojResolveAssemblyReference.cache
+E:\Clientes\SmartStrategy\FacturaElectronica\Quickbook\EntregaAsientos\bin\Debug\Quickbook.dll
+E:\Clientes\SmartStrategy\FacturaElectronica\Quickbook\EntregaAsientos\bin\Debug\Quickbook.pdb
+E:\Clientes\SmartStrategy\FacturaElectronica\Quickbook\Quickbook\obj\Debug\Quickbook.csprojResolveAssemblyReference.cache
+E:\Clientes\SmartStrategy\FacturaElectronica\Quickbook\Quickbook\obj\Debug\Quickbook.dll
+E:\Clientes\SmartStrategy\FacturaElectronica\Quickbook\Quickbook\obj\Debug\Quickbook.pdb
+E:\Clientes\SmartStrategy\FacturaElectronica\Quickbook\EntregaAsientos\bin\Debug\samples\CurrencyList.xml
+E:\Clientes\SmartStrategy\FacturaElectronica\Quickbook\EntregaAsientos\bin\Debug\samples\C_800016C3-1474047648.xml
+E:\Clientes\SmartStrategy\FacturaElectronica\Quickbook\EntregaAsientos\bin\Debug\samples\C_8000144B-1458767877.xml
+E:\Clientes\SmartStrategy\FacturaElectronica\Quickbook\EntregaAsientos\bin\Debug\samples\C_8000153D-1463421731.xml
+E:\Clientes\SmartStrategy\FacturaElectronica\Quickbook\EntregaAsientos\bin\Debug\samples\C_80001540-1463493071.xml
+E:\Clientes\SmartStrategy\FacturaElectronica\Quickbook\EntregaAsientos\bin\Debug\samples\C_8000153E-1463430995.xml
+E:\Clientes\SmartStrategy\FacturaElectronica\Quickbook\EntregaAsientos\bin\Debug\samples\C_80001531-1462997465.xml
+E:\Clientes\SmartStrategy\FacturaElectronica\Quickbook\EntregaAsientos\bin\Debug\samples\C_80001524-1462559029.xml
+E:\Clientes\SmartStrategy\FacturaElectronica\Quickbook\EntregaAsientos\bin\Debug\samples\ItemList.xml
+E:\Clientes\SmartStrategy\FacturaElectronica\Quickbook\EntregaAsientos\bin\Debug\samples\I_32247.xml
+E:\Clientes\SmartStrategy\FacturaElectronica\Quickbook\EntregaAsientos\bin\Debug\samples\I_32292.xml
+E:\Clientes\SmartStrategy\FacturaElectronica\Quickbook\EntregaAsientos\bin\Debug\samples\I_32283.xml
+E:\Clientes\SmartStrategy\FacturaElectronica\Quickbook\EntregaAsientos\bin\Debug\samples\TermsList.xml
+E:\Clientes\SmartStrategy\FacturaElectronica\Quickbook\EntregaAsientos\bin\Debug\samples\C_80001536-1463086562.xml
+E:\Clientes\SmartStrategy\FacturaElectronica\Quickbook\EntregaAsientos\bin\Debug\samples\I_32265.xml
+E:\Clientes\SmartStrategy\FacturaElectronica\Quickbook\EntregaAsientos\bin\Debug\samples\I_31693.xml
+E:\Clientes\SmartStrategy\FacturaElectronica\Quickbook\EntregaAsientos\bin\Debug\samples\I_32256.xml
+E:\Clientes\SmartStrategy\FacturaElectronica\Quickbook\EntregaAsientos\bin\Debug\samples\InvoiceList.xml
+E:\Clientes\SmartStrategy\FacturaElectronica\Quickbook\EntregaAsientos\bin\Debug\samples\I_32274.xml
+E:\Clientes\SmartStrategy\FacturaElectronica\Quickbook\EntregaAsientos\bin\Debug\samples\I_31515.xml
+E:\Clientes\SmartStrategy\FacturaElectronica\QuickbookV2\EntregaAsientos\bin\Debug\Quickbook.dll
+E:\Clientes\SmartStrategy\FacturaElectronica\QuickbookV2\EntregaAsientos\bin\Debug\Quickbook.pdb
+E:\Clientes\SmartStrategy\FacturaElectronica\QuickbookV2\Quickbook\obj\Debug\Quickbook.dll
+E:\Clientes\SmartStrategy\FacturaElectronica\QuickbookV2\Quickbook\obj\Debug\Quickbook.pdb
+D:\Trabajo\dotnet\Factura Electronica\EntregaAsientos\bin\Debug\Quickbook.dll
+D:\Trabajo\dotnet\Factura Electronica\EntregaAsientos\bin\Debug\Quickbook.pdb
+D:\Trabajo\dotnet\Factura Electronica\Quickbook\obj\Debug\Quickbook.dll
+D:\Trabajo\dotnet\Factura Electronica\Quickbook\obj\Debug\Quickbook.pdb
+D:\Trabajo\dotnet\Factura Electronica\Quickbook\obj\Debug\Quickbook.csprojResolveAssemblyReference.cache
+D:\Trabajo\dotnet\Conobra\Proccessor\EntregaAsientos\bin\Debug\Quickbook.dll
+D:\Trabajo\dotnet\Conobra\Proccessor\EntregaAsientos\bin\Debug\Quickbook.pdb
+D:\Trabajo\dotnet\Conobra\Proccessor\Quickbook\obj\Debug\Quickbook.dll
+D:\Trabajo\dotnet\Conobra\Proccessor\Quickbook\obj\Debug\Quickbook.pdb
+D:\Trabajo\TrabajoSmart\conobra\Quickbook\obj\Debug\Quickbook.dll
+D:\Trabajo\TrabajoSmart\conobra\Quickbook\obj\Debug\Quickbook.pdb
+D:\smartStrategy\Conobra\conobra\EntregaAsientos\bin\Debug\Quickbook.dll
+D:\smartStrategy\Conobra\conobra\EntregaAsientos\bin\Debug\Quickbook.pdb
+D:\smartStrategy\Conobra\conobra\Quickbook\obj\Debug\Quickbook.dll
+D:\smartStrategy\Conobra\conobra\Quickbook\obj\Debug\Quickbook.pdb

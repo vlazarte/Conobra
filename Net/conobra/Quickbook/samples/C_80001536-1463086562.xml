@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" ?>
+<QBXML>
+  <QBXMLMsgsRs>
+    <CustomerQueryRs statusCode="0" statusSeverity="Info" statusMessage="Status OK">
+      <CustomerRet>
+        <ListID>80001536-1463086562</ListID>
+        <TimeCreated>2016-05-12T14:56:02-06:00</TimeCreated>
+        <TimeModified>2017-08-17T08:50:18-06:00</TimeModified>
+        <EditSequence>1473115752</EditSequence>
+        <Name>Corporacion Importadora de Vehiculos Afin</Name>
+        <FullName>Corporacion Importadora de Vehiculos Afin</FullName>
+        <IsActive>true</IsActive>
+        <Sublevel>0</Sublevel>
+        <CompanyName>Tico Car</CompanyName>
+        <FirstName>Victor</FirstName>
+        <LastName>Arias</LastName>
+        <BillAddress>
+          <Addr1>Corporacion Importadora de Vehiculos Afin</Addr1>
+          <Addr2>Andrea Mondol</Addr2>
+          <City>400 Norte de la iglesia</City>
+          <State>DE</State>
+          <Note>San Jose</Note>
+        </BillAddress>
+        <BillAddressBlock>
+          <Addr1>Corporacion Importadora de Vehiculos Afin</Addr1>
+          <Addr2>Andrea Mondol</Addr2>
+          <Addr3>400 Norte de la iglesia de San Sebastian</Addr3>
+          <Addr4>San Jose</Addr4>
+        </BillAddressBlock>
+        <ShipAddress>
+          <Addr1>Corporacion Importadora de Vehiculos Afin</Addr1>
+          <Addr2>Andrea Mondol</Addr2>
+          <City>400 Norte de la iglesia</City>
+          <State>DE</State>
+          <Note>San Jose</Note>
+        </ShipAddress>
+        <ShipAddressBlock>
+          <Addr1>Corporacion Importadora de Vehiculos Afin</Addr1>
+          <Addr2>Andrea Mondol</Addr2>
+          <Addr3>400 Norte de la iglesia de San Sebastian</Addr3>
+          <Addr4>San Jose</Addr4>
+        </ShipAddressBlock>
+        <ShipToAddress>
+          <Name>Ship To 1</Name>
+          <Addr1>Corporacion Importadora de Vehiculos Afin</Addr1>
+          <Addr2>Andrea Mondol</Addr2>
+          <City>400 Norte de la iglesia</City>
+          <State>DE</State>
+          <Note>San Jose</Note>
+          <DefaultShipTo>true</DefaultShipTo>
+        </ShipToAddress>
+        <Phone>2227-6565</Phone>
+        <Email>vic_arias2011@hotmail.com</Email>
+        <Contact>Victor Arias</Contact>
+        <AdditionalContactRef>
+          <ContactName>Main Phone</ContactName>
+          <ContactValue>2227-6565</ContactValue>
+        </AdditionalContactRef>
+        <AdditionalContactRef>
+          <ContactName>Work Phone</ContactName>
+          <ContactValue>2222-0759</ContactValue>
+        </AdditionalContactRef>
+        <AdditionalContactRef>
+          <ContactName>Main Email</ContactName>
+          <ContactValue>vic_arias2011@hotmail.com</ContactValue>
+        </AdditionalContactRef>
+        <ContactsRet>
+          <ListID>000000000000BJ0T</ListID>
+          <TimeCreated>2016-07-22T16:58:12-06:00</TimeCreated>
+          <TimeModified>2016-07-22T16:58:12-06:00</TimeModified>
+          <EditSequence>1469228292</EditSequence>
+          <FirstName>Victor</FirstName>
+          <LastName>Arias</LastName>
+          <JobTitle>CXP</JobTitle>
+          <AdditionalContactRef>
+            <ContactName>MainEmail</ContactName>
+            <ContactValue>vic_arias2011@hotmail.com</ContactValue>
+          </AdditionalContactRef>
+        </ContactsRet>
+        <TermsRef>
+          <ListID>80000019-1457127513</ListID>
+          <FullName>CONTADO</FullName>
+        </TermsRef>
+        <SalesRepRef>
+          <ListID>80000022-1461078473</ListID>
+          <FullName>JF</FullName>
+        </SalesRepRef>
+        <Balance>315.00</Balance>
+        <TotalBalance>315.00</TotalBalance>
+        <SalesTaxCodeRef>
+          <ListID>80000001-1284491570</ListID>
+          <FullName>Tax</FullName>
+        </SalesTaxCodeRef>
+        <ItemSalesTaxRef>
+          <ListID>8000002B-1286236692</ListID>
+          <FullName>CR Sales Tax</FullName>
+        </ItemSalesTaxRef>
+        <AccountNumber>10002701</AccountNumber>
+        <JobStatus>None</JobStatus>
+        <PreferredDeliveryMethod>Email</PreferredDeliveryMethod>
+        <CurrencyRef>
+          <ListID>80000096-1284491573</ListID>
+          <FullName>US Dollar</FullName>
+        </CurrencyRef>
+        <DataExtRet>
+          <OwnerID>0</OwnerID>
+          <DataExtName>Latitude</DataExtName>
+          <DataExtType>STR255TYPE</DataExtType>
+          <DataExtValue>9.91542</DataExtValue>
+        </DataExtRet>
+        <DataExtRet>
+          <OwnerID>0</OwnerID>
+          <DataExtName>Longitude</DataExtName>
+          <DataExtType>STR255TYPE</DataExtType>
+          <DataExtValue>-84.084726</DataExtValue>
+        </DataExtRet>
+        <DataExtRet>
+          <OwnerID>0</OwnerID>
+          <DataExtName>Cedula</DataExtName>
+          <DataExtType>STR255TYPE</DataExtType>
+          <DataExtValue>3-101-424610</DataExtValue>
+        </DataExtRet>
+      </CustomerRet>
+    </CustomerQueryRs>
+  </QBXMLMsgsRs>
+</QBXML>
