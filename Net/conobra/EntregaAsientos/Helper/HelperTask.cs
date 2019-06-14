@@ -106,17 +106,18 @@ namespace SmartQuickbook.Helper
 
         }
 
-        public static string getObjectValue(string fieldProperty ,object obj, string fieldValue, ref string err) {
+        public static string getObjectValue(string fieldProperty, object obj, string fieldValue, ref string err)
+        {
 
-          
+
             PropertyInfo _propertyInfo = obj.GetType().GetProperty(fieldProperty);
-                            if (_propertyInfo == null)
-                            {
-                                err = "Property with names " + fieldProperty + " does not exists in " + obj.GetType().ToString();
-                                return null;
-                            }
-            object objectValue=_propertyInfo.GetValue(obj, null);
-            string value=string.Empty;
+            if (_propertyInfo == null)
+            {
+                err = "Property with names " + fieldProperty + " does not exists in " + obj.GetType().ToString();
+                return null;
+            }
+            object objectValue = _propertyInfo.GetValue(obj, null);
+            string value = string.Empty;
             if (objectValue.GetType().GetProperties().Count() > 1)
             {
                 PropertyInfo _propertyInfo2 = objectValue.GetType().GetProperty(fieldValue);
@@ -127,11 +128,12 @@ namespace SmartQuickbook.Helper
                 }
                 value = Convert.ToString(_propertyInfo2.GetValue(objectValue, null));
             }
-            else {
-              value   = Convert.ToString(_propertyInfo.GetValue(obj, null));
-            }         
-                   
-               return value;
+            else
+            {
+                value = Convert.ToString(_propertyInfo.GetValue(obj, null));
+            }
+
+            return value;
         }
 
         private static DateTime getDateValue(String value)
@@ -241,130 +243,140 @@ namespace SmartQuickbook.Helper
         }
         public static void GetValuesToAdd(ProcesoAccion accion, Hashtable pairs, ref List<string> fieldNames, ref  List<object> fieldValues, ref Dictionary<string, string> fieldNameExternals, ref Dictionary<string, string> llaveQuickbase, ref string fieldRiquiered, ref bool Requiered, ref StringBuilder mostrarMensaje, ref string err)
         {
-
-
-            for (int i = 0; i < accion.parametros.Count; i++)
+            try
             {
-
-
-                bool isValue = false;
-                if (!accion.parametros[i].isKey)
+                for (int i = 0; i < accion.parametros.Count; i++)
                 {
-                    if (accion.parametros[i].fieldId.ToString().Contains("/"))//campo
-                    { //Elemento compuesto 
-
-                        string[] field = accion.parametros[i].fieldId.ToString().Split('/');
-                        string fieldPropertyCustomer = field[0];//parenref
-                        string fieldPropertyCurrency = field[1];//listID
-                        fieldNames.Add(fieldPropertyCustomer);
-
-                        if (accion.parametros[i].Type != null)
-                        {
-
-                            string value = pairs[fieldPropertyCustomer].ToString();
-                            if (value != string.Empty)
-                            {
 
 
-
-                                var newValueObject = HelperTask.ConvertType(fieldPropertyCurrency, value, accion.parametros[i].Type, ref err);
-                                if (err != string.Empty)
-                                {
-
-                                    mostrarMensaje.Append("Convirtiendo valores Error:" + err + Environment.NewLine);
-
-                                }
-
-                                fieldValues.Add(newValueObject);
-                                isValue = true;
-                            }
-                            else
-                            {
-                                if (accion.parametros[i].Required)
-                                {
-
-                                    Requiered = true;
-                                    fieldRiquiered = accion.parametros[i].fieldId;
-                                    break;
-                                }
-                                else
-                                {
-                                    fieldValues.Add(null);
-                                    isValue = true;
-                                }
-
-
-                            }
-
-                        }
-                        else
-                        {
-                            fieldValues.Add(pairs[accion.parametros[i].fieldName]);
-                            isValue = true;
-                        }
-                    }
-                    else
+                    bool isValue = false;
+                    if (!accion.parametros[i].isKey)
                     {
-                        fieldNames.Add(accion.parametros[i].fieldId);
-                    }
-                    if (isValue == false)
-                    {
-                        if (pairs.ContainsKey(accion.parametros[i].fieldName))
-                        {
+                        if (accion.parametros[i].fieldId.ToString().Contains("/"))//campo
+                        { //Elemento compuesto 
 
-                            if (pairs[accion.parametros[i].fieldName] != null && accion.parametros[i].Type != null)
+                            string[] field = accion.parametros[i].fieldId.ToString().Split('/');
+                            string fieldPropertyCustomer = field[0];//parenref
+                            string fieldPropertyCurrency = field[1];//listID
+                            fieldNames.Add(fieldPropertyCustomer);
+
+                            if (accion.parametros[i].Type != null)
                             {
 
-                                string value = pairs[accion.parametros[i].fieldName].ToString();
+                                string value = pairs[fieldPropertyCustomer].ToString();
                                 if (value != string.Empty)
                                 {
-                                    var newDate = HelperTask.ConvertType(value, accion.parametros[i].Type);
-                                    fieldValues.Add(newDate);
+
+
+
+                                    var newValueObject = HelperTask.ConvertType(fieldPropertyCurrency, value, accion.parametros[i].Type, ref err);
+                                    if (err != string.Empty)
+                                    {
+
+                                        mostrarMensaje.Append("Convirtiendo valores Error:" + err + Environment.NewLine);
+
+                                    }
+
+                                    fieldValues.Add(newValueObject);
+                                    isValue = true;
                                 }
                                 else
                                 {
-                                    fieldValues.Add(null);
+                                    if (accion.parametros[i].Required)
+                                    {
+
+                                        Requiered = true;
+                                        fieldRiquiered = accion.parametros[i].fieldId;
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        fieldValues.Add(null);
+                                        isValue = true;
+                                    }
+
+
                                 }
 
                             }
                             else
                             {
                                 fieldValues.Add(pairs[accion.parametros[i].fieldName]);
+                                isValue = true;
                             }
-
-
                         }
                         else
                         {
-                            fieldValues.Add(null);
+                            fieldNames.Add(accion.parametros[i].fieldId);
                         }
+                        if (isValue == false)
+                        {
+                            if (pairs.ContainsKey(accion.parametros[i].fieldName))
+                            {
+
+                                if (pairs[accion.parametros[i].fieldName] != null && accion.parametros[i].Type != null)
+                                {
+
+                                    string value = pairs[accion.parametros[i].fieldName].ToString();
+                                    if (value != string.Empty)
+                                    {
+                                        var newDate = HelperTask.ConvertType(value, accion.parametros[i].Type);
+                                        fieldValues.Add(newDate);
+                                    }
+                                    else
+                                    {
+                                        fieldValues.Add(null);
+                                    }
+
+                                }
+                                else
+                                {
+                                    fieldValues.Add(pairs[accion.parametros[i].fieldName]);
+                                }
+
+
+                            }
+                            else
+                            {
+                                fieldValues.Add(null);
+                            }
+                        }
+
+                    }
+                    else
+                    {  //si es el campo llave debe ser igual con fieldNameExternal
+
+                        if (fieldNameExternals.Count > 0)
+                        {
+                            var value = Array.Find(fieldNameExternals.ToArray(), element => element.Value.Equals(accion.parametros[i].fieldName));
+
+                            if (value.Value != string.Empty && pairs[value.Value] != null)
+                            {
+                                //valor de la llave externa
+                                if (llaveQuickbase.ContainsKey(value.Key))
+                                {
+                                    llaveQuickbase[value.Key] = pairs[value.Value].ToString();
+                                }
+                                else
+                                {
+                                    llaveQuickbase.Add(value.Key, pairs[value.Value].ToString());
+                                }
+
+                            }
+                        }
+
+
                     }
 
-                }
-                else
-                {  //si es el campo llave debe ser igual con fieldNameExternal
-
-
-                    var value = Array.Find(fieldNameExternals.ToArray(), element => element.Value.Equals(accion.parametros[i].fieldName));
-
-                    if (value.Value != string.Empty && pairs[value.Value] != null)
-                    {
-                        //valor de la llave externa
-                        if (llaveQuickbase.ContainsKey(value.Key))
-                        {
-                            llaveQuickbase[value.Key] = pairs[value.Value].ToString();
-                        }
-                        else
-                        {
-                            llaveQuickbase.Add(value.Key, pairs[value.Value].ToString());
-                        }
-
-                    }
 
                 }
-
-
             }
+            catch (Exception ex)
+            {
+                err = ex.Message;
+                //throw;
+            }
+
         }
         public static void GetValuesToAddAndUpdate(ProcesoAccion accion, Hashtable pairs, ref List<string> fieldNames, ref  List<object> fieldValues, ref Dictionary<string, string> fieldNameExternals, ref Dictionary<string, string> fieldNameExternalsCreate, ref Dictionary<string, string> llaveQuickbase, ref string fieldRiquiered, ref bool Requiered, ref StringBuilder mostrarMensaje, ref string err)
         {
@@ -1117,32 +1129,9 @@ namespace SmartQuickbook.Helper
             {
                 if (ConfiguracionRespuestaCreate.Count > 0)
                 {
-                    /*foreach (var respuesta in ConfiguracionRespuestaCreate)
-                    {
-                        //cargar los parametros a insertar//values
-                        /*try
-                        {
-                            string[] list = Generic.getFieldValues(respuesta.parametros, objectToCreate, ref err);
 
-                            int recordID = ws.addRecord(respuesta.quickbaseAccessToken, list, out err);
-
-                            //respuesta tiene custom?
-                            //registrar custom
-                            //actualizar en quickbook uno por uno
-                        }
-                        catch (Exception e)
-                        {
-                            err = e.Message;
-                            return err;
-                        }*/
-
-
-                    //update
-                    //obtener el List]ID de quickbook adicionar al cvs
                     HelperTask.AddConfigSave(ConfiguracionRespuestaCreate, llaveQuickbase, objectToCreate, ref err, ref RespuestasCreate);
 
-
-                    // }
                 }
             }
 

@@ -86,6 +86,25 @@ namespace Quickbook
 
             return list;
         }
+        public string toXmlRef()
+        {
+            StringBuilder xml = new StringBuilder();
+            XmlElement ele = (new XmlDocument()).CreateElement("test");
+            xml.Append("<APAccountRef>");
+            if (ListID != string.Empty)
+            {
+                xml.Append("<ListID >" + ListID + "</ListID>");
+            }
+            if (FullName != string.Empty)
+            {
+                ele.InnerText = FullName + "";
+                xml.Append("<FullName>" + ele.InnerXml + "</FullName>"); //-- required -->
+            }
 
+            xml.Append("</APAccountRef>");
+
+
+            return xml.ToString();
+        }
     }
 }

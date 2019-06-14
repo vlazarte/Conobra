@@ -10,20 +10,28 @@ using System.Globalization;
 namespace Quickbook
 {
     public class Bill
-    {
+    {//:Abstract
+        
+
+        public Vendor VendorRef {get;set;}
+        public VendorAddress VendorAddress{get;set;}
+        public Account APAccountRef{get;set;}        
+        public DateTime txnDate {get;set;}
+        public  DateTime DueDate{get;set;}
+        public string RefNumber{get;set;}
+        public TermsRef TermsRef { get; set;}
+        public string Memo { get; set; }
+        public bool? IsTaxIncluded { get; set; }
+        public SalesTaxCodeRef SalesTaxCodeRef { get; set; }
+        public float ExchangeRate { get; set; }
+        public string ExternalGUID { get; set; }
+        public string LinkToTxnID { get; set; }
+
+
         private bool exists;
 
-        public string TxnID ;
-        public string EditSequence ;
-
-        private Vendor vendor;
-        private Account apaAccount;
-        private DateTime txnDate;
-        private DateTime dueDate;
-        private string refNumber;
-        private string memo;
-        private float rate;
-
+        public string TxnID {get;set;}
+        public string EditSequence {get;set;}
         public string lastResponse;
 
         private List<BillExpenseLine> expenseLines ;
@@ -31,17 +39,25 @@ namespace Quickbook
         public List<BillItemLine> itemLines;
 
         private Connector qb;
+              
+
 
         public Bill( Connector instance )
         {
-            vendor = null;
-            apaAccount = null;
+            VendorRef = null;
+            VendorAddress = null;
+            APAccountRef = null;
+            RefNumber = string.Empty;
+            TermsRef = null;
+            Memo = string.Empty;
+            IsTaxIncluded = null;
+            SalesTaxCodeRef = null;
+            ExternalGUID = string.Empty;
+
             expenseLines = new List<BillExpenseLine>();
             itemLines = new List<BillItemLine>();
             qb = instance;
-
             exists = false;
-
             TxnID = string.Empty;
             EditSequence = string.Empty;
         }
@@ -98,48 +114,14 @@ namespace Quickbook
                 }
             }
         }
-
-        public Vendor VendorRef
-        {
-            get { return vendor; }
-            set { vendor = value; }
-        }
-
-        public Account APAccountRef
-        {
-            get { return apaAccount; }
-            set { apaAccount = value; }
-        }
-
+        
         public DateTime TxnDate
         {
             get { return txnDate; }
             set { txnDate = value; }
         }
 
-        public DateTime DueDate
-        {
-            get { return dueDate; }
-            set { dueDate = value; }
-        }
-
-        public string RefNumber
-        {
-            get { return refNumber; }
-            set { refNumber = value; }
-        }
-
-        public string Memo
-        {
-            get { return memo; }
-            set { memo = value; }
-        }
-
-        public float ExchangeRate
-        {
-            get { return rate; }
-            set { rate = value; }
-        }
+     
 
      
         public XmlDocument create()
@@ -303,7 +285,7 @@ namespace Quickbook
             xml += Environment.NewLine + "<TxnID>" + TxnID + "</TxnID>";
             xml += Environment.NewLine + "<EditSequence>" + EditSequence + "</EditSequence>";
 
-            if (vendor != null)
+           /* if (vendor != null)
             {
                 xml += Environment.NewLine + "<VendorRef>";
                 xml += Environment.NewLine + "<ListID >" + vendor.ListID + "</ListID>";
@@ -328,8 +310,8 @@ namespace Quickbook
             {
                 xml += Environment.NewLine + "<Memo>" + memo + "</Memo>";
             }
-
-            xml += Environment.NewLine + "<ExchangeRate>" + rate.ToString("0.00") + "</ExchangeRate>";
+            */
+           // xml += Environment.NewLine + "<ExchangeRate>" + rate.ToString("0.00") + "</ExchangeRate>";
 
             foreach (BillExpenseLine line in expenseLines)
             {
@@ -361,21 +343,15 @@ namespace Quickbook
 		            xml += Environment.NewLine + "<BillAddRq requestID=\"10001\">";
 			            xml += Environment.NewLine + "<BillAdd>";
 
-                        if ( vendor != null ) {
-                            xml += Environment.NewLine + "<VendorRef>";
-	                            xml += Environment.NewLine + "<ListID >" + vendor.ListID + "</ListID>";
-	                            //xml += Environment.NewLine + "<FullName >STRTYPE</FullName>";
-                            xml += Environment.NewLine + "</VendorRef>";
+                        if ( VendorRef != null ) {
+                            xml += VendorRef.toXMLVendorRef();
                         }
 
-                        if ( apaAccount != null ) {
-                            xml += Environment.NewLine + "<APAccountRef>";
-		                        xml += Environment.NewLine + "<ListID >" + apaAccount.ListID + "</ListID>";
-		                        //xml += Environment.NewLine + "<FullName >STRTYPE</FullName>";
-	                        xml += Environment.NewLine + "</APAccountRef>";
+                        if ( APAccountRef != null ) {
+                            xml += APAccountRef.toXmlRef();
                         }
 
-                        xml += Environment.NewLine + "<TxnDate>" + txnDate.ToString("yyyy-MM-dd") + "</TxnDate>" ;
+                    /*    xml += Environment.NewLine + "<TxnDate>" + txnDate.ToString("yyyy-MM-dd") + "</TxnDate>" ;
                         if ( dueDate != null )
                             xml += Environment.NewLine + "<DueDate>" + dueDate.ToString("yyyy-MM-dd") + "</DueDate>" ;
 
@@ -394,7 +370,7 @@ namespace Quickbook
                         foreach (BillItemLine line in itemLines)
                         {
                             xml += Environment.NewLine + line.toXml();
-                        }
+                        }*/
 
 			            xml += Environment.NewLine + "</BillAdd>";
 		            xml += Environment.NewLine + "</BillAddRq>";

@@ -257,7 +257,8 @@ namespace SmartQuickbook.Helper
                         }
                         catch (Exception ex)
                         {
-                            throw new Exception("Error al conectar a Quickbook: " + ex.Message);
+                            mostrarMensaje.Append(ex.Message);
+                            //throw new Exception("Error al conectar a Quickbook: " + ex.Message);
                         }
 
                     }

@@ -534,24 +534,12 @@
           <p field="RecordID" key ="true">RecordID</p>
           <p field="Name" required="true">Name</p>
           <p field="CompanyName">CompanyName</p>
-          <p field="ID" type="Custom/Name">ID</p>
-          <p field="ContactName/MainPhone" type="AdditionalContactRef">contactRef</p>
-          <p field="Email">Email</p>
-          <p field="ListID">ListID</p>                    
+          <p field="ID" type="Custom/Name">Cedula</p>
+          <p field="ContactName/MainPhone" type="AdditionalContactRef">Telefono</p>
+          <p field="Email">Correo</p>
+          <p field="ListID">QuickbookID</p>
         </parametros>
-        <respuestas>
-          <respuesta tipo="import_quickbase" categoria="Save">
-            <access_token>0823871b4f16ca3cd7d6f6259690c002</access_token>
-            <parametros>
-              <p field="1" key="true">RECORD_ID</p>
-              <p field="2">Name</p>
-              <p field="3">CompanyName</p>
-              <p field="4" type="Custom/ID">ID</p>
-              <p field="5" type="AdditionalContactRef/ContactName" >phone</p>
-              <p field="6">email</p>
-              <p field="7" >ListID</p>
-            </parametros>
-          </respuesta>
+        <respuestas>         
           <respuesta tipo="import_quickbase" categoria="Create">
             <access_token>3a847e17ba9e87559ad0bb71fac12100</access_token>
             <parametros>
@@ -576,6 +564,19 @@
   </proceso>
 
 
+
+  <!--<respuesta tipo="import_quickbase" categoria="Save">
+    <access_token>3a847e17ba9e87559ad0bb71fac12200</access_token>
+    <parametros>
+      <p field="1" key="true">RecordID</p>
+      <p field="2">Name</p>
+      <p field="3">CompanyName</p>
+      <p field="4" type="Custom/ID">ID</p>
+      <p field="5" type="AdditionalContactRef/ContactName" >phone</p>
+      <p field="6">email</p>
+      <p field="7" >ListID</p>
+    </parametros>
+  </respuesta>-->
 
 
 
