@@ -768,6 +768,11 @@ namespace Quickbook
             xml.Append("</ParentRef>");
             return xml.ToString();
         }
+        public override List<Abstract> GetRecords(ref string err)
+        {
+            err = "No implemented yet Customer";
+            return new List<Abstract>();
+        }
 
     }
 

@@ -15,6 +15,12 @@ namespace Quickbook
             err = "No implemented yet CustomerMsg";
             return false;
         }
+        public override List<Abstract> GetRecords(ref string err)
+        {
+            err = "No implemented yet CustomerMsg";
+            return new List<Abstract>();
+        }
+
   
     }
 }

@@ -17,11 +17,11 @@ namespace Quickbook
             err = "No implemented yet ARAccount";
             return false;
         }
-        //public override List<Object> GetRecords(ref string err)
-        //{
-        //    err = "No implemented yet ARAccount";
-        //    return new List<Object>();
-        //}
+        public override List<Abstract> GetRecords(ref string err)
+        {
+            err = "No implemented yet ARAccount";
+            return new List<Abstract>();
+        }
 
     }
 }

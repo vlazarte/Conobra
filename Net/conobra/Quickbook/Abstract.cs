@@ -286,7 +286,7 @@ namespace Quickbook
             return xml;
         }
         public abstract bool AddRecord(ref string err, ref string xmlSend, ref string xmlRecived);
-       // public abstract List<Object> GetRecords(ref string err);
+        public abstract List<Abstract> GetRecords(ref string err);
         
     }
 }

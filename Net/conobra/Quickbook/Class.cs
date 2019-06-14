@@ -217,7 +217,7 @@ namespace Quickbook
 
 
         }
-        public List<Class> GetRecordsCVS(ref string err)
+        public List<Abstract> GetRecordsCVS(ref string err)
         {
 
             try
@@ -257,7 +257,7 @@ namespace Quickbook
                 if (code == "0")
                 {
 
-                    List<Class> quickbookListClass = new List<Class>();
+                    List<Abstract> quickbookListClass = new List<Abstract>();
                     XmlNodeList rets = res.SelectNodes("/QBXML/QBXMLMsgsRs/ClassQueryRs/ClassRet");
                     quickbookListClass = GetClasses(rets);
 
@@ -281,9 +281,9 @@ namespace Quickbook
                 err = ex.Message;
             }
 
-            return new List<Class>();
+            return new List<Abstract>();
         }
-        public List<Class> GetRecords(ref string err)
+        public override List<Abstract> GetRecords(ref string err)
         {
 
             try
@@ -323,7 +323,7 @@ namespace Quickbook
                 if (code == "0")
                 {
 
-                    List<Class> quickbookListClass = new List<Class>();
+                    List<Abstract> quickbookListClass = new List<Abstract>();
                     XmlNodeList rets = res.SelectNodes("/QBXML/QBXMLMsgsRs/ClassQueryRs/ClassRet");
                     quickbookListClass=GetClasses(rets);
 
@@ -347,14 +347,14 @@ namespace Quickbook
                 err = ex.Message;
             }
 
-            return new List<Class>();
+            return new List<Abstract>();
         }
 
-        private List<Class> GetClasses(XmlNodeList rets)
+        private List<Abstract> GetClasses(XmlNodeList rets)
         {
 
 
-            List<Class> quickbookListClass = new List<Class>();
+            List<Abstract> quickbookListClass = new List<Abstract>();
             
             string message = string.Empty;
 

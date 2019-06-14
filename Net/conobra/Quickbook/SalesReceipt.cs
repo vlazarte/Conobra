@@ -792,6 +792,11 @@ namespace Quickbook
             err = "No implemented yet SalesReceipt";
             return false;
         }
+        public override List<Abstract> GetRecords(ref string err)
+        {
+            err = "No implemented yet SalesReceipt";
+            return new List<Abstract>();
+        }
 
 
 

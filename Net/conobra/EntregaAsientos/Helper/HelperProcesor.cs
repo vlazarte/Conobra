@@ -239,7 +239,7 @@ namespace SmartQuickbook.Helper
                             object objQuickbookInstance = Activator.CreateInstance(difineType);
                             //que campos
                             string err = string.Empty;
-                            List<Class> Records = ((Class)objQuickbookInstance).GetRecords(ref err);
+                            List<Abstract> Records = ((Abstract)objQuickbookInstance).GetRecords(ref err);
 
                             if (Records.Count > 0)
                             {
@@ -268,7 +268,7 @@ namespace SmartQuickbook.Helper
 
         }
 
-        public static string ProcesarRegistros(Proceso proceso, List<Class> quickbookRecords)
+        public static string ProcesarRegistros(Proceso proceso, List<Abstract> quickbookRecords)
         {
             //  Access
             // Procesar Entrada..

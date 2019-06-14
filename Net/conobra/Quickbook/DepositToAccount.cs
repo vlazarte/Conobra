@@ -15,5 +15,10 @@ namespace Quickbook
             err = "No implemented yet DepositToAccount";
             return false;
         }
+        public override List<Abstract> GetRecords(ref string err)
+        {
+            err = "No implemented yet DepositToAccount";
+            return new List<Abstract>();
+        }
     }
 }

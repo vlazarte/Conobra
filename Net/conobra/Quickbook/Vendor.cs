@@ -8,9 +8,9 @@ using System.IO;
 
 namespace Quickbook
 {
-    public class Vendor
+    public class Vendor:Abstract
     {
-        private string id;
+        
         private string name;
         private bool active;
         private string firstName;
@@ -33,7 +33,7 @@ namespace Quickbook
         public string Cc { get; set; }
         public string Contact { get; set; }
         public string AltContact { get; set; }
-        public AdditionalContactRef contactRef { get; set; }
+        public AdditionalContactRef AdditionalContactRef { get; set; }
         public ContactsRet Contacts { get; set; }
         public string NameOnCheck { get; set; }
         public string AccountNumber { get; set; }
@@ -68,27 +68,23 @@ namespace Quickbook
         public PrefillAccountRef PrefillAccountRef { get; set; }
 
         public Currency CurrencyRef { get; set; }
-        public string ObjectName = "";
+       
 
-        private Hashtable dataEx;
+     //   private Hashtable dataEx;
 
 
 
-        public Hashtable getDataEx()
+     /*   public Hashtable getDataEx()
         {
             return dataEx;
-        }
+        }*/
 
-        public void addDataEx(string name, string value)
+       /* public void addDataEx(string name, string value)
         {
             dataEx.Add(name, value);
-        }
+        }*/
 
-        public string ListID
-        {
-            get { return id; }
-            set { id = value; }
-        }
+       
 
         public string Name
         {
@@ -149,7 +145,7 @@ namespace Quickbook
             Cc = string.Empty;
             Contact = string.Empty;
             AltContact = string.Empty;
-            contactRef = null;
+            AdditionalContactRef = null;
             Contacts = null;
             NameOnCheck = string.Empty;
             AccountNumber = string.Empty;
@@ -182,7 +178,7 @@ namespace Quickbook
             PrefillAccountRef = null;
 
             CurrencyRef = null;
-            dataEx = new Hashtable();
+            
 
             ObjectName = "Vendor";
         }
@@ -250,7 +246,7 @@ namespace Quickbook
                     {
                         var name = ex["DataExtName"].InnerText;
                         var value = ex["DataExtValue"].InnerText;
-                        v.addDataEx(name, value);
+                        v.AddDataEx(name, value);
                     }
 
                     list.Add(v);
@@ -343,7 +339,7 @@ namespace Quickbook
 
 
 
-        public List<Vendor> GetRecordsCVS(ref string err)
+        public List<Abstract> GetRecordsCVS(ref string err)
         {
 
             try
@@ -383,7 +379,7 @@ namespace Quickbook
                 if (code == "0")
                 {
 
-                    List<Vendor> quickbookListVendor = new List<Vendor>();
+                    List<Abstract> quickbookListVendor = new List<Abstract>();
                     XmlNodeList rets = res.SelectNodes("/QBXML/QBXMLMsgsRs/VendorQueryRs/VendorRet");
                     quickbookListVendor = GetVendors(rets);
 
@@ -407,17 +403,22 @@ namespace Quickbook
                 err = ex.Message;
             }
 
-            return new List<Vendor>();
+            return new List<Abstract>();
         }
 
 
+        public override bool AddRecord(ref string err, ref string xmlSend, ref string xmlRecived)
+        {
+            err = "No implemented yet Vendor";
+            return false;
 
-        public List<Vendor> GetRecords(ref string err)
+        }
+        public override List<Abstract> GetRecords(ref string err)
         {
 
             try
             {
-                string xml = toXmlQuery(true);
+                string xml = toXmlQuery(true); 
                 if (xml == null)
                 {
                     err = "Hubo un error al generar el XML";
@@ -452,7 +453,7 @@ namespace Quickbook
                 if (code == "0")
                 {
 
-                    List<Vendor> quickbookListVendors = new List<Vendor>();
+                    List<Abstract> quickbookListVendors = new List<Abstract>();
 
                     XmlNodeList fieldsList = (((System.Xml.XmlNode)(res))).LastChild.FirstChild.FirstChild.ChildNodes;
 
@@ -493,7 +494,7 @@ namespace Quickbook
                         {
                             var name = ex["DataExtName"].InnerText;
                             var value = ex["DataExtValue"].InnerText;
-                            v.addDataEx(name, value);
+                            v.AddDataEx(name, value);
                         }
 
                         quickbookListVendors.Add(v);
@@ -520,14 +521,14 @@ namespace Quickbook
                 err = ex.Message;
             }
 
-            return new List<Vendor>();
+            return new List<Abstract>();
         }
 
-        private List<Vendor> GetVendors(XmlNodeList rets)
+        private List<Abstract> GetVendors(XmlNodeList rets)
         {
 
 
-            List<Vendor> quickbookListVendor = new List<Vendor>();
+            List<Abstract> quickbookListVendor = new List<Abstract>();
 
             string message = string.Empty;
 
@@ -701,14 +702,14 @@ namespace Quickbook
                 }
                 if (node.SelectNodes("AdditionalContactRef").Count > 0)
                 {
-                    toUpdate.contactRef = new AdditionalContactRef();
+                    toUpdate.AdditionalContactRef = new AdditionalContactRef();
                     if (node["AdditionalContactRef"]["ContactName"] != null)
                     {
-                        toUpdate.contactRef.ContactName = node["AdditionalContactRef"]["ContactName"].InnerText;
+                        toUpdate.AdditionalContactRef.ContactName = node["AdditionalContactRef"]["ContactName"].InnerText;
                     }
                     if (node["AdditionalContactRef"]["ContactValue"] != null)
                     {
-                        toUpdate.contactRef.ContactValue = node["AdditionalContactRef"]["ContactValue"].InnerText;
+                        toUpdate.AdditionalContactRef.ContactValue = node["AdditionalContactRef"]["ContactValue"].InnerText;
                     }
 
                 }
@@ -934,7 +935,8 @@ namespace Quickbook
                 {
                     var name = ex["DataExtName"].InnerText;
                     var value = ex["DataExtValue"].InnerText;
-                    toUpdate.addDataEx(name, value);
+                    toUpdate.AddDataEx(name, value);
+                    
                 }
 
                 quickbookListVendor.Add(toUpdate);

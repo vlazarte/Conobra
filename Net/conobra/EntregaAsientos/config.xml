@@ -442,7 +442,7 @@
 
  
   
-  <!--Obtener Las clases padres de proyectos-->
+  <!--Obtener Las clases padres de proyectos--><!--
 
   <proceso id="8">
     <nombre>Class to Quickbase</nombre>
@@ -455,7 +455,7 @@
         </parametros>
       </quickbase>
     </entrada>
-    <!--Creando los jobs y guardando el codigo-->
+    --><!--Creando los jobs y guardando el codigo--><!--
     <acciones>
       <accion id="cust001" tipo="add_quickbase">
         <nombre>Crear y Actualizar Clases</nombre>
@@ -505,7 +505,141 @@
       <fecha_unica>2019-04-09</fecha_unica>
     </ejecucion>
 
+  </proceso>-->
+
+
+
+  
+  
+  
+  <!--Obtener Los proveedores-->
+
+  <proceso id="9">
+    <nombre>Vendor to Quickbase</nombre>
+    <entrada tipo="quickbook">
+      <quickbook></quickbook>
+      <quickbase>
+        <access_token>3a847e17ba9e87559ad0bb71fac12000</access_token>
+        <parametros>
+          <p field="B">NOMBRE</p>
+        </parametros>
+      </quickbase>
+    </entrada>
+ <!--Creando los vendor y guardando el codigo-->
+    <acciones>
+      <accion id="cust001" tipo="add_quickbase">
+        <nombre>Crear y Actualizar Proveedores</nombre>
+        <quickbook_tabla>Vendor</quickbook_tabla>
+        <parametros>          
+          <p field="RecordID" key ="true">RecordID</p>
+          <p field="Name" required="true">Name</p>
+          <p field="CompanyName">CompanyName</p>
+          <p field="ID" type="Custom/Name">ID</p>
+          <p field="ContactName/MainPhone" type="AdditionalContactRef">contactRef</p>
+          <p field="Email">Email</p>
+          <p field="ListID">ListID</p>                    
+        </parametros>
+        <respuestas>
+          <respuesta tipo="import_quickbase" categoria="Save">
+            <access_token>0823871b4f16ca3cd7d6f6259690c002</access_token>
+            <parametros>
+              <p field="1" key="true">RECORD_ID</p>
+              <p field="2">Name</p>
+              <p field="3">CompanyName</p>
+              <p field="4" type="Custom/ID">ID</p>
+              <p field="5" type="AdditionalContactRef/ContactName" >phone</p>
+              <p field="6">email</p>
+              <p field="7" >ListID</p>
+            </parametros>
+          </respuesta>
+          <respuesta tipo="import_quickbase" categoria="Create">
+            <access_token>3a847e17ba9e87559ad0bb71fac12100</access_token>
+            <parametros>
+              <p field="1">Name</p>
+              <p field="2">CompanyName</p>
+              <p field="3" type="Custom/ID">ID</p>
+              <p field="4" type="AdditionalContactRef/ContactValue">phone</p>
+              <p field="5">Email</p>
+              <p field="6">ListID</p>
+            </parametros>
+            <customfields>
+            </customfields>
+          </respuesta>         
+        </respuestas>
+      </accion>
+    </acciones>
+    <ejecucion tipo="intervalo">
+      <intervalo tipo="segundo">3600</intervalo>
+      <fecha_unica>2019-04-09</fecha_unica>
+    </ejecucion>
+
   </proceso>
+
+
+
+
+
+  <!--Obtener PROVEEDORES de golpe de prueba-->
+  
+
+  <!--<proceso id="10">
+    <nombre>Vendor to Quickbase</nombre>
+    <entrada tipo="quickbook">
+      <quickbook></quickbook>
+      <quickbase>
+        <access_token>3a847e17ba9e87559ad0bb71fac12010</access_token>
+        <parametros>
+          <p field="B">NOMBRE</p>          
+        </parametros>
+      </quickbase>
+    </entrada>
+   
+  --><!--Creando los jobs y guardando el codigo--><!--
+  
+    <acciones>
+      <accion id="cust001" tipo="add_quickbase">
+        <nombre>Crear y actualizar Proveedores</nombre>
+        <quickbook_tabla>Vendor</quickbook_tabla>
+        <parametros>
+          <p field="RecordID">RecordID</p>
+          <p field="Name">Nombre</p>
+          <p field="CompanyName">alias</p>
+          <p field="Email">Correo</p>
+          <p field="ListID">QuickbookID</p>
+        </parametros>
+        <respuestas>
+          <respuesta tipo="import_quickbase" categoria="Save">
+            <access_token>3a847e17ba9e87559ad0bb71fac12001</access_token>
+            <parametros>
+              <p field="1" key="true">RECORD_ID</p>
+              <p field="2">Name</p>
+              <p field="3">CompanyName</p>
+              <p field="4">email</p>
+              <p field="5" >ListID</p>           
+            </parametros>
+          </respuesta>
+          <respuesta tipo="import_quickbase" categoria="Create">
+            <access_token>3a847e17ba9e87559ad0bb71fac12003</access_token>--><!--3a847e17ba9e87559ad0bb71fac12002--><!--
+            <parametros>              
+              <p field="1">Name</p>
+              <p field="2">CompanyName</p>
+              <p field="3">Email</p>
+              <p field="4" >ListID</p>
+            </parametros>
+            <customfields>              
+            </customfields>
+          </respuesta>         
+        </respuestas>
+      </accion>
+    </acciones>
+
+
+    <ejecucion tipo="intervalo">
+      <intervalo tipo="segundo">30</intervalo>
+      <fecha_unica>2019-04-09</fecha_unica>
+    </ejecucion>
+
+  </proceso>-->
 
   
 

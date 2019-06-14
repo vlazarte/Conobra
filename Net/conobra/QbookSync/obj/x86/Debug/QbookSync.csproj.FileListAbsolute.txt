@@ -22,3 +22,14 @@ D:\smartStrategy\Conobra\conobra\QbookSync\obj\x86\Debug\QbookSync.Properties.Re
 D:\smartStrategy\Conobra\conobra\QbookSync\obj\x86\Debug\QbookSync.csproj.GenerateResource.Cache
 D:\smartStrategy\Conobra\conobra\QbookSync\obj\x86\Debug\QbookSync.exe
 D:\smartStrategy\Conobra\conobra\QbookSync\obj\x86\Debug\QbookSync.pdb
+D:\smartStrategy\Conobra\Conobra Nueva version\Net\conobra\QbookSync\bin\Debug\QbookSync.exe.config
+D:\smartStrategy\Conobra\Conobra Nueva version\Net\conobra\QbookSync\bin\Debug\QbookSync.exe
+D:\smartStrategy\Conobra\Conobra Nueva version\Net\conobra\QbookSync\bin\Debug\QbookSync.pdb
+D:\smartStrategy\Conobra\Conobra Nueva version\Net\conobra\QbookSync\bin\Debug\Quickbook.dll
+D:\smartStrategy\Conobra\Conobra Nueva version\Net\conobra\QbookSync\bin\Debug\Quickbook.pdb
+D:\smartStrategy\Conobra\Conobra Nueva version\Net\conobra\QbookSync\obj\x86\Debug\QbookSync.csprojResolveAssemblyReference.cache
+D:\smartStrategy\Conobra\Conobra Nueva version\Net\conobra\QbookSync\obj\x86\Debug\QbookSync.Dashboard.resources
+D:\smartStrategy\Conobra\Conobra Nueva version\Net\conobra\QbookSync\obj\x86\Debug\QbookSync.Properties.Resources.resources
+D:\smartStrategy\Conobra\Conobra Nueva version\Net\conobra\QbookSync\obj\x86\Debug\QbookSync.csproj.GenerateResource.Cache
+D:\smartStrategy\Conobra\Conobra Nueva version\Net\conobra\QbookSync\obj\x86\Debug\QbookSync.exe
+D:\smartStrategy\Conobra\Conobra Nueva version\Net\conobra\QbookSync\obj\x86\Debug\QbookSync.pdb

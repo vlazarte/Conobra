@@ -26,5 +26,10 @@ namespace Quickbook
             err = "No implemented yet PriceLevel";
             return false;
         }
+        public override List<Abstract> GetRecords(ref string err)
+        {
+            err = "No implemented yet PriceLevel";
+            return new List<Abstract>();
+        }
     }
 }

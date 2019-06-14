@@ -60,5 +60,10 @@ namespace Quickbook
             err = "No implemented yet TransactionLine";
             return false;
         }
+        public override List<Abstract> GetRecords(ref string err)
+        {
+            err = "No implemented yet TransactionLine";
+            return new List<Abstract>();
+        }
     }
 }

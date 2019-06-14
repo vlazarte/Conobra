@@ -25,6 +25,11 @@ namespace Quickbook
             err = "No implemented yet CustomerType";
             return false;
         }
+        public override List<Abstract> GetRecords(ref string err)
+        {
+            err = "No implemented yet CustomerType";
+            return new List<Abstract>();
+        }
 
     }
 }

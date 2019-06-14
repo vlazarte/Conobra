@@ -14,5 +14,10 @@ namespace Quickbook
             err = "No implemented yet TaxVendor";
             return false;
         }
+        public override List<Abstract> GetRecords(ref string err)
+        {
+            err = "No implemented yet TaxVendor";
+            return new List<Abstract>();
+        }
     }
 }

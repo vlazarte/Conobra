@@ -31,6 +31,11 @@ namespace Quickbook
             err = "No implemented yet SalesReceiptLineGroup";
             return false;
         }
+        public override List<Abstract> GetRecords(ref string err)
+        {
+            err = "No implemented yet SalesReceiptLineGroup";
+            return new List<Abstract>();
+        }
 
     }
 }

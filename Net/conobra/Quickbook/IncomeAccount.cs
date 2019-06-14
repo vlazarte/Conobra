@@ -13,5 +13,10 @@ namespace Quickbook
             err = "No implemented yet IncomeAccount";
             return false;
         }
+        public override List<Abstract> GetRecords(ref string err)
+        {
+             err = "No implemented yet IncomeAccount";
+            return new List<Abstract>();
+        }
     }
 }

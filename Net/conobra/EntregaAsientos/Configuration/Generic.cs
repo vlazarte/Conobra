@@ -5,12 +5,13 @@ using System.Text;
 using System.Reflection;
 using System.Collections;
 using Quickbook;
+using SmartQuickbook.Helper;
 
 namespace SmartQuickbook.Configuration
 {
     public class Generic
     {
-        public static object SetFields( List<string> fieldNames, List<object> fieldValues, object obj, ref string err )
+        public static object SetFields(List<string> fieldNames, List<object> fieldValues, object obj, ref string err)
         {
             err = "";
             for (int i = 0; i < fieldNames.Count; i++)
@@ -25,7 +26,7 @@ namespace SmartQuickbook.Configuration
                     }
                     _propertyInfo.SetValue(obj, fieldValues[i], null);
                 }
-              
+
             }
             return obj;
         }
@@ -44,63 +45,119 @@ namespace SmartQuickbook.Configuration
         }
         public static string GetFieldsToCsv(List<ProcesoParametros> parametros, string keyExternalValue, object obj, ref string err)
         {
-            err = "";
-            String fieldValues = "";
-
-        
-             for (int i = 0; i < parametros.Count; i++)                                    
+            try
             {
-                if (!parametros[i].isKey)
+                err = "";
+                String fieldValues = "";
+
+
+                for (int i = 0; i < parametros.Count; i++)
                 {
-                    PropertyInfo[] ifnoo= obj.GetType().GetProperties();
-                    PropertyInfo _propertyInfo = obj.GetType().GetProperty(parametros[i].fieldName);
-                    if (_propertyInfo == null)
+                    if (!parametros[i].isKey)
                     {
-                        err = "Property with names " + parametros[i].fieldName + " does not exists in " + obj.GetType().ToString();
-                        return null;
-                    }
-                    if (fieldValues == string.Empty)
-                    {
-                        fieldValues = Convert.ToString(_propertyInfo.GetValue(obj, null));
-                    }
-                    else
-                    {
-                        object objectValue = _propertyInfo.GetValue(obj, null);
-                        Abstract ObjectQuickbook = objectValue as Abstract;
-                        if (ObjectQuickbook != null)
+                        if (parametros[i].Type == null)
                         {
-                            fieldValues = fieldValues + "," + ObjectQuickbook.ListID;
-                        }else{
-                        fieldValues = fieldValues+"," + Convert.ToString(objectValue);
+                            PropertyInfo[] ifnoo = obj.GetType().GetProperties();
+                            PropertyInfo _propertyInfo = obj.GetType().GetProperty(parametros[i].fieldName);
+                            if (_propertyInfo == null)
+                            {
+                                err = "Property with names " + parametros[i].fieldName + " does not exists in " + obj.GetType().ToString();
+                                return null;
+                            }
+                            if (fieldValues == string.Empty)
+                            {
+                                fieldValues = Convert.ToString(_propertyInfo.GetValue(obj, null));
+                            }
+                            else
+                            {
+                                object objectValue = _propertyInfo.GetValue(obj, null);
+                                Abstract ObjectQuickbook = objectValue as Abstract;
+                                if (ObjectQuickbook != null)
+                                {
+                                    fieldValues = fieldValues + "," + ObjectQuickbook.ListID;
+                                }
+                                else
+                                {
+                                    fieldValues = fieldValues + "," + Convert.ToString(objectValue);
+                                }
+
+                            }
+
                         }
-                        
-                        
-                        
-                        
-                    }
-                }
-                else
-                {
-                    if (fieldValues == string.Empty)
-                    {
-                        fieldValues = keyExternalValue;
+                        else
+                        {
+
+
+                            string[] field = parametros[i].Type.ToString().Split('/');
+                            string fieldPropertyCustom = field[0];//custom
+                            string fieldPropertyName = field[1];//ID
+                            if (fieldPropertyCustom == "Custom")
+                            {
+                                Abstract newValueObject = obj as Abstract;
+                                string value = newValueObject.getDataExValue(fieldPropertyName);
+
+                                if (value != null)
+                                {
+
+                                    fieldValues = fieldValues + "," + value;
+
+                                }
+                                else
+                                {
+                                    fieldValues = fieldValues + "," + "";
+                                }
+                            }
+                            else
+                            {
+                                ////si es otro dato compuesto obtener el tipo
+                                string value = HelperTask.getObjectValue(fieldPropertyCustom, obj, fieldPropertyName, ref err);
+                                if (value != null)
+                                {
+                                   fieldValues = fieldValues + "," + value;
+
+                                }
+                                else
+                                {
+                                    fieldValues = fieldValues + "," + "";
+                                }
+
+                            }
+
+
+
+                        }
+
                     }
                     else
                     {
-                        if (keyExternalValue!=string.Empty) {
-                            fieldValues = fieldValues + "," + keyExternalValue;
+                        if (fieldValues == string.Empty)
+                        {
+                            fieldValues = keyExternalValue;
                         }
-                        
+                        else
+                        {
+                            if (keyExternalValue != string.Empty)
+                            {
+                                fieldValues = fieldValues + "," + keyExternalValue;
+                            }
+
+                        }
                     }
+
                 }
-                
-                
-                
+                return fieldValues;
             }
-            return fieldValues;
+            catch (Exception ex)
+            {
+                err = ex.Message;
+                return string.Empty;
+
+            }
+
+
         }
 
-        public static Hashtable getPairValues( List<Par> list )
+        public static Hashtable getPairValues(List<Par> list)
         {
             Hashtable data = new Hashtable();
             foreach (Par P in list)
@@ -109,38 +166,44 @@ namespace SmartQuickbook.Configuration
             }
             return data;
         }
-        public static string[] getFieldValues(List<ProcesoParametros> parametros,  object obj, ref string err)
-        { 
+        public static string[] getFieldValues(List<ProcesoParametros> parametros, object obj, ref string err)
+        {
             err = "";
-            String[] fieldValues = new string[parametros.Count];
+            int countToCreate = parametros.Count * 2;
+            String[] fieldValues = new string[countToCreate];
 
-        
-             for (int i = 0; i < parametros.Count; i++)                                    
+
+            int index = 0;
+            int i = 0;
+            while (index < countToCreate)
             {
-                
-                    PropertyInfo[] ifnoo= obj.GetType().GetProperties();
-                    PropertyInfo _propertyInfo = obj.GetType().GetProperty(parametros[i].fieldName);
-                    if (_propertyInfo == null)
-                    {
-                        err = "Property with names " + parametros[i].fieldName + " does not exists in " + obj.GetType().ToString();
-                        return null;
-                    }
-                   
-                        object objectValue = _propertyInfo.GetValue(obj, null);
-                        Abstract ObjectQuickbook = objectValue as Abstract;
-                        if (ObjectQuickbook != null)
-                        {
-                            fieldValues[i] = ObjectQuickbook.ListID;
-                        }else{
-                        fieldValues[i]= Convert.ToString(objectValue);
-                        }
-                    
-                
+                PropertyInfo[] ifnoo = obj.GetType().GetProperties();
+                PropertyInfo _propertyInfo = obj.GetType().GetProperty(parametros[i].fieldName);
+                if (_propertyInfo == null)
+                {
+                    err = "Property with names " + parametros[index].fieldName + " does not exists in " + obj.GetType().ToString();
+                    return null;
+                }
+
+                object objectValue = _propertyInfo.GetValue(obj, null);
+                Abstract ObjectQuickbook = objectValue as Abstract;
+                if (ObjectQuickbook != null)
+                {
+                    fieldValues[index] = parametros[i].fieldName;
+                    fieldValues[index + 1] = ObjectQuickbook.ListID;
+                }
+                else
+                {
+                    fieldValues[index] = parametros[i].fieldName;
+                    fieldValues[index + 1] = Convert.ToString(objectValue);
+                }
+                index = index + 2;
+                i++;
             }
 
 
 
-             return fieldValues;
+            return fieldValues;
         }
     }
 }
