@@ -8,13 +8,15 @@ namespace Quickbook
 {
     public class AdditionalContactRef
     {
-                                
-      public  string ContactName{get; set;}
+
+    
+      public string ContactName { get; set; }
       public  string ContactValue{get;set;}
 
       public bool isValid() {
           return ContactName != string.Empty && ContactValue != string.Empty;
       }
+        
       public string toXmlRef()
       {
           StringBuilder xml = new StringBuilder();

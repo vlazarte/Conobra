@@ -33,7 +33,8 @@ namespace Quickbook
         public string Cc { get; set; }
         public string Contact { get; set; }
         public string AltContact { get; set; }
-        public AdditionalContactRef AdditionalContactRef { get; set; }
+        public List<AdditionalContactRef> AdditionalContactRef { get; set; }
+        
         public ContactsRet Contacts { get; set; }
         public string NameOnCheck { get; set; }
         public string AccountNumber { get; set; }
@@ -702,15 +703,16 @@ namespace Quickbook
                 }
                 if (node.SelectNodes("AdditionalContactRef").Count > 0)
                 {
-                    toUpdate.AdditionalContactRef = new AdditionalContactRef();
-                    if (node["AdditionalContactRef"]["ContactName"] != null)
+                    toUpdate.AdditionalContactRef = new List<AdditionalContactRef>();
+                    XmlNodeList nodes= node.SelectNodes("AdditionalContactRef");
+                    for (int i = 0; i < nodes.Count; i++)
                     {
-                        toUpdate.AdditionalContactRef.ContactName = node["AdditionalContactRef"]["ContactName"].InnerText;
-                    }
-                    if (node["AdditionalContactRef"]["ContactValue"] != null)
-                    {
-                        toUpdate.AdditionalContactRef.ContactValue = node["AdditionalContactRef"]["ContactValue"].InnerText;
-                    }
+                       AdditionalContactRef contact=  new AdditionalContactRef();
+                        contact.ContactName = nodes[i].FirstChild.InnerText;
+                       contact.ContactValue = nodes[i].LastChild.InnerText;
+                        
+                        toUpdate.AdditionalContactRef.Add(contact);
+                    }   
 
                 }
 

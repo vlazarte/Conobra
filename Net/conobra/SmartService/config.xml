@@ -459,13 +459,13 @@
     <params>
     </params>
     <response>
-      <p field="3">RecordID</p>
-      <p field="6">Nombre</p>
-      <p field="45">alias</p>
-      <p field="76">Cedula</p>
-      <p field="7">Telefono</p>
-      <p field="11">Correo</p>
-      <p field="51">QuickbookID</p>
+      <p fid="3">RecordID</p>
+      <p fid="6">Name</p>
+      <p fid="45">CompanyName</p>
+      <p fid="76" type="Custom/Name">ID</p>
+      <p fid="7" type="AdditionalContactRef">AdditionalContactRef</p>      
+      <p fid="11">Email</p>
+      <p fid="51">ListID</p>
     </response>
   </access>
   <access id="3a847e17ba9e87559ad0bb71fac12100">
@@ -486,7 +486,25 @@
     </params>
   </access>
 
-
+  <access id="3a847e17ba9e87559ad0bb71fac12200">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bn8txn28h</dbid>
+    <query>-1</query>
+    <qid>-1</qid>
+    <clist>3.6.45.76.7.11.51</clist>
+    <params>
+      <p field="3">RecordID</p>
+      <p field="6">nombre</p>
+      <p field="45">alias</p>
+      <p field="76">Cedula</p>
+      <p field="7">Telephono</p>
+      <p field="11">Correo</p>
+      <p field="51">QuickbookID</p>
+    </params>
+  </access>
+  
 
 
   <!--Proceso 10 Proveedores-->
