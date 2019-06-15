@@ -1037,7 +1037,11 @@
     <file relUrl="vendors/DateJS/build/production/date-en-US.min.js" publishTime="05/30/2019 16:00:01" />
     <file relUrl="vendors/DateJS/build/i18n/fr-CH.js" publishTime="05/30/2019 16:00:01" />
     <file relUrl="vendors/Chart.js/samples/line-x-axis-filter.html" publishTime="05/30/2019 16:00:00" />
+<<<<<<< HEAD
     <file relUrl="config.xml" publishTime="06/14/2019 13:28:02" />
+=======
+    <file relUrl="config.xml" publishTime="06/15/2019 08:25:43" />
+>>>>>>> master
     <file relUrl="vendors/Chart.js/dist/Chart.bundle.min.js" publishTime="05/30/2019 16:00:00" />
     <file relUrl="vendors/bootstrap-progressbar/css/bootstrap-progressbar-2.2.0.min.css" publishTime="05/30/2019 16:00:01" />
     <file relUrl="vendors/DateJS/build/production/i18n/es-UY.js" publishTime="05/30/2019 16:00:01" />

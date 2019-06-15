@@ -168,7 +168,9 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Web References\wClient\WService.disco" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -212,10 +214,10 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://localhost:49349/WService.asmx">
+    <WebReferenceUrl Include="http://servicesnet.smartstrategyapps.com//Cloud/WebServices/IntegracionesQuickbook/WService.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\wClient\</RelPath>
-      <UpdateFromURL>http://localhost:49349/WService.asmx</UpdateFromURL>
+      <UpdateFromURL>http://servicesnet.smartstrategyapps.com//Cloud/WebServices/IntegracionesQuickbook/WService.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>

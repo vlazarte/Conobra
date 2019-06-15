@@ -18,13 +18,47 @@ namespace SmartQuickbook.Configuration
             {
                 if (fieldNames[i] != null)
                 {
+
+
                     PropertyInfo _propertyInfo = obj.GetType().GetProperty(fieldNames[i]);
                     if (_propertyInfo == null)
                     {
-                        err = "Property with names " + fieldNames[i] + " does not exists in " + obj.GetType().ToString();
-                        return null;
+                        if (fieldNames[i] == "Custom")
+                        {
+                            ((Abstract)obj).AddDataEx("ID", fieldValues[i].ToString());
+                        }
+                        else
+                        {
+                            
+                                err = "Property with names " + fieldNames[i] + " does not exists in " + obj.GetType().ToString();
+                                return null;
+                            
+                        }
+
+
+
                     }
-                    _propertyInfo.SetValue(obj, fieldValues[i], null);
+                    else
+                    {
+
+
+                        if (fieldNames[i] == "AdditionalContactRef")
+                        {
+                            if (((Vendor)obj).AdditionalContactRef == null)
+                            {
+                                ((Vendor)obj).AdditionalContactRef = new List<AdditionalContactRef>();
+                                AdditionalContactRef adicional = new AdditionalContactRef();
+                                adicional.ContactName = "Main Phone";
+                                adicional.ContactValue = fieldValues[i].ToString();
+                                ((Vendor)obj).AdditionalContactRef.Add(adicional);
+                            }
+                        }
+                        else {
+                            _propertyInfo.SetValue(obj, fieldValues[i], null);
+                        }
+                        
+                    }
+
                 }
 
             }
@@ -48,7 +82,7 @@ namespace SmartQuickbook.Configuration
             try
             {
                 err = "";
-                String fieldValues = "";
+                 List< String> fieldValues = new List<string>();
 
 
                 for (int i = 0; i < parametros.Count; i++)
@@ -64,29 +98,21 @@ namespace SmartQuickbook.Configuration
                                 err = "Property with names " + parametros[i].fieldName + " does not exists in " + obj.GetType().ToString();
                                 return null;
                             }
-                            if (fieldValues == string.Empty)
-                            {
-                                fieldValues = Convert.ToString(_propertyInfo.GetValue(obj, null));
-                            }
-                            else
-                            {
+                            
                                 object objectValue = _propertyInfo.GetValue(obj, null);
                                 Abstract ObjectQuickbook = objectValue as Abstract;
                                 if (ObjectQuickbook != null)
                                 {
-                                    fieldValues = fieldValues + "," + ObjectQuickbook.ListID;
+                                    fieldValues.Add( ObjectQuickbook.ListID);
                                 }
                                 else
                                 {
-                                    fieldValues = fieldValues + "," + Convert.ToString(objectValue);
+                                    fieldValues.Add(Convert.ToString(objectValue).Replace("\"", "\"\""));
                                 }
-
-                            }
 
                         }
                         else
                         {
-
 
                             string[] field = parametros[i].Type.ToString().Split('/');
                             string fieldPropertyCustom = field[0];//custom
@@ -99,53 +125,68 @@ namespace SmartQuickbook.Configuration
                                 if (value != null)
                                 {
 
-                                    fieldValues = fieldValues + "," + value;
+                                    fieldValues.Add( value.Replace("\"", "\"\""));
 
                                 }
                                 else
                                 {
-                                    fieldValues = fieldValues + "," + "";
+                                    fieldValues.Add( "");
                                 }
                             }
                             else
-                            {
-                                ////si es otro dato compuesto obtener el tipo
-                                string value = HelperTask.getObjectValue(fieldPropertyCustom, obj, fieldPropertyName, ref err);
-                                if (value != null)
-                                {
-                                   fieldValues = fieldValues + "," + value;
+                            {                               
+                                    if (fieldPropertyCustom == "AdditionalContactRef")
+                                    {
+                                        if (((Vendor)obj).AdditionalContactRef == null)
+                                        {
+                                            fieldValues .Add("");
+                                        }
+                                        else {
+                                            AdditionalContactRef newValue=  ((Vendor)obj).AdditionalContactRef.Find(d => d.ContactName == "Main Phone");
+                                            if (newValue != null)
+                                            {
+                                                fieldValues.Add( newValue.ContactValue.Replace("\"", "\"\""));
+                                            }
+                                            else {
+                                                   fieldValues.Add( "");
+                                            }
 
-                                }
-                                else
-                                {
-                                    fieldValues = fieldValues + "," + "";
-                                }
+                                        }
+                                    }
+                                    else {
+                                        ////si es otro dato compuesto obtener el tipo
+                                        string value = HelperTask.getObjectValue(fieldPropertyCustom, obj, fieldPropertyName, ref err);
+                                        if (value != null)
+                                        {
+                                               fieldValues.Add( value.Replace("\"", "\"\""));
 
+                                        }
+                                        else
+                                        {
+                                           fieldValues.Add( "");
+                                        }
+                                    }
                             }
-
-
 
                         }
 
                     }
                     else
                     {
-                        if (fieldValues == string.Empty)
+                        if (keyExternalValue != string.Empty)
                         {
-                            fieldValues = keyExternalValue;
+                            fieldValues.Add(keyExternalValue);
                         }
-                        else
-                        {
-                            if (keyExternalValue != string.Empty)
-                            {
-                                fieldValues = fieldValues + "," + keyExternalValue;
-                            }
-
+                        else {
+                            fieldValues.Add("");
                         }
                     }
 
                 }
-                return fieldValues;
+
+                string fila = "\"" + String.Join("\",\"", fieldValues.ToArray()) + "\"";
+                //fila="\"
+                return fila;
             }
             catch (Exception ex)
             {

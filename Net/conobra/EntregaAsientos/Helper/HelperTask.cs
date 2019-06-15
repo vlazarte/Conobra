@@ -258,42 +258,76 @@ namespace SmartQuickbook.Helper
                             string[] field = accion.parametros[i].fieldId.ToString().Split('/');
                             string fieldPropertyCustomer = field[0];//parenref
                             string fieldPropertyCurrency = field[1];//listID
-                            fieldNames.Add(fieldPropertyCustomer);
 
-                            if (accion.parametros[i].Type != null)
+
+                            if (fieldPropertyCustomer == "Custom")
                             {
 
-                                string value = pairs[fieldPropertyCustomer].ToString();
-                                if (value != string.Empty)
+                                fieldNames.Add(fieldPropertyCustomer);
+                                fieldValues.Add(pairs[accion.parametros[i].fieldName].ToString());
+                                isValue = true;
+                            }
+                            else
+                            {
+
+
+                                fieldNames.Add(fieldPropertyCustomer);
+
+
+                                if (accion.parametros[i].Type != null)
                                 {
 
-
-
-                                    var newValueObject = HelperTask.ConvertType(fieldPropertyCurrency, value, accion.parametros[i].Type, ref err);
-                                    if (err != string.Empty)
+                                    string value = pairs[fieldPropertyCustomer].ToString();
+                                    if (accion.parametros[i].Type == "AdditionalContactRef")
                                     {
+                                        fieldValues.Add(value);
+                                        isValue = true;
 
-                                        mostrarMensaje.Append("Convirtiendo valores Error:" + err + Environment.NewLine);
-
-                                    }
-
-                                    fieldValues.Add(newValueObject);
-                                    isValue = true;
-                                }
-                                else
-                                {
-                                    if (accion.parametros[i].Required)
-                                    {
-
-                                        Requiered = true;
-                                        fieldRiquiered = accion.parametros[i].fieldId;
-                                        break;
                                     }
                                     else
                                     {
-                                        fieldValues.Add(null);
-                                        isValue = true;
+
+                                        if (value != string.Empty)
+                                        {
+
+                                            var newValueObject = HelperTask.ConvertType(fieldPropertyCurrency, value, accion.parametros[i].Type, ref err);
+                                            if (err != string.Empty)
+                                            {
+
+                                                mostrarMensaje.Append("Convirtiendo valores Error:" + err + Environment.NewLine);
+
+                                            }
+
+                                            fieldValues.Add(newValueObject);
+                                            isValue = true;
+                                        }
+                                        else
+                                        {
+                                            if (accion.parametros[i].Required)
+                                            {
+
+                                                Requiered = true;
+                                                fieldRiquiered = accion.parametros[i].fieldId;
+                                                break;
+                                            }
+                                            else
+                                            {
+                                                fieldValues.Add(null);
+                                                isValue = true;
+                                            }
+
+
+                                        }
                                     }
+
+                                }
+                                else
+                                {
+                                    fieldValues.Add(pairs[accion.parametros[i].fieldName]);
+                                    isValue = true;
+                                }
+
+                            }
 
 
                                 }
@@ -342,40 +376,40 @@ namespace SmartQuickbook.Helper
                             }
                         }
 
+
                     }
                     else
                     {  //si es el campo llave debe ser igual con fieldNameExternal
 
-                        if (fieldNameExternals.Count > 0)
+
+                        var value = Array.Find(fieldNameExternals.ToArray(), element => element.Value.Equals(accion.parametros[i].fieldName));
+
+                        if (value.Value != string.Empty && pairs[value.Value] != null)
                         {
-                            var value = Array.Find(fieldNameExternals.ToArray(), element => element.Value.Equals(accion.parametros[i].fieldName));
-
-                            if (value.Value != string.Empty && pairs[value.Value] != null)
+                            //valor de la llave externa
+                            if (llaveQuickbase.ContainsKey(value.Key))
                             {
-                                //valor de la llave externa
-                                if (llaveQuickbase.ContainsKey(value.Key))
-                                {
-                                    llaveQuickbase[value.Key] = pairs[value.Value].ToString();
-                                }
-                                else
-                                {
-                                    llaveQuickbase.Add(value.Key, pairs[value.Value].ToString());
-                                }
-
+                                llaveQuickbase[value.Key] = pairs[value.Value].ToString();
                             }
+                            else
+                            {
+                                llaveQuickbase.Add(value.Key, pairs[value.Value].ToString());
+                            }
+
+
                         }
 
 
-                    }
 
+
+                
+             catch (Exception e)
+            {
+                err = e.Message;
 
                 }
-            }
-            catch (Exception ex)
-            {
-                err = ex.Message;
-                //throw;
-            }
+            
+           
 
         }
         public static void GetValuesToAddAndUpdate(ProcesoAccion accion, Hashtable pairs, ref List<string> fieldNames, ref  List<object> fieldValues, ref Dictionary<string, string> fieldNameExternals, ref Dictionary<string, string> fieldNameExternalsCreate, ref Dictionary<string, string> llaveQuickbase, ref string fieldRiquiered, ref bool Requiered, ref StringBuilder mostrarMensaje, ref string err)
