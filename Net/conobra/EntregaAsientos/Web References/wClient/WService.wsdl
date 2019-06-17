@@ -196,10 +196,10 @@
   </wsdl:binding>
   <wsdl:service name="WService">
     <wsdl:port name="WServiceSoap" binding="tns:WServiceSoap">
-      <soap:address location="http://servicesnet.smartstrategyapps.com/Cloud/WebServices/IntegracionesQuickbook/WService.asmx" />
+      <soap:address location="http://localhost:49349/WService.asmx" />
     </wsdl:port>
     <wsdl:port name="WServiceSoap12" binding="tns:WServiceSoap12">
-      <soap12:address location="http://servicesnet.smartstrategyapps.com/Cloud/WebServices/IntegracionesQuickbook/WService.asmx" />
+      <soap12:address location="http://localhost:49349/WService.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

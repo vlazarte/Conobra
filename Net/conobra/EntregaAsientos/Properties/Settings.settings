@@ -12,7 +12,7 @@
       <Value Profile="(Default)">b4f16ca3cd7d_</Value>
     </Setting>
     <Setting Name="SmartQuickbook_wClient_WService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://servicesnet.smartstrategyapps.com/Cloud/WebServices/IntegracionesQuickbook/WService.asmx</Value>
+      <Value Profile="(Default)">http://localhost:49349/WService.asmx</Value>
     </Setting>
   </Settings>
 </SettingsFile>

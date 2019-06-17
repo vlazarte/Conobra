@@ -5,43 +5,60 @@ using System.Text;
 using System.Collections;
 using System.Xml;
 using System.Globalization;
+using System.IO;
 
 
 namespace Quickbook
 {
-    public class Bill
+    public class Bill : Abstract
     {
+        public Vendor VendorRef { get; set; }
+        public VendorAddress VendorAddress { get; set; }
+        public Account APAccountRef { get; set; }
+        public DateTime? txnDate { get; set; }
+        public DateTime? DueDate { get; set; }
+        public string RefNumber { get; set; }
+        public TermsRef TermsRef { get; set; }
+        public string Memo { get; set; }
+        public bool? IsTaxIncluded { get; set; }
+        public SalesTaxCodeRef SalesTaxCodeRef { get; set; }
+        public float ExchangeRate { get; set; }
+        public string ExternalGUID { get; set; }
+        public string LinkToTxnID { get; set; }
+
+
         private bool exists;
 
-        public string TxnID ;
-        public string EditSequence ;
-
-        private Vendor vendor;
-        private Account apaAccount;
-        private DateTime txnDate;
-        private DateTime dueDate;
-        private string refNumber;
-        private string memo;
-        private float rate;
-
+        public string TxnID { get; set; }
+        public string EditSequence { get; set; }
         public string lastResponse;
 
-        private List<BillExpenseLine> expenseLines ;
+        private List<BillExpenseLine> expenseLines;
 
         public List<BillItemLine> itemLines;
 
-        private Connector qb;
 
-        public Bill( Connector instance )
+
+
+        public Bill()
         {
-            vendor = null;
-            apaAccount = null;
+            VendorRef = null;
+            VendorAddress = null;
+            APAccountRef = null;
+            RefNumber = string.Empty;
+            TermsRef = null;
+            Memo = string.Empty;
+            IsTaxIncluded = null;
+            SalesTaxCodeRef = null;
+            ExternalGUID = string.Empty;
+
+            txnDate = null;
+            DueDate = null;
+
             expenseLines = new List<BillExpenseLine>();
             itemLines = new List<BillItemLine>();
-            qb = instance;
 
             exists = false;
-
             TxnID = string.Empty;
             EditSequence = string.Empty;
         }
@@ -65,18 +82,18 @@ namespace Quickbook
             return itemLines.Count;
         }
 
-        public void addExpenseLine( BillExpenseLine line )
+        public void addExpenseLine(BillExpenseLine line)
         {
             expenseLines.Add(line);
         }
 
-        public void addItemLine( BillItemLine line )
+        public void addItemLine(BillItemLine line)
         {
             itemLines.Add(line);
         }
 
 
-        public void updateItemLine( string itemName, BillItemLine line )
+        public void updateItemLine(string itemName, BillItemLine line)
         {
             foreach (BillItemLine l in itemLines)
             {
@@ -88,9 +105,10 @@ namespace Quickbook
             }
         }
 
-        public void updateExpenseLine( string account, BillExpenseLine line )
+        public void updateExpenseLine(string account, BillExpenseLine line)
         {
-            foreach( BillExpenseLine l in expenseLines ) {
+            foreach (BillExpenseLine l in expenseLines)
+            {
                 if (l.account.ListID == account)
                 {
                     l.copy(line);
@@ -99,82 +117,50 @@ namespace Quickbook
             }
         }
 
-        public Vendor VendorRef
-        {
-            get { return vendor; }
-            set { vendor = value; }
-        }
 
-        public Account APAccountRef
-        {
-            get { return apaAccount; }
-            set { apaAccount = value; }
-        }
 
-        public DateTime TxnDate
+        public DateTime? TxnDate
         {
             get { return txnDate; }
             set { txnDate = value; }
         }
 
-        public DateTime DueDate
-        {
-            get { return dueDate; }
-            set { dueDate = value; }
-        }
 
-        public string RefNumber
-        {
-            get { return refNumber; }
-            set { refNumber = value; }
-        }
-
-        public string Memo
-        {
-            get { return memo; }
-            set { memo = value; }
-        }
-
-        public float ExchangeRate
-        {
-            get { return rate; }
-            set { rate = value; }
-        }
-
-     
         public XmlDocument create()
         {
             try
             {
-                if (qb.Connect())
-                {
+                //if (qb.Connect())
+                //{
 
-                    string msg = qb.sendRequest(toXml());
-                    lastResponse = msg;
-                    XmlDocument doc = new XmlDocument();
-                    doc.LoadXml(msg);
-                    return doc;
-                }
-            } catch( Exception ex ) {
+                //    string msg = qb.sendRequest(toXml());
+                //    lastResponse = msg;
+                //    XmlDocument doc = new XmlDocument();
+                //    doc.LoadXml(msg);
+                //    return doc;
+                //}
+            }
+            catch (Exception ex)
+            {
                 //lastResponse = ex.Message;
             }
             return null;
         }
 
-        public string toXmlLoadBill( string refNumber )
+        public string toXmlLoadBill(string refNumber)
         {
             string xml = string.Empty;
-            xml += "<?xml version=\"1.0\" ?>" + Environment.NewLine ;
-            xml += "<?qbxml version=\"13.0\"?>" + Environment.NewLine ;
-            xml += "<QBXML>" + Environment.NewLine ;
-                xml += "<QBXMLMsgsRq onError=\"stopOnError\">" + Environment.NewLine;
-                    xml += "<BillQueryRq>" + Environment.NewLine ;
-                        xml += "<RefNumber >" + refNumber + "</RefNumber>" + Environment.NewLine ;
-                        xml += "<IncludeLineItems >true</IncludeLineItems>" + Environment.NewLine ;
-                        xml += "<OwnerID>0</OwnerID>" + Environment.NewLine ;
-                    xml += "</BillQueryRq>" + Environment.NewLine ;
-                xml += "</QBXMLMsgsRq>" + Environment.NewLine ;
-            xml += "</QBXML>" ;
+            xml += "<?xml version=\"1.0\" ?>" + Environment.NewLine;
+            xml += "<?qbxml version=\"13.0\"?>" + Environment.NewLine;
+            xml += "<QBXML>" + Environment.NewLine;
+            xml += "<QBXMLMsgsRq onError=\"stopOnError\">" + Environment.NewLine;
+            xml += "<BillQueryRq>" + Environment.NewLine;
+            xml += "<RefNumber >" + refNumber + "</RefNumber>" + Environment.NewLine;
+            xml += "<IncludeLineItems >true</IncludeLineItems>" + Environment.NewLine;
+            xml += "<OwnerID>0</OwnerID>" + Environment.NewLine;
+            xml += "</BillQueryRq>" + Environment.NewLine;
+            xml += "</QBXMLMsgsRq>" + Environment.NewLine;
+            xml += "</QBXML>";
 
             return xml;
         }
@@ -205,7 +191,7 @@ namespace Quickbook
             return xml;
         }
 
-        public bool LoadBill( string xml )
+        public bool LoadBill(string xml)
         {
             XmlDocument doc = new XmlDocument();
             try
@@ -215,7 +201,7 @@ namespace Quickbook
             }
             catch (Exception ex)
             {
-                return false ;
+                return false;
             }
 
             var statusCode = doc["QBXML"]["QBXMLMsgsRs"]["BillQueryRs"].Attributes["statusCode"].Value;
@@ -230,16 +216,16 @@ namespace Quickbook
                     foreach (XmlNode node in rets)
                     {
 
-                        TxnID = node["TxnID"].InnerText ;
-                        EditSequence = node["EditSequence"].InnerText ;
+                        TxnID = node["TxnID"].InnerText;
+                        EditSequence = node["EditSequence"].InnerText;
 
                         Hashtable aux = new Hashtable();
 
                         XmlNodeList extras = node.SelectNodes("ExpenseLineRet");
                         foreach (XmlNode ex in extras)
                         {
-                            string txn = ex["TxnLineID"].InnerText ;
-                            string lid = ex["AccountRef"]["ListID"].InnerText ;
+                            string txn = ex["TxnLineID"].InnerText;
+                            string lid = ex["AccountRef"]["ListID"].InnerText;
 
                             aux[lid] = txn;
                         }
@@ -284,7 +270,7 @@ namespace Quickbook
                     return true;
                 }
             }
-            
+
             return false;
         }
 
@@ -303,33 +289,37 @@ namespace Quickbook
             xml += Environment.NewLine + "<TxnID>" + TxnID + "</TxnID>";
             xml += Environment.NewLine + "<EditSequence>" + EditSequence + "</EditSequence>";
 
-            if (vendor != null)
+            if (VendorRef != null)
             {
-                xml += Environment.NewLine + "<VendorRef>";
-                xml += Environment.NewLine + "<ListID >" + vendor.ListID + "</ListID>";
-                //xml += Environment.NewLine + "<FullName >STRTYPE</FullName>";
-                xml += Environment.NewLine + "</VendorRef>";
+                xml += VendorRef.toXMLVendorRef();
             }
 
-            if (apaAccount != null)
+            if (APAccountRef != null)
             {
-                xml += Environment.NewLine + "<APAccountRef>";
-                xml += Environment.NewLine + "<ListID >" + apaAccount.ListID + "</ListID>";
-                //xml += Environment.NewLine + "<FullName >STRTYPE</FullName>";
-                xml += Environment.NewLine + "</APAccountRef>";
+                xml += APAccountRef.toXmlRef();
             }
 
-            xml += Environment.NewLine + "<TxnDate>" + txnDate.ToString("yyyy-MM-dd") + "</TxnDate>";
-            if (dueDate != null)
-                xml += Environment.NewLine + "<DueDate>" + dueDate.ToString("yyyy-MM-dd") + "</DueDate>";
-
-            xml += Environment.NewLine + "<RefNumber>" + refNumber + "</RefNumber>";
-            if (memo != string.Empty)
-            {
-                xml += Environment.NewLine + "<Memo>" + memo + "</Memo>";
+            if (txnDate != null) {
+                string DateString = txnDate.ToString();
+                DateTime dt = Convert.ToDateTime(DateString);                
+                xml += Environment.NewLine + "<TxnDate>" + dt.ToString("yyyy-MM-dd") + "</TxnDate>";
             }
 
-            xml += Environment.NewLine + "<ExchangeRate>" + rate.ToString("0.00") + "</ExchangeRate>";
+
+            if (DueDate != null) {
+                string DateString = DueDate.ToString();
+                DateTime dt = Convert.ToDateTime(DateString);
+                xml += Environment.NewLine + "<DueDate>" + dt.ToString("yyyy-MM-dd") + "</DueDate>";
+            }
+                
+
+            xml += Environment.NewLine + "<RefNumber>" + RefNumber + "</RefNumber>";
+            if (Memo != string.Empty)
+            {
+                xml += Environment.NewLine + "<Memo>" + Memo + "</Memo>";
+            }
+
+            xml += Environment.NewLine + "<ExchangeRate>" + ExchangeRate.ToString("0.00") + "</ExchangeRate>";
 
             foreach (BillExpenseLine line in expenseLines)
             {
@@ -357,53 +347,182 @@ namespace Quickbook
             xml += "<?xml version=\"1.0\" ?>";
             xml += Environment.NewLine + Environment.NewLine + "<?qbxml version=\"13.0\" ?>";
             xml += Environment.NewLine + "<QBXML>";
-	            xml += Environment.NewLine + "<QBXMLMsgsRq onError=\"stopOnError\">";
-		            xml += Environment.NewLine + "<BillAddRq requestID=\"10001\">";
-			            xml += Environment.NewLine + "<BillAdd>";
+            xml += Environment.NewLine + "<QBXMLMsgsRq onError=\"stopOnError\">";
+            xml += Environment.NewLine + "<BillAddRq requestID=\"10001\">";
+            xml += Environment.NewLine + "<BillAdd>";
+            if (VendorRef != null)
+            {
+                xml += VendorRef.toXMLVendorRef();
+            }
 
-                        if ( vendor != null ) {
-                            xml += Environment.NewLine + "<VendorRef>";
-	                            xml += Environment.NewLine + "<ListID >" + vendor.ListID + "</ListID>";
-	                            //xml += Environment.NewLine + "<FullName >STRTYPE</FullName>";
-                            xml += Environment.NewLine + "</VendorRef>";
-                        }
 
-                        if ( apaAccount != null ) {
-                            xml += Environment.NewLine + "<APAccountRef>";
-		                        xml += Environment.NewLine + "<ListID >" + apaAccount.ListID + "</ListID>";
-		                        //xml += Environment.NewLine + "<FullName >STRTYPE</FullName>";
-	                        xml += Environment.NewLine + "</APAccountRef>";
-                        }
+            if (VendorAddress != null)
+            {
 
-                        xml += Environment.NewLine + "<TxnDate>" + txnDate.ToString("yyyy-MM-dd") + "</TxnDate>" ;
-                        if ( dueDate != null )
-                            xml += Environment.NewLine + "<DueDate>" + dueDate.ToString("yyyy-MM-dd") + "</DueDate>" ;
+                xml += VendorAddress.toXmlRef();
+            }
 
-	                    xml += Environment.NewLine + "<RefNumber>" + refNumber + "</RefNumber>" ;    
-                        if ( memo != string.Empty ) {
-                            xml += Environment.NewLine + "<Memo>" + memo + "</Memo>" ;    
-                        }
+            if (APAccountRef != null)
+            {
+                xml += APAccountRef.toXmlRef();
+            }
+            if (txnDate != null)
+            {
+                string DateString = txnDate.ToString();
+                DateTime dt = Convert.ToDateTime(DateString);
+                xml += Environment.NewLine + "<TxnDate>" + dt.ToString("yyyy-MM-dd") + "</TxnDate>";
+            }
 
-                        xml += Environment.NewLine + "<ExchangeRate>" + rate.ToString("0.00") + "</ExchangeRate>" ;
 
-                        foreach (BillExpenseLine line in expenseLines)
-                        {
-                            xml += Environment.NewLine + line.toXml();
-                        }
+            if (DueDate != null)
+            {
+                string DateString = DueDate.ToString();
+                DateTime dt = Convert.ToDateTime(DateString);
+                xml += Environment.NewLine + "<DueDate>" + dt.ToString("yyyy-MM-dd") + "</DueDate>";
+            }
 
-                        foreach (BillItemLine line in itemLines)
-                        {
-                            xml += Environment.NewLine + line.toXml();
-                        }
+         
 
-			            xml += Environment.NewLine + "</BillAdd>";
-		            xml += Environment.NewLine + "</BillAddRq>";
-	            xml += Environment.NewLine + "</QBXMLMsgsRq>";
+            xml += Environment.NewLine + "<RefNumber>" + RefNumber + "</RefNumber>";
+
+
+            if (TermsRef != null)
+            {
+                xml += TermsRef.toXmlRef();
+            }
+            if (Memo != string.Empty)
+            {
+                xml += Environment.NewLine + "<Memo>" + Memo + "</Memo>";
+            }
+
+            if (IsTaxIncluded != null)
+            {
+                xml += " <IsTaxIncluded >" + IsTaxIncluded.ToString() + "</IsTaxIncluded>";
+            }
+
+            if (SalesTaxCodeRef != null)
+            {
+                xml += SalesTaxCodeRef.toXmlRef();
+            }
+
+
+            xml += Environment.NewLine + "<ExchangeRate>" + ExchangeRate.ToString("0.00") + "</ExchangeRate>";
+            if (ExternalGUID != string.Empty)
+            {
+                xml += " <ExternalGUID >" + ExternalGUID + "</ExternalGUID>";
+            }
+            foreach (BillExpenseLine line in expenseLines)
+            {
+                xml += Environment.NewLine + line.toXml();
+            }
+
+            foreach (BillItemLine line in itemLines)
+            {
+                xml += Environment.NewLine + line.toXml();
+            }
+
+            xml += Environment.NewLine + "</BillAdd>";
+            xml += Environment.NewLine + "</BillAddRq>";
+            xml += Environment.NewLine + "</QBXMLMsgsRq>";
             xml += Environment.NewLine + "</QBXML>";
 
 
             return xml;
         }
 
+
+        public override bool AddRecord(ref string err, ref string xmlSend, ref string xmlRecived)
+        {
+
+            try
+            {
+                string xml = toXml();
+                if (xml == null)
+                {
+                    err = "Hubo un error al generar el XML";
+                    return false;
+                }
+
+                XmlDocument res = new XmlDocument();
+
+                if (Config.IsProduction == true)
+                {
+
+
+                    var qbook = new Connector(Quickbook.Config.App_Name, Quickbook.Config.File);
+
+                    if (qbook.Connect())
+                    {
+
+                        string response = qbook.sendRequest(xml);
+                        xmlSend = xml.Replace(",", ".");
+
+                        res.LoadXml(response);
+
+                        xmlRecived = res.InnerXml;
+                        xmlRecived = xmlRecived.Replace(",", ".");
+                        if (Config.SaveXML == true)
+                        {
+                            string pathFile = Directory.GetCurrentDirectory() + "\\samples\\C_" + ListID + ".xml";
+                            File.WriteAllText(pathFile, response);
+                        }
+
+                        qbook.Disconnect();
+                    }
+                    else
+                    {
+                        err = "QuickBook no conecto";
+                    }
+
+
+
+                }
+                else
+                {
+                    string pathFile = Directory.GetCurrentDirectory() + "\\samples\\NewCustomer_" + DateTime.Now.Ticks + ".xml";
+                    File.WriteAllText(pathFile, xml);
+                }
+
+                string code = "";
+                string statusMessage = "";
+
+                code = res["QBXML"]["QBXMLMsgsRs"]["BillAddRs"].Attributes["statusCode"].Value;
+                statusMessage = res["QBXML"]["QBXMLMsgsRs"]["BillAddRs"].Attributes["statusMessage"].Value;
+
+                if (code == "0")
+                {
+
+                    //string editSequence = "";
+                    ListID = res["QBXML"]["QBXMLMsgsRs"]["BillAddRs"]["BillRet"]["TxnID"].InnerText;
+                    //editSequence = res["QBXML"]["QBXMLMsgsRs"]["CustomerAddRs"]["CustomerRet"]["EditSequence"].InnerText;
+
+                    // Crear DataExRet
+                    if (RegisterDataEx(ref err))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    err = statusMessage;
+                }
+            }
+            catch (Exception ex)
+            {
+                err = ex.Message;
+            }
+
+
+            return false;
+        }
+        public override List<Abstract> GetRecords(ref string err)
+        {
+            err = "No implemented yet Bill";
+            return new List<Abstract>();
+        }
     }
 }

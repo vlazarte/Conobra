@@ -92,6 +92,11 @@ namespace Quickbook
             get { return name; }
             set { name = value; }
         }
+        public string FullName
+        {
+            get { return name; }
+            set { name = value; }
+        }
 
         public string CompanyName
         {
@@ -339,7 +344,24 @@ namespace Quickbook
         }
 
 
+        public string toXMLVendorRef() {
+            StringBuilder xml = new StringBuilder();
+            XmlElement ele = (new XmlDocument()).CreateElement("test");
+            xml.Append("<VendorRef>");
+            if (ListID != string.Empty)
+            {
+                xml.Append("<ListID >" + ListID + "</ListID>");
+            }
+            if (name != string.Empty)
+            {
+                ele.InnerText = name + "";
+                xml.Append("<FullName>" + ele.InnerXml + "</FullName>"); //-- required -->
+            }
 
+            xml.Append("</VendorRef>");
+
+            return xml.ToString();
+        }
         public List<Abstract> GetRecordsCVS(ref string err)
         {
 

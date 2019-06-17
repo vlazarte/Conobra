@@ -62,8 +62,7 @@ namespace SmartQuickbook.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://servicesnet.smartstrategyapps.com/Cloud/WebServices/IntegracionesQuickbook" +
-            "/WService.asmx")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:49349/WService.asmx")]
         public string SmartQuickbook_wClient_WService {
             get {
                 return ((string)(this["SmartQuickbook_wClient_WService"]));

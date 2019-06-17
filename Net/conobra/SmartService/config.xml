@@ -574,4 +574,40 @@
       <p field="6">ListID</p>
     </params>
   </access>
+  
+  
+  
+  <!--REcibos-->
+
+  <access id="0823871b4f16ca3cd7d6f62596903000">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>doquery</type>
+    <dbid>bn8txn25q</dbid>
+    <query></query>
+    <qid>27</qid>
+    <clist>3.35.6.7</clist>
+    <params>
+    </params>
+    <response>
+      <p fid="3" >RecordID</p>
+      <p fid="35" >VendorRef</p>
+      <p fid="6" >RefNumber</p>
+      <p fid="7" >txnDate</p>
+    </response>
+  </access>
+
+  <access id="0823871b4f16ca3cd7d6f62596903100">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bn8txn25q</dbid>
+    <query></query>
+    <qid>-1</qid>
+    <clist>3.86</clist>
+    <params>
+      <p field="3">RecordID</p>      
+      <p field="86">QuickbookID</p>
+    </params>
+  </access>
 </root>

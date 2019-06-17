@@ -8,9 +8,9 @@ namespace Quickbook
     public class BillExpenseLine
     {
         public Account account;
-        private float amount;
-        private string memo;
-        private string classRef;
+        public float amount;
+        public string memo;
+        public string classRef;
 
         public string TxnLineID;
 
