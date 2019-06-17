@@ -6,6 +6,7 @@ using System.Web.Services;
 using SmartService.Quickbase;
 using System.Reflection;
 using System.Web.Script.Serialization;
+using System.Collections;
 
 namespace SmartService
 {
@@ -30,7 +31,6 @@ namespace SmartService
         public string doQuery(string id, List<string> paramethers, out string err)
         {
             err = "";
-
             Config config = new Config();
             Root root = new Root();
             config = root.getAccess(id,  err);
@@ -39,106 +39,214 @@ namespace SmartService
             {
                 if (config.type == "doquery" || config.type == "fetchrow")
                 {
-                    Connector cnx = new Connector(Constants.username, Constants.password, config.realm);
-                    cnx.setToken(config.token);
+                    return doQuerySimple(config, id, paramethers, out err);
+                }
+                else if (config.type == "doquery_complex")
+                {
+                    return doQueryDetails(config, id, paramethers, out err);
+                }
+            }
 
-                    if (!cnx.Login())
+            return null;
+        }
+
+
+        private string doQueryDetails(Config config, string id, List<string> paramethers, out string err)
+        {
+            err = "";
+
+            Connector cnx = new Connector(Constants.username, Constants.password, config.realm);
+            cnx.setToken(config.token);
+
+            if (!cnx.Login())
+            {
+                err = "Authentication failed. " + cnx.getMessage();
+                return null;
+            }
+            // reemplazar XD
+            string QUERY = config.query;
+
+            for (int i = 0; i < config.paramethers.Count; i++)
+            {
+                if (paramethers != null)
+                {
+                    for (int j = 0; j < paramethers.Count; j++)
                     {
-                        err = "Authentication failed. " + cnx.getMessage();
-                        return null ;
-                    }
-                    // reemplazar XD
-                    string QUERY = config.query;
 
-                    for (int i = 0; i < config.paramethers.Count; i++)
-                    {
-                        if (paramethers != null)
+                        if (config.paramethers[i].name == paramethers[j])
                         {
-                            for (int j = 0; j < paramethers.Count; j++)
+                            if (j + 1 < paramethers.Count)
                             {
+                                QUERY = QUERY.Replace("__" + config.paramethers[i].name + "__", paramethers[j + 1]);
 
-                                if (config.paramethers[i].name == paramethers[j])
-                                {
-                                    if (j + 1 < paramethers.Count)
-                                    {
-                                        QUERY = QUERY.Replace("__" + config.paramethers[i].name + "__", paramethers[j + 1]);
-
-                                    }
-
-                                }
                             }
-                        }
 
-                    }
-
-                    var list = cnx.DoQuery(config.dbid, QUERY, config.clist + ".3", config.qid);
-
-                    if (list != null)
-                    {
-                        if (list.Count == 0)
-                        {
-                            return sendResponse(new List<List<KeyValuePair<string, string>>>());
-                        }
-                        else
-                        {
-                            if (config.type == "doquery")
-                            {
-                                List<List<KeyValuePair<string, string>>> lista = new List<List<KeyValuePair<string, string>>>();
-
-                                foreach (Record R in list)
-                                {
-                                    List<KeyValuePair<string, string>> obj = new List<KeyValuePair<string, string>>();
-
-                                    obj.Add(new KeyValuePair<string, string>("RECORD_ID", R.getFieldValue(3)));
-
-                                    foreach (Paramether P in config.response)
-                                    {
-                                        obj.Add(new KeyValuePair<string, string>(P.name, R.getFieldValue(P.fid)));
-                                    }
-
-                                    lista.Add(obj);
-
-                                }
-
-                                return sendResponse(lista);
-                            }
-                            else if (config.type == "fetchrow")
-                            {
-
-                                List<KeyValuePair<string, string>> obj = null;
-                                foreach (Record R in list)
-                                {
-                                    obj = new List<KeyValuePair<string, string>>();
-
-                                    obj.Add(new KeyValuePair<string, string>("RECORD_ID", R.getFieldValue(3)));
-
-                                    foreach (Paramether P in config.response)
-                                    {
-                                        obj.Add(new KeyValuePair<string, string>(P.name, R.getFieldValue(P.fid)));
-                                    }
-
-                                    break;
-                                }
-
-                                return sendResponse(obj);
-                            }
                         }
                     }
+                }
 
-                   
-                    
+            }
 
+            var list = cnx.DoQuery(config.dbid, QUERY, config.clist + ".3", config.qid);
+
+            if (list != null)
+            {
+                if (list.Count == 0)
+                {
+                    return sendResponse(new List<List<KeyValuePair<string, string>>>());
                 }
                 else
                 {
-                    err = "Access type invalid";
+
+                    List<List<KeyValuePair<string, string>>> lista = new List<List<KeyValuePair<string, string>>>();
+
+                    foreach (Record R in list)
+                    {
+                        List<KeyValuePair<string, string>> obj = new List<KeyValuePair<string, string>>();
+
+                        string QUERY_CHILD = config.details.query;
+
+                        foreach (Paramether P in config.response)
+                        {
+                            obj.Add(new KeyValuePair<string, string>(P.name, R.getFieldValue(P.fid)));
+                            QUERY_CHILD = QUERY_CHILD.Replace("__" + P.name + "__", R.getFieldValue(P.fid));
+                        }
+
+
+                        // Buscamos los hijos
+                        {
+
+                            var childs = cnx.DoQuery(config.details.dbid, QUERY_CHILD, config.details.clist + ".3", -1);
+
+
+                            List<List<KeyValuePair<string, string>>> listaChilds = new List<List<KeyValuePair<string, string>>>();
+
+                            foreach (Record RChild in childs)
+                            {
+                                List<KeyValuePair<string, string>> objCh = new List<KeyValuePair<string, string>>();
+
+                                foreach (Paramether PCh in config.details.response)
+                                {
+                                    objCh.Add(new KeyValuePair<string, string>(PCh.name, RChild.getFieldValue(PCh.fid)));
+                                }
+
+                                listaChilds.Add(objCh);
+
+                            }
+
+                            string json = sendResponse(listaChilds);
+                            // Agregamos todos los hijos como Elemento al padre
+                            obj.Add(new KeyValuePair<string, string>("CHILDS", json));
+
+                        }
+
+
+
+                        lista.Add(obj);
+
+                    }
+
+                    return sendResponse(lista);
                 }
             }
-            else
+
+
+            return null;
+
+        }
+
+
+        private string doQuerySimple(Config config, string id, List<string> paramethers, out string err)
+        {
+            err = "";
+
+            Connector cnx = new Connector(Constants.username, Constants.password, config.realm);
+            cnx.setToken(config.token);
+
+            if (!cnx.Login())
             {
-                err = "Access type invalid";
+                err = "Authentication failed. " + cnx.getMessage();
+                return null ;
+            }
+            // reemplazar XD
+            string QUERY = config.query;
+
+            for (int i = 0; i < config.paramethers.Count; i++)
+            {
+                if (paramethers != null)
+                {
+                    for (int j = 0; j < paramethers.Count; j++)
+                    {
+
+                        if (config.paramethers[i].name == paramethers[j])
+                        {
+                            if (j + 1 < paramethers.Count)
+                            {
+                                QUERY = QUERY.Replace("__" + config.paramethers[i].name + "__", paramethers[j + 1]);
+
+                            }
+
+                        }
+                    }
+                }
+
             }
 
+            var list = cnx.DoQuery(config.dbid, QUERY, config.clist + ".3", config.qid);
+
+            if (list != null)
+            {
+                if (list.Count == 0)
+                {
+                    return sendResponse(new List<List<KeyValuePair<string, string>>>());
+                }
+                else
+                {
+                    if (config.type == "doquery")
+                    {
+                        List<List<KeyValuePair<string, string>>> lista = new List<List<KeyValuePair<string, string>>>();
+
+                        foreach (Record R in list)
+                        {
+                            List<KeyValuePair<string, string>> obj = new List<KeyValuePair<string, string>>();
+
+                            obj.Add(new KeyValuePair<string, string>("RECORD_ID", R.getFieldValue(3)));
+
+                            foreach (Paramether P in config.response)
+                            {
+                                obj.Add(new KeyValuePair<string, string>(P.name, R.getFieldValue(P.fid)));
+                            }
+
+                            lista.Add(obj);
+
+                        }
+
+                        return sendResponse(lista);
+                    }
+                    else if (config.type == "fetchrow")
+                    {
+
+                        List<KeyValuePair<string, string>> obj = null;
+                        foreach (Record R in list)
+                        {
+                            obj = new List<KeyValuePair<string, string>>();
+
+                            obj.Add(new KeyValuePair<string, string>("RECORD_ID", R.getFieldValue(3)));
+
+                            foreach (Paramether P in config.response)
+                            {
+                                obj.Add(new KeyValuePair<string, string>(P.name, R.getFieldValue(P.fid)));
+                            }
+
+                            break;
+                        }
+
+                        return sendResponse(obj);
+                    }
+                }
+            }
+
+                   
             return null;
 
         }

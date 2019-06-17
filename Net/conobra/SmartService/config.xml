@@ -1,5 +1,36 @@
 <?xml version="1.0" standalone="yes"?>
 <root>
+
+  <access id="test001">
+    <token>j7umazv5c5bekptqr2dtg44zx</token>
+    <realm>smartstrategy</realm>
+    <type>doquery_complex</type>
+    <dbid>big57sxk9</dbid>
+    <query></query>
+    <qid>-1</qid>
+    <clist>6.7</clist>
+    <params>
+    </params>
+    <response>
+      <p fid="6" >NOMBRE</p>
+      <p fid="7" >TELEFONO</p>
+      <p fid="3" >LLAVE</p>
+    </response>
+    <detail>
+      <dbid>bpe2arqje</dbid>
+      <query>{'40'.EX.'__LLAVE__'}</query>
+      <clist>3.40.10.15</clist>
+      <params>
+      </params>
+      <response>
+        <p fid="3" >DET_RID</p>
+        <p fid="40">DET_PADRE</p>
+        <p fid="10">DET_FIELDA</p>
+        <p fid="15">DET_FIELDB</p>
+      </response>
+    </detail>
+  </access>
+
   <access id="0823871b4f16ca3cd7d6f6259690ca20">
     <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
     <realm>conobra</realm>

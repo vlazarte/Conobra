@@ -34,12 +34,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Intuit.QuickBase.Client">
-      <HintPath>..\..\..\Aldesa\WsOperativa\WsOperativa\bin\Intuit.QuickBase.Client.dll</HintPath>
+      <HintPath>..\..\..\..\Proccessor\SmartService\bin\Intuit.QuickBase.Client.dll</HintPath>
     </Reference>
     <Reference Include="Intuit.QuickBase.Core">
-      <HintPath>..\..\..\..\httpd\FacturaElectronica\Intuit.QuickBase.Core.dll</HintPath>
+      <HintPath>..\..\..\..\Proccessor\SmartService\bin\Intuit.QuickBase.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />

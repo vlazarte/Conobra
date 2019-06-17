@@ -21,7 +21,9 @@ namespace SmartService
         public string clist = "";
 
         public List<Paramether> paramethers = null;
-        public List<Paramether> response = null;       
+        public List<Paramether> response = null;
+
+        public Detail details = null;
 
 
         public static Config LoadConfig(string id, ref string err)
@@ -87,7 +89,53 @@ namespace SmartService
                         }
                     }
 
-                                      
+                    if (config.type == "doquery_complex" && item["detail"] != null)
+                    {
+                        config.details = new Detail();
+                        config.details.paramethers = new List<Paramether>();
+                        config.details.response = new List<Paramether>();
+                        var nodoDetail = item["detail"];
+
+                        //onfig.details.dbid = nodoDetail["dbid"]
+                        config.details.dbid = nodoDetail["dbid"].InnerXml;
+                        config.details.query = nodoDetail["query"].InnerXml;
+                        config.details.clist = nodoDetail["clist"].InnerXml;
+
+                        config.paramethers = new List<Paramether>();
+                        nodo = nodoDetail.SelectNodes("params/p");
+                        if (nodo.Count > 0)
+                        {
+                            for (int i = 0; i < nodo.Count; i++)
+                            {
+                                Paramether param = new Paramether();
+                                param.name = nodo[i].InnerXml;
+                                if (nodo[i].Attributes["fid"] != null && Int32.Parse(nodo[i].Attributes["fid"].Value) != -1)
+                                {
+                                    param.fid = Int32.Parse(nodo[i].Attributes["fid"].Value);
+                                }
+                                if (nodo[i].Attributes["require"] != null && nodo[i].Attributes["require"].Value == "true")
+                                {
+                                    param.require = true;
+                                }
+                                config.details.paramethers.Add(param);
+                            }
+                        }
+
+                        nodo = nodoDetail.SelectNodes("response/p");
+                        if (nodo.Count > 0)
+                        {
+                            for (int i = 0; i < nodo.Count; i++)
+                            {
+                                Paramether param = new Paramether();
+                                param.name = nodo[i].InnerXml;
+                                if (nodo[i].Attributes["fid"] != null && Int32.Parse(nodo[i].Attributes["fid"].Value) != -1)
+                                {
+                                    param.fid = Int32.Parse(nodo[i].Attributes["fid"].Value);
+                                }
+                                config.details.response.Add(param);
+                            }
+                        }
+                    }
                     
                 }
 
@@ -145,6 +193,53 @@ namespace SmartService
                 }
 
                 config.clist = item["clist"].InnerXml;
+
+                if (config.type == "doquery_complex" && item["detail"] != null)
+                {
+                    config.details = new Detail();
+                    var nodoDetail = item["detail"];
+
+                    //onfig.details.dbid = nodoDetail["dbid"]
+                    config.details.dbid = item["dbid"].InnerXml;
+                    config.details.query = item["query"].InnerXml;
+                    config.details.clist = item["clist"].InnerXml;
+
+                    config.paramethers = new List<Paramether>();
+                    nodo = nodoDetail.SelectNodes("params/p");
+                    if (nodo.Count > 0)
+                    {
+                        for (int i = 0; i < nodo.Count; i++)
+                        {
+                            Paramether param = new Paramether();
+                            param.name = nodo[i].InnerXml;
+                            if (nodo[i].Attributes["fid"] != null && Int32.Parse(nodo[i].Attributes["fid"].Value) != -1)
+                            {
+                                param.fid = Int32.Parse(nodo[i].Attributes["fid"].Value);
+                            }
+                            if (nodo[i].Attributes["require"] != null && nodo[i].Attributes["require"].Value == "true")
+                            {
+                                param.require = true;
+                            }
+                            config.details.paramethers.Add(param);
+                        }
+                    }
+
+                    nodo = nodoDetail.SelectNodes("response/p");
+                    if (nodo.Count > 0)
+                    {
+                        for (int i = 0; i < nodo.Count; i++)
+                        {
+                            Paramether param = new Paramether();
+                            param.name = nodo[i].InnerXml;
+                            if (nodo[i].Attributes["fid"] != null && Int32.Parse(nodo[i].Attributes["fid"].Value) != -1)
+                            {
+                                param.fid = Int32.Parse(nodo[i].Attributes["fid"].Value);
+                            }
+                            config.details.response.Add(param);
+                        }
+                    }
+                }
+
                 list.Add(config);
             }
 
@@ -221,5 +316,19 @@ namespace SmartService
 
 
     }
+
+
+    public class Detail
+    {
+        public string dbid = "";
+        public string query = "";
+        public int qid = -1;
+        public string clist = "";
+
+        public List<Paramether> paramethers = null;
+        public List<Paramether> response = null;
+
+    }
+
    
 }
