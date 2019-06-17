@@ -52,6 +52,28 @@ namespace SmartQuickbook.Helper
             return fieldResponseNames;
         }
 
+        public static List< string> GetFieldNameKeyExternalDetalle(List<ProcesoParametros> detalle)
+        {
+            List< string> fieldResponseNames = new List< string>();
+
+           
+                String fieldResponseName = string.Empty;
+
+                foreach (var parametro in detalle)
+                {
+                    //obtener los field que nos interesan registrar en quickbase
+                    if (parametro.isKey)
+                    {
+                        fieldResponseName = parametro.fieldName;
+                        fieldResponseNames.Add(fieldResponseName);
+                    }
+                }
+                //Si no encuentra colocara vacio
+                
+            
+            return fieldResponseNames;
+        }
+
         public static object ConvertType(string value, string type)
         {
 
@@ -61,6 +83,13 @@ namespace SmartQuickbook.Helper
             {
 
                 return getDateValue(value);
+            }
+            if (type == "Double")
+            {                                
+                System.Globalization.CultureInfo myInfo = System.Globalization.CultureInfo.CreateSpecificCulture("en-GB");
+                return  Double.Parse(value, myInfo);
+
+                
             }
             return null;
 
@@ -1182,6 +1211,240 @@ namespace SmartQuickbook.Helper
 
             return "Finalizo proceso de registro " + Environment.NewLine;
         }
+        public static bool CargadoDetalle(Abstract quickbookRecord, ProcesoAccion accion, string Details, ref string err)
+        {
+            var serializer = new JavaScriptSerializer();
+            serializer.MaxJsonLength = Int32.MaxValue;
+            List<List<Par>> data = null;
+            StringBuilder mostrarMensaje = new StringBuilder();
+            try
+            {
+                data = serializer.Deserialize<List<List<Par>>>(Details);
 
+
+                if (data != null && data.Count > 0)
+                {
+                    Dictionary<string, List<string>> RespuestasSave = new Dictionary<string, List<string>>();
+                    Dictionary<string, List<string>> RespuestasLog = new Dictionary<string, List<string>>();
+                    string llaveQuickbook = "";
+                    Dictionary<string, string> llaveQuickbase = new Dictionary<string, string>();
+
+                    //obtener los campos de respuesta para los parametros a enviar
+                    //el token sera la llave
+
+                    List< string> fieldNameExternals = HelperTask.GetFieldNameKeyExternalDetalle(accion.details);
+                    
+                    for (int j = 0; j < data.Count; j++)
+                    {
+                        // Para Key => Value retornado desde Quickbase ;
+                        Hashtable pairs = Generic.getPairValues(data[j]);
+
+                        // Obtener la coleccion Fields => Value que se asignara al Objeto
+                        List<string> fieldNames = new List<string>();
+                        List<object> fieldValues = new List<object>();
+                        string fieldRiquiered = string.Empty;
+                        bool Requiered = false;
+                        //Get the Values to add to quickbook
+                        
+                        
+                          HelperTask.GetValuesToAddDetails(accion.details, pairs, ref fieldNames, ref fieldValues, ref fieldNameExternals, ref llaveQuickbase, ref fieldRiquiered, ref Requiered, ref mostrarMensaje, ref err);
+
+                        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+                        if (Requiered == false)
+                        {
+
+                            try
+                            {
+                                string fullPath = System.IO.Directory.GetCurrentDirectory();
+
+                                Assembly testAssembly = Assembly.LoadFile(fullPath + "\\Quickbook.dll");
+
+                                Type difineType = testAssembly.GetType("Quickbook." + accion.quickbookTablaDetalle);
+                                                               
+                                object objQuickbookInstance = Activator.CreateInstance(difineType);
+                                Abstract ObjectQuickbookItem = (Abstract)Generic.SetFields(fieldNames, fieldValues, objQuickbookInstance, ref err);
+                                
+                                ((Bill)quickbookRecord).addExpenseLine(ObjectQuickbookItem);
+                                
+                            }
+                            catch (Exception ex)
+                            {                                
+                               mostrarMensaje.Append( "Error al conectar a Quickbook: " + ex.Message);
+                            }
+
+                        }
+                        else
+                        {
+                            mostrarMensaje.Append("Error campos del detalle faltantes: " );
+                            
+                        }
+
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                err = "Ejecutando accion Error des serializando detalles:" + ex.Message;
+
+            }
+            return true;
+
+        }
+
+        public static void GetValuesToAddDetails(List<ProcesoParametros> parametrosDetalle, Hashtable pairs, ref List<string> fieldNames, ref  List<object> fieldValues, ref List< string> fieldNameExternals, ref Dictionary<string, string> llaveQuickbase, ref string fieldRiquiered, ref bool Requiered, ref StringBuilder mostrarMensaje, ref string err)
+        {
+            try
+            {
+                for (int i = 0; i < parametrosDetalle.Count; i++)
+                {
+
+
+                    bool isValue = false;
+                    if (!parametrosDetalle[i].isKey)
+                    {
+                        if (parametrosDetalle[i].fieldId.ToString().Contains("/"))//campo
+                        { //Elemento compuesto 
+
+                            string[] field = parametrosDetalle[i].fieldId.ToString().Split('/');
+                            string fieldPropertyCustomer = field[0];//parenref
+                            string fieldPropertyCurrency = field[1];//listID
+
+                            if (fieldPropertyCustomer == "Custom")
+                            {
+
+                                fieldNames.Add(fieldPropertyCustomer);
+                                fieldValues.Add(pairs[parametrosDetalle[i].fieldName].ToString());
+                                isValue = true;
+                            }
+                            else
+                            {
+
+                                fieldNames.Add(fieldPropertyCustomer);
+
+                                if (parametrosDetalle[i].Type != null)
+                                {
+
+                                    string value = pairs[fieldPropertyCustomer].ToString();
+                                    if (parametrosDetalle[i].Type == "AdditionalContactRef")
+                                    {
+                                        fieldValues.Add(value);
+                                        isValue = true;
+
+                                    }
+                                    else
+                                    {
+
+                                        if (value != string.Empty)
+                                        {
+
+                                            var newValueObject = HelperTask.ConvertType(fieldPropertyCurrency, value, parametrosDetalle[i].Type, ref err);
+                                            if (err != string.Empty)
+                                            {
+
+                                                mostrarMensaje.Append("Convirtiendo valores Error:" + err + Environment.NewLine);
+
+                                            }
+
+                                            fieldValues.Add(newValueObject);
+                                            isValue = true;
+                                        }
+                                        else
+                                        {
+                                            if (parametrosDetalle[i].Required)
+                                            {
+
+                                                Requiered = true;
+                                                fieldRiquiered = parametrosDetalle[i].fieldId;
+                                                break;
+                                            }
+                                            else
+                                            {
+                                                fieldValues.Add(null);
+                                                isValue = true;
+                                            }
+
+
+                                        }
+                                    }
+
+                                }
+                                else
+                                {
+                                    fieldValues.Add(pairs[parametrosDetalle[i].fieldName]);
+                                    isValue = true;
+                                }
+
+                            }
+
+                        }
+                        else
+                        {
+                            fieldNames.Add(parametrosDetalle[i].fieldId);
+                        }
+                        if (isValue == false)
+                        {
+                            if (pairs.ContainsKey(parametrosDetalle[i].fieldName))
+                            {
+
+                                if (pairs[parametrosDetalle[i].fieldName] != null && parametrosDetalle[i].Type != null)
+                                {
+
+                                    string value = pairs[parametrosDetalle[i].fieldName].ToString();
+                                    if (value != string.Empty)
+                                    {
+                                        var newDate = HelperTask.ConvertType(value, parametrosDetalle[i].Type);
+                                        fieldValues.Add(newDate);
+                                    }
+                                    else
+                                    {
+                                        fieldValues.Add(null);
+                                    }
+
+                                }
+                                else
+                                {
+                                    fieldValues.Add(pairs[parametrosDetalle[i].fieldName]);
+                                }
+
+
+                            }
+                            else
+                            {
+                                fieldValues.Add(null);
+                            }
+                        }
+
+                    }
+                    else
+                    {  //si es el campo llave debe ser igual con fieldNameExternal
+
+
+                        var value = Array.Find(fieldNameExternals.ToArray(), element => element.Equals(parametrosDetalle[i].fieldName));
+
+                        if (value != string.Empty && pairs[value] != null)
+                        {
+                            //valor de la llave externa
+                            
+                                llaveQuickbase.Add(value, pairs[value].ToString());
+                            
+
+                        }
+
+                    }
+
+
+                }
+            }
+            catch (Exception e)
+            {
+                err = e.Message;
+
+            }
+
+
+        }
     }
 }

@@ -133,6 +133,13 @@ namespace SmartQuickbook.Helper
                                         // create instance of class Calculator
                                         object objQuickbookInstance = Activator.CreateInstance(difineType);
                                         Abstract ObjectQuickbook = (Abstract)Generic.SetFields(fieldNames, fieldValues, objQuickbookInstance, ref err);
+                                        if (ObjectQuickbook.HasChild) {
+                                            if (pairs["CHILDS"] != null) {
+                                                string pairsDetails = pairs["CHILDS"].ToString();
+                                              
+                                                HelperTask.CargadoDetalle(ObjectQuickbook,accion, pairsDetails, ref err);
+                                            }                                            
+                                        }
                                         if (ObjectQuickbook != null && ObjectQuickbook.AddRecord(ref err, ref xmlSend, ref xmlRecived))
                                         {
 

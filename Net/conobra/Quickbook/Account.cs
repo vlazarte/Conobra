@@ -13,20 +13,24 @@ namespace Quickbook
     /// </summary>
     public class Account
     {
-        public string ListID;
-        public string TimeCreated;
-        public string EditSequence;
-        public string Name;
-        public string FullName;
-        public bool IsActive;
-        public string Sublevel;
-        public string AccountType;
-        public int AccountNumber;
-        public float Balance;
-        public float TotalBalance;
-        public string CashFlowClassification;
-        public string Currency;
+        public string ListID { get; set; }
+        public string TimeCreated { get; set; }
+        public string EditSequence { get; set; }
+        public string Name { get; set; }
+        public string FullName{get;set;}
+        public bool IsActive { get; set; }
+        public string Sublevel { get; set; }
+        public string AccountType { get; set; }
+        public int AccountNumber { get; set; }
+        public float Balance { get; set; }
+        public float TotalBalance { get; set; }
+        public string CashFlowClassification { get; set; }
+        public string Currency { get; set; }
+        public Account() {
 
+            ListID = string.Empty;
+            FullName = string.Empty;
+        }
         public override string ToString()
         {
             return AccountNumber + " - " + ListID;
@@ -92,7 +96,7 @@ namespace Quickbook
         {
             StringBuilder xml = new StringBuilder();
             XmlElement ele = (new XmlDocument()).CreateElement("test");
-            xml.Append("<APAccountRef>");
+            xml.Append("<AccountRef>");
             if (ListID != string.Empty)
             {
                 xml.Append("<ListID >" + ListID + "</ListID>");
@@ -103,10 +107,11 @@ namespace Quickbook
                 xml.Append("<FullName>" + ele.InnerXml + "</FullName>"); //-- required -->
             }
 
-            xml.Append("</APAccountRef>");
+            xml.Append("</AccountRef>");
 
             return xml.ToString();
         }
+        
 
     }
 }

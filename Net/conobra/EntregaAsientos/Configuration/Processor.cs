@@ -77,6 +77,46 @@ namespace SmartQuickbook.Configuration
                         acccion.parametros.Add(param1);
                     }
 
+                    var detailNodoList = pNode.SelectNodes("detail");
+                    if (detailNodoList.Count>0)
+                    {
+                        
+                        foreach (XmlNode paramNodeDetails in detailNodoList)
+                        {
+                            if (paramNodeDetails.SelectNodes("quickbook_tabla").Count > 0) {
+                                acccion.quickbookTablaDetalle = paramNodeDetails.SelectNodes("quickbook_tabla")[0].InnerText;
+                                var paramNodoListDetail = paramNodeDetails.SelectNodes("parametros/p");
+
+
+                                acccion.details = new List<ProcesoParametros>();
+                                foreach (XmlNode paramNode in paramNodoListDetail)
+                                {
+                                    var param1 = new ProcesoParametros(
+                                            paramNode.Attributes["field"].Value, paramNode.InnerText
+                                        );
+
+                                    if (paramNode.Attributes["type"] != null)
+                                    {
+                                        param1.Type = paramNode.Attributes["type"].Value;
+                                    }
+                                    if (paramNode.Attributes["key"] != null && paramNode.Attributes["key"].Value == "true")
+                                    {
+                                        param1.isKey = true;
+                                    }
+                                    if (paramNode.Attributes["required"] != null)
+                                    {
+                                        if (paramNode.Attributes["required"].Value == "true")
+                                            param1.Required = true;
+                                    }
+                                    acccion.details.Add(param1);
+                                }
+                            }
+                            
+                        }
+                        //Obtener La informacion de parametros
+                    }
+                    
+
 
                     var paramNodoListRespuestas = pNode.SelectNodes("respuestas/respuesta");
                     acccion.respuestas = new List<ProcesoRespuesta>();
@@ -191,6 +231,8 @@ namespace SmartQuickbook.Configuration
         public string nombre = "";
         public string quickbookTabla = "";
         public List<ProcesoParametros> parametros;
+        public List<ProcesoParametros> details;
+        public string quickbookTablaDetalle = "";
         public List<ProcesoRespuesta> respuestas;
     }
 

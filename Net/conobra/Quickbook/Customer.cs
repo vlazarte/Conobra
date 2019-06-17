@@ -743,11 +743,23 @@ namespace Quickbook
 
         public string toXmlRef()
         {
-            if (ListID == "")
-                return "";
-            return "<CustomerRef>" +
-            "<ListID >" + ListID + "</ListID>" +
-            "</CustomerRef>";
+            
+            StringBuilder xml = new StringBuilder();
+            XmlElement ele = (new XmlDocument()).CreateElement("test");
+            xml.Append("<CustomerRef>");
+            if (ListID != string.Empty)
+            {
+                xml.Append(Environment.NewLine + "<ListID >" + ListID + "</ListID>");
+            }
+            if (FullName != string.Empty)
+            {
+                ele.InnerText = FullName + "";
+                xml.Append(Environment.NewLine + "<FullName>" + ele.InnerXml + "</FullName>"); //-- required -->
+            }
+
+            xml.Append("</CustomerRef>");
+
+            return xml.ToString();
         }
         public string ToXMlParentRef()
         {

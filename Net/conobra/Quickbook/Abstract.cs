@@ -14,6 +14,7 @@ namespace Quickbook
         private List<DataEx> DataExList = new List<DataEx>();
         public string ListID { get; set; }
         public string ObjectName = "";
+        public bool HasChild { get; set; }
 
         protected bool full_loaded = false;
 

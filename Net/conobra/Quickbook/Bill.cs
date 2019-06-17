@@ -22,7 +22,7 @@ namespace Quickbook
         public string Memo { get; set; }
         public bool? IsTaxIncluded { get; set; }
         public SalesTaxCodeRef SalesTaxCodeRef { get; set; }
-        public float ExchangeRate { get; set; }
+        public Decimal? ExchangeRate { get; set; }
         public string ExternalGUID { get; set; }
         public string LinkToTxnID { get; set; }
 
@@ -54,13 +54,14 @@ namespace Quickbook
 
             txnDate = null;
             DueDate = null;
-
+            ExchangeRate = null;
             expenseLines = new List<BillExpenseLine>();
             itemLines = new List<BillItemLine>();
 
             exists = false;
             TxnID = string.Empty;
             EditSequence = string.Empty;
+            HasChild = true;
         }
 
         public void clearExpenseLine()
@@ -82,9 +83,9 @@ namespace Quickbook
             return itemLines.Count;
         }
 
-        public void addExpenseLine(BillExpenseLine line)
+        public void addExpenseLine(Abstract line)
         {
-            expenseLines.Add(line);
+            expenseLines.Add((BillExpenseLine)line);
         }
 
         public void addItemLine(BillItemLine line)
@@ -109,7 +110,7 @@ namespace Quickbook
         {
             foreach (BillExpenseLine l in expenseLines)
             {
-                if (l.account.ListID == account)
+                if (l.AccountRef.ListID == account)
                 {
                     l.copy(line);
                     break;
@@ -232,9 +233,9 @@ namespace Quickbook
 
                         foreach (BillExpenseLine ll in expenseLines)
                         {
-                            if (aux.ContainsKey(ll.account.ListID))
+                            if (aux.ContainsKey(ll.AccountRef.ListID))
                             {
-                                ll.TxnLineID = aux[ll.account.ListID] + "";
+                                ll.TxnLineID = aux[ll.AccountRef.ListID] + "";
                             }
                             else
                             {
@@ -319,7 +320,13 @@ namespace Quickbook
                 xml += Environment.NewLine + "<Memo>" + Memo + "</Memo>";
             }
 
-            xml += Environment.NewLine + "<ExchangeRate>" + ExchangeRate.ToString("0.00") + "</ExchangeRate>";
+            if (ExchangeRate != null) {
+                System.Globalization.CultureInfo myInfo = System.Globalization.CultureInfo.CreateSpecificCulture("en-GB");
+                string val =ExchangeRate.ToString();
+                Double value = Double.Parse(val, myInfo);
+                xml += Environment.NewLine + "<ExchangeRate>" + value + "</ExchangeRate>";
+            }
+            
 
             foreach (BillExpenseLine line in expenseLines)
             {
@@ -348,7 +355,7 @@ namespace Quickbook
             xml += Environment.NewLine + Environment.NewLine + "<?qbxml version=\"13.0\" ?>";
             xml += Environment.NewLine + "<QBXML>";
             xml += Environment.NewLine + "<QBXMLMsgsRq onError=\"stopOnError\">";
-            xml += Environment.NewLine + "<BillAddRq requestID=\"10001\">";
+            xml += Environment.NewLine + "<BillAddRq>";
             xml += Environment.NewLine + "<BillAdd>";
             if (VendorRef != null)
             {
@@ -406,7 +413,13 @@ namespace Quickbook
             }
 
 
-            xml += Environment.NewLine + "<ExchangeRate>" + ExchangeRate.ToString("0.00") + "</ExchangeRate>";
+            if (ExchangeRate != null)
+            {
+                System.Globalization.CultureInfo myInfo = System.Globalization.CultureInfo.CreateSpecificCulture("en-GB");
+                string val = ExchangeRate.ToString();
+                Double value = Double.Parse(val, myInfo);
+                xml += Environment.NewLine + "<ExchangeRate>" + value.ToString("0.00") + "</ExchangeRate>";
+            }
             if (ExternalGUID != string.Empty)
             {
                 xml += " <ExternalGUID >" + ExternalGUID + "</ExternalGUID>";

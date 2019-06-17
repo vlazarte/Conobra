@@ -5,62 +5,62 @@ using System.Text;
 
 namespace Quickbook
 {
-    public class BillExpenseLine
+    public class BillExpenseLine:Abstract
     {
-        public Account account;
-        public float amount;
-        public string memo;
-        public string classRef;
-
+        public Account AccountRef{get;set;}
+        public Double Amount{get;set;}
+        public string Memo{get;set;}
+        public Customer CustomerRef{get;set;}
+        public Class ClassRef{get;set;}
+        public string BillableStatus{get;set;}
         public string TxnLineID;
-
-        public BillExpenseLine( Account _account, float _amount, string _memo, string _class, string txnID )
+        public BillExpenseLine()
         {
-            account = _account;
-            amount = _amount;
-            memo = _memo;
-            classRef = _class;
-            TxnLineID = txnID;
+            AccountRef = null;
+            Memo = string.Empty;
+            CustomerRef = null;
+            ClassRef = null;
+            TxnLineID = string.Empty;
             
         }
 
         public void copy( BillExpenseLine line )
         {
-            account = line.account;
-            amount = line.amount;
-            memo = line.memo;
-            classRef = line.classRef;
+            AccountRef = line.AccountRef;
+            Amount = line.Amount;
+            Memo = line.Memo;
+            CustomerRef = line.CustomerRef;
+            ClassRef = line.ClassRef;
+            BillableStatus = string.Empty;
+            TxnLineID = string.Empty;
         }
 
         public string toXmlAdd()
         {
             string xml = Environment.NewLine + "<ExpenseLineAdd>";
-            if (account != null)
+            if (AccountRef != null)
             {
-                xml += Environment.NewLine + "<AccountRef>";
-                xml += Environment.NewLine + "<ListID >" + account.ListID + "</ListID>";
-                //xml += "<FullName >STRTYPE</FullName>";
-                xml += Environment.NewLine + "</AccountRef>";
+                xml += Environment.NewLine + AccountRef.toXmlRef();               
             }
 
-            xml += Environment.NewLine + "<Amount >" + amount.ToString("0.00") + "</Amount>";
-            if (memo != string.Empty)
+            System.Globalization.CultureInfo myInfo = System.Globalization.CultureInfo.CreateSpecificCulture("en-GB");
+            
+            xml += Environment.NewLine + "<Amount>" + Amount.ToString("0.00", myInfo) + "</Amount>";
+            if (Memo != string.Empty)
             {
-                xml += Environment.NewLine + "<Memo >" + memo + "</Memo>";
+                xml += Environment.NewLine + "<Memo>" + Memo + "</Memo>";
             }
 
-            /*xml += Environment.NewLine + "<CustomerRef>";
-                xml += Environment.NewLine + "<ListID >IDTYPE</ListID>";
-                xml += Environment.NewLine + "<FullName >STRTYPE</FullName>";
-            xml += Environment.NewLine + "</CustomerRef>"; */
-
-            if (classRef != string.Empty)
-            {
-                xml += Environment.NewLine + "<ClassRef>";
-                xml += Environment.NewLine + "<FullName >" + classRef + "</FullName>";
-                xml += Environment.NewLine + "</ClassRef>";
+            if (CustomerRef != null) {
+                xml += CustomerRef.toXmlRef();
+            }
+            if (ClassRef != null) {
+                xml += ClassRef.toXmlRef();
             }
 
+            if (BillableStatus != null &&  BillableStatus!=string.Empty) {
+                xml += Environment.NewLine + "<BillableStatus>" + BillableStatus + "</BillableStatus> ";            
+            }
 
 
             xml += Environment.NewLine + "</ExpenseLineAdd>";
@@ -72,18 +72,18 @@ namespace Quickbook
         {
             string xml = Environment.NewLine + "<ExpenseLineMod>";
             xml += Environment.NewLine + "<TxnLineID>" + TxnLineID + "</TxnLineID>";
-            if (account != null)
+            if (AccountRef != null)
             {
                 xml += Environment.NewLine + "<AccountRef>";
-                xml += Environment.NewLine + "<ListID >" + account.ListID + "</ListID>";
+                xml += Environment.NewLine + "<ListID >" + AccountRef.ListID + "</ListID>";
                 //xml += "<FullName >STRTYPE</FullName>";
                 xml += Environment.NewLine + "</AccountRef>";
             }
 
-            xml += Environment.NewLine + "<Amount >" + amount.ToString("0.00") + "</Amount>";
-            if (memo != string.Empty)
+            xml += Environment.NewLine + "<Amount >" + Amount.ToString("0.00") + "</Amount>";
+            if (Memo != string.Empty)
             {
-                xml += Environment.NewLine + "<Memo >" + memo + "</Memo>";
+                xml += Environment.NewLine + "<Memo >" + Memo + "</Memo>";
             }
 
             /*xml += Environment.NewLine + "<CustomerRef>";
@@ -91,10 +91,10 @@ namespace Quickbook
                 xml += Environment.NewLine + "<FullName >STRTYPE</FullName>";
             xml += Environment.NewLine + "</CustomerRef>"; */
 
-            if (classRef != string.Empty)
+            if (ClassRef != null)
             {
                 xml += Environment.NewLine + "<ClassRef>";
-                xml += Environment.NewLine + "<FullName >" + classRef + "</FullName>";
+                xml += Environment.NewLine + "<FullName >" + ClassRef.FullName + "</FullName>";
                 xml += Environment.NewLine + "</ClassRef>";
             }
 
@@ -115,6 +115,17 @@ namespace Quickbook
             {
                 return toXmlMod();
             }
+        }
+
+        public override bool AddRecord(ref string err, ref string xmlSend, ref string xmlRecived)
+        {
+            err = "No implemented yet BillExpenseLine";
+            return false;
+        }
+        public override List<Abstract> GetRecords(ref string err)
+        {
+            err = "No implemented yet BillExpenseLine";
+            return new List<Abstract>();
         }
     
         /*

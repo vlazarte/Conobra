@@ -98,7 +98,7 @@ namespace Quickbook
         public void updateExpenseLine( string account, BillExpenseLine line )
         {
             foreach( BillExpenseLine l in expenseLines ) {
-                if (l.account.ListID == account)
+                if (l.AccountRef.ListID == account)
                 {
                     l.copy(line);
                     break;
@@ -253,9 +253,9 @@ namespace Quickbook
 
                         foreach (BillExpenseLine ll in expenseLines)
                         {
-                            if (aux.ContainsKey(ll.account.ListID))
+                            if (aux.ContainsKey(ll.AccountRef.ListID))
                             {
-                                ll.TxnLineID = aux[ll.account.ListID] + "";
+                                ll.TxnLineID = aux[ll.AccountRef.ListID] + "";
                             }
                             else
                             {

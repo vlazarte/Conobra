@@ -582,7 +582,7 @@
   <access id="0823871b4f16ca3cd7d6f62596903000">
     <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
     <realm>conobra</realm>
-    <type>doquery</type>
+    <type>doquery_complex</type>
     <dbid>bn8txn25q</dbid>
     <query></query>
     <qid>27</qid>
@@ -595,6 +595,21 @@
       <p fid="6" >RefNumber</p>
       <p fid="7" >txnDate</p>
     </response>
+    <detail>
+      <dbid>bn8txn26i</dbid>
+      <query>{'8'.EX.'__RecordID__'}</query>
+      <clist>3.8.151.36.155.149</clist>
+      <params>
+      </params>
+      <response>
+        <p fid="3" >DET_RID</p>
+        <p fid="8" >DET_PADRE</p>
+        <p fid="151">AccountRef</p>
+        <p fid="36">Amount</p>
+        <p fid="155">CustomerRef</p>
+        <p fid="149">ClassRef</p>
+      </response>
+    </detail>
   </access>
 
   <access id="0823871b4f16ca3cd7d6f62596903100">
@@ -610,4 +625,54 @@
       <p field="86">QuickbookID</p>
     </params>
   </access>
+  
+  
+  
+  
+  
+  <!--<access id="testRecibo001">
+    <token>j7umazv5c5bekptqr2dtg44zx</token>
+    <realm>smartstrategy</realm>
+    <type>doquery_complex</type>
+    <dbid>big57sxk9</dbid>
+    <query></query>
+    <qid>-1</qid>
+    <clist>3.6.17.18</clist>
+    <params>
+    </params>
+    <response>
+      <p fid="3" >RecordID</p>
+      <p fid="6" >VendorRef</p>           
+      <p fid="17" >RefNumber</p>
+      <p fid="18" >txnDate</p>
+    </response>
+    <detail>
+      <dbid>bpe2arqje</dbid>
+      <query>{'40'.EX.'__RecordID__'}AND{'17'.XEX.''}</query>
+      <clist>3.40.42.43.44.45</clist>
+      <params>
+      </params>
+      <response>
+        <p fid="3" >DET_RID</p>
+        <p fid="40" >DET_PADRE</p>
+        <p fid="42">AccountRef</p>
+        <p fid="43">Amount</p>
+        <p fid="44">CustomerRef</p>
+        <p fid="45">ClassRef</p>
+      </response>
+    </detail>
+  </access>
+  <access id="testRecibo002">
+    <token>j7umazv5c5bekptqr2dtg44zx</token>
+    <realm>smartstrategy</realm>
+    <type>import</type>
+    <dbid>big57sxk9</dbid>
+    <query></query>
+    <qid>-1</qid>
+    <clist>3.19</clist>
+    <params>
+      <p field="3">RecordID</p>
+      <p field="19">QuickbookID</p>
+    </params>
+  </access>-->
 </root>
