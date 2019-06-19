@@ -374,7 +374,6 @@
       <intervalo tipo="segundo">40</intervalo>
       <fecha_unica>2019-04-09</fecha_unica>
     </ejecucion>
-
   </proceso>
   <proceso id="7">
     <nombre>Add Exonerado Class to Quickbook</nombre>
@@ -442,7 +441,7 @@
 
  
   
-  <!--Obtener Las clases padres de proyectos--><!--
+  <!--Obtener Las clases padres de proyectos OK-->
 
   <proceso id="8">
     <nombre>Class to Quickbase</nombre>
@@ -454,8 +453,7 @@
           <p field="B">NOMBRE</p>          
         </parametros>
       </quickbase>
-    </entrada>
-    --><!--Creando los jobs y guardando el codigo--><!--
+    </entrada>    
     <acciones>
       <accion id="cust001" tipo="add_quickbase">
         <nombre>Crear y Actualizar Clases</nombre>
@@ -477,7 +475,7 @@
             </parametros>
           </respuesta>
           <respuesta tipo="import_quickbase" categoria="Create">
-            <access_token>3a847e17ba9e87559ad0bb71fac10008</access_token>
+            <access_token>0823871b4f16ca3cd7d6f6259690c003</access_token>
             <parametros>
               <p field="1" >ListID</p>
               <p field="2" >FullName</p>
@@ -505,16 +503,16 @@
       <fecha_unica>2019-04-09</fecha_unica>
     </ejecucion>
 
-  </proceso>-->
+  </proceso>
 
 
 
   
   
   
-  <!--Obtener Los proveedores OK-->
+  Obtener Los proveedores OK
 
-  <!--<proceso id="9">
+  <proceso id="9">
     <nombre>Vendor to Quickbase</nombre>
     <entrada tipo="quickbook">
       <quickbook></quickbook>
@@ -524,8 +522,7 @@
           <p field="B">NOMBRE</p>
         </parametros>
       </quickbase>
-    </entrada>
- --><!--Creando los vendor y guardando el codigo--><!--
+    </entrada> 
     <acciones>
       <accion id="cust001" tipo="add_quickbase">
         <nombre>Crear y Actualizar Proveedores</nombre>
@@ -573,124 +570,7 @@
       <fecha_unica>2019-04-09</fecha_unica>
     </ejecucion>
 
-  </proceso>-->
-
-
-
-
-
-  <!--Obtener PROVEEDORES de golpe de prueba-->
-  
-
-  <!--<proceso id="10">
-    <nombre>Vendor to Quickbase</nombre>
-    <entrada tipo="quickbook">
-      <quickbook></quickbook>
-      <quickbase>
-        <access_token>3a847e17ba9e87559ad0bb71fac12010</access_token>
-        <parametros>
-          <p field="B">NOMBRE</p>          
-        </parametros>
-      </quickbase>
-    </entrada>
-   
-  --><!--Creando los jobs y guardando el codigo--><!--
-  
-    <acciones>
-      <accion id="cust001" tipo="add_quickbase">
-        <nombre>Crear y actualizar Proveedores</nombre>
-        <quickbook_tabla>Vendor</quickbook_tabla>
-        <parametros>
-          <p field="RecordID">RecordID</p>
-          <p field="Name">Nombre</p>
-          <p field="CompanyName">alias</p>
-          <p field="Email">Correo</p>
-          <p field="ListID">QuickbookID</p>
-        </parametros>
-        <respuestas>
-          <respuesta tipo="import_quickbase" categoria="Save">
-            <access_token>3a847e17ba9e87559ad0bb71fac12001</access_token>
-            <parametros>
-              <p field="1" key="true">RECORD_ID</p>
-              <p field="2">Name</p>
-              <p field="3">CompanyName</p>
-              <p field="4">email</p>
-              <p field="5" >ListID</p>           
-            </parametros>
-          </respuesta>
-          <respuesta tipo="import_quickbase" categoria="Create">
-            <access_token>3a847e17ba9e87559ad0bb71fac12003</access_token>--><!--3a847e17ba9e87559ad0bb71fac12002--><!--
-            <parametros>              
-              <p field="1">Name</p>
-              <p field="2">CompanyName</p>
-              <p field="3">Email</p>
-              <p field="4" >ListID</p>
-            </parametros>
-            <customfields>              
-            </customfields>
-          </respuesta>         
-        </respuestas>
-      </accion>
-    </acciones>
-
-
-    <ejecucion tipo="intervalo">
-      <intervalo tipo="segundo">120</intervalo>
-      <fecha_unica>2019-04-09</fecha_unica>
-    </ejecucion>
-
-  </proceso>-->
-
-
-  <!--<proceso id="11">
-    <nombre>Bill to Quickbook</nombre>
-    <entrada tipo="quickbase">
-      <quickbook></quickbook>
-      <quickbase>
-        <access_token>0823871b4f16ca3cd7d6f62596903000</access_token>
-        <parametros>
-          <p field="B">NOMBRE</p>          
-        </parametros>
-      </quickbase>
-    </entrada>
-    <acciones>
-      <accion id="cust001" tipo="add_quickbook">
-        <nombre>Crear Bill</nombre>
-        <quickbook_tabla>Bill</quickbook_tabla>
-        <parametros>
-          <p field="RecordID" key="true">RecordID</p>
-          <p field="VendorRef/FullName" type="Vendor" required="true">VendorRef</p>
-          <p field="RefNumber" required="true">RefNumber</p>
-          <p field="txnDate" type="DateTime" required="true">txnDate</p>          
-        </parametros>       
-        <respuestas>
-          <respuesta tipo="import_quickbase" categoria="Save">
-            <access_token>0823871b4f16ca3cd7d6f62596903100</access_token>
-            <parametros>
-              <p field="1" key="true">RecordID</p>
-              <p field="2" >ListID</p>
-            </parametros>
-          </respuesta>
-          <respuesta tipo="import_quickbase" categoria="Log">
-            <access_token>8fc1a0edf52f44ba5cb7c7809613cbdd</access_token>
-            <parametros>            
-              <p field="6" key="true">ACCION</p>
-              <p field="7" >SEND</p>
-              <p field="8" >RECIVED</p>
-              <p field="9" >SUCCESS</p>
-            </parametros>
-          </respuesta>
-        </respuestas>        
-      </accion>
-    </acciones>
-    
-
-    <ejecucion tipo="intervalo">
-      <intervalo tipo="segundo">30</intervalo>
-      <fecha_unica>2019-04-09</fecha_unica>
-    </ejecucion>
-
-  </proceso>-->
+  </proceso>
 
 
 
@@ -722,7 +602,7 @@
             <p field="DET_PADRE" key="true">DET_PADRE</p>
             <p field="AccountRef/FullName" type="Account" >AccountRef</p>
             <p field="Amount" type="Double">Amount</p>
-            <p field="CustomerRef/FullName" type="Customer">CustomerRef</p>
+            <p field="CustomerRef/ListID" type="Customer">CustomerRef</p>
             <p field="ClassRef/FullName" type="Class">ClassRef</p>
           </parametros>
         </detail>
@@ -754,6 +634,16 @@
     </ejecucion>
 
   </proceso>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 <!--PRUEBA-->
   <!--<proceso id="12">
     <nombre>Bill to Quickbook</nombre>

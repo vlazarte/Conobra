@@ -375,6 +375,20 @@
       <p field="12">ParentRef</p>
     </params>
   </access>
+  <access id="0823871b4f16ca3cd7d6f6259690c003">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bpnv724uz</dbid>
+    <query>{11.XEX.''}</query>
+    <qid>-1</qid>
+    <clist>11.6.12</clist>
+    <params>      
+      <p field="11">ListID</p>
+      <p field="6">NombreClase</p>
+      <p field="12">ParentRef</p>
+    </params>
+  </access>
   <!--Repite el 3a847e17ba9e87559ad0bb71fac10008 para crear-->
 
 
@@ -596,9 +610,9 @@
       <p fid="7" >txnDate</p>
     </response>
     <detail>
-      <dbid>bn8txn26i</dbid>
+      <dbid>bn8txn26i</dbid>      
       <query>{'8'.EX.'__RecordID__'}</query>
-      <clist>3.8.151.36.155.149</clist>
+      <clist>3.8.151.36.154.149</clist>
       <params>
       </params>
       <response>
@@ -606,7 +620,7 @@
         <p fid="8" >DET_PADRE</p>
         <p fid="151">AccountRef</p>
         <p fid="36">Amount</p>
-        <p fid="155">CustomerRef</p>
+        <p fid="154">CustomerRef</p>
         <p fid="149">ClassRef</p>
       </response>
     </detail>
