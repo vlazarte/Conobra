@@ -521,7 +521,7 @@
   
 
 
-  <!--Proceso 10 Proveedores-->
+  <!--Proceso 10 Proveedores completo manual-->
   <access id="3a847e17ba9e87559ad0bb71fac12010">
     <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
     <realm>conobra</realm>
@@ -640,53 +640,25 @@
     </params>
   </access>
   
-  
-  
-  
-  
-  <!--<access id="testRecibo001">
-    <token>j7umazv5c5bekptqr2dtg44zx</token>
-    <realm>smartstrategy</realm>
-    <type>doquery_complex</type>
-    <dbid>big57sxk9</dbid>
-    <query></query>
-    <qid>-1</qid>
-    <clist>3.6.17.18</clist>
-    <params>
-    </params>
-    <response>
-      <p fid="3" >RecordID</p>
-      <p fid="6" >VendorRef</p>           
-      <p fid="17" >RefNumber</p>
-      <p fid="18" >txnDate</p>
-    </response>
-    <detail>
-      <dbid>bpe2arqje</dbid>
-      <query>{'40'.EX.'__RecordID__'}AND{'17'.XEX.''}</query>
-      <clist>3.40.42.43.44.45</clist>
-      <params>
-      </params>
-      <response>
-        <p fid="3" >DET_RID</p>
-        <p fid="40" >DET_PADRE</p>
-        <p fid="42">AccountRef</p>
-        <p fid="43">Amount</p>
-        <p fid="44">CustomerRef</p>
-        <p fid="45">ClassRef</p>
-      </response>
-    </detail>
-  </access>
-  <access id="testRecibo002">
-    <token>j7umazv5c5bekptqr2dtg44zx</token>
-    <realm>smartstrategy</realm>
+<!--PROVEEDORES MANUAL OK-->
+  <access id="3a847e17ba9e87559ad0bb71fac1123">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
     <type>import</type>
-    <dbid>big57sxk9</dbid>
-    <query></query>
+    <dbid>bn8txn3n8</dbid>
+    <query>-1</query>
     <qid>-1</qid>
-    <clist>3.19</clist>
+    <clist>6.45.76.7.11.51.27</clist>
     <params>
-      <p field="3">RecordID</p>
-      <p field="19">QuickbookID</p>
+      <p field="6">nombre</p>
+      <p field="45">alias</p>
+      <p field="76">Cedula</p>
+      <p field="7">Telephono</p>
+      <p field="11">Correo</p>
+      <p field="51">QuickbookID</p>
+      <p field="27">QuickbooksCompania</p>
     </params>
-  </access>-->
+  </access>
+  
+
 </root>

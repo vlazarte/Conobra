@@ -195,10 +195,6 @@ namespace SmartQuickbook.Configuration
             }
         }
 
-
-
-
-
     }
 
     public class ProcesoParametros
@@ -247,8 +243,7 @@ namespace SmartQuickbook.Configuration
     public class Proceso
     {
         public string id;
-
-        public string nombre;
+        public string nombre;        
         public ProcesoEntrada entrada;
         public List<ProcesoAccion> acciones;
 

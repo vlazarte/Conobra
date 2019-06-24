@@ -379,7 +379,6 @@ namespace Quickbook
                 if (Config.IsProduction == true)
                 {
                     var qbook = new Connector(Quickbook.Config.App_Name, Quickbook.Config.File);
-
                     if (qbook.Connect())
                     {
                         string response = qbook.sendRequest(xml);
@@ -391,6 +390,12 @@ namespace Quickbook
                     {
                         err = "QuickBook no conecto";
                     }
+                }
+                else {
+                    string pathFile = Directory.GetCurrentDirectory() + "\\samples\\NewVendor_test.xml";
+                   string response=  File.ReadAllText(pathFile);
+                    res.LoadXml(response);
+                
                 }
 
                 string code = "";

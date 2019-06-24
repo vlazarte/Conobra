@@ -246,7 +246,15 @@ namespace SmartQuickbook.Helper
                             object objQuickbookInstance = Activator.CreateInstance(difineType);
                             //que campos
                             string err = string.Empty;
-                            List<Abstract> Records = ((Abstract)objQuickbookInstance).GetRecords(ref err);
+                            List<Abstract> Records=new List<Abstract>();
+                            if (proceso.tipoEjecucion == "manual")
+                            {//TODO:AComodar GEnerico
+                                Records = ((Vendor)objQuickbookInstance).GetRecordsCVS(ref err);
+                            }
+                            else {
+                                Records = ((Abstract)objQuickbookInstance).GetRecords(ref err);
+                            }
+                             
 
                             if (Records.Count > 0)
                             {
@@ -283,35 +291,39 @@ namespace SmartQuickbook.Helper
 
             var ws = new wClient.WService();
             string err = "";
-            string resp = ws.doQuery(proceso.entrada.quickbaseAccessToken, null, out err);
-            //El query debe ser los que tengan Quickbook si o si
-
-            if (err != string.Empty)
-            {
-                mostrarMensaje.Append("Ejecutando accion Error en el servicio:" + err);
-            }
-
-            var serializer = new JavaScriptSerializer();
-            serializer.MaxJsonLength = Int32.MaxValue;
             List<List<Par>> data = null;
-            try
-            {
-                data = serializer.Deserialize<List<List<Par>>>(resp);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                mostrarMensaje.Append("Ejecutando accion Error des serializando:" + ex.Message);
+            if (proceso.entrada.quickbaseAccessToken != string.Empty) {
+                string resp = ws.doQuery(proceso.entrada.quickbaseAccessToken, null, out err);
+                //El query debe ser los que tengan Quickbook si o si
 
+                if (err != string.Empty)
+                {
+                    mostrarMensaje.Append("Ejecutando accion Error en el servicio:" + err);
+                }
+
+                var serializer = new JavaScriptSerializer();
+                serializer.MaxJsonLength = Int32.MaxValue;
+               
+                try
+                {
+                    data = serializer.Deserialize<List<List<Par>>>(resp);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    mostrarMensaje.Append("Ejecutando accion Error des serializando:" + ex.Message);
+
+                }
+                if (data == null)
+                {
+                    mostrarMensaje.Append("Ejecutando accion data:null");
+                }
+                else
+                {
+                    mostrarMensaje.Append("Ejecutando accion cantidad a procesar:" + quickbookRecords.Count + Environment.NewLine);
+                }
             }
-            if (data == null)
-            {
-                mostrarMensaje.Append("Ejecutando accion data:null");
-            }
-            else
-            {
-                mostrarMensaje.Append("Ejecutando accion cantidad a procesar:" + quickbookRecords.Count + Environment.NewLine);
-            }
+           
 
             if (data != null && data.Count > 0)
             {

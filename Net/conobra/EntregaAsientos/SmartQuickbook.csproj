@@ -117,6 +117,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Strings.resx</DependentUpon>
     </Compile>
+    <Compile Include="TareasManuales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TareasManuales.Designer.cs">
+      <DependentUpon>TareasManuales.cs</DependentUpon>
+    </Compile>
     <Compile Include="Web References\wClient\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -144,6 +150,9 @@
     <EmbeddedResource Include="Strings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TareasManuales.resx">
+      <DependentUpon>TareasManuales.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">

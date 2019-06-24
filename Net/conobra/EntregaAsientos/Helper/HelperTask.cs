@@ -173,40 +173,51 @@ namespace SmartQuickbook.Helper
         }
         public static void AddConfigSave(List<ProcesoRespuesta> ConfiguracionRespuestaSave, Dictionary<string, string> llaveQuickbase, Abstract ObjectQuickbook, ref string err, ref  Dictionary<string, List<string>> RespuestasSave)
         {
-            foreach (var respuesta in ConfiguracionRespuestaSave)
+            try
             {
-                string KeyQuickBase = string.Empty;
-                if (llaveQuickbase.ContainsKey(respuesta.quickbaseAccessToken))
+                foreach (var respuesta in ConfiguracionRespuestaSave)
                 {
-                    KeyQuickBase = llaveQuickbase[respuesta.quickbaseAccessToken];
+                    string KeyQuickBase = string.Empty;
+                    if (llaveQuickbase.ContainsKey(respuesta.quickbaseAccessToken))
+                    {
+                        KeyQuickBase = llaveQuickbase[respuesta.quickbaseAccessToken];
+                    }
+
+                  
+                     String csv = Generic.GetFieldsToCsv(respuesta.parametros, KeyQuickBase, ObjectQuickbook, ref err);
+                     if (csv != string.Empty)
+                     {
+                         List<string> responses = null;
+
+                         if (RespuestasSave.ContainsKey(respuesta.quickbaseAccessToken))
+                         {
+                             responses = RespuestasSave[respuesta.quickbaseAccessToken];
+                         }
+                         else
+                         {
+                             responses = new List<string>();
+                         }
+
+
+                         responses.Add(csv);
+                         if (RespuestasSave.ContainsKey(respuesta.quickbaseAccessToken))
+                         {
+                             RespuestasSave[respuesta.quickbaseAccessToken] = responses;
+                         }
+                         else
+                         {
+                             RespuestasSave.Add(respuesta.quickbaseAccessToken, responses);
+                         }
+                     }
+
                 }
-                String csv = Generic.GetFieldsToCsv(respuesta.parametros, KeyQuickBase, ObjectQuickbook, ref err);
-                if (csv != string.Empty)
-                {
-                    List<string> responses = null;
-
-                    if (RespuestasSave.ContainsKey(respuesta.quickbaseAccessToken))
-                    {
-                        responses = RespuestasSave[respuesta.quickbaseAccessToken];
-                    }
-                    else
-                    {
-                        responses = new List<string>();
-                    }
-
-
-                    responses.Add(csv);
-                    if (RespuestasSave.ContainsKey(respuesta.quickbaseAccessToken))
-                    {
-                        RespuestasSave[respuesta.quickbaseAccessToken] = responses;
-                    }
-                    else
-                    {
-                        RespuestasSave.Add(respuesta.quickbaseAccessToken, responses);
-                    }
-                }
-
             }
+            catch (Exception ex)
+            {
+                
+                err += ex.Message; 
+            }
+            
         }
         public static void AddConfigLog(List<ProcesoRespuesta> ConfiguracionRespuestaLog, String log, ref  Dictionary<string, List<string>> RespuestasLog)
         {
@@ -698,14 +709,9 @@ namespace SmartQuickbook.Helper
 
             return registroExitoso;
         }
-        public static bool ImportToQuickBaseVendedoresFromQuickBookCVS(ref string err, ref string cvs)
+        public static string ImportToQuickBaseVendedoresFromQuickBookCVS(ref string err, ref string cvs)
         {
-            /* string keyImportToQuickbaseCreate = "3a847e17ba9e87559ad0bb71fac10010";
-             string keyQueryFromQuickbase = "3a847e17ba9e87559ad0bb71fac10011";
-             string keyImportToQuickbaseUpdate = "3a847e17ba9e87559ad0bb71fac10012";
-             string keyImportToQuickbaseEmparejar = "3a847e17ba9e87559ad0bb71fac10013";
-            
-
+             string keyImportToQuickbaseCreate = "3a847e17ba9e87559ad0bb71fac10010"; 
              Vendor VendorImport = new Vendor();
              var ws = new wClient.WService();
           
@@ -714,178 +720,21 @@ namespace SmartQuickbook.Helper
              Quickbook.Config.File = Properties.Settings.Default.qbook_file;
              Quickbook.Config.IsProduction = true;
              List<Abstract> vendorToCreate = VendorImport.GetRecordsCVS(ref err);
-             Dictionary<string, Vendor> vendorToSincronize = new Dictionary<string, Vendor>();
-             //ya previos guardados
-             Dictionary<string, string> registrados = registrosSincronizados(keyQueryFromQuickbase, ref err);
+             
 
-             bool registroExitoso = false;
-             if (registrados.Count > 0)
+             if (vendorToCreate.Count > 0)
              {
+                
+                 //obtener el listado de quickbase, separar los que tienen listID
+             //    string mensaje = HelperProcesor.ProcesarRegistros(proceso, vendorToCreate);
+
+                 return string.Empty;
              }
              else
              {
-                 List<string> quickbookListClass = new List<string>();
-                 if (vendorToCreate.Count > 0)
-                 {
-                     Dictionary<string, string> emparejar = registrosParaEmparejar(keyImportToQuickbaseEmparejar, ref err);
-                     Dictionary<string, Vendor> vendorToRegisterListID = new Dictionary<string, Vendor>();
-                     if (emparejar.Count > 0)
-                     {
-
-                         foreach (var item in emparejar)
-                         {
-                             Vendor toUpdate = vendorToCreate.Find(d => d.Name == item.Key);
-                             if (toUpdate != null)
-                             {
-                                 vendorToRegisterListID.Add(item.Value, toUpdate);
-                                 vendorToCreate.Remove(toUpdate);
-                             }
-                         }
-
-                     }
-
-
-                     //Actualizar
-                     List<string> quickbookListVendor = new List<string>();
-                     if (vendorToRegisterListID.Count > 0)
-                     {
-                         foreach (var item in vendorToRegisterListID)
-                         {//guardar el recordid para quickbook
-
-
-                             string cvsValues = item.Value.Name + "," + item.Value.CompanyName + ",";
-
-                             Hashtable customField = item.Value.getDataEx();
-                             if (customField.Count > 0)
-                             {
-
-                                 if (customField.ContainsKey("ID"))
-                                 {
-                                     cvsValues = cvsValues + customField["ID"];
-                                 }
-                                 else
-                                 {
-                                     cvsValues = cvsValues + "";
-                                 }
-
-                             }//no tiene llave 
-                             else
-                             {
-                                 cvsValues = cvsValues + "";
-                             }
-                             //Pasando el record id a QuickbaseIDCustomfield
-
-                             if (customField.ContainsKey("QuickbaseCode"))
-                             {
-                                 //asignando el recodID
-                                 customField["QuickbaseCode"] = item.Key;
-
-                             }
-                             else {
-                                 item.Value.addDataEx("QuickbaseCode", item.Key);
-                             }
-                             //--------------------------
-
-                             if (item.Value.contactRef != null)
-                             {
-                                 if (item.Value.contactRef.ContactName == "Main Phone")
-                                 {
-                                     cvsValues = cvsValues + "," + item.Value.contactRef.ContactValue;
-                                 }
-                                 else
-                                 {
-                                     cvsValues = cvsValues + "," + "";
-                                 }
-
-                             }//no tiene main phone
-                             else
-                             {
-                                 cvsValues = cvsValues + "," + "";
-                             }
-                             cvsValues = cvsValues + "," + item.Value.Email + "," + item.Value.ListID;
-                             quickbookListVendor.Add(item.Key+ ","+cvsValues);
-                            
-                            
-                         }
-                     }
-
-
-                      if (quickbookListVendor.Count > 0)
-                       {
-
-                           cvs = string.Join(Environment.NewLine, quickbookListVendor.ToArray());
-                          // registroExitoso = ws.importFromCsv(keyImportToQuickbaseUpdate, cvs, out err);
-                       }
-                     //Actualizar a quickbook los que sincronizo ya
-
-
-
-                        quickbookListVendor = new List<string>();
-
-                       if (vendorToCreate.Count > 0)
-                       {
-                           foreach (var item in vendorToCreate)
-                           {
-                               string cvsValues = item.Name + "," + item.CompanyName + ",";
-
-                               Hashtable customField=item.getDataEx();
-                               if (customField.Count > 0)
-                               {
-
-                                   if (customField.ContainsKey("ID"))
-                                   {
-                                       cvsValues = cvsValues + customField["ID"];
-                                   }
-                                   else
-                                   {
-                                       cvsValues = cvsValues + "";
-                                   }
-                                  
-                               }//no tiene llave 
-                               else {
-                                   cvsValues = cvsValues + "";
-                               }
-                               if (item.contactRef != null)
-                               {
-                                   if (item.contactRef.ContactName == "Main Phone")
-                                   {
-                                       cvsValues = cvsValues + "," + item.contactRef.ContactValue;
-                                   }
-                                   else
-                                   {
-                                       cvsValues = cvsValues + "," + "";
-                                   }
-
-                               }//no tiene main phone
-                               else
-                               {
-                                   cvsValues = cvsValues + "," + "";
-                               }
-                               cvsValues = cvsValues + "," + item.Email +"," +item.ListID;    
-                               quickbookListVendor.Add(cvsValues);
-                              
-                           }
-                       }
-
-                     if (quickbookListClass.Count > 0)
-                      {
-
-                          cvs = string.Join(Environment.NewLine, quickbookListClass.ToArray());
-                         // registroExitoso = ws.importFromCsv(keyImportToQuickbaseCreate, cvs, out err);
-                      }
-                       //obtener las llaves recodID nuevos y adicionarlos a los credos.
-                /*  }
-
-                  if (quickbookListClass.Count > 0)
-                  {
-
-                      cvs = string.Join(Environment.NewLine, quickbookListClass.ToArray());
-                      registroExitoso = ws.importFromCsv(keyImportToQuickbaseCreate, cvs, out err);
-                  }*/
-            /*   }
-           }
-   */
-            return true;//registroExitoso;
+                 err = "No se encontraron registros para sincronizar";
+                 return err;
+             }
         }
         private static bool UpdateQuickbookToQuickbaseVendor(Dictionary<string, string> registrados, ref List<Vendor> vendorToCreate)
         {
@@ -1178,32 +1027,12 @@ namespace SmartQuickbook.Helper
             {
                 if (ConfiguracionRespuestaCreate.Count > 0)
                 {
-                    /*foreach (var respuesta in ConfiguracionRespuestaCreate)
-                    {
-                        //cargar los parametros a insertar//values
-                        /*try
-                        {
-                            string[] list = Generic.getFieldValues(respuesta.parametros, objectToCreate, ref err);
-
-                            int recordID = ws.addRecord(respuesta.quickbaseAccessToken, list, out err);
-
-                            //respuesta tiene custom?
-                            //registrar custom
-                            //actualizar en quickbook uno por uno
-                        }
-                        catch (Exception e)
-                        {
-                            err = e.Message;
-                            return err;
-                        }*/
-
-
-                    //update
+                   
                     //obtener el List]ID de quickbook adicionar al cvs
                     HelperTask.AddConfigSave(ConfiguracionRespuestaCreate, llaveQuickbase, objectToCreate, ref err, ref RespuestasCreate);
 
 
-                    // }
+                   
                 }
             }
 

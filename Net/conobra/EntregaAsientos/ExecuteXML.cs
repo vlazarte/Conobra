@@ -34,24 +34,33 @@ namespace SmartQuickbook
         private void button2_Click(object sender, EventArgs e)
         {
             Quickbook.Config.IsProduction = true;//(Properties.Settings.Default.qbook_production == "b4f16ca3cd7d");
+          //  Properties.Settings.Default.qbook_file = txtConection.Text;
             var qbook = new Connector(Properties.Settings.Default.qbook_app_name, Properties.Settings.Default.qbook_file);
             if (qbook.Connect())
             {
-                
+                label1.Text = "Conecto con exito";
 
-                string xmlResponse = qbook.sendRequest(textBox1.Text);
-                textBox2.Text = xmlResponse;
+                if (textBox1.Text != string.Empty) {
+                    string xmlResponse = qbook.sendRequest(textBox1.Text);
+                    textBox2.Text = xmlResponse;
+                }
                 qbook.Disconnect();
 
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            var ws = new wClient.WService();
-            string err = "";
-            string resp = ws.doQuery(textBox3.Text, null, out err);
-            textBox4.Text = resp;
+
         }
+
+        private void ExecuteXML_Load(object sender, EventArgs e)
+        {
+
+        }
+
+     
+
+       
     }
 }

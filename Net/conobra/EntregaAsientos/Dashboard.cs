@@ -40,6 +40,7 @@ namespace SmartQuickbook
 
             processor.load();
             CrearTabProcesos();
+            this.Text = Properties.Settings.Default.qbook_Compania;
         }
 
         #region "Configuracion"
@@ -67,7 +68,9 @@ namespace SmartQuickbook
             for (int i = 0; i < processor.procesos.Count; i++)
             {
                 Proceso P = processor.procesos[i];
-                CrearTabProceso(P, ref tabControl1);
+                if (P.tipoEjecucion == "intervalo") {
+                    CrearTabProceso(P, ref tabControl1);
+                }
             }
         }
 
@@ -136,7 +139,7 @@ namespace SmartQuickbook
                 {
                     BeginInvoke((Action)(() =>
                     {
-                        proceso.controlUI.MostrarMensaje("Buscando datos de Quickbase");
+                        proceso.controlUI.MostrarMensaje("Buscando datos de Quickbook");
                     }));
                     string mensajes = HelperProcesor.ProcesoEjecutarToQuickBook(proceso);
 
@@ -271,7 +274,10 @@ namespace SmartQuickbook
 
             foreach (Proceso proceso in processor.procesos)
             {
-                var result = AsyncOperation(proceso);
+                if (proceso.tipoEjecucion == "intervalo")
+                {
+                    var result = AsyncOperation(proceso);
+                }
             }
         }
         private void Dashboard_Load(object sender, EventArgs e)
@@ -320,38 +326,13 @@ namespace SmartQuickbook
 
         }
 
-        private void obtenerClasesProyectosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ClasesProyectosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string err = string.Empty;
-            string cvs = string.Empty;
-            if (HelperTask.ImportToQuickBaseClassFromQuickBookCVS(ref err, ref cvs))
-            {
-                //exito
-                MessageBox.Show("Importo Proyecto clases a Quickbase con exito");
-               
-            }
-            else { 
-            //error
-                MessageBox.Show(err);
-            }
+            TareasManuales tarea = new TareasManuales();
+            tarea.ShowDialog();
         }
 
-        private void importProveedoresToQuickBaseToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            string err = string.Empty;
-            string cvs = string.Empty;
-            if (HelperTask.ImportToQuickBaseVendedoresFromQuickBookCVS(ref err, ref cvs))
-            {
-                //exito
-                MessageBox.Show("Sincronizo e importo Proveedores a Quickbase con exito");
-
-            }
-            else
-            {
-                //error
-                MessageBox.Show(err);
-            }
-        }
+      
     }
 
     public class Par

@@ -37,7 +37,7 @@ namespace SmartQuickbook.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Compania BD")]
         public string qbook_file {
             get {
                 return ((string)(this["qbook_file"]));
@@ -67,6 +67,30 @@ namespace SmartQuickbook.Properties {
         public string SmartQuickbook_wClient_WService {
             get {
                 return ((string)(this["SmartQuickbook_wClient_WService"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("CONOBRA LTDA.")]
+        public string qbook_CompaniaBD {
+            get {
+                return ((string)(this["qbook_CompaniaBD"]));
+            }
+            set {
+                this["qbook_CompaniaBD"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("CONOBRA LTDA. - Quickbooks Factura Electrónica Costa Rica.")]
+        public string qbook_Compania {
+            get {
+                return ((string)(this["qbook_Compania"]));
+            }
+            set {
+                this["qbook_Compania"] = value;
             }
         }
     }
