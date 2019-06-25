@@ -521,73 +521,7 @@
   
 
 
-  <!--Proceso 10 Proveedores completo manual-->
-  <access id="3a847e17ba9e87559ad0bb71fac12010">
-    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
-    <realm>conobra</realm>
-    <type>doquery</type>
-    <dbid>bn8txn3n8</dbid>
-    <query>-1</query>
-    <qid>-1</qid>
-    <clist>3.7.9.11.6</clist>
-    <params>
-    </params>
-    <response>
-      <p field="3">RecordID</p>
-      <p field="7">Nombre</p>
-      <p field="9">alias</p>
-      <p field="11">Correo</p>
-      <p field="6">QuickbookID</p>
-    </response>
-  </access>
-  <access id="3a847e17ba9e87559ad0bb71fac12001">
-    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
-    <realm>conobra</realm>
-    <type>import</type>
-    <dbid>bn8txn3n8</dbid>
-    <query>-1</query>
-    <qid>-1</qid>
-    <clist>3.7.9.11.6</clist>
-    <params>
-      <p field="3">RecordID</p>
-      <p field="7">Name</p>
-      <p field="9">CompanyName</p>     
-      <p field="11">Email</p>
-      <p field="6">QuickbookID</p>
-    </params>
-  </access>
 
-
-  <access id="3a847e17ba9e87559ad0bb71fac12002">
-    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
-    <realm>conobra</realm>
-    <type>add</type>
-    <dbid>bn8txn3n8</dbid>
-    <query>-1</query>
-    <qid>-1</qid>
-    <clist>7.9.11.6</clist>
-    <params>
-      <p fid="7">Name</p>
-      <p fid="9">CompanyName</p>
-      <p fid="11">Email</p>
-      <p fid="6">ListID</p>
-    </params>
-  </access>
-  <access id="3a847e17ba9e87559ad0bb71fac12003">
-    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
-    <realm>conobra</realm>
-    <type>import</type>
-    <dbid>bn8txn3n8</dbid>
-    <query>-1</query>
-    <qid>-1</qid>
-    <clist>7.9.11.6</clist>
-    <params>
-      <p field="7">Name</p>
-      <p field="9">CompanyName</p>
-      <p field="11">Email</p>
-      <p field="6">ListID</p>
-    </params>
-  </access>
   
   
   
@@ -648,15 +582,16 @@
     <dbid>bn8txn3n8</dbid>
     <query>-1</query>
     <qid>-1</qid>
-    <clist>6.45.76.7.11.51.27</clist>
+    <clist>7.9.8.10.11.6.27.24</clist>
     <params>
-      <p field="6">nombre</p>
-      <p field="45">alias</p>
-      <p field="76">Cedula</p>
-      <p field="7">Telephono</p>
+      <p field="7">nombre</p>
+      <p field="9">alias</p>
+      <p field="8">Cedula</p>
+      <p field="10">Telephono</p>
       <p field="11">Correo</p>
-      <p field="51">QuickbookID</p>
+      <p field="6">QuickbookID</p>
       <p field="27">QuickbooksCompania</p>
+      <p field="24">DiasCredito</p>
     </params>
   </access>
   

@@ -265,7 +265,7 @@ namespace SmartQuickbook.Helper
                             }
                             else
                             {
-                                mostrarMensaje.Append("No se encontraron registros para sincronizar");
+                                mostrarMensaje.Append("No se encontraron registros para sincronizar" + Environment.NewLine);
                             }
 
 
@@ -298,7 +298,7 @@ namespace SmartQuickbook.Helper
 
                 if (err != string.Empty)
                 {
-                    mostrarMensaje.Append("Ejecutando accion Error en el servicio:" + err);
+                    mostrarMensaje.Append("Ejecutando accion Error en el servicio:" + err + Environment.NewLine);
                 }
 
                 var serializer = new JavaScriptSerializer();
@@ -311,12 +311,12 @@ namespace SmartQuickbook.Helper
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message);
-                    mostrarMensaje.Append("Ejecutando accion Error des serializando:" + ex.Message);
+                    mostrarMensaje.Append("Ejecutando accion Error des serializando:" + ex.Message + Environment.NewLine);
 
                 }
                 if (data == null)
                 {
-                    mostrarMensaje.Append("Ejecutando accion data:null");
+                    mostrarMensaje.Append("Ejecutando accion data:null" + Environment.NewLine);
                 }
                 else
                 {
@@ -343,11 +343,14 @@ namespace SmartQuickbook.Helper
                         mostrarMensaje.Append(resultadoActualizacion);
 
                         //Existen nuevos registros para crear
+                        mostrarMensaje.Append("Cantidad de registros a crear:" + quickbookRecords.Count + Environment.NewLine);
                         if (quickbookRecords.Count > 0)
                         {
+                         
                             string resultadoCreados = HelperTask.CreateQuickbookToQuickbaseNewVendor(accion, quickbookRecords, ref err);
                             mostrarMensaje.Append(resultadoCreados);
                         }
+                        
 
                     }
                 }
@@ -356,16 +359,20 @@ namespace SmartQuickbook.Helper
             else
             {
 
-                foreach (ProcesoAccion accion in proceso.acciones)
-                {
-                    //Revisando si tenemos respuesta creada a esta altura
-                    if (accion.tipo == "add_quickbase")
+                mostrarMensaje.Append("Cantidad de registros a crear:" + quickbookRecords.Count);
+                if (quickbookRecords.Count > 0) {
+                    foreach (ProcesoAccion accion in proceso.acciones)
                     {
-                        //Existen nuevos registros de quickbook para quickbase
-                        string resultadoCreados = HelperTask.CreateQuickbookToQuickbaseNewVendor(accion, quickbookRecords, ref err);
-                        mostrarMensaje.Append(resultadoCreados);
+                        //Revisando si tenemos respuesta creada a esta altura
+                        if (accion.tipo == "add_quickbase")
+                        {
+                            //Existen nuevos registros de quickbook para quickbase
+                            string resultadoCreados = HelperTask.CreateQuickbookToQuickbaseNewVendor(accion, quickbookRecords, ref err);
+                            mostrarMensaje.Append(resultadoCreados);
+                        }
                     }
                 }
+                
                 return mostrarMensaje.ToString();
             }
         }

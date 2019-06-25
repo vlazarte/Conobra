@@ -626,7 +626,7 @@
     </ejecucion>
   </proceso>
 
-
+<!--Clenco-->
   <proceso id="1">
     <nombre>importar Proveedores a quickbase</nombre>    
     <entrada tipo="quickbook">
@@ -655,6 +655,7 @@
               <p field="5">Email</p>
               <p field="6">ListID</p>
               <p field="7" key="true" type="Configuration">QuickbooksCompania</p>
+              <p field="8" type="TermsRef/FullName">TermsRef</p>             
             </parametros>           
           </respuesta>
         </respuestas>
@@ -665,6 +666,47 @@
       <fecha_unica>2019-04-09</fecha_unica>      
     </ejecucion>
   </proceso>
+
+<!--Conobra-->
+  <!--<proceso id="1">
+    <nombre>importar Proveedores a quickbase</nombre>
+    <entrada tipo="quickbook">
+      <quickbook></quickbook>
+      <quickbase>
+        <access_token></access_token>
+        <parametros>
+          <p field="B">NOMBRE</p>
+        </parametros>
+      </quickbase>
+    </entrada>
+    <acciones>
+      <accion id="cust001" tipo="add_quickbase">
+        <nombre>importar Proveedores a quickbase</nombre>
+        <quickbook_tabla>Vendor</quickbook_tabla>
+        <parametros>
+        </parametros>
+        <respuestas>
+          <respuesta tipo="import_quickbase" categoria="Create">
+            <access_token>3a847e17ba9e87559ad0bb71fac1123</access_token>
+            <parametros>
+              <p field="1">Name</p>
+              <p field="2">CompanyName</p>
+              <p field="3" type="Custom/ID:">ID</p>
+              <p field="4" type="AdditionalContactRef/ContactValue">phone</p>
+              <p field="5">Email</p>
+              <p field="6">ListID</p>
+              <p field="7" key="true" type="Configuration">QuickbooksCompania</p>
+              <p field="8" type="TermsRef/FullName">TermsRef</p>
+            </parametros>
+          </respuesta>
+        </respuestas>
+      </accion>
+    </acciones>
+    <ejecucion tipo="manual">
+      <intervalo tipo="segundo">60</intervalo>
+      <fecha_unica>2019-04-09</fecha_unica>
+    </ejecucion>
+  </proceso>-->
   <!--<proceso id="2">
     <nombre>importar clases a quickbase</nombre>
     <entrada tipo="quickbook">

@@ -147,7 +147,7 @@ namespace SmartQuickbook.Helper
             }
             object objectValue = _propertyInfo.GetValue(obj, null);
             string value = string.Empty;
-            if (objectValue.GetType().GetProperties().Count() > 1)
+            if (objectValue!=null && objectValue.GetType().GetProperties().Count() > 1)
             {
                 PropertyInfo _propertyInfo2 = objectValue.GetType().GetProperty(fieldValue);
                 if (_propertyInfo2 == null)
@@ -1026,19 +1026,15 @@ namespace SmartQuickbook.Helper
             foreach (var objectToCreate in quickbookRecords)
             {
                 if (ConfiguracionRespuestaCreate.Count > 0)
-                {
-                   
+                {                   
                     //obtener el List]ID de quickbook adicionar al cvs
                     HelperTask.AddConfigSave(ConfiguracionRespuestaCreate, llaveQuickbase, objectToCreate, ref err, ref RespuestasCreate);
-
-
-                   
                 }
             }
 
             HelperTask.ImportToQuickBase(ConfiguracionRespuestaCreate, null, RespuestasCreate, null, ref err);
 
-            return "Finalizo proceso de registro " + Environment.NewLine;
+            return "Finalizo proceso de registro " + Environment.NewLine + "Mensaje de importancion:"+err;
         }
         public static bool CargadoDetalle(Abstract quickbookRecord, ProcesoAccion accion, string Details, ref string err)
         {

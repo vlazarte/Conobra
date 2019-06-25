@@ -178,7 +178,14 @@ namespace SmartQuickbook.Configuration
                             fieldValues.Add(keyExternalValue);
                         }
                         else {
-                            fieldValues.Add("");
+                            if (parametros[i].Type == "Configuration")
+                            {
+                                fieldValues.Add(Properties.Settings.Default.qbook_CompaniaBD);
+                            }
+                            else {
+                                fieldValues.Add("");
+                            }
+                            
                         }
                     }
 
