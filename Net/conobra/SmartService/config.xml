@@ -2,7 +2,7 @@
 <root>
 
 
-  <!--Proceso automatico 1 Proveedores-->
+  <!--Proceso automatico 1 Proveedores Conobra-->
   <access id="3a847e17ba9e87559ad0bb71fac12000">
     <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
     <realm>conobra</realm>
@@ -89,6 +89,73 @@
     </params>
   </access>
   <!--Proceso manual 1 FIN Proveedores-->
+
+
+
+  <!--Proceso automatico 1 Proveedores Clenco-->
+  <access id="3a847e17ba9e87559ad0bb71fac13000">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>doquery</type>
+    <dbid>bn8txn28h</dbid>
+    <query>{51.XEX.''}AND{'94'.EX.'Clean Construction LTDA.'}</query>
+    <qid>-1</qid>
+    <clist>3.6.45.76.7.11.51.94.47</clist>
+    <params>
+    </params>
+    <response>
+      <p fid="3">RecordID</p>
+      <p fid="6">Name</p>
+      <p fid="45">CompanyName</p>
+      <p fid="76" type="Custom/ID">ID</p>
+      <p fid="7" type="AdditionalContactRef">AdditionalContactRef</p>
+      <p fid="11">Email</p>
+      <p fid="51">ListID</p>
+      <p fid="94">QuickbooksCompania</p>
+      <p fid="47" type="TermsRef">TermsRef</p>
+    </response>
+  </access>
+  <access id="3a847e17ba9e87559ad0bb71fac13001">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bn8txn28h</dbid>
+    <query>-1</query>
+    <qid>-1</qid>
+    <clist>3.6.45.76.7.11.51.94.47</clist>
+    <params>
+      <p field="3">RecordID</p>
+      <p field="6">nombre</p>
+      <p field="45">alias</p>
+      <p field="76">Cedula</p>
+      <p field="7">Telephono</p>
+      <p field="11">Correo</p>
+      <p field="51">QuickbookID</p>
+      <p field="94">QuickbooksCompania</p>
+      <p field="47">CondicionPago</p>
+    </params>
+  </access>
+  <access id="3a847e17ba9e87559ad0bb71fac13002">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bn8txn28h</dbid>
+    <query>-1</query>
+    <qid>-1</qid>
+    <clist>6.45.76.7.11.51.94.47</clist>
+    <params>
+      <p field="6">nombre</p>
+      <p field="45">alias</p>
+      <p field="76">Cedula</p>
+      <p field="7">Telephono</p>
+      <p field="11">Correo</p>
+      <p field="51">QuickbookID</p>
+      <p field="94">QuickbooksCompania</p>
+      <p field="47">CondicionPago</p>
+    </params>
+  </access>
+
+  <!--Proceso automatico 1 FIN Proveedores Clenco-->
   
   <access id="0823871b4f16ca3cd7d6f6259690ca20">
     <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
@@ -555,23 +622,27 @@
   
   
   
-  <!--REcibos-->
+  <!--REcibos Conobra-->
 
   <access id="0823871b4f16ca3cd7d6f62596903000">
     <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
     <realm>conobra</realm>
     <type>doquery_complex</type>
     <dbid>bn8txn25q</dbid>
-    <query></query>
+    <query>{'304'.EX.'CONOBRA LTDA.'}</query>
     <qid>27</qid>
-    <clist>3.35.6.7</clist>
+    <clist>3.302.6.7.304.313.315.318</clist>
     <params>
     </params>
     <response>
       <p fid="3" >RecordID</p>
-      <p fid="35" >VendorRef</p>
+      <p fid="302" >VendorRef</p>
       <p fid="6" >RefNumber</p>
       <p fid="7" >txnDate</p>
+      <p fid="304">QuickbooksCompania</p>
+      <p fid="313">DueDate</p>
+      <p fid="315">ExchangeRate</p>
+      <p fid="318">Memo</p>
     </response>
     <detail>
       <dbid>bn8txn26i</dbid>      
