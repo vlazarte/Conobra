@@ -370,7 +370,7 @@ namespace Quickbook
                 string xml = toXmlQuery(false);
                 if (xml == null)
                 {
-                    err = "Hubo un error al generar el XML";
+                    err = "Hubo un error al generar el XML" + Environment.NewLine;
                     return null;
                 }
 
@@ -383,17 +383,25 @@ namespace Quickbook
                     {
                         string response = qbook.sendRequest(xml);
                         res.LoadXml(response);
+
+                        if (Config.SaveXML == true)
+                        {
+                            string pathFile = Directory.GetCurrentDirectory() + "\\samples\\V_" + DateTime.Now.Ticks + ".xml";
+                            File.WriteAllText(pathFile, response);
+                        }
                         qbook.Disconnect();
 
                     }
                     else
                     {
-                        err = "QuickBook no conecto";
+                        err = "QuickBook no conecto" + Environment.NewLine;
                     }
                 }
                 else {
+                    //Datos de prueba
                     string pathFile = Directory.GetCurrentDirectory() + "\\samples\\NewVendor_test.xml";
-                   string response=  File.ReadAllText(pathFile);
+                    string response=  File.ReadAllText(pathFile);
+                  
                     res.LoadXml(response);
                 
                 }
@@ -417,18 +425,18 @@ namespace Quickbook
                     }
                     else
                     {
-                        err = "No se obtuvo ningun registro";
+                        err = "No se obtuvo ningun registro" + Environment.NewLine;
                     }
 
                 }
                 else
                 {
-                    err = statusMessage;
+                    err = statusMessage + Environment.NewLine;
                 }
             }
             catch (Exception ex)
             {
-                err = ex.Message;
+                throw new Exception("Error en Vendor: " + ex.Message + Environment.NewLine);
             }
 
             return new List<Abstract>();
@@ -449,7 +457,7 @@ namespace Quickbook
                 string xml = toXmlQuery(true); 
                 if (xml == null)
                 {
-                    err = "Hubo un error al generar el XML";
+                    err = "Hubo un error al generar el XML" + Environment.NewLine;
                     return null;
                 }
 
@@ -463,6 +471,12 @@ namespace Quickbook
                     {
                         string response = qbook.sendRequest(xml);
                         res.LoadXml(response);
+
+                        if (Config.SaveXML == true)
+                        {
+                            string pathFile = Directory.GetCurrentDirectory() + "\\samples\\V_" + DateTime.Now.Ticks + ".xml";
+                            File.WriteAllText(pathFile, response);
+                        }
                         qbook.Disconnect();
 
                     }
@@ -471,6 +485,14 @@ namespace Quickbook
                         err = "QuickBook no conecto";
                     }
                 }
+                else {
+                    //Datos de prueba
+                    string pathFile = Directory.GetCurrentDirectory() + "\\samples\\NewVendor_Test2.xml";
+                    string response = File.ReadAllText(pathFile);
+
+                    res.LoadXml(response);
+                }
+                
 
                 string code = "";
                 string statusMessage = "";
@@ -495,7 +517,7 @@ namespace Quickbook
                     }
                     else
                     {
-                        err = "No se obtuvo ningun registro";
+                        err = "No se obtuvo ningun registro" + Environment.NewLine;
                     }
 
 
@@ -535,7 +557,7 @@ namespace Quickbook
                     }
                     else
                     {
-                        err = "No se obtuvo ningun registro";
+                        err = "No se obtuvo ningun registro" + Environment.NewLine;
                     }
 
                 }
@@ -546,7 +568,8 @@ namespace Quickbook
             }
             catch (Exception ex)
             {
-                err = ex.Message;
+                
+                throw new Exception("Error al conectar al Obtener Proveedores registros de Quickbooks: " + ex.Message);
             }
 
             return new List<Abstract>();

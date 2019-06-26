@@ -71,7 +71,7 @@ namespace SmartQuickbook
             
             ProcessControl PC = new ProcessControl(proceso);
             proceso.controlUI = PC;
-            //tabPage.Controls.Add(PC);
+            pnlLog.Controls.Add(PC);
         }
 
         private void pnlTareas_Paint(object sender, PaintEventArgs e)
@@ -135,15 +135,25 @@ namespace SmartQuickbook
         {
             if (proceso.entrada.tipo == "quickbase")
             {
-               lblResultado.Text+= "Buscando datos de Quickbase";
-               
+              
+               BeginInvoke((Action)(() =>
+               {
+                   proceso.controlUI.MostrarMensaje("Buscando datos de Quickbase");
+               }));
                string mensajes = HelperProcesor.ProcesoEjecutarToQuickBase(proceso);
                 
-               lblResultado.Text+=mensajes;
+              
+               BeginInvoke((Action)(() =>
+               {
+                   proceso.controlUI.MostrarMensaje(mensajes);
+               }));
                 
-               lblResultado.Text +="Finalizo Proceso";
-                
+              
 
+               BeginInvoke((Action)(() =>
+               {
+                   proceso.controlUI.MostrarMensaje("Finalizo Proceso");
+               }));
             }
             else
             {
@@ -151,15 +161,31 @@ namespace SmartQuickbook
                 if (proceso.entrada.tipo == "quickbook")
                 {
                     
-                        lblResultado.Text+="Buscando datos de Quickbook";
-                    
+                        
+                        BeginInvoke((Action)(() =>
+                        {
+                            proceso.controlUI.MostrarMensaje("Buscando datos de Quickbooks");
+                        }));
                         string mensajes = HelperProcesor.ProcesoEjecutarToQuickBook(proceso);
+                        BeginInvoke((Action)(() =>
+                        {
+                            proceso.controlUI.MostrarMensaje(mensajes);
+                        }));
 
-                        lblResultado.Text+=mensajes;                    
-                        lblResultado.Text+="Finalizo Proceso";
+                        BeginInvoke((Action)(() =>
+                        {
+                            proceso.controlUI.MostrarMensaje("Finalizo Proceso");
+                        }));
+                                    
+                        
                     
                 }
             }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
 

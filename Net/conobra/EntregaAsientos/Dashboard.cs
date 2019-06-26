@@ -37,10 +37,19 @@ namespace SmartQuickbook
 
             processor = new Processor();
             pages = new List<TabPage>();
-
-            processor.load();
-            CrearTabProcesos();
             this.Text = Properties.Settings.Default.qbook_Compania;
+            try
+            {
+                processor.load();
+                CrearTabProcesos();
+            }
+            catch (Exception)
+            {
+                
+               MessageBox.Show(  "Error al cargar la configuración de procesos.");
+            }
+            
+           
         }
 
         #region "Configuracion"
@@ -81,30 +90,34 @@ namespace SmartQuickbook
             for (int i = 0; i < processor.procesos.Count; i++)
             {
                 Proceso P = processor.procesos[i];
-                string accion = "";
-                foreach (ProcesoAccion A in P.acciones)
-                {
-                    accion += "De " + P.entrada.tipo + " a " + A.nombre + Environment.NewLine;
+
+                if (P.tipoEjecucion == "intervalo"){
+                    string accion = "";
+                    foreach (ProcesoAccion A in P.acciones)
+                    {
+                        accion += "De " + P.entrada.tipo + " a " + A.nombre + Environment.NewLine;
+                    }
+
+                    accion = accion.Trim(Environment.NewLine.ToCharArray());
+
+                    string ultimaEjecucion = "";
+                    if (P.ultimaEjecucion != null)
+                        ultimaEjecucion = ((DateTime)P.ultimaEjecucion).ToString("yyyy-MM-dd hh:mm:ss");
+                    string siguienteEjecucion = "";
+                    if (P.siguienteEjecucion != null)
+                        siguienteEjecucion = ((DateTime)P.siguienteEjecucion).ToString("yyyy-MM-dd hh:mm:ss");
+
+                    string datosEjecucion = " Cada " + P.tipoIntervaloValor + " " + P.tipoIntervalo;
+                    dgListProcess.Rows.Add(P.id,
+                        P.nombre,
+                        accion,
+                        datosEjecucion,
+                        P.estado,
+                        ultimaEjecucion,
+                        siguienteEjecucion
+                    );
                 }
-
-                accion = accion.Trim(Environment.NewLine.ToCharArray());
-
-                string ultimaEjecucion = "";
-                if (P.ultimaEjecucion != null)
-                    ultimaEjecucion = ((DateTime)P.ultimaEjecucion).ToString("yyyy-MM-dd hh:mm:ss");
-                string siguienteEjecucion = "";
-                if (P.siguienteEjecucion != null)
-                    siguienteEjecucion = ((DateTime)P.siguienteEjecucion).ToString("yyyy-MM-dd hh:mm:ss");
-
-                string datosEjecucion = " Cada " + P.tipoIntervaloValor + " " + P.tipoIntervalo;
-                dgListProcess.Rows.Add(P.id,
-                    P.nombre,
-                    accion,
-                    datosEjecucion,
-                    P.estado,
-                    ultimaEjecucion,
-                    siguienteEjecucion
-                );
+               
             }
         }
 

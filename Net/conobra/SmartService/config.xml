@@ -1,5 +1,95 @@
 <?xml version="1.0" standalone="yes"?>
 <root>
+
+
+  <!--Proceso automatico 1 Proveedores-->
+  <access id="3a847e17ba9e87559ad0bb71fac12000">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>doquery</type>
+    <dbid>bn8txn28h</dbid>
+    <query>{51.XEX.''}AND{'94'.EX.'CONOBRA LTDA.'}</query>
+    <qid>-1</qid>
+    <clist>3.6.45.76.7.11.51.94.47</clist>
+    <params>
+    </params>
+    <response>
+      <p fid="3">RecordID</p>
+      <p fid="6">Name</p>
+      <p fid="45">CompanyName</p>
+      <p fid="76" type="Custom/ID:">ID</p>
+      <p fid="7" type="AdditionalContactRef">AdditionalContactRef</p>
+      <p fid="11">Email</p>
+      <p fid="51">ListID</p>
+      <p fid="94">QuickbooksCompania</p>
+      <p fid="47" type="TermsRef">TermsRef</p>
+    </response>
+  </access>
+  <access id="3a847e17ba9e87559ad0bb71fac12200">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bn8txn28h</dbid>
+    <query>-1</query>
+    <qid>-1</qid>
+    <clist>3.6.45.76.7.11.51.94.47</clist>
+    <params>
+      <p field="3">RecordID</p>
+      <p field="6">nombre</p>
+      <p field="45">alias</p>
+      <p field="76">Cedula</p>
+      <p field="7">Telephono</p>
+      <p field="11">Correo</p>
+      <p field="51">QuickbookID</p>
+      <p field="94">QuickbooksCompania</p>
+      <p field="47">CondicionPago</p>
+    </params>
+  </access>
+  <access id="3a847e17ba9e87559ad0bb71fac12100">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bn8txn28h</dbid>
+    <query>-1</query>
+    <qid>-1</qid>
+    <clist>6.45.76.7.11.51.94.47</clist>
+    <params>
+      <p field="6">nombre</p>
+      <p field="45">alias</p>
+      <p field="76">Cedula</p>
+      <p field="7">Telephono</p>
+      <p field="11">Correo</p>
+      <p field="51">QuickbookID</p>
+      <p field="94">QuickbooksCompania</p>
+      <p field="47">CondicionPago</p>
+    </params>
+  </access>
+
+  <!--Proceso automatico 1 FIN Proveedores-->
+
+
+  <!--Proceso 1 manual PROVEEDORES -->
+  <access id="3a847e17ba9e87559ad0bb71fac1123">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bn8txn3n8</dbid>
+    <query>-1</query>
+    <qid>-1</qid>
+    <clist>7.9.8.10.11.6.27.24</clist>
+    <params>
+      <p field="7">nombre</p>
+      <p field="9">alias</p>
+      <p field="8">Cedula</p>
+      <p field="10">Telephono</p>
+      <p field="11">Correo</p>
+      <p field="6">QuickbookID</p>
+      <p field="27">QuickbooksCompania</p>
+      <p field="24">DiasCredito</p>
+    </params>
+  </access>
+  <!--Proceso manual 1 FIN Proveedores-->
+  
   <access id="0823871b4f16ca3cd7d6f6259690ca20">
     <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
     <realm>conobra</realm>
@@ -461,67 +551,7 @@
     </params>
   </access>
   
-  <!--Proceso 9 Proveedores-->
-  <access id="3a847e17ba9e87559ad0bb71fac12000">
-    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
-    <realm>conobra</realm>
-    <type>doquery</type>
-    <dbid>bn8txn28h</dbid>
-    <query>{51.XEX.''}</query>
-    <qid>-1</qid>
-    <clist>3.6.45.76.7.11.51</clist>
-    <params>
-    </params>
-    <response>
-      <p fid="3">RecordID</p>
-      <p fid="6">Name</p>
-      <p fid="45">CompanyName</p>
-      <p fid="76" type="Custom/Name">ID</p>
-      <p fid="7" type="AdditionalContactRef">AdditionalContactRef</p>      
-      <p fid="11">Email</p>
-      <p fid="51">ListID</p>
-    </response>
-  </access>
-  <access id="3a847e17ba9e87559ad0bb71fac12100">
-    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
-    <realm>conobra</realm>
-    <type>import</type>
-    <dbid>bn8txn28h</dbid>
-    <query>-1</query>
-    <qid>-1</qid>
-    <clist>6.45.76.7.11.51</clist>
-    <params>      
-      <p field="6">nombre</p>
-      <p field="45">alias</p>
-      <p field="76">Cedula</p>
-      <p field="7">Telephono</p>
-      <p field="11">Correo</p>
-      <p field="51">QuickbookID</p>
-    </params>
-  </access>
-
-  <access id="3a847e17ba9e87559ad0bb71fac12200">
-    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
-    <realm>conobra</realm>
-    <type>import</type>
-    <dbid>bn8txn28h</dbid>
-    <query>-1</query>
-    <qid>-1</qid>
-    <clist>3.6.45.76.7.11.51</clist>
-    <params>
-      <p field="3">RecordID</p>
-      <p field="6">nombre</p>
-      <p field="45">alias</p>
-      <p field="76">Cedula</p>
-      <p field="7">Telephono</p>
-      <p field="11">Correo</p>
-      <p field="51">QuickbookID</p>
-    </params>
-  </access>
   
-
-
-
   
   
   
@@ -574,26 +604,7 @@
     </params>
   </access>
   
-<!--PROVEEDORES MANUAL OK-->
-  <access id="3a847e17ba9e87559ad0bb71fac1123">
-    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
-    <realm>conobra</realm>
-    <type>import</type>
-    <dbid>bn8txn3n8</dbid>
-    <query>-1</query>
-    <qid>-1</qid>
-    <clist>7.9.8.10.11.6.27.24</clist>
-    <params>
-      <p field="7">nombre</p>
-      <p field="9">alias</p>
-      <p field="8">Cedula</p>
-      <p field="10">Telephono</p>
-      <p field="11">Correo</p>
-      <p field="6">QuickbookID</p>
-      <p field="27">QuickbooksCompania</p>
-      <p field="24">DiasCredito</p>
-    </params>
-  </access>
+
   
 
 </root>

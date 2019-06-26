@@ -23,7 +23,7 @@ namespace SmartQuickbook
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Test");
+         //   MessageBox.Show("Test");
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)

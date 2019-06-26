@@ -44,7 +44,7 @@ namespace SmartQuickbook.Helper
 
             if (err != string.Empty)
             {
-                mostrarMensaje.Append("Ejecutando accion Error en el servicio:" + err);
+                mostrarMensaje.Append("Ejecutando accion Error en el servicio:" + err + Environment.NewLine);
             }
 
             var serializer = new JavaScriptSerializer();
@@ -57,12 +57,12 @@ namespace SmartQuickbook.Helper
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                mostrarMensaje.Append("Ejecutando accion Error des serializando:" + ex.Message);
+                mostrarMensaje.Append("Ejecutando accion Error des serializando:" + ex.Message + Environment.NewLine);
 
             }
             if (data == null)
             {
-                mostrarMensaje.Append("Ejecutando accion data:null");
+                mostrarMensaje.Append("Ejecutando accion data:null" + Environment.NewLine);
             }
             else
             {
@@ -186,7 +186,7 @@ namespace SmartQuickbook.Helper
                                             string log = accion.tipo + accion.quickbookTabla + "," + "Al crear el objeto" + "," + "Se requiere la libreria Quickbook" + "," + "0";
                                             HelperTask.AddConfigLog(ConfiguracionRespuestaLog, log, ref RespuestasLog);
                                         }
-                                        throw new Exception("Error al conectar a Quickbook: " + ex.Message);
+                                        throw new Exception("Error al conectar a Quickbook: " + ex.Message + Environment.NewLine);
                                     }
 
                                 }
@@ -272,7 +272,8 @@ namespace SmartQuickbook.Helper
                         }
                         catch (Exception ex)
                         {
-                            throw new Exception("Error al conectar a Quickbook: " + ex.Message);
+                            mostrarMensaje.Append("Error al procesar:" + ex.Message+Environment.NewLine);
+                            
                         }
 
                     }

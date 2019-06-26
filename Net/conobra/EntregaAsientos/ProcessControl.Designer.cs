@@ -43,12 +43,14 @@
             // 
             // btnStop
             // 
+            this.btnStop.Enabled = false;
             this.btnStop.Location = new System.Drawing.Point(512, 43);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(122, 23);
             this.btnStop.TabIndex = 0;
             this.btnStop.Text = "Stop";
             this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.Visible = false;
             this.btnStop.Click += new System.EventHandler(this.button1_Click);
             // 
             // backgroundWorker1
@@ -57,12 +59,14 @@
             // 
             // btnStart
             // 
+            this.btnStart.Enabled = false;
             this.btnStart.Location = new System.Drawing.Point(512, 14);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(122, 23);
             this.btnStart.TabIndex = 1;
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Visible = false;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // txtLog
@@ -77,6 +81,7 @@
             // 
             // imgLoading
             // 
+            this.imgLoading.Enabled = false;
             this.imgLoading.Image = ((System.Drawing.Image)(resources.GetObject("imgLoading.Image")));
             this.imgLoading.Location = new System.Drawing.Point(563, 72);
             this.imgLoading.Name = "imgLoading";

@@ -9,7 +9,7 @@ namespace Quickbook
 {
     public class Connector
     {
-        private RequestProcessor2 rp;
+        private RequestProcessor2 rp;        
         private string ticket;
         private string appName;
         private string maxVersion;
@@ -67,7 +67,7 @@ namespace Quickbook
             }
             catch (Exception ex)
             {
-                throw new Exception("Error al conectar a Quickbook: " + ex.Message);
+                throw new Exception("Error al conectar a Quickbooks: " + ex.Message);
             }
             return true;
         }
@@ -85,8 +85,9 @@ namespace Quickbook
                 ticket = null;
                 rp.CloseConnection();
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
+                throw new Exception("Error al desconectar a Quickbooks: " + ex.Message);
             }
             
         }

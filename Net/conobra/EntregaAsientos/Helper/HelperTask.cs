@@ -409,22 +409,29 @@ namespace SmartQuickbook.Helper
                     {  //si es el campo llave debe ser igual con fieldNameExternal
 
 
-                        var value = Array.Find(fieldNameExternals.ToArray(), element => element.Value.Equals(accion.parametros[i].fieldName));
-
-                        if (value.Value != string.Empty && pairs[value.Value] != null)
+                        if (accion.parametros[i].Type == null)
                         {
-                            //valor de la llave externa
-                            if (llaveQuickbase.ContainsKey(value.Key))
-                            {
-                                llaveQuickbase[value.Key] = pairs[value.Value].ToString();
-                            }
-                            else
-                            {
-                                llaveQuickbase.Add(value.Key, pairs[value.Value].ToString());
-                            }
+                            var value = Array.Find(fieldNameExternals.ToArray(), element => element.Value.Equals(accion.parametros[i].fieldName));
 
+                            if (value.Value != string.Empty && pairs[value.Value] != null)
+                            {
+                                //valor de la llave externa
+                                if (llaveQuickbase.ContainsKey(value.Key))
+                                {
+                                    llaveQuickbase[value.Key] = pairs[value.Value].ToString();
+                                }
+                                else
+                                {
+                                    llaveQuickbase.Add(value.Key, pairs[value.Value].ToString());
+                                }
+
+                            }
                         }
-
+                        else { 
+                        //TODO:Ver que dato entregar aqui
+                        
+                        }
+                      
                     }
 
 
@@ -1009,8 +1016,9 @@ namespace SmartQuickbook.Helper
 
             }
             //Toupdate
+            
             HelperTask.ImportToQuickBase(ConfiguracionRespuestaSave, ConfiguracionRespuestaLog, RespuestasSave, RespuestasLog, ref err);
-            return "Finalizo proceso de actualizacion " + Environment.NewLine;
+            return "Finalizo proceso de actualizacion Mensaje de importacion:" + err + Environment.NewLine;
         }
         public static string CreateQuickbookToQuickbaseNewVendor(ProcesoAccion accion, List<Abstract> quickbookRecords, ref string err)
         {

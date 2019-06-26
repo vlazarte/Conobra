@@ -95,7 +95,7 @@ namespace SmartQuickbook.Configuration
                             PropertyInfo _propertyInfo = obj.GetType().GetProperty(parametros[i].fieldName);
                             if (_propertyInfo == null)
                             {
-                                err = "Property with names " + parametros[i].fieldName + " does not exists in " + obj.GetType().ToString();
+                                err = "Property with names " + parametros[i].fieldName + " does not exists in " + obj.GetType().ToString() + Environment.NewLine;
                                 return null;
                             }
                             
@@ -173,20 +173,25 @@ namespace SmartQuickbook.Configuration
                     }
                     else
                     {
-                        if (keyExternalValue != string.Empty)
+
+                        if (parametros[i].Type == "Configuration")
                         {
-                            fieldValues.Add(keyExternalValue);
+                            fieldValues.Add(Properties.Settings.Default.qbook_CompaniaBD);
                         }
-                        else {
-                            if (parametros[i].Type == "Configuration")
+                        else
+                        {
+                            if (keyExternalValue != string.Empty)
                             {
-                                fieldValues.Add(Properties.Settings.Default.qbook_CompaniaBD);
+                                fieldValues.Add(keyExternalValue);
                             }
                             else {
                                 fieldValues.Add("");
                             }
+                       
                             
                         }
+
+                       
                     }
 
                 }
@@ -197,7 +202,7 @@ namespace SmartQuickbook.Configuration
             }
             catch (Exception ex)
             {
-                err = ex.Message;
+                err = ex.Message + Environment.NewLine;
                 return string.Empty;
 
             }

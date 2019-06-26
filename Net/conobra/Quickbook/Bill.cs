@@ -476,7 +476,7 @@ namespace Quickbook
                         xmlRecived = xmlRecived.Replace(",", ".");
                         if (Config.SaveXML == true)
                         {
-                            string pathFile = Directory.GetCurrentDirectory() + "\\samples\\C_" + ListID + ".xml";
+                            string pathFile = Directory.GetCurrentDirectory() + "\\samples\\B_" + DateTime.Now.Ticks + ".xml";
                             File.WriteAllText(pathFile, response);
                         }
 
@@ -492,7 +492,7 @@ namespace Quickbook
                 }
                 else
                 {
-                    string pathFile = Directory.GetCurrentDirectory() + "\\samples\\NewCustomer_" + DateTime.Now.Ticks + ".xml";
+                    string pathFile = Directory.GetCurrentDirectory() + "\\samples\\Bill_" + DateTime.Now.Ticks + ".xml";
                     File.WriteAllText(pathFile, xml);
                 }
 
@@ -526,7 +526,7 @@ namespace Quickbook
             }
             catch (Exception ex)
             {
-                err = ex.Message;
+                throw new Exception("Error al Obtener Bill registros de Quickbooks: " + ex.Message);
             }
 
 

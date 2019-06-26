@@ -239,6 +239,11 @@ namespace Quickbook
                     {
                         string response = qbook.sendRequest(xml);
                         res.LoadXml(response);
+                        if (Config.SaveXML == true)
+                        {
+                            string pathFile = Directory.GetCurrentDirectory() + "\\samples\\C_" + DateTime.Now.Ticks + ".xml";
+                            File.WriteAllText(pathFile, response);
+                        }
                         qbook.Disconnect();
 
                     }
@@ -246,6 +251,13 @@ namespace Quickbook
                     {
                         err = "QuickBook no conecto";
                     }
+                }
+                else {
+                    //Datos de prueba
+                    string pathFile = Directory.GetCurrentDirectory() + "\\samples\\NewClass_test.xml";
+                    string response = File.ReadAllText(pathFile);
+
+                    res.LoadXml(response);
                 }
 
                 string code = "";
@@ -278,7 +290,7 @@ namespace Quickbook
             }
             catch (Exception ex)
             {
-                err = ex.Message;
+                throw new Exception("Error  al Obtener Class registros CSV de Quickbooks: " + ex.Message);
             }
 
             return new List<Abstract>();
@@ -305,6 +317,7 @@ namespace Quickbook
                     {
                         string response = qbook.sendRequest(xml);
                         res.LoadXml(response);
+
                         qbook.Disconnect();
 
                     }
@@ -344,7 +357,7 @@ namespace Quickbook
             }
             catch (Exception ex)
             {
-                err = ex.Message;
+                throw new Exception("Error al Obtener Class registros de Quickbooks: " + ex.Message);
             }
 
             return new List<Abstract>();

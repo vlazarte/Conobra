@@ -38,6 +38,7 @@ namespace SmartQuickbook
                 Quickbook.Config.IsProduction = true;//(Properties.Settings.Default.qbook_production == "b4f16ca3cd7d");
                 //  Properties.Settings.Default.qbook_file = txtConection.Text;
                 var qbook = new Connector(Properties.Settings.Default.qbook_app_name, Properties.Settings.Default.qbook_file);
+                label1.Text = "Conectando";
                 if (qbook.Connect())
                 {
                     label1.Text = "Conecto con exito";
@@ -48,14 +49,14 @@ namespace SmartQuickbook
                         textBox2.Text = xmlResponse;
                     }
                     qbook.Disconnect();
-
+                    label1.Text += "Desconecto!";
                 }
 
             }
             catch (Exception ex)
             {
-
-                label1.Text = "No conecto"+ ex.Message;
+                MessageBox.Show("Error no se pudo conectar a: " + Properties.Settings.Default.qbook_file + ex.Message);
+                
             }
            
         }

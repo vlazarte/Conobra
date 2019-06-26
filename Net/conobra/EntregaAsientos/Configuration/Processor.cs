@@ -9,7 +9,7 @@ namespace SmartQuickbook.Configuration
     public class Processor
     {
         public List<Proceso> procesos = null;
-        
+
         public string pathFile = "";
 
         public Processor()
@@ -20,109 +20,112 @@ namespace SmartQuickbook.Configuration
 
         public void load()
         {
-            procesos = new List<Proceso>();
-
-            string xml = System.IO.File.ReadAllText(pathFile);
-
-            XmlDocument doc = new XmlDocument();
-            doc.LoadXml(xml);
-
-            XmlNodeList fieldsList = doc.SelectNodes("root/proceso");
-            foreach (XmlNode node in fieldsList)
+            try
             {
-                Proceso P = new Proceso();
-                P.id = node.Attributes["id"].Value;
-                P.nombre = node["nombre"].InnerText;
-                if (node["ejecucion"] != null)
+                procesos = new List<Proceso>();
+
+                string xml = System.IO.File.ReadAllText(pathFile);
+
+                XmlDocument doc = new XmlDocument();
+                doc.LoadXml(xml);
+
+                XmlNodeList fieldsList = doc.SelectNodes("root/proceso");
+                foreach (XmlNode node in fieldsList)
                 {
-                    P.tipoEjecucion = node["ejecucion"].Attributes["tipo"].Value;
-                    if (node["ejecucion"]["intervalo"] != null)
+                    Proceso P = new Proceso();
+                    P.id = node.Attributes["id"].Value;
+                    P.nombre = node["nombre"].InnerText;
+                    if (node["ejecucion"] != null)
                     {
-                        P.tipoIntervalo = node["ejecucion"]["intervalo"].Attributes["tipo"].Value;
-                        P.tipoIntervaloValor = node["ejecucion"]["intervalo"].InnerText;
-                    }
-                }
-
-                XmlNodeList nodoList = node.SelectNodes("acciones/accion");
-                P.acciones = new List<ProcesoAccion>();
-                foreach (XmlNode pNode in nodoList)
-                {
-                    ProcesoAccion acccion = new ProcesoAccion();
-                    acccion.tipo = pNode.Attributes["tipo"].Value;
-                    acccion.nombre = pNode["nombre"].InnerText;
-                    if (pNode["quickbook_tabla"] != null)
-                        acccion.quickbookTabla = pNode["quickbook_tabla"].InnerText;
-
-                    var paramNodoList = pNode.SelectNodes("parametros/p");
-                    acccion.parametros = new List<ProcesoParametros>();
-                    foreach (XmlNode paramNode in paramNodoList)
-                    {
-                        var param1 = new ProcesoParametros(
-                                paramNode.Attributes["field"].Value, paramNode.InnerText
-                            );
-
-                        if (paramNode.Attributes["type"] != null)
+                        P.tipoEjecucion = node["ejecucion"].Attributes["tipo"].Value;
+                        if (node["ejecucion"]["intervalo"] != null)
                         {
-                            param1.Type = paramNode.Attributes["type"].Value;
+                            P.tipoIntervalo = node["ejecucion"]["intervalo"].Attributes["tipo"].Value;
+                            P.tipoIntervaloValor = node["ejecucion"]["intervalo"].InnerText;
                         }
-                        if (paramNode.Attributes["key"] != null && paramNode.Attributes["key"].Value == "true")
-                        {
-                            param1.isKey = true;
-                        }
-                        if (paramNode.Attributes["required"] != null)
-                        {
-                            if (paramNode.Attributes["required"].Value == "true")
-                                param1.Required = true;
-                        }
-                        acccion.parametros.Add(param1);
                     }
 
-                    var detailNodoList = pNode.SelectNodes("detail");
-                    if (detailNodoList.Count>0)
+                    XmlNodeList nodoList = node.SelectNodes("acciones/accion");
+                    P.acciones = new List<ProcesoAccion>();
+                    foreach (XmlNode pNode in nodoList)
                     {
-                        
-                        foreach (XmlNode paramNodeDetails in detailNodoList)
+                        ProcesoAccion acccion = new ProcesoAccion();
+                        acccion.tipo = pNode.Attributes["tipo"].Value;
+                        acccion.nombre = pNode["nombre"].InnerText;
+                        if (pNode["quickbook_tabla"] != null)
+                            acccion.quickbookTabla = pNode["quickbook_tabla"].InnerText;
+
+                        var paramNodoList = pNode.SelectNodes("parametros/p");
+                        acccion.parametros = new List<ProcesoParametros>();
+                        foreach (XmlNode paramNode in paramNodoList)
                         {
-                            if (paramNodeDetails.SelectNodes("quickbook_tabla").Count > 0) {
-                                acccion.quickbookTablaDetalle = paramNodeDetails.SelectNodes("quickbook_tabla")[0].InnerText;
-                                var paramNodoListDetail = paramNodeDetails.SelectNodes("parametros/p");
+                            var param1 = new ProcesoParametros(
+                                    paramNode.Attributes["field"].Value, paramNode.InnerText
+                                );
 
-
-                                acccion.details = new List<ProcesoParametros>();
-                                foreach (XmlNode paramNode in paramNodoListDetail)
-                                {
-                                    var param1 = new ProcesoParametros(
-                                            paramNode.Attributes["field"].Value, paramNode.InnerText
-                                        );
-
-                                    if (paramNode.Attributes["type"] != null)
-                                    {
-                                        param1.Type = paramNode.Attributes["type"].Value;
-                                    }
-                                    if (paramNode.Attributes["key"] != null && paramNode.Attributes["key"].Value == "true")
-                                    {
-                                        param1.isKey = true;
-                                    }
-                                    if (paramNode.Attributes["required"] != null)
-                                    {
-                                        if (paramNode.Attributes["required"].Value == "true")
-                                            param1.Required = true;
-                                    }
-                                    acccion.details.Add(param1);
-                                }
+                            if (paramNode.Attributes["type"] != null)
+                            {
+                                param1.Type = paramNode.Attributes["type"].Value;
                             }
-                            
+                            if (paramNode.Attributes["key"] != null && paramNode.Attributes["key"].Value == "true")
+                            {
+                                param1.isKey = true;
+                            }
+                            if (paramNode.Attributes["required"] != null)
+                            {
+                                if (paramNode.Attributes["required"].Value == "true")
+                                    param1.Required = true;
+                            }
+                            acccion.parametros.Add(param1);
                         }
-                        //Obtener La informacion de parametros
-                    }
-                    
+
+                        var detailNodoList = pNode.SelectNodes("detail");
+                        if (detailNodoList.Count > 0)
+                        {
+
+                            foreach (XmlNode paramNodeDetails in detailNodoList)
+                            {
+                                if (paramNodeDetails.SelectNodes("quickbook_tabla").Count > 0)
+                                {
+                                    acccion.quickbookTablaDetalle = paramNodeDetails.SelectNodes("quickbook_tabla")[0].InnerText;
+                                    var paramNodoListDetail = paramNodeDetails.SelectNodes("parametros/p");
 
 
-                    var paramNodoListRespuestas = pNode.SelectNodes("respuestas/respuesta");
-                    acccion.respuestas = new List<ProcesoRespuesta>();
-                    foreach (XmlNode paramNode in paramNodoListRespuestas)
-                    {
-                        
+                                    acccion.details = new List<ProcesoParametros>();
+                                    foreach (XmlNode paramNode in paramNodoListDetail)
+                                    {
+                                        var param1 = new ProcesoParametros(
+                                                paramNode.Attributes["field"].Value, paramNode.InnerText
+                                            );
+
+                                        if (paramNode.Attributes["type"] != null)
+                                        {
+                                            param1.Type = paramNode.Attributes["type"].Value;
+                                        }
+                                        if (paramNode.Attributes["key"] != null && paramNode.Attributes["key"].Value == "true")
+                                        {
+                                            param1.isKey = true;
+                                        }
+                                        if (paramNode.Attributes["required"] != null)
+                                        {
+                                            if (paramNode.Attributes["required"].Value == "true")
+                                                param1.Required = true;
+                                        }
+                                        acccion.details.Add(param1);
+                                    }
+                                }
+
+                            }
+                            //Obtener La informacion de parametros
+                        }
+
+
+
+                        var paramNodoListRespuestas = pNode.SelectNodes("respuestas/respuesta");
+                        acccion.respuestas = new List<ProcesoRespuesta>();
+                        foreach (XmlNode paramNode in paramNodoListRespuestas)
+                        {
+
                             ProcesoRespuesta respuesta = new ProcesoRespuesta();
                             respuesta.tipo = paramNode.Attributes["tipo"].Value;
                             respuesta.categoria = paramNode.Attributes["categoria"].Value;
@@ -150,51 +153,59 @@ namespace SmartQuickbook.Configuration
                                         param2.Required = true;
                                 }
 
-                                
+
                                 respuesta.parametros.Add(param2);
                             }
                             acccion.respuestas.Add(respuesta);
                         }
-                   
-                    // Respuesta
 
-                    P.acciones.Add(acccion);
-                }
+                        // Respuesta
 
-                if (node["entrada"] != null)
-                {
-                    P.entrada = new ProcesoEntrada();
-                    P.entrada.tipo = node["entrada"].Attributes["tipo"].Value;
+                        P.acciones.Add(acccion);
+                    }
 
-                    if (node["entrada"]["quickbase"] != null)
+                    if (node["entrada"] != null)
                     {
-                        P.entrada.quickbaseAccessToken = node["entrada"]["quickbase"]["access_token"].InnerText;
-                        nodoList = node["entrada"]["quickbase"].SelectNodes("parametros/p");
-                        P.entrada.parametros = new List<ProcesoParametros>();
-                        foreach (XmlNode pNode in nodoList)
-                        {
-                            var param = new ProcesoParametros(
-                                    pNode.Attributes["field"].Value, pNode.InnerText
-                                );
+                        P.entrada = new ProcesoEntrada();
+                        P.entrada.tipo = node["entrada"].Attributes["tipo"].Value;
 
-                            if (pNode.Attributes["type"] != null)
+                        if (node["entrada"]["quickbase"] != null)
+                        {
+                            P.entrada.quickbaseAccessToken = node["entrada"]["quickbase"]["access_token"].InnerText;
+                            nodoList = node["entrada"]["quickbase"].SelectNodes("parametros/p");
+                            P.entrada.parametros = new List<ProcesoParametros>();
+                            foreach (XmlNode pNode in nodoList)
                             {
-                                param.Type = pNode.Attributes["type"].Value;
+                                var param = new ProcesoParametros(
+                                        pNode.Attributes["field"].Value, pNode.InnerText
+                                    );
+
+                                if (pNode.Attributes["type"] != null)
+                                {
+                                    param.Type = pNode.Attributes["type"].Value;
+                                }
+                                if (pNode.Attributes["required"] != null)
+                                {
+                                    if (pNode.Attributes["required"].Value == "true")
+                                        param.Required = true;
+                                }
+                                P.entrada.parametros.Add(param);
                             }
-                            if (pNode.Attributes["required"] != null)
-                            {
-                                if (pNode.Attributes["required"].Value == "true")
-                                    param.Required = true;
-                            }
-                            P.entrada.parametros.Add(param);
                         }
                     }
+
+                    procesos.Add(P);
                 }
-
-                procesos.Add(P);
             }
-        }
 
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+
+        }
     }
 
     public class ProcesoParametros
