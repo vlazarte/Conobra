@@ -147,11 +147,11 @@ namespace SmartQuickbook.Helper
                                             {
                                                 HelperTask.AddConfigSave(ConfiguracionRespuestaSave, llaveQuickbase, ObjectQuickbook, ref err, ref RespuestasSave);
                                             }
-                                            if (ConfiguracionRespuestaLog.Count > 0)
+                                            /*if (ConfiguracionRespuestaLog.Count > 0)
                                             {
                                                 string log = accion.tipo + accion.quickbookTabla + "," + xmlSend + "," + xmlRecived + "," + "1";
                                                 HelperTask.AddConfigLog(ConfiguracionRespuestaLog, log, ref RespuestasLog);
-                                            }
+                                            }*/
                                         }
                                         else
                                         {
@@ -183,10 +183,11 @@ namespace SmartQuickbook.Helper
                                     {
                                         if (ConfiguracionRespuestaLog.Count > 0)
                                         {
-                                            string log = accion.tipo + accion.quickbookTabla + "," + "Al crear el objeto" + "," + "Se requiere la libreria Quickbook" + "," + "0";
+                                            string log = accion.tipo +" " +accion.quickbookTabla + "," + "Genero excepcion :Al crear el objeto" + "," + ex.Message + "," + "0";
                                             HelperTask.AddConfigLog(ConfiguracionRespuestaLog, log, ref RespuestasLog);
                                         }
-                                        throw new Exception("Error al conectar a Quickbook: " + ex.Message + Environment.NewLine);
+                                        mostrarMensaje.Append("Error al Procesar los datos: " + ex.Message + Environment.NewLine);
+                                        
                                     }
 
                                 }

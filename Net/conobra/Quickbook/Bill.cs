@@ -22,7 +22,7 @@ namespace Quickbook
         public string Memo { get; set; }
         public bool? IsTaxIncluded { get; set; }
         public SalesTaxCodeRef SalesTaxCodeRef { get; set; }
-        public Decimal? ExchangeRate { get; set; }
+        public Double? ExchangeRate { get; set; }
         public string ExternalGUID { get; set; }
         public string LinkToTxnID { get; set; }
 
@@ -417,8 +417,8 @@ namespace Quickbook
             {
                 System.Globalization.CultureInfo myInfo = System.Globalization.CultureInfo.CreateSpecificCulture("en-GB");
                 string val = ExchangeRate.ToString();
-                Double value = Double.Parse(val, myInfo);
-                xml += Environment.NewLine + "<ExchangeRate>" + value.ToString("0.00") + "</ExchangeRate>";
+                double value = Double.Parse(val, myInfo);                
+                xml += Environment.NewLine + "<ExchangeRate>" + value.ToString("0.00",myInfo) + "</ExchangeRate>";
             }
             if (ExternalGUID != string.Empty)
             {
@@ -519,10 +519,7 @@ namespace Quickbook
                         return false;
                     }
                 }
-                else
-                {
-                    err = statusMessage;
-                }
+             
             }
             catch (Exception ex)
             {

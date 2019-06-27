@@ -68,3 +68,7 @@ D:\smartStrategy\Conobra\Conobra Nueva version\Net\conobra\EntregaAsientos\bin\D
 D:\smartStrategy\Conobra\Conobra Nueva version\Net\conobra\EntregaAsientos\bin\Debug\Quickbook.pdb
 D:\smartStrategy\Conobra\Conobra Nueva version\Net\conobra\Quickbook\obj\Debug\Quickbook.dll
 D:\smartStrategy\Conobra\Conobra Nueva version\Net\conobra\Quickbook\obj\Debug\Quickbook.pdb
+D:\Vanesa\smartstrategy\Conobra Nueva version\Net\conobra\Quickbook\obj\Debug\Quickbook.pdb
+D:\Vanesa\smartstrategy\Conobra Nueva version\Net\conobra\EntregaAsientos\bin\Debug\Quickbook.dll
+D:\Vanesa\smartstrategy\Conobra Nueva version\Net\conobra\EntregaAsientos\bin\Debug\Quickbook.pdb
+D:\Vanesa\smartstrategy\Conobra Nueva version\Net\conobra\Quickbook\obj\Debug\Quickbook.dll

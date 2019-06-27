@@ -156,7 +156,123 @@
   </access>
 
   <!--Proceso automatico 1 FIN Proveedores Clenco-->
+
+
+
+  <!--Proceso 2 Recibos Conobra-->
+
+  <access id="0823871b4f16ca3cd7d6f62596903000">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>doquery_complex</type>
+    <dbid>bn8txn25q</dbid>
+    <query>{'304'.EX.'CONOBRA LTDA.'}</query>
+    <qid>27</qid>
+    <clist>3.35.6.7.304.313.315.316</clist>
+    <params>
+    </params>
+    <response>
+      <p fid="3" >RecordID</p>
+      <p fid="35" >VendorRef</p>
+      <p fid="6" >RefNumber</p>
+      <p fid="7" >txnDate</p>
+      <p fid="304">QuickbooksCompania</p>
+      <p fid="313">DueDate</p>
+      <p fid="315">ExchangeRate</p>
+      <p fid="316">Memo</p>
+    </response>
+    <detail>
+      <dbid>bn8txn26i</dbid>
+      <query>{'8'.EX.'__RecordID__'}</query>
+      <clist>3.8.151.36.154.149</clist>
+      <params>
+      </params>
+      <response>
+        <p fid="3" >DET_RID</p>
+        <p fid="8" >DET_PADRE</p>
+        <p fid="151">AccountRef</p>
+        <p fid="36">Amount</p>
+        <p fid="154">CustomerRef</p>
+        <p fid="149">ClassRef</p>
+      </response>
+    </detail>
+  </access>
+
+  <access id="0823871b4f16ca3cd7d6f62596903100">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bn8txn25q</dbid>
+    <query></query>
+    <qid>-1</qid>
+    <clist>3.86</clist>
+    <params>
+      <p field="3">RecordID</p>
+      <p field="86">QuickbookID</p>
+    </params>
+  </access>
+
+  <!--Proceso 2 FIN Recibos Conobra-->
+
+  <!--Proceso 2 Recibos Clenco-->
+
+  <access id="0823871b4f16ca3cd7d6f62596904000">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>doquery_complex</type>
+    <dbid>bn8txn25q</dbid>
+    <query>{'304'.EX.'Clean Construction LTDA.'}</query>
+    <qid>27</qid>
+    <clist>3.35.6.7.304.313.315.316</clist>
+    <params>
+    </params>
+    <response>
+      <p fid="3" >RecordID</p>
+      <p fid="35" >VendorRef</p>
+      <p fid="6" >RefNumber</p>
+      <p fid="7" >txnDate</p>
+      <p fid="304">QuickbooksCompania</p>
+      <p fid="313">DueDate</p>
+      <p fid="315">ExchangeRate</p>
+      <p fid="316">Memo</p>
+    </response>
+    <detail>
+      <dbid>bn8txn26i</dbid>
+      <query>{'8'.EX.'__RecordID__'}</query>
+      <clist>3.8.151.36.154.149</clist>
+      <params>
+      </params>
+      <response>
+        <p fid="3" >DET_RID</p>
+        <p fid="8" >DET_PADRE</p>
+        <p fid="151">AccountRef</p>
+        <p fid="36">Amount</p>
+        <p fid="154">CustomerRef</p>
+        <p fid="149">ClassRef</p>
+      </response>
+    </detail>
+  </access>
+
+  <access id="0823871b4f16ca3cd7d6f62596904001">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bn8txn25q</dbid>
+    <query></query>
+    <qid>-1</qid>
+    <clist>3.86</clist>
+    <params>
+      <p field="3">RecordID</p>
+      <p field="86">QuickbookID</p>
+    </params>
+  </access>
+
+  <!--Proceso 2 FIN Recibos Clenco-->
   
+  
+  
+
+
   <access id="0823871b4f16ca3cd7d6f6259690ca20">
     <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
     <realm>conobra</realm>
@@ -620,61 +736,7 @@
   
   
   
-  
-  
-  <!--REcibos Conobra-->
-
-  <access id="0823871b4f16ca3cd7d6f62596903000">
-    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
-    <realm>conobra</realm>
-    <type>doquery_complex</type>
-    <dbid>bn8txn25q</dbid>
-    <query>{'304'.EX.'CONOBRA LTDA.'}</query>
-    <qid>27</qid>
-    <clist>3.302.6.7.304.313.315.318</clist>
-    <params>
-    </params>
-    <response>
-      <p fid="3" >RecordID</p>
-      <p fid="302" >VendorRef</p>
-      <p fid="6" >RefNumber</p>
-      <p fid="7" >txnDate</p>
-      <p fid="304">QuickbooksCompania</p>
-      <p fid="313">DueDate</p>
-      <p fid="315">ExchangeRate</p>
-      <p fid="318">Memo</p>
-    </response>
-    <detail>
-      <dbid>bn8txn26i</dbid>      
-      <query>{'8'.EX.'__RecordID__'}</query>
-      <clist>3.8.151.36.154.149</clist>
-      <params>
-      </params>
-      <response>
-        <p fid="3" >DET_RID</p>
-        <p fid="8" >DET_PADRE</p>
-        <p fid="151">AccountRef</p>
-        <p fid="36">Amount</p>
-        <p fid="154">CustomerRef</p>
-        <p fid="149">ClassRef</p>
-      </response>
-    </detail>
-  </access>
-
-  <access id="0823871b4f16ca3cd7d6f62596903100">
-    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
-    <realm>conobra</realm>
-    <type>import</type>
-    <dbid>bn8txn25q</dbid>
-    <query></query>
-    <qid>-1</qid>
-    <clist>3.86</clist>
-    <params>
-      <p field="3">RecordID</p>      
-      <p field="86">QuickbookID</p>
-    </params>
-  </access>
-  
+ 
 
   
 
