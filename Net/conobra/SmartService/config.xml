@@ -76,7 +76,7 @@
     <dbid>bn8txn3n8</dbid>
     <query>-1</query>
     <qid>-1</qid>
-    <clist>7.9.8.10.11.6.27.24</clist>
+    <clist>7.9.8.10.11.6.27.24.29.30</clist>
     <params>
       <p field="7">nombre</p>
       <p field="9">alias</p>
@@ -86,6 +86,8 @@
       <p field="6">QuickbookID</p>
       <p field="27">QuickbooksCompania</p>
       <p field="24">DiasCredito</p>
+      <p field="29">MonedaProveedor</p>
+      <p field="30">ActivoTexto</p>      
     </params>
   </access>
   <!--Proceso manual 1 FIN Proveedores-->

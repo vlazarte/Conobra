@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<configuration>
+    <configSections>
+        <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <section name="SmartQuickbook.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false"/>
+            <section name="EntregaAsientos.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false"/>
+        </sectionGroup>
+        <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="SmartQuickbook.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <userSettings>
+        <SmartQuickbook.Properties.Settings>
+            <setting name="qbook_app_name" serializeAs="String">
+                <value>CONOBRA LTDA SmartStrategy - Quickbook Connector v2.4</value>
+            </setting>
+            <setting name="qbook_file" serializeAs="String">
+                <value>C:\Quickbooks db\Conobra\Conobra Limitada.qbw</value>
+            </setting>
+            <setting name="qbook_production" serializeAs="String">
+                <value>b4f16ca3cd7d_</value>
+            </setting>
+            <setting name="qbook_CompaniaBD" serializeAs="String">
+                <value>CONOBRA LTDA.</value>
+            </setting>
+            <setting name="qbook_Compania" serializeAs="String">
+                <value>CONOBRA LTDA. - Quickbooks Factura Electrónica Costa Rica.</value>
+            </setting>
+        </SmartQuickbook.Properties.Settings>
+    </userSettings>
+<startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup>
+    <applicationSettings>
+        <SmartQuickbook.Properties.Settings>
+            <setting name="SmartQuickbook_wClient_WService" serializeAs="String">
+                <value>http://servicesnet.smartstrategyapps.com/Cloud/WebServices/IntegracionesQuickbook/WService.asmx</value>
+            </setting>
+        </SmartQuickbook.Properties.Settings>
+    </applicationSettings>
+</configuration>

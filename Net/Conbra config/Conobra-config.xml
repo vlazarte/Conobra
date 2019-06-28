@@ -129,9 +129,9 @@
       <fecha_unica>2019-04-09</fecha_unica>
     </ejecucion>
   </proceso>
-  
-  
-  
+
+
+
   <proceso id="1">
     <nombre>Importar Proveedores a quickbase</nombre>
     <entrada tipo="quickbook">
@@ -161,6 +161,8 @@
               <p field="6">ListID</p>
               <p field="7" key="true" type="Configuration">QuickbooksCompania</p>
               <p field="8" type="TermsRef/FullName">TermsRef</p>
+              <p field="9" type="CurrencyRef/FullName">CurrencyRef</p>
+              <p field="10">IsActive</p>
             </parametros>
           </respuesta>
         </respuestas>
@@ -172,6 +174,6 @@
     </ejecucion>
   </proceso>
 
- 
+
 
 </root>

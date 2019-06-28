@@ -84,11 +84,22 @@ namespace Quickbook
                     ac.IsActive = (bool)(node["IsActive"].InnerText == "true");
                     ac.Sublevel = node["Sublevel"].InnerText;
                     ac.AccountType = node["AccountType"].InnerText;
-                    ac.AccountNumber = Int32.Parse(node["AccountNumber"].InnerText);
-                    ac.Balance = float.Parse(node["Balance"].InnerText);
-                    ac.TotalBalance = float.Parse(node["TotalBalance"].InnerText);
+                    ac.AccountNumber = node["AccountNumber"].InnerText;
+                    ac.Balance =Convert.ToDecimal(node["Balance"].InnerText );
+                    ac.TotalBalance = Convert.ToDecimal(node["TotalBalance"].InnerText);
                     ac.CashFlowClassification = node["CashFlowClassification"].InnerText;
-                    ac.Currency = node["CurrencyRef"]["FullName"].InnerText;
+                    if (node.SelectNodes("CurrencyRef").Count > 0)
+                    {
+                        ac.CurrencyRef = new Currency();
+                        if (node["CurrencyRef"]["ListID"] != null)
+                        {
+                            ac.CurrencyRef.ListID = node["CurrencyRef"]["ListID"].InnerText;
+                        }
+                        if (node["CurrencyRef"]["FullName"] != null)
+                        {
+                            ac.CurrencyRef.FullName = node["CurrencyRef"]["FullName"].InnerText;
+                        }
+                    }                    
 
                     //list.Add(node["AccountNumber"].InnerText, ac);
                     list[node["AccountNumber"].InnerText] = ac ;
