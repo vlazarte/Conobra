@@ -81,6 +81,7 @@
     <Compile Include="SalesTaxReturnRef.cs" />
     <Compile Include="ShipAdress.cs" />
     <Compile Include="ShipMethod.cs" />
+    <Compile Include="TaxLineInfo.cs" />
     <Compile Include="TaxOnPurchasesAccountRef.cs" />
     <Compile Include="TaxOnSalesAccountRef.cs" />
     <Compile Include="Template.cs" />

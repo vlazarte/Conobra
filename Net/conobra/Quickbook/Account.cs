@@ -11,21 +11,30 @@ namespace Quickbook
     /// <summary>
     /// 
     /// </summary>
-    public class Account
+    public class Account:Abstract
     {
+
+
+
         public string ListID { get; set; }
         public string TimeCreated { get; set; }
         public string EditSequence { get; set; }
         public string Name { get; set; }
         public string FullName{get;set;}
         public bool IsActive { get; set; }
+        public Account ParentRef{get;set;}        
         public string Sublevel { get; set; }
         public string AccountType { get; set; }
-        public int AccountNumber { get; set; }
-        public float Balance { get; set; }
-        public float TotalBalance { get; set; }
+        public string SpecialAccountType { get; set; }
+        public string BankNumber{get;set;}
+        public string Desc{get;set;}
+        public string AccountNumber { get; set; }
+        public Decimal Balance { get; set; }
+        public Decimal TotalBalance { get; set; }
+        public TaxLineInfo TaxLineInfoRet{get;set;}
+
         public string CashFlowClassification { get; set; }
-        public string Currency { get; set; }
+        public Currency CurrencyRef { get; set; }
         public Account() {
 
             ListID = string.Empty;
@@ -110,6 +119,16 @@ namespace Quickbook
             xml.Append("</AccountRef>");
 
             return xml.ToString();
+        }
+        public override bool AddRecord(ref string err, ref string xmlSend, ref string xmlRecived)
+        {
+            err = "No implemented yet Account";
+            return false;
+        }
+        public override List<Abstract> GetRecords(ref string err)
+        {
+            err = "No implemented yet Account";
+            return new List<Abstract>();
         }
         
 
