@@ -10,7 +10,7 @@
     <dbid>bn8txn28h</dbid>
     <query>{51.XEX.''}AND{'94'.EX.'CONOBRA LTDA.'}</query>
     <qid>-1</qid>
-    <clist>3.6.45.76.7.11.51.94.47</clist>
+    <clist>3.6.45.76.7.11.51.94.47.102.103</clist>
     <params>
     </params>
     <response>
@@ -23,6 +23,8 @@
       <p fid="51">ListID</p>
       <p fid="94">QuickbooksCompania</p>
       <p fid="47" type="TermsRef">TermsRef</p>
+      <p fid="102" type="Currency">CurrencyRef</p>
+      <p fid="103">IsActive</p>
     </response>
   </access>
   <access id="3a847e17ba9e87559ad0bb71fac12200">
@@ -32,7 +34,7 @@
     <dbid>bn8txn28h</dbid>
     <query>-1</query>
     <qid>-1</qid>
-    <clist>3.6.45.76.7.11.51.94.47</clist>
+    <clist>3.6.45.76.7.11.51.94.47.102.103</clist>
     <params>
       <p field="3">RecordID</p>
       <p field="6">nombre</p>
@@ -43,6 +45,8 @@
       <p field="51">QuickbookID</p>
       <p field="94">QuickbooksCompania</p>
       <p field="47">CondicionPago</p>
+      <p field="102">MonedaProveedor</p>
+      <p field="103">ActivoTexto</p>
     </params>
   </access>
   <access id="3a847e17ba9e87559ad0bb71fac12100">
@@ -52,7 +56,7 @@
     <dbid>bn8txn28h</dbid>
     <query>-1</query>
     <qid>-1</qid>
-    <clist>6.45.76.7.11.51.94.47</clist>
+    <clist>6.45.76.7.11.51.94.47.102.103</clist>
     <params>
       <p field="6">nombre</p>
       <p field="45">alias</p>
@@ -62,6 +66,8 @@
       <p field="51">QuickbookID</p>
       <p field="94">QuickbooksCompania</p>
       <p field="47">CondicionPago</p>
+      <p field="102">MonedaProveedor</p>
+      <p field="103">ActivoTexto</p>
     </params>
   </access>
 
@@ -102,7 +108,7 @@
     <dbid>bn8txn28h</dbid>
     <query>{51.XEX.''}AND{'94'.EX.'Clean Construction LTDA.'}</query>
     <qid>-1</qid>
-    <clist>3.6.45.76.7.11.51.94.47</clist>
+    <clist>3.6.45.76.7.11.51.94.47.102.103</clist>
     <params>
     </params>
     <response>
@@ -115,6 +121,8 @@
       <p fid="51">ListID</p>
       <p fid="94">QuickbooksCompania</p>
       <p fid="47" type="TermsRef">TermsRef</p>
+      <p fid="102" type="Currency">CurrencyRef</p>
+      <p fid="103">IsActive</p>
     </response>
   </access>
   <access id="3a847e17ba9e87559ad0bb71fac13001">
@@ -124,7 +132,7 @@
     <dbid>bn8txn28h</dbid>
     <query>-1</query>
     <qid>-1</qid>
-    <clist>3.6.45.76.7.11.51.94.47</clist>
+    <clist>3.6.45.76.7.11.51.94.47.102.103</clist>
     <params>
       <p field="3">RecordID</p>
       <p field="6">nombre</p>
@@ -135,6 +143,8 @@
       <p field="51">QuickbookID</p>
       <p field="94">QuickbooksCompania</p>
       <p field="47">CondicionPago</p>
+      <p field="102">MonedaProveedor</p>
+      <p field="103">ActivoTexto</p>
     </params>
   </access>
   <access id="3a847e17ba9e87559ad0bb71fac13002">
@@ -144,7 +154,7 @@
     <dbid>bn8txn28h</dbid>
     <query>-1</query>
     <qid>-1</qid>
-    <clist>6.45.76.7.11.51.94.47</clist>
+    <clist>6.45.76.7.11.51.94.47.102.103</clist>
     <params>
       <p field="6">nombre</p>
       <p field="45">alias</p>
@@ -154,6 +164,8 @@
       <p field="51">QuickbookID</p>
       <p field="94">QuickbooksCompania</p>
       <p field="47">CondicionPago</p>
+      <p field="102">MonedaProveedor</p>
+      <p field="103">ActivoTexto</p>
     </params>
   </access>
 

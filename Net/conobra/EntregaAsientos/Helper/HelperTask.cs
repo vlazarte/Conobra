@@ -311,7 +311,7 @@ namespace SmartQuickbook.Helper
 
                                 fieldNames.Add(fieldPropertyCustomer);
 
-                                if (accion.parametros[i].Type != null)
+                                if (accion.parametros[i].Type != null && pairs[fieldPropertyCustomer]!=null)
                                 {
 
                                     string value = pairs[fieldPropertyCustomer].ToString();
@@ -946,73 +946,79 @@ namespace SmartQuickbook.Helper
                 string xmlSend = string.Empty;
                 string xmlRecived = string.Empty;
 
-
-                if (accion.quickbookTabla != string.Empty)
+                if (err == string.Empty)
                 {
-                    if (Requiered == false)
+                    if (accion.quickbookTabla != string.Empty)
                     {
-
-                        try
+                        if (Requiered == false)
                         {
-                            string fullPath = System.IO.Directory.GetCurrentDirectory();
 
-                            Assembly testAssembly = Assembly.LoadFile(fullPath + "\\Quickbook.dll");
-
-                            Type difineType = testAssembly.GetType("Quickbook." + accion.quickbookTabla);
-
-                            // create instance of class Calculator
-                            object objQuickbookInstance = Activator.CreateInstance(difineType);
-                            Abstract ObjectQuickbook = (Abstract)Generic.SetFields(fieldNames, fieldValues, objQuickbookInstance, ref err);
-
-                            if (err == string.Empty && ObjectQuickbook.ListID != "")
+                            try
                             {
-                                Abstract objectToUpdate = quickbookRecords.Find(d => d.ListID == ObjectQuickbook.ListID);
+                                string fullPath = System.IO.Directory.GetCurrentDirectory();
 
-                                if (objectToUpdate != null)
+                                Assembly testAssembly = Assembly.LoadFile(fullPath + "\\Quickbook.dll");
+
+                                Type difineType = testAssembly.GetType("Quickbook." + accion.quickbookTabla);
+
+                                // create instance of class Calculator
+                                object objQuickbookInstance = Activator.CreateInstance(difineType);
+                                Abstract ObjectQuickbook = (Abstract)Generic.SetFields(fieldNames, fieldValues, objQuickbookInstance, ref err);
+
+                                if (err == string.Empty && ObjectQuickbook.ListID != "")
                                 {
-                                    if (ConfiguracionRespuestaSave.Count > 0)
-                                    {
-                                        //update
-                                        //obtener el List]ID de quickbook adicionar al cvs
-                                        HelperTask.AddConfigSave(ConfiguracionRespuestaSave, llaveQuickbase, objectToUpdate, ref err, ref RespuestasSave);
-                                        //El remover generico 
-                                        quickbookRecords.Remove(objectToUpdate);
+                                    Abstract objectToUpdate = quickbookRecords.Find(d => d.ListID == ObjectQuickbook.ListID);
 
-                                    }
-                                    if (ConfiguracionRespuestaLog.Count > 0)
+                                    if (objectToUpdate != null)
                                     {
-                                        string log = accion.tipo + accion.quickbookTabla + "," + xmlSend + "," + xmlRecived + "," + "1";
-                                        HelperTask.AddConfigLog(ConfiguracionRespuestaLog, log, ref RespuestasLog);
-                                    }
-                                }
+                                        if (ConfiguracionRespuestaSave.Count > 0)
+                                        {
+                                            //update
+                                            //obtener el List]ID de quickbook adicionar al cvs
+                                            HelperTask.AddConfigSave(ConfiguracionRespuestaSave, llaveQuickbase, objectToUpdate, ref err, ref RespuestasSave);
+                                            //El remover generico 
+                                            quickbookRecords.Remove(objectToUpdate);
 
-                                if (quickbookRecords.Count == 0)
-                                {
-                                    break;
+                                        }
+                                        if (ConfiguracionRespuestaLog.Count > 0)
+                                        {
+                                            string log = accion.tipo + accion.quickbookTabla + "," + xmlSend + "," + xmlRecived + "," + "1";
+                                            HelperTask.AddConfigLog(ConfiguracionRespuestaLog, log, ref RespuestasLog);
+                                        }
+                                    }
+
+                                    if (quickbookRecords.Count == 0)
+                                    {
+                                        break;
+                                    }
                                 }
                             }
-                        }
-                        catch (Exception ex)
-                        {
-                            if (ConfiguracionRespuestaLog.Count > 0)
+                            catch (Exception ex)
                             {
-                                string log = accion.tipo + accion.quickbookTabla + "," + "Al crear el objeto" + "," + "Se requiere la libreria Quickbook" + "," + "0";
+                                if (ConfiguracionRespuestaLog.Count > 0)
+                                {
+                                    string log = accion.tipo + accion.quickbookTabla + "," + "Al crear el objeto" + "," + "Se requiere la libreria Quickbook" + "," + "0";
+                                    HelperTask.AddConfigLog(ConfiguracionRespuestaLog, log, ref RespuestasLog);
+                                }
+                                throw new Exception("Error al conectar a Quickbooks: " + ex.Message);
+                            }
+
+                        }
+                        else
+                        {
+
+                            if (ConfiguracionRespuestaLog.Count > 0)
+                            {//record id
+                                string log = accion.tipo + accion.quickbookTabla + ", Registro:Requerido:" + fieldRiquiered + "," + "Se requiere el campo se encuentra vacio o null" + "," + "0";
                                 HelperTask.AddConfigLog(ConfiguracionRespuestaLog, log, ref RespuestasLog);
                             }
-                            throw new Exception("Error al conectar a Quickbook: " + ex.Message);
-                        }
-
-                    }
-                    else
-                    {
-
-                        if (ConfiguracionRespuestaLog.Count > 0)
-                        {//record id
-                            string log = accion.tipo + accion.quickbookTabla + ", Registro:Requerido:" + fieldRiquiered + "," + "Se requiere el campo se encuentra vacio o null" + "," + "0";
-                            HelperTask.AddConfigLog(ConfiguracionRespuestaLog, log, ref RespuestasLog);
                         }
                     }
                 }
+                else {
+                    throw new Exception("Error al tratar de actualizar a Quickbase: " + err);
+                }
+                
 
             }
             //Toupdate
@@ -1103,7 +1109,7 @@ namespace SmartQuickbook.Helper
                             }
                             catch (Exception ex)
                             {                                
-                               mostrarMensaje.Append( "Error al conectar a Quickbook: " + ex.Message);
+                               mostrarMensaje.Append( "Error al conectar a Quickbooks: " + ex.Message);
                             }
 
                         }

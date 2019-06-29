@@ -148,11 +148,11 @@ namespace SmartQuickbook
             else
             {
 
-                if (proceso.entrada.tipo == "quickbook")
+                if (proceso.entrada.tipo == "quickbooks")
                 {
                     BeginInvoke((Action)(() =>
                     {
-                        proceso.controlUI.MostrarMensaje("Buscando datos de Quickbook");
+                        proceso.controlUI.MostrarMensaje("Buscando datos de Quickbooks");
                     }));
                     string mensajes = HelperProcesor.ProcesoEjecutarToQuickBook(proceso);
 

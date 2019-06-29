@@ -104,10 +104,19 @@ namespace Quickbook
             set { companyName = value; }
         }
 
-        public bool IsActive
+        public string IsActive
         {
-            get { return active; }
-            set { active = value; }
+            get { return Convert.ToString( active); }
+            set {
+                if (value.ToUpper() == "TRUE")
+                {
+                    active = true;
+                }
+                else {
+                    active = false;
+                }
+                
+            }
         }
 
         public string FirstName
@@ -233,7 +242,7 @@ namespace Quickbook
                     Vendor v = new Vendor();
                     v.ListID = node["ListID"].InnerText;
                     v.Name = node["Name"].InnerText;
-                    v.IsActive = (bool)(node["IsActive"].InnerText == "true");
+                    v.active = (bool)(node["IsActive"].InnerText == "true");
                     if (node.SelectNodes("FirstName").Count > 0)
                     {
                         v.FirstName = node["FirstName"].InnerText;
@@ -487,7 +496,7 @@ namespace Quickbook
                 }
                 else {
                     //Datos de prueba
-                    string pathFile = Directory.GetCurrentDirectory() + "\\samples\\NewVendor_Test2.xml";
+                    string pathFile = Directory.GetCurrentDirectory() + "\\samples\\NewVendor_Test.xml";
                     string response = File.ReadAllText(pathFile);
 
                     res.LoadXml(response);
@@ -596,7 +605,7 @@ namespace Quickbook
                 }
                 if (node["IsActive"] != null)
                 {
-                    toUpdate.IsActive = node["IsActive"].InnerText == "true" ? true : false;
+                    toUpdate.active = node["IsActive"].InnerText == "true" ? true : false;
                 }
 
                 if (node.SelectNodes("ClassRef").Count > 0)
