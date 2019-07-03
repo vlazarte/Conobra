@@ -72,8 +72,7 @@
   </access>
 
   <!--Proceso automatico 1 FIN Proveedores-->
-
-
+  
   <!--Proceso 1 manual PROVEEDORES -->
   <access id="3a847e17ba9e87559ad0bb71fac1123">
     <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
@@ -172,6 +171,196 @@
   <!--Proceso automatico 1 FIN Proveedores Clenco-->
 
 
+  
+   <!--Proceso 1 manual Customer -->
+  <access id="3a847e17ba9e87559ad0bb71fac4000">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bpqnu7xg5</dbid>
+    <query>-1</query>
+    <qid>-1</qid>
+    <clist>6.7.8.9.10.11.12.13.14.15.21.22.23</clist>
+    <params>
+      <p field="6">nombreCompania</p>
+      <p field="7">QuickbookID</p>
+      <p field="8">NombreCliente</p>
+      <p field="9">Cedula</p>
+      <p field="10">Direccion</p>
+      <p field="11">Correo</p>
+      <p field="12">Telefono</p>
+      <p field="13">Telefono2</p>
+      <p field="14">Fax</p>
+      <p field="15">MonedaCliente</p>
+      <p field="21">Estado</p>
+      <p field="22">CondicionCobro</p>
+      <p field="23">CompanyName</p>      
+    </params>
+  </access>
+  <!--Proceso manual 1 FIN Customer-->
+
+  <!--Proceso automatico 1 Clientes-customer Conobra-->
+  <access id="3a847e17ba9e87559ad0bb71fac15000">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>doquery</type>
+    <dbid>bn8txn3fe</dbid>
+    <query>{6.XEX.''}AND{'28'.EX.'CONOBRA LTDA.'}</query>
+    <qid>-1</qid>
+    <clist>3.8.9.10.11.12.13.14.15.31.27.6.28.21</clist>
+    <params>
+    </params>
+    <response>
+      <p fid="3">RecordID</p>
+      <p fid="8">Name</p>
+      <p fid="9" type="Custom/ID:">ID</p>
+      <p fid="10" type="Address">BillAddress</p>
+      <p fid="11">Email</p>
+      <p fid="12">Phone</p>
+      <p fid="13">AltPhone</p>
+      <p fid="14">Fax</p>
+      <p fid="15" type="Currency">CurrencyRef</p>
+      <p fid="31">IsActive</p>
+      <p fid="27" type="TermsRef">TermsRef</p>
+      <p fid="6">ListID</p>
+      <p fid="28">QuickbooksCompania</p>
+      <p fid="21">CompanyName</p>
+      
+    </response>
+  </access>
+  <access id="3a847e17ba9e87559ad0bb71fac15200">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bn8txn3fe</dbid>
+    <query>-1</query>
+    <qid>-1</qid>
+    <clist>3.8.9.10.11.12.13.14.15.31.27.6.28.21</clist>
+    <params>
+      <p field="3">RecordID</p>
+      <p field="8">NombreDeCliente</p>
+      <p field="9">NumeroCedula</p>
+      <p field="10">Direccion</p>
+      <p field="11">Email</p>
+      <p field="12">Telefono</p>
+      <p field="13">Telefono2</p>
+      <p field="14">Fax</p>
+      <p field="15">MonedaCliente</p>
+      <p field="31">EstadoCliente</p>
+      <p field="27">CondiciondeCobro</p>
+      <p field="6">QuickbookID</p>
+      <p field="28">QuickbooksCompania</p>
+      <p field="21">CompanyName</p>
+    </params>
+  </access>
+  <access id="3a847e17ba9e87559ad0bb71fac15300">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bn8txn3fe</dbid>
+    <query>-1</query>
+    <qid>-1</qid>
+    <clist>8.9.10.11.12.13.14.15.31.27.6.28.21</clist>
+    <params>
+      <p field="8">NombreDeCliente</p>
+      <p field="9">NumeroCedula</p>
+      <p field="10">Direccion</p>
+      <p field="11">Email</p>
+      <p field="12">Telefono</p>
+      <p field="13">Telefono2</p>
+      <p field="14">Fax</p>
+      <p field="15">MonedaCliente</p>
+      <p field="31">EstadoCliente</p>
+      <p field="27">CondiciondeCobro</p>
+      <p field="6">QuickbookID</p>
+      <p field="28">QuickbooksCompania</p>
+      <p field="21">CompanyName</p>
+    </params>
+  </access>
+
+  <!--Proceso automatico 1 FIN Clientes conobra-->
+
+  <!--Proceso automatico 1 Clientes-customer Cleanco-->
+  <access id="3a847e17ba9e87559ad0bb71fac16000">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>doquery</type>
+    <dbid>bn8txn3fe</dbid>
+    <query>{6.XEX.''}AND{'28'.EX.'Clean Construction LTDA.'}</query>
+    <qid>-1</qid>
+    <clist>3.8.9.10.11.12.13.14.15.31.27.6.28.21</clist>
+    <params>
+    </params>
+    <response>
+      <p fid="3">RecordID</p>
+      <p fid="8">Name</p>
+      <p fid="9" type="Custom/ID">ID</p>
+      <p fid="10" type="Address">BillAddress</p>
+      <p fid="11">Email</p>
+      <p fid="12">Phone</p>
+      <p fid="13">AltPhone</p>
+      <p fid="14">Fax</p>
+      <p fid="15" type="Currency">CurrencyRef</p>
+      <p fid="31">IsActive</p>
+      <p fid="27" type="TermsRef">TermsRef</p>
+      <p fid="6">ListID</p>
+      <p fid="28">QuickbooksCompania</p>
+      <p fid="21">CompanyName</p>
+
+    </response>
+  </access>
+  <access id="3a847e17ba9e87559ad0bb71fac16200">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bn8txn3fe</dbid>
+    <query>-1</query>
+    <qid>-1</qid>
+    <clist>3.8.9.10.11.12.13.14.15.31.27.6.28.21</clist>
+    <params>
+      <p field="3">RecordID</p>
+      <p field="8">NombreDeCliente</p>
+      <p field="9">NumeroCedula</p>
+      <p field="10">Direccion</p>
+      <p field="11">Email</p>
+      <p field="12">Telefono</p>
+      <p field="13">Telefono2</p>
+      <p field="14">Fax</p>
+      <p field="15">MonedaCliente</p>
+      <p field="31">EstadoCliente</p>
+      <p field="27">CondiciondeCobro</p>
+      <p field="6">QuickbookID</p>
+      <p field="28">QuickbooksCompania</p>
+      <p field="21">CompanyName</p>
+    </params>
+  </access>
+  <access id="3a847e17ba9e87559ad0bb71fac16300">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bn8txn3fe</dbid>
+    <query>-1</query>
+    <qid>-1</qid>
+    <clist>8.9.10.11.12.13.14.15.31.27.6.28.21</clist>
+    <params>
+      <p field="8">NombreDeCliente</p>
+      <p field="9">NumeroCedula</p>
+      <p field="10">Direccion</p>
+      <p field="11">Email</p>
+      <p field="12">Telefono</p>
+      <p field="13">Telefono2</p>
+      <p field="14">Fax</p>
+      <p field="15">MonedaCliente</p>
+      <p field="31">EstadoCliente</p>
+      <p field="27">CondiciondeCobro</p>
+      <p field="6">QuickbookID</p>
+      <p field="28">QuickbooksCompania</p>
+      <p field="21">CompanyName</p>
+    </params>
+  </access>
+
+  <!--Proceso automatico 1 FIN Clientes Cleanco-->
+  
 
   <!--Proceso 2 Recibos Conobra-->
 

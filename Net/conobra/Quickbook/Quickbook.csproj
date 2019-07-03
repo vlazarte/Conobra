@@ -51,7 +51,7 @@
   <ItemGroup>
     <Compile Include="Abstract.cs" />
     <Compile Include="Account.cs" />
-    <Compile Include="AdditionalContactRef.cs" />
+    <Compile Include="AdditionalContact.cs" />
     <Compile Include="Address.cs" />
     <Compile Include="AssetAccount.cs" />
     <Compile Include="Bill.cs" />
@@ -62,7 +62,7 @@
     <Compile Include="COGSAccount.cs" />
     <Compile Include="ARAccount.cs" />
     <Compile Include="Config.cs" />
-    <Compile Include="ContactsRet.cs" />
+    <Compile Include="Contact.cs" />
     <Compile Include="ItemPayment.cs" />
     <Compile Include="PrefillAccountRef.cs" />
     <Compile Include="SalesReceiptLineGroup.cs" />
@@ -77,7 +77,6 @@
     <Compile Include="InventorySite.cs" />
     <Compile Include="CustomerSalesTaxCode.cs" />
     <Compile Include="Report.cs" />
-    <Compile Include="SalesTaxCodeRef.cs" />
     <Compile Include="SalesTaxReturnRef.cs" />
     <Compile Include="ShipAdress.cs" />
     <Compile Include="ShipMethod.cs" />

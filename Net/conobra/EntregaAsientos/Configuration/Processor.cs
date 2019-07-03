@@ -35,6 +35,11 @@ namespace SmartQuickbook.Configuration
                     Proceso P = new Proceso();
                     P.id = node.Attributes["id"].Value;
                     P.nombre = node["nombre"].InnerText;
+                    if (node.Attributes["includeSublevel"] != null) {
+                        P.includeSublevel = (node.Attributes["includeSublevel"].Value == "true" ? true : false);
+                    }
+                    
+
                     if (node["ejecucion"] != null)
                     {
                         P.tipoEjecucion = node["ejecucion"].Attributes["tipo"].Value;
@@ -52,6 +57,7 @@ namespace SmartQuickbook.Configuration
                         ProcesoAccion acccion = new ProcesoAccion();
                         acccion.tipo = pNode.Attributes["tipo"].Value;
                         acccion.nombre = pNode["nombre"].InnerText;
+                        
                         if (pNode["quickbook_tabla"] != null)
                             acccion.quickbookTabla = pNode["quickbook_tabla"].InnerText;
 
@@ -129,7 +135,7 @@ namespace SmartQuickbook.Configuration
                             ProcesoRespuesta respuesta = new ProcesoRespuesta();
                             respuesta.tipo = paramNode.Attributes["tipo"].Value;
                             respuesta.categoria = paramNode.Attributes["categoria"].Value;
-                            respuesta.quickbaseAccessToken = paramNode["access_token"].InnerText;
+                            respuesta.quickbaseAccessToken = paramNode["access_token"].InnerText;                            
 
                             var paramNodoList2 = paramNode.SelectNodes("parametros/p");
                             respuesta.parametros = new List<ProcesoParametros>();
@@ -237,6 +243,7 @@ namespace SmartQuickbook.Configuration
         public string tipo = "";
         public string nombre = "";
         public string quickbookTabla = "";
+        
         public List<ProcesoParametros> parametros;
         public List<ProcesoParametros> details;
         public string quickbookTablaDetalle = "";
@@ -247,14 +254,15 @@ namespace SmartQuickbook.Configuration
     {
         public string tipo = "";
         public string categoria = "";
-        public string quickbaseAccessToken = "";
+        public string quickbaseAccessToken = "";       
         public List<ProcesoParametros> parametros;
     }
 
     public class Proceso
     {
         public string id;
-        public string nombre;        
+        public string nombre;
+        public bool includeSublevel = false;
         public ProcesoEntrada entrada;
         public List<ProcesoAccion> acciones;
 

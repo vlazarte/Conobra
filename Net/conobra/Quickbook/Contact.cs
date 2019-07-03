@@ -6,15 +6,15 @@ using System.Xml;
 
 namespace Quickbook
 {
-    public class ContactsRet
+    public class Contact
     {
-
+        public string ListID { get; set; }
         public string Salutation { get; set; }
         public string FirstName { get; set; }
         public string MiddleName { get; set; }
         public string LastName { get; set; }
         public string JobTitle { get; set; }
-        public AdditionalContactRef AdicionalContacRef { get; set; }
+        public List<AdditionalContact> AdicionalContacRef { get; set; }
         public string toXmlRef()
         {
             StringBuilder xml = new StringBuilder();
@@ -50,10 +50,16 @@ namespace Quickbook
                 xml.Append("<JobTitle>" + ele.InnerXml + "</JobTitle>"); //-- required -->
             }
 
-             if (AdicionalContacRef!=null && AdicionalContacRef.isValid())
+             if (AdicionalContacRef!=null && AdicionalContacRef.Count>0)
             {
-                
-                xml.Append(AdicionalContacRef.toXmlRef()); //-- required -->
+                for (int j = 0; j < AdicionalContacRef.Count; j++)
+                {
+                    if (AdicionalContacRef[j].isValid()) {
+                        xml.Append(AdicionalContacRef[j].toXmlRef()); //-- required -->
+                    }
+                    
+                }
+               
             }
             xml.Append("</Contacts>");
 

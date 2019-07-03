@@ -250,10 +250,11 @@ namespace SmartQuickbook.Helper
                             List<Abstract> Records=new List<Abstract>();
                             if (proceso.tipoEjecucion == "manual")
                             {//TODO:AComodar GEnerico
-                                Records = ((Vendor)objQuickbookInstance).GetRecordsCVS(ref err);
+
+                                Records = ((Abstract)objQuickbookInstance).GetRecordsCVS(ref err, proceso.includeSublevel);
                             }
                             else {
-                                Records = ((Abstract)objQuickbookInstance).GetRecords(ref err);
+                                Records = ((Abstract)objQuickbookInstance).GetRecords(ref err, proceso.includeSublevel);
                             }
                              
 

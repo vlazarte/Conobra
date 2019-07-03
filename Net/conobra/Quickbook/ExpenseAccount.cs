@@ -13,7 +13,12 @@ namespace Quickbook
             err = "No implemented yet ExpenseAccount";
             return false;
         }
-        public override List<Abstract> GetRecords(ref string err)
+        public override List<Abstract> GetRecords(ref string err, bool includeSublevel)
+        {
+            err = "No implemented yet ExpenseAccount";
+            return new List<Abstract>();
+        }
+        public override List<Abstract> GetRecordsCVS(ref string err, bool includeSublevel)
         {
             err = "No implemented yet ExpenseAccount";
             return new List<Abstract>();

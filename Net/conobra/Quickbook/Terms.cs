@@ -22,7 +22,7 @@ namespace Quickbook
         public int StdDiscountDays;
         public decimal DiscountPct;
 
-        public string FullName;
+        public string FullName{get;set;}
 
 
         public static List<Terms> getTerms(ref string err)
@@ -199,14 +199,34 @@ namespace Quickbook
 
         public string toXmlRef()
         {
-            return "";
+            StringBuilder xml = new StringBuilder();
+            XmlElement ele = (new XmlDocument()).CreateElement("test");
+            xml.Append("<TermsRef>");
+            if (ListID != string.Empty)
+            {
+                xml.Append("<ListID >" + ListID + "</ListID>");
+            }
+            if (FullName != string.Empty)
+            {
+                ele.InnerText = FullName + "";
+                xml.Append("<FullName>" + ele.InnerXml + "</FullName>");
+            }
+
+            xml.Append("</TermsRef>");
+
+            return xml.ToString();
         }
         public override bool AddRecord(ref string err, ref string xmlSend, ref string xmlRecived)
         {
             err = "No implemented yet Terms";
             return false;
         }
-        public override List<Abstract> GetRecords(ref string err)
+        public override List<Abstract> GetRecords(ref string err, bool includeSublevel)
+        {
+            err = "No implemented yet Terms";
+            return new List<Abstract>();
+        }
+        public override List<Abstract> GetRecordsCVS(ref string err, bool includeSublevel)
         {
             err = "No implemented yet Terms";
             return new List<Abstract>();

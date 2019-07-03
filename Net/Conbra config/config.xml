@@ -1,11 +1,9 @@
 ﻿<?xml version="1.0" standalone="yes"?>
 <root>
 
-
-
   <proceso id="1">
     <nombre>Proveedores a Quickbase</nombre>
-    <entrada tipo="quickbook">
+    <entrada tipo="quickbooks">
       <quickbook></quickbook>
       <quickbase>
         <access_token>3a847e17ba9e87559ad0bb71fac12000</access_token>
@@ -28,6 +26,8 @@
           <p field="ListID">ListID</p>
           <p field="QuickbooksCompania" key="true" type="Configuration">QuickbooksCompania</p>
           <p field="TermsRef/FullName" type="TermsRef">TermsRef</p>
+          <p field="CurrencyRef/FullName" type="Currency">CurrencyRef</p>
+          <p field="IsActive">IsActive</p>
         </parametros>
         <respuestas>
           <respuesta tipo="import_quickbase" categoria="Save">
@@ -42,6 +42,8 @@
               <p field="7" >ListID</p>
               <p field="8" key="true" type="Configuration">QuickbooksCompania</p>
               <p field="9" type="TermsRef/FullName">TermsRef</p>
+              <p field="10" type="CurrencyRef/FullName">CurrencyRef</p>
+              <p field="11">IsActive</p>
             </parametros>
           </respuesta>
           <respuesta tipo="import_quickbase" categoria="Create">
@@ -53,8 +55,10 @@
               <p field="4" type="AdditionalContactRef/ContactValue">phone</p>
               <p field="5">Email</p>
               <p field="6">ListID</p>
-              <p field="8" key="true" type="Configuration">QuickbooksCompania</p>
-              <p field="9" type="TermsRef/FullName">TermsRef</p>
+              <p field="7" key="true" type="Configuration">QuickbooksCompania</p>
+              <p field="8" type="TermsRef/FullName">TermsRef</p>
+              <p field="9" type="CurrencyRef/FullName">CurrencyRef</p>
+              <p field="10">IsActive</p>
             </parametros>
             <customfields>
             </customfields>
@@ -68,7 +72,7 @@
     </ejecucion>
 
   </proceso>
-  <proceso id="2">
+  <!--<proceso id="2">
     <nombre>Importar Recibos a Quickbooks</nombre>
     <entrada tipo="quickbase">
       <quickbook></quickbook>
@@ -128,13 +132,10 @@
       <intervalo tipo="segundo">120</intervalo>
       <fecha_unica>2019-04-09</fecha_unica>
     </ejecucion>
-  </proceso>
-  
-  
-  
+  </proceso>-->
   <proceso id="1">
     <nombre>Importar Proveedores a quickbase</nombre>
-    <entrada tipo="quickbook">
+    <entrada tipo="quickbooks">
       <quickbook></quickbook>
       <quickbase>
         <access_token></access_token>
@@ -161,6 +162,51 @@
               <p field="6">ListID</p>
               <p field="7" key="true" type="Configuration">QuickbooksCompania</p>
               <p field="8" type="TermsRef/FullName">TermsRef</p>
+              <p field="9" type="CurrencyRef/FullName">CurrencyRef</p>
+              <p field="10">IsActive</p>              
+            </parametros>
+          </respuesta>
+        </respuestas>
+      </accion>
+    </acciones>
+    <ejecucion tipo="manual">
+      <intervalo tipo="segundo">60</intervalo>
+      <fecha_unica>2019-04-09</fecha_unica>
+    </ejecucion>
+  </proceso>
+  <proceso id="2" includeSublevel="false">
+    <nombre>Importar Clientes a quickbase</nombre>
+    <entrada tipo="quickbooks">
+      <quickbook></quickbook>
+      <quickbase>
+        <access_token></access_token>
+        <parametros>
+          <p field="B">NOMBRE</p>
+        </parametros>
+      </quickbase>
+    </entrada>
+    <acciones>
+      <accion id="cust001" tipo="add_quickbase">
+        <nombre>Importar Clientes a quickbase</nombre>
+        <quickbook_tabla>Customer</quickbook_tabla>
+        <parametros>
+        </parametros>
+        <respuestas>
+          <respuesta tipo="import_quickbase" categoria="Create">
+            <access_token>3a847e17ba9e87559ad0bb71fac4000</access_token>            
+            <parametros>
+              <p field="1" key="true" type="Configuration">QuickbooksCompania</p>
+              <p field="2">ListID</p>              
+              <p field="3">Name</p>
+              <p field="4" type="Custom/ID:">ID</p>                            
+              <p field="5" type="Address/Addr1">BillAddress</p>
+              <p field="6">Email</p>
+              <p field="7">Phone</p>
+              <p field="8">AltPhone</p>
+              <p field="9">Fax</p>
+              <p field="10" type="Currency/FullName">CurrencyRef</p>
+              <p field="11">IsActive</p>              
+              <p field="12" type="Terms/FullName">TermsRef</p>
             </parametros>
           </respuesta>
         </respuestas>
@@ -172,6 +218,14 @@
     </ejecucion>
   </proceso>
 
- 
+
+
+
 
 </root>
+
+
+
+
+
+

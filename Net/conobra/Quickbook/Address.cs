@@ -5,28 +5,57 @@ using System.Text;
 
 namespace Quickbook
 {
-    public class Address
+    public class Address : Abstract
     {
-        public static int Bill_Address = 0 ;
-        public static int Ship_Address = 1 ;
-        public static int Ship_To_Address = 2 ;
+        public static int Bill_Address = 0;
+        public static int Ship_Address = 1;
+        public static int Ship_To_Address = 2;
+        public static int Bill_BillAddressBlock = 3;
+        public static int Bill_ShipAddressBlock = 4;
 
-        private int AddressType = 0 ;
+        private int AddressType = 0;
 
         public List<string> AddressLine;
 
-        public string Name;
-        public string City ;
-        public string State ;
-        public string PostalCode;
-        public string Country;
-        public string Note;
+        public string Addr1{get;set;}
+        public string Addr2 { get; set; }
+        public string Addr3 { get; set; }
+        public string Addr4 { get; set; }
+        public string Addr5 { get; set; }
+
+        public string Name { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public string PostalCode { get; set; }
+        public string Country { get; set; }
+        public string Note { get; set; }
         public bool IsDefault = false;
 
-        public Address( int AddresType )
+
+
+        public Address(int AddresType)
         {
+
+            Addr1 = string.Empty;
+            Addr2 = string.Empty;
+            Addr3 = string.Empty;
+            Addr4 = string.Empty;
+            Addr5 = string.Empty;
             this.AddressType = AddresType;
             AddressLine = new List<string>();
+            ObjectName = "Address";
+        }
+        public Address()
+        {
+
+            Addr1 = string.Empty;
+            Addr2 = string.Empty;
+            Addr3 = string.Empty;
+            Addr4 = string.Empty;
+            Addr5 = string.Empty;
+            this.AddressType = Bill_Address;
+            AddressLine = new List<string>();
+            ObjectName = "Address";
         }
 
         public void isDefaultShipToAddress(bool isDefault)
@@ -38,7 +67,7 @@ namespace Quickbook
         {
             if (AddressLine.Count == 0)
                 return "";
-            return AddressLine[indice-1];
+            return AddressLine[indice - 1];
         }
 
         public void addAddrLine(string line)
@@ -148,9 +177,24 @@ namespace Quickbook
             {
                 xml = "<ShipToAddress>" + xml + "</ShipToAddress>";
             }
-            
+
             return xml;
         }
-  
+        public override bool AddRecord(ref string err, ref string xmlSend, ref string xmlRecived)
+        {
+            err = "No implemented yet Address";
+            return false;
+        }
+        public override List<Abstract> GetRecords(ref string err, bool includeSublevel)
+        {
+            err = "No implemented yet Address";
+            return new List<Abstract>();
+        }
+        public override List<Abstract> GetRecordsCVS(ref string err, bool includeSublevel)
+        {
+            err = "No implemented yet Address";
+            return new List<Abstract>();
+        }
+
     }
 }

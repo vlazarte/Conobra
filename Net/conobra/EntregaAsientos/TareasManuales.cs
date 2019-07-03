@@ -112,7 +112,7 @@ namespace SmartQuickbook
         }
         private void ImportandoClases(string idProceso)
         {
-            Proceso proceso = processor.procesos.Find(p => p.id == idProceso && p.tipoEjecucion == "manual");
+           /* Proceso proceso = processor.procesos.Find(p => p.id == idProceso && p.tipoEjecucion == "manual");
 
            // EjecutarProceso(idProceso);
             string err = string.Empty;
@@ -127,7 +127,7 @@ namespace SmartQuickbook
             {
                 //error
                 MessageBox.Show(err);
-            }
+            }*/
         }
 
 
@@ -158,7 +158,7 @@ namespace SmartQuickbook
             else
             {
 
-                if (proceso.entrada.tipo == "quickbook")
+                if (proceso.entrada.tipo == "quickbooks")
                 {
                     
                         

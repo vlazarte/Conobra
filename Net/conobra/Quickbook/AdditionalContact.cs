@@ -6,7 +6,7 @@ using System.Xml;
 
 namespace Quickbook
 {
-    public class AdditionalContactRef
+    public class AdditionalContact
     {
 
     

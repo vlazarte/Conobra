@@ -135,14 +135,14 @@ namespace SmartQuickbook.Helper
 
         }
 
-        public static string getObjectValue(string fieldProperty, object obj, string fieldValue, ref string err)
+        public static string getObjectValue(string PropertyName, string TypeProperty, object obj, string fieldValue, ref string err)
         {
 
 
-            PropertyInfo _propertyInfo = obj.GetType().GetProperty(fieldProperty);
+            PropertyInfo _propertyInfo = obj.GetType().GetProperty(PropertyName);
             if (_propertyInfo == null)
             {
-                err = "Property with names " + fieldProperty + " does not exists in " + obj.GetType().ToString();
+                err = "Property with names " + PropertyName + " does not exists in " + obj.GetType().ToString();
                 return null;
             }
             object objectValue = _propertyInfo.GetValue(obj, null);
@@ -260,7 +260,7 @@ namespace SmartQuickbook.Helper
                     {
                         List<string> Responses = RespuestasSave[respuesta.quickbaseAccessToken];
                         string csv = string.Join(Environment.NewLine, Responses.ToArray());
-                        bool import = ws.importFromCsv(respuesta.quickbaseAccessToken, csv, out err);
+                        //bool import = ws.importFromCsv(respuesta.quickbaseAccessToken, csv, out err);
 
                     }
                 }
@@ -307,26 +307,24 @@ namespace SmartQuickbook.Helper
                                 isValue = true;
                             }
                             else
-                            {
+                            {                              
 
-                                fieldNames.Add(fieldPropertyCustomer);
-
-                                if (accion.parametros[i].Type != null && pairs[fieldPropertyCustomer]!=null)
-                                {
-
-                                    string value = pairs[fieldPropertyCustomer].ToString();
+                                if (accion.parametros[i].Type != null )
+                                { 
                                     if (accion.parametros[i].Type == "AdditionalContactRef")
                                     {
+                                        string value = pairs[fieldPropertyCustomer].ToString();
+                                        fieldNames.Add(fieldPropertyCustomer);
                                         fieldValues.Add(value);
                                         isValue = true;
 
                                     }
                                     else
                                     {
-
+                                        string value = pairs[accion.parametros[i].fieldName].ToString();
                                         if (value != string.Empty)
                                         {
-
+                                            fieldNames.Add(accion.parametros[i].fieldName);
                                             var newValueObject = HelperTask.ConvertType(fieldPropertyCurrency, value, accion.parametros[i].Type, ref err);
                                             if (err != string.Empty)
                                             {
@@ -340,6 +338,7 @@ namespace SmartQuickbook.Helper
                                         }
                                         else
                                         {
+                                            fieldNames.Add(accion.parametros[i].fieldName);
                                             if (accion.parametros[i].Required)
                                             {
 
@@ -360,6 +359,7 @@ namespace SmartQuickbook.Helper
                                 }
                                 else
                                 {
+                                    fieldNames.Add(accion.parametros[i].fieldId);
                                     fieldValues.Add(pairs[accion.parametros[i].fieldName]);
                                     isValue = true;
                                 }
@@ -588,52 +588,52 @@ namespace SmartQuickbook.Helper
 
             }
         }
-        public static bool ImportToQuickBaseClassFromQuickBookCVS(ref string err, ref string cvs)
-        {
-            string keyImportToQuickbaseCreate = "3a847e17ba9e87559ad0bb71fac10015";//"3a847e17ba9e87559ad0bb71fac10008";
-            string keyImportToQuickbaseUpdate = "0823871b4f16ca3cd7d6f6259690c002";
-            string keyQueryFromQuickbase = "3a847e17ba9e87559ad0bb71fac10009";
+        /* public static bool ImportToQuickBaseClassFromQuickBookCVS(ref string err, ref string cvs)
+         {
+             string keyImportToQuickbaseCreate = "3a847e17ba9e87559ad0bb71fac10015";//"3a847e17ba9e87559ad0bb71fac10008";
+             string keyImportToQuickbaseUpdate = "0823871b4f16ca3cd7d6f6259690c002";
+             string keyQueryFromQuickbase = "3a847e17ba9e87559ad0bb71fac10009";
 
 
-            Class ClassImport = new Class();
+             Class ClassImport = new Class();
 
 
-            Quickbook.Config.App_Name = Properties.Settings.Default.qbook_app_name;
-            Quickbook.Config.File = Properties.Settings.Default.qbook_file;
-            Quickbook.Config.IsProduction = true;
-            List<Abstract> classToCreate = ClassImport.GetRecordsCVS(ref err);
+             Quickbook.Config.App_Name = Properties.Settings.Default.qbook_app_name;
+             Quickbook.Config.File = Properties.Settings.Default.qbook_file;
+             Quickbook.Config.IsProduction = true;
+             List<Abstract> classToCreate = ClassImport.GetRecordsCVS(ref err);
 
-            Dictionary<string, string> registrados = registrosSincronizados(keyQueryFromQuickbase, ref err);
+             Dictionary<string, string> registrados = registrosSincronizados(keyQueryFromQuickbase, ref err);
 
-            bool registroExitoso = false;
-            if (registrados.Count > 0)
-            {
-                registroExitoso = UpdateQuickbookToQuickbaseClass(registrados, ref classToCreate, keyImportToQuickbaseUpdate, ref err);
-                //quedan registros nuevos por adicionar?
-                if (classToCreate.Count > 0)
-                {
-                    registroExitoso = CreateQuickbookToQuickbaseNewsClass(classToCreate, keyImportToQuickbaseCreate, ref  err);
-                }
-                else
-                {
-                    err = "No se encontraron registros nuevos para Registrar";
-                }
-            }
-            else
-            {
-                if (classToCreate.Count > 0)
-                {
-                    registroExitoso = CreateQuickbookToQuickbaseNewsClass(classToCreate, keyImportToQuickbaseCreate, ref  err);
-                }
-                else
-                {
-                    err = "No se encontraron registros nuevos para Registrar";
-                }
-            }
+             bool registroExitoso = false;
+             if (registrados.Count > 0)
+             {
+                 registroExitoso = UpdateQuickbookToQuickbaseClass(registrados, ref classToCreate, keyImportToQuickbaseUpdate, ref err);
+                 //quedan registros nuevos por adicionar?
+                 if (classToCreate.Count > 0)
+                 {
+                     registroExitoso = CreateQuickbookToQuickbaseNewsClass(classToCreate, keyImportToQuickbaseCreate, ref  err);
+                 }
+                 else
+                 {
+                     err = "No se encontraron registros nuevos para Registrar";
+                 }
+             }
+             else
+             {
+                 if (classToCreate.Count > 0)
+                 {
+                     registroExitoso = CreateQuickbookToQuickbaseNewsClass(classToCreate, keyImportToQuickbaseCreate, ref  err);
+                 }
+                 else
+                 {
+                     err = "No se encontraron registros nuevos para Registrar";
+                 }
+             }
 
-            return registroExitoso;
+             return registroExitoso;
 
-        }
+         }*/
         private static bool UpdateQuickbookToQuickbaseClass(Dictionary<string, string> registrados, ref  List<Abstract> classToCreate, string keyImportToQuickbaseUpdate, ref string err)
         {
             bool registroExitoso = false;
@@ -716,33 +716,33 @@ namespace SmartQuickbook.Helper
 
             return registroExitoso;
         }
-        public static string ImportToQuickBaseVendedoresFromQuickBookCVS(ref string err, ref string cvs)
-        {
-             string keyImportToQuickbaseCreate = "3a847e17ba9e87559ad0bb71fac10010"; 
-             Vendor VendorImport = new Vendor();
-             var ws = new wClient.WService();
+        //public static string ImportToQuickBaseVendedoresFromQuickBookCVS(ref string err, ref string cvs)
+        //{
+        //     string keyImportToQuickbaseCreate = "3a847e17ba9e87559ad0bb71fac10010"; 
+        //     Vendor VendorImport = new Vendor();
+        //     var ws = new wClient.WService();
           
 
-             Quickbook.Config.App_Name = Properties.Settings.Default.qbook_app_name;
-             Quickbook.Config.File = Properties.Settings.Default.qbook_file;
-             Quickbook.Config.IsProduction = true;
-             List<Abstract> vendorToCreate = VendorImport.GetRecordsCVS(ref err);
+        //     Quickbook.Config.App_Name = Properties.Settings.Default.qbook_app_name;
+        //     Quickbook.Config.File = Properties.Settings.Default.qbook_file;
+        //     Quickbook.Config.IsProduction = true;
+        //     List<Abstract> vendorToCreate = VendorImport.GetRecordsCVS(ref err);
              
 
-             if (vendorToCreate.Count > 0)
-             {
+        //     if (vendorToCreate.Count > 0)
+        //     {
                 
-                 //obtener el listado de quickbase, separar los que tienen listID
-             //    string mensaje = HelperProcesor.ProcesarRegistros(proceso, vendorToCreate);
+        //         //obtener el listado de quickbase, separar los que tienen listID
+        //     //    string mensaje = HelperProcesor.ProcesarRegistros(proceso, vendorToCreate);
 
-                 return string.Empty;
-             }
-             else
-             {
-                 err = "No se encontraron registros para sincronizar";
-                 return err;
-             }
-        }
+        //         return string.Empty;
+        //     }
+        //     else
+        //     {
+        //         err = "No se encontraron registros para sincronizar";
+        //         return err;
+        //     }
+        //}
         private static bool UpdateQuickbookToQuickbaseVendor(Dictionary<string, string> registrados, ref List<Vendor> vendorToCreate)
         {
             /*  //ya registrados actualizar

@@ -46,8 +46,8 @@ namespace SmartQuickbook.Configuration
                         {
                             if (((Vendor)obj).AdditionalContactRef == null)
                             {
-                                ((Vendor)obj).AdditionalContactRef = new List<AdditionalContactRef>();
-                                AdditionalContactRef adicional = new AdditionalContactRef();
+                                ((Vendor)obj).AdditionalContactRef = new List<AdditionalContact>();
+                                AdditionalContact adicional = new AdditionalContact();
                                 adicional.ContactName = "Main Phone";
                                 adicional.ContactValue = fieldValues[i].ToString();
                                 ((Vendor)obj).AdditionalContactRef.Add(adicional);
@@ -142,7 +142,7 @@ namespace SmartQuickbook.Configuration
                                             fieldValues .Add("");
                                         }
                                         else {
-                                            AdditionalContactRef newValue=  ((Vendor)obj).AdditionalContactRef.Find(d => d.ContactName == "Main Phone");
+                                            AdditionalContact newValue=  ((Vendor)obj).AdditionalContactRef.Find(d => d.ContactName == "Main Phone");
                                             if (newValue != null)
                                             {
                                                 fieldValues.Add( newValue.ContactValue.Replace("\"", "\"\""));
@@ -155,7 +155,7 @@ namespace SmartQuickbook.Configuration
                                     }
                                     else {
                                         ////si es otro dato compuesto obtener el tipo
-                                        string value = HelperTask.getObjectValue(fieldPropertyCustom, obj, fieldPropertyName, ref err);
+                                        string value = HelperTask.getObjectValue(parametros[i].fieldName, fieldPropertyCustom, obj, fieldPropertyName, ref err);
                                         if (value != null)
                                         {
                                                fieldValues.Add( value.Replace("\"", "\"\""));
