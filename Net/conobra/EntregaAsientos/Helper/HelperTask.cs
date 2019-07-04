@@ -260,7 +260,7 @@ namespace SmartQuickbook.Helper
                     {
                         List<string> Responses = RespuestasSave[respuesta.quickbaseAccessToken];
                         string csv = string.Join(Environment.NewLine, Responses.ToArray());
-                        //bool import = ws.importFromCsv(respuesta.quickbaseAccessToken, csv, out err);
+                        bool import = ws.importFromCsv(respuesta.quickbaseAccessToken, csv, out err);
 
                     }
                 }
