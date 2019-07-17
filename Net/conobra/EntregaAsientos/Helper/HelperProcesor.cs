@@ -160,6 +160,15 @@ namespace SmartQuickbook.Helper
                                             {
                                                 if (ConfiguracionRespuestaLog.Count > 0)
                                                 {
+                                                    xmlSend = xmlSend.Replace(",", ".");
+                                                    xmlSend = xmlSend.Replace(Environment.NewLine, "");
+
+
+
+                                                    xmlRecived = xmlRecived.Replace(",", ".");
+                                                    xmlRecived = xmlRecived.Replace(Environment.NewLine, "");
+
+
                                                     string log = accion.tipo + accion.quickbookTabla + "," + xmlSend + "," + xmlRecived + "," + "0";
                                                     HelperTask.AddConfigLog(ConfiguracionRespuestaLog, log, ref RespuestasLog);
                                                 }
@@ -169,6 +178,11 @@ namespace SmartQuickbook.Helper
 
                                                 if (ConfiguracionRespuestaLog.Count > 0)
                                                 {
+                                                    xmlSend = xmlSend.Replace(",", ".");
+                                                    xmlSend = xmlSend.Replace(Environment.NewLine, "");
+                                                    err = err.Replace(",", ".");
+                                                    err = err.Replace(Environment.NewLine, "");
+
                                                     string log = accion.tipo + accion.quickbookTabla + "," + xmlSend + "," + err + "," + "0";
                                                     HelperTask.AddConfigLog(ConfiguracionRespuestaLog, log, ref RespuestasLog);
                                                 }
@@ -181,11 +195,11 @@ namespace SmartQuickbook.Helper
                                     }
                                     catch (Exception ex)
                                     {
-                                        if (ConfiguracionRespuestaLog.Count > 0)
-                                        {
-                                            string log = accion.tipo +" " +accion.quickbookTabla + "," + "Genero excepcion :Al crear el objeto" + "," + ex.Message + "," + "0";
-                                            HelperTask.AddConfigLog(ConfiguracionRespuestaLog, log, ref RespuestasLog);
-                                        }
+                                        //if (ConfiguracionRespuestaLog.Count > 0)
+                                        //{
+                                        //    string log = accion.tipo +" " +accion.quickbookTabla + "," + "Genero excepcion :Al crear el objeto" + "," + ex.Message + "," + "0";
+                                        //    HelperTask.AddConfigLog(ConfiguracionRespuestaLog, log, ref RespuestasLog);
+                                        //}
                                         mostrarMensaje.Append("Error al Procesar los datos: " + ex.Message + Environment.NewLine);
                                         
                                     }

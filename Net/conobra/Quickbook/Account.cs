@@ -129,6 +129,26 @@ namespace Quickbook
 
             xml.Append("</AccountRef>");
 
+
+            return xml.ToString();
+        }
+
+         public string toXmlRefBill()
+        {
+            StringBuilder xml = new StringBuilder();
+            XmlElement ele = (new XmlDocument()).CreateElement("test");
+            xml.Append("<APAccountRef>");
+            if (ListID != string.Empty)
+            {
+                xml.Append("<ListID >" + ListID + "</ListID>");
+            }
+            if (FullName != string.Empty)
+            {
+                ele.InnerText = FullName + "";
+                xml.Append("<FullName>" + ele.InnerXml + "</FullName>"); //-- required -->
+            }
+
+            xml.Append("</APAccountRef>");
             return xml.ToString();
         }
         public override bool AddRecord(ref string err, ref string xmlSend, ref string xmlRecived)

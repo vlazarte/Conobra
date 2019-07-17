@@ -223,10 +223,10 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://servicesnet.smartstrategyapps.com//Cloud/WebServices/IntegracionesQuickbook/WService.asmx">
+    <WebReferenceUrl Include="http://smartstrategyonline.com/Cloud/WebServices/IntegracionesQuickbook/WService.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\wClient\</RelPath>
-      <UpdateFromURL>http://servicesnet.smartstrategyapps.com//Cloud/WebServices/IntegracionesQuickbook/WService.asmx</UpdateFromURL>
+      <UpdateFromURL>http://smartstrategyonline.com/Cloud/WebServices/IntegracionesQuickbook/WService.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>

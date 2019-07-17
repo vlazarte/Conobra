@@ -11,7 +11,25 @@ namespace Quickbook
     {
 
         public string FullName { get; set; }
-        public bool? IsActive { get; set; }
+        public string Name { get; set; }
+        private bool? active;
+
+        public string IsActive
+        {
+            get { return Convert.ToString(active); }
+            set
+            {
+                if (value != null && value.ToUpper() == "TRUE")
+                {
+                    active = true;
+                }
+                else
+                {
+                    active = false;
+                }
+
+            }
+        }
         public int Sublevel { get; set; }
         public Class ParentRef { get; set; }
 
@@ -51,9 +69,9 @@ namespace Quickbook
                 toXML.Append("<Name>" + ele.InnerXml + "</Name>"); //-- required -->
             }
 
-            if (IsActive != null)
+            if (active != null)
             {
-                toXML.Append("<IsActive>" + (IsActive == true ? "true" : "false") + "</IsActive> ");//-- optional -->
+                toXML.Append("<IsActive>" + (active == true ? "true" : "false") + "</IsActive> ");//-- optional -->
             }
             if (ParentRef != null)
             {
@@ -126,6 +144,8 @@ namespace Quickbook
             }
             toXML.Append("<IncludeRetElement >ListID</IncludeRetElement>");
             toXML.Append("<IncludeRetElement >Name</IncludeRetElement>");
+            toXML.Append("<IncludeRetElement >FullName</IncludeRetElement>");
+            toXML.Append("<IncludeRetElement >IsActive</IncludeRetElement>");
             toXML.Append("<IncludeRetElement >ParentRef</IncludeRetElement>");
             toXML.Append("<IncludeRetElement >Sublevel</IncludeRetElement>");
             toXML.Append("</ClassQueryRq>");
@@ -374,8 +394,26 @@ namespace Quickbook
             foreach (XmlNode node in rets)
             {
                 Class toUpdate = new Class();
-                toUpdate.ListID = node["ListID"].InnerText;
-                toUpdate.FullName = node["Name"].InnerText;
+                if (node["ListID"] != null)
+                {
+                    toUpdate.ListID = node["ListID"].InnerText;
+                }
+
+                if (node["Name"] != null)
+                {
+                    toUpdate.Name = node["Name"].InnerText;
+                }
+               
+
+                if (node["FullName"] != null)
+                {
+                    toUpdate.FullName = node["FullName"].InnerText;
+                }
+
+                if (node["IsActive"] != null)
+                {
+                    toUpdate.active = node["IsActive"].InnerText == "true" ? true : false;
+                }               
 
                 if (node.SelectNodes("ParentRef").Count > 0)
                 {
@@ -389,6 +427,10 @@ namespace Quickbook
                         toUpdate.ParentRef.FullName = node["ParentRef"]["FullName"].InnerText;
                     }
                 }
+                if (node["Sublevel"] != null)
+                {
+                    toUpdate.Sublevel =Convert.ToInt16( node["Sublevel"].InnerText); 
+                }   
 
                 quickbookListClass.Add(toUpdate);
             }

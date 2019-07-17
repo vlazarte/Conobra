@@ -369,6 +369,7 @@ namespace Quickbook
 
             xml.Append("</VendorRef>");
 
+
             return xml.ToString();
         }
         public override List<Abstract> GetRecordsCVS(ref string err, bool includeSublevel)

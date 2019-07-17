@@ -360,8 +360,54 @@
   </access>
 
   <!--Proceso automatico 1 FIN Clientes Cleanco-->
-  
 
+  <!--Proceso 3 manual Clases -->
+
+  <access id="0823871b4f16ca3cd7d6f6259690c003">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bpnv724uz</dbid>
+    <query></query>
+    <qid>-1</qid>
+    <clist>6.15.11.12.14.16.13</clist>
+    <params>
+      <p field="6">NombreClase</p>
+      <p field="15">Quickbooks_FullName</p>
+      <p field="11">Quickbook_ListID</p>
+      <p field="12">QuickBook_ParentRef</p>
+      <p field="14">Quickbooks_sublevel</p>
+      <p field="16">Quickbooks_isActivo</p>
+      <p field="13">Quickbook_Compania</p>
+    </params>
+  </access>
+
+  <!--Proceso 3 manual Clases -->
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!--Por confirmar-->
+  
+  
+  
+  
+  
+  
   <!--Proceso 2 Recibos Conobra-->
 
   <access id="0823871b4f16ca3cd7d6f62596903000">
@@ -471,9 +517,30 @@
   </access>
 
   <!--Proceso 2 FIN Recibos Clenco-->
+  <!--proceso creacion de jobs Cleanco-->
+  <access id="0823871b4f16ca3cd7d6f625970000">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>doquery</type>
+    <dbid>bn8txn2we</dbid>
+    <query>{'642'.EX.'Clean Construction LTDA.'}</query>
+    <qid>162</qid>
+    <clist>1002.6.902.642.909.3.9</clist>
+    <params>
+    </params>
+    <response>
+      <p fid="1002">ParentRef</p>
+      <p fid="6">Name</p>
+      <p fid="902">IsActive</p>
+      <p fid="642">QuickbooksCompania</p>
+      <p fid="909">CurrencyRef</p>
+      <p fid="3">RecordID</p>
+      <p fid="9">JobStartDate</p>
+    </response>
+  </access>
+  <!--proceso creacion de jobs Cleanco FIN-->
   
-  
-  
+  <!--Proceso creacion de jobs Conobra-->
 
 
   <access id="0823871b4f16ca3cd7d6f6259690ca20">
@@ -481,24 +548,23 @@
     <realm>conobra</realm>
     <type>doquery</type>
     <dbid>bn8txn2we</dbid>
-    <query></query>
-    <qid>-1</qid>
-    <clist>674.6.903.902.642.909.3.487.6</clist>
+    <query>{'642'.EX.'CONOBRA LTDA.'}</query>
+    <qid>162</qid>
+    <clist>1002.6.902.642.909.3.9</clist>
     <params>
     </params>
     <response>      
-      <p fid="674" >ParentRef</p>
-      <p fid="6" >NOMBRE</p>
-      <p fid="903" >FULLNAME</p>
-      <p fid="902" >ISACTIVE</p>
-      <p fid="642" >COMPANYNAME</p>
-      <p fid="909" >CurrencyRef</p>
-      <p fid="3" >RECORDIDPROYECTO</p>
-      <p fid="487" type="Date">JobStartDate</p>
-      <p fid="6" >JobDesc</p>
+      <p fid="1002">ParentRef</p>
+      <p fid="6">Name</p>      
+      <p fid="902">IsActive</p>
+      <p fid="642">QuickbooksCompania</p>
+      <p fid="909">CurrencyRef</p>      
+      <p fid="3">RecordID</p>      
+      <p fid="9">JobStartDate</p>      
     </response>
   </access>
-  <access id="tokenRespuesta">
+
+  <access id="0823871b4f16ca3cd7d6f62596901000">
     <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
     <realm>conobra</realm>
     <type>import</type>
@@ -509,6 +575,7 @@
     <params>
     </params>
   </access>
+
   <access id="8fc1a0edf52f44ba5cb7c7809613cbdd">
     <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
     <realm>conobra</realm>
@@ -521,6 +588,11 @@
     </params>
 
   </access>
+
+  <!--Proceso creacion de jobs Conobra FIN-->
+
+ 
+ 
   <access id="89bb73b8911978456775bfebfaa945c6">
     <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
     <realm>conobra</realm>
@@ -531,9 +603,13 @@
     <clist>3.6</clist>
     <params>
     </params>
-    <response>
-      <p fid="3" >RECORDIDPROYECTO</p>
-      <p fid="6" >FullName</p>
+    <response>      
+      <p fid="3">RecordID</p>
+      <p fid="6">Name</p>
+      <p fid="">IsActive</p>
+      <p fid="">QuickbooksCompania</p>
+      <p fid="">ParentRef</p>
+      <p fid="">QuickbooksCompania</p>
     </response>
   </access>
   <access id="3a847e17ba9e87559ad0bb71fac10a3e">
@@ -851,20 +927,7 @@
       <p field="12">ParentRef</p>
     </params>
   </access>
-  <access id="0823871b4f16ca3cd7d6f6259690c003">
-    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
-    <realm>conobra</realm>
-    <type>import</type>
-    <dbid>bpnv724uz</dbid>
-    <query>{11.XEX.''}</query>
-    <qid>-1</qid>
-    <clist>11.6.12</clist>
-    <params>      
-      <p field="11">ListID</p>
-      <p field="6">NombreClase</p>
-      <p field="12">ParentRef</p>
-    </params>
-  </access>
+  
   <!--Repite el 3a847e17ba9e87559ad0bb71fac10008 para crear-->
 
 

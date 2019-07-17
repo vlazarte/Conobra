@@ -281,8 +281,11 @@ namespace Quickbook
             string xml = string.Empty;
 
             xml += "<?xml version=\"1.0\" ?>";
-            xml += Environment.NewLine + Environment.NewLine + "<?qbxml version=\"13.0\" ?>";
-            xml += Environment.NewLine + "<QBXML>";
+            xml += "<?qbxml version=\"13.0\" ?>";
+            xml += "<QBXML>";
+
+
+
             xml += Environment.NewLine + "<QBXMLMsgsRq onError=\"stopOnError\">";
             xml += Environment.NewLine + "<BillModRq requestID=\"10002\">";
             xml += Environment.NewLine + "<BillMod>";
@@ -349,35 +352,36 @@ namespace Quickbook
 
         public string toXml()
         {
-            string xml = string.Empty;
+            StringBuilder toXML = new StringBuilder();
 
-            xml += "<?xml version=\"1.0\" ?>";
-            xml += Environment.NewLine + Environment.NewLine + "<?qbxml version=\"13.0\" ?>";
-            xml += Environment.NewLine + "<QBXML>";
-            xml += Environment.NewLine + "<QBXMLMsgsRq onError=\"stopOnError\">";
-            xml += Environment.NewLine + "<BillAddRq>";
-            xml += Environment.NewLine + "<BillAdd>";
+            toXML.Append("<?xml version=\"1.0\" encoding=\"utf-8\"?>");
+            toXML.Append("<?qbxml version=\"13.0\" ?>");
+            toXML.Append( "<QBXML>");
+            toXML.Append("<QBXMLMsgsRq onError=\"stopOnError\">");
+            toXML.Append("<BillAddRq>");
+            toXML.Append("<BillAdd>");
+            
             if (VendorRef != null)
             {
-                xml += VendorRef.toXMLVendorRef();
+                toXML.Append( VendorRef.toXMLVendorRef());
             }
 
 
             if (VendorAddress != null)
             {
 
-                xml += VendorAddress.toXmlRef();
+                toXML.Append(  VendorAddress.toXmlRef());
             }
 
             if (APAccountRef != null)
             {
-                xml += APAccountRef.toXmlRef();
+               toXML.Append(APAccountRef.toXmlRefBill());
             }
             if (txnDate != null)
             {
                 string DateString = txnDate.ToString();
                 DateTime dt = Convert.ToDateTime(DateString);
-                xml += Environment.NewLine + "<TxnDate>" + dt.ToString("yyyy-MM-dd") + "</TxnDate>";
+                toXML.Append( "<TxnDate>" + dt.ToString("yyyy-MM-dd") + "</TxnDate>");
             }
 
 
@@ -385,62 +389,68 @@ namespace Quickbook
             {
                 string DateString = DueDate.ToString();
                 DateTime dt = Convert.ToDateTime(DateString);
-                xml += Environment.NewLine + "<DueDate>" + dt.ToString("yyyy-MM-dd") + "</DueDate>";
+                toXML.Append(  "<DueDate>" + dt.ToString("yyyy-MM-dd") + "</DueDate>");
             }
 
          
 
-            xml += Environment.NewLine + "<RefNumber>" + RefNumber + "</RefNumber>";
+           toXML.Append("<RefNumber>" + RefNumber + "</RefNumber>");
 
 
             if (TermsRef != null)
             {
-                xml += TermsRef.toXmlRef();
+               toXML.Append( TermsRef.toXmlRef());
             }
             if (Memo != string.Empty)
             {
-                xml += Environment.NewLine + "<Memo>" + Memo + "</Memo>";
+                toXML.Append( "<Memo>" + Memo + "</Memo>");
             }
 
-            if (IsTaxIncluded != null)
-            {
-                xml += " <IsTaxIncluded >" + IsTaxIncluded.ToString() + "</IsTaxIncluded>";
-            }
+            //if (IsTaxIncluded != null)
+            //{
+            //    xml += " <IsTaxIncluded >" + IsTaxIncluded.ToString() + "</IsTaxIncluded>";
+            //}
 
-            if (SalesTaxCodeRef != null)
-            {
-                xml += SalesTaxCodeRef.toXmlRef();
-            }
+            //if (SalesTaxCodeRef != null)
+            //{
+            //    xml += SalesTaxCodeRef.toXmlRef();
+            //}
 
-
+            
+            
+             
+             
+              
+               
+                
             if (ExchangeRate != null)
             {
                 System.Globalization.CultureInfo myInfo = System.Globalization.CultureInfo.CreateSpecificCulture("en-GB");
                 string val = ExchangeRate.ToString();
                 double value = Double.Parse(val, myInfo);                
-                xml += Environment.NewLine + "<ExchangeRate>" + value.ToString("0.00",myInfo) + "</ExchangeRate>";
+               toXML.Append( "<ExchangeRate>" + value.ToString("0.00",myInfo) + "</ExchangeRate>");
             }
             if (ExternalGUID != string.Empty)
             {
-                xml += " <ExternalGUID >" + ExternalGUID + "</ExternalGUID>";
+                toXML.Append( " <ExternalGUID >" + ExternalGUID + "</ExternalGUID>");
             }
             foreach (BillExpenseLine line in expenseLines)
             {
-                xml += Environment.NewLine + line.toXml();
+                toXML.Append( line.toXml());
             }
 
             foreach (BillItemLine line in itemLines)
             {
-                xml += Environment.NewLine + line.toXml();
+                 toXML.Append( Environment.NewLine + line.toXml());
             }
 
-            xml += Environment.NewLine + "</BillAdd>";
-            xml += Environment.NewLine + "</BillAddRq>";
-            xml += Environment.NewLine + "</QBXMLMsgsRq>";
-            xml += Environment.NewLine + "</QBXML>";
+            toXML.Append( "</BillAdd>");
+            toXML.Append("</BillAddRq>");
+            toXML.Append("</QBXMLMsgsRq>");
+            toXML.Append("</QBXML>");
 
 
-            return xml;
+            return toXML.ToString();
         }
 
 
@@ -519,6 +529,10 @@ namespace Quickbook
                         return false;
                     }
                 }
+                else {
+                    err = statusMessage;
+                    return false;
+                }
              
             }
             catch (Exception ex)
@@ -526,8 +540,6 @@ namespace Quickbook
                 throw new Exception("Error al Obtener Bill registros de Quickbooks: " + ex.Message);
             }
 
-
-            return false;
         }
         public override List<Abstract> GetRecords(ref string err, bool includeSublevel)
         {

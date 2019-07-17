@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" standalone="yes"?>
+<?xml version="1.0" standalone="yes"?>
 <root>
 
   <proceso id="1">
@@ -326,8 +326,8 @@
               <p field="3" >ListID</p>
               <p field="4" type="Class/ListID">ParentRef</p>
               <p field="5">Sublevel</p>
-              <p field="6">IsActive</p>
-              <p field="7" key="true" type="Configuration">QuickbooksCompania</p>
+              <p field="6">IsActive</p>              
+              <p field="7" key="true" type="Configuration">QuickbooksCompania</p>              
             </parametros>
           </respuesta>
         </respuestas>

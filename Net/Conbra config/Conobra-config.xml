@@ -122,7 +122,7 @@
               <p field="12">ListID</p>
               <p field="13" key="true" type="Configuration">QuickbooksCompania</p>
               <p field="14">CompanyName</p>
-              
+
             </parametros>
           </respuesta>
           <respuesta tipo="import_quickbase" categoria="Create">
@@ -154,7 +154,63 @@
     </ejecucion>
 
   </proceso>
-  <!--<proceso id="3">
+
+
+
+  <proceso id="3" includeSublevel="true">
+    <nombre>Proyectos a Quickbooks</nombre>
+    <entrada tipo="quickbase">
+      <quickbook></quickbook>
+      <quickbase>
+        <access_token>0823871b4f16ca3cd7d6f6259690ca20</access_token>
+        <parametros>
+          <p field="B">NOMBRE</p>        
+        </parametros>
+      </quickbase>
+    </entrada>
+    <acciones>
+      <accion id="cust001" tipo="add_quickbook">
+        <nombre>Crear Proyecto</nombre>
+        <quickbook_tabla>Customer</quickbook_tabla>
+        <parametros>          
+          <p field="Customer/ListID" type="Customer" required="true">ParentRef</p>
+          <p field="Name" required="true">Name</p>          
+          <p field="IsActive" required="false">IsActive</p>
+          <p field="QuickbooksCompania" key="true" type="Configuration">QuickbooksCompania</p>
+          <p field="Currency/FullName" type="Currency">CurrencyRef</p>          
+          <p field="RecordID" key="true">RecordID</p>          
+          <p field="JobStartDate" type="DateTime" required="false">JobStartDate</p>
+        </parametros>
+        <respuestas>
+          <respuesta tipo="import_quickbase" categoria="Save">
+            <access_token>0823871b4f16ca3cd7d6f62596901000</access_token>
+            <parametros>
+              <p field="1" key="true">RecordID</p>
+              <p field="2" >ListID</p>
+            </parametros>
+          </respuesta>
+          <respuesta tipo="import_quickbase" categoria="Log">
+            <access_token>8fc1a0edf52f44ba5cb7c7809613cbdd</access_token>
+            <parametros>            
+              <p field="6" key="true">ACCION</p>
+              <p field="7" >SEND</p>
+              <p field="8" >RECIVED</p>
+              <p field="9" >SUCCESS</p>
+            </parametros>
+          </respuesta>
+        </respuestas>        
+      </accion>
+    </acciones>
+    <ejecucion tipo="intervalo">
+      <intervalo tipo="segundo">60</intervalo>
+      <fecha_unica>2019-04-09</fecha_unica>
+    </ejecucion>
+  </proceso>
+  
+  
+  
+    
+  <!--<proceso id="4">
     <nombre>Importar Recibos a Quickbooks</nombre>
     <entrada tipo="quickbase">
       <quickbook></quickbook>
