@@ -247,9 +247,10 @@ namespace SmartQuickbook.Helper
                 }
             }
         }
-        public static void ImportToQuickBase(List<ProcesoRespuesta> ConfiguracionRespuestaSave, List<ProcesoRespuesta> ConfiguracionRespuestaLog, Dictionary<string, List<string>> RespuestasSave, Dictionary<string, List<string>> RespuestasLog, ref string err)
+        public static string ImportToQuickBase(List<ProcesoRespuesta> ConfiguracionRespuestaSave, List<ProcesoRespuesta> ConfiguracionRespuestaLog, Dictionary<string, List<string>> RespuestasSave, Dictionary<string, List<string>> RespuestasLog, ref string err)
         {
             //Realizar el import
+            string ServicioRespuesta = string.Empty;
             wClient.WService ws = new wClient.WService();
 
             if (RespuestasSave.Count > 0)
@@ -259,6 +260,7 @@ namespace SmartQuickbook.Helper
                     if (respuesta.tipo == "import_quickbase")
                     {
                         List<string> Responses = RespuestasSave[respuesta.quickbaseAccessToken];
+                        ServicioRespuesta = "Cantidad de registros a importar fueron :" + Responses.Count();
                         string csv = string.Join(Environment.NewLine, Responses.ToArray());
                         bool import = ws.importFromCsv(respuesta.quickbaseAccessToken, csv, out err);
 
@@ -274,12 +276,15 @@ namespace SmartQuickbook.Helper
                     if (respuestaLog.tipo == "import_quickbase")
                     {
                         List<string> Responses = RespuestasLog[respuestaLog.quickbaseAccessToken];
+                        ServicioRespuesta += "\n Cantidad de registros a importar al log fueron :" + Responses.Count();
                         string csv = string.Join(Environment.NewLine, Responses.ToArray());
                         bool import = ws.importFromCsv(respuestaLog.quickbaseAccessToken, csv, out err);
 
                     }
                 }
             }
+
+            return ServicioRespuesta;
         }
         public static void GetValuesToAdd(ProcesoAccion accion, Hashtable pairs, ref List<string> fieldNames, ref  List<object> fieldValues, ref Dictionary<string, string> fieldNameExternals, ref Dictionary<string, string> llaveQuickbase, ref string fieldRiquiered, ref bool Requiered, ref StringBuilder mostrarMensaje, ref string err)
         {
@@ -1023,8 +1028,9 @@ namespace SmartQuickbook.Helper
             }
             //Toupdate
             
-            HelperTask.ImportToQuickBase(ConfiguracionRespuestaSave, ConfiguracionRespuestaLog, RespuestasSave, RespuestasLog, ref err);
-            return "Finalizo proceso de actualizacion Mensaje de importacion:" + err + Environment.NewLine;
+           string ResultadoMensaje=  HelperTask.ImportToQuickBase(ConfiguracionRespuestaSave, ConfiguracionRespuestaLog, RespuestasSave, RespuestasLog, ref err);
+
+            return ResultadoMensaje + Environment.NewLine+"Finalizo proceso de actualizacion Mensaje de importacion:" + err + Environment.NewLine;
         }
         public static string CreateQuickbookToQuickbaseNewVendor(ProcesoAccion accion, List<Abstract> quickbookRecords, ref string err)
         {
@@ -1046,9 +1052,9 @@ namespace SmartQuickbook.Helper
                 }
             }
 
-            HelperTask.ImportToQuickBase(ConfiguracionRespuestaCreate, null, RespuestasCreate, null, ref err);
+           string RespuestaServicio= HelperTask.ImportToQuickBase(ConfiguracionRespuestaCreate, null, RespuestasCreate, null, ref err);
 
-            return "Finalizo proceso de registro " + Environment.NewLine + "Mensaje de importancion:"+err;
+            return RespuestaServicio+ Environment.NewLine+"Finalizo proceso de registro " + Environment.NewLine + "Mensaje de importancion:"+err;
         }
         public static bool CargadoDetalle(Abstract quickbookRecord, ProcesoAccion accion, string Details, ref string err)
         {

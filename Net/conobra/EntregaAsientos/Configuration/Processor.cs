@@ -47,6 +47,10 @@ namespace SmartQuickbook.Configuration
                         {
                             P.tipoIntervalo = node["ejecucion"]["intervalo"].Attributes["tipo"].Value;
                             P.tipoIntervaloValor = node["ejecucion"]["intervalo"].InnerText;
+                            if (node["ejecucion"]["hora_inicio"] != null) {
+                                P.horaInicio = node["ejecucion"]["hora_inicio"].InnerText;
+                            }
+                            
                         }
                     }
 
@@ -278,6 +282,8 @@ namespace SmartQuickbook.Configuration
 
         public string tipoIntervalo = "";
         public string tipoIntervaloValor = "";
+        public string horaInicio = "";
+        public bool esIniciado = false;
 
         // -----------------------------
         public string estado = "";

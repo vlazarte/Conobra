@@ -66,7 +66,8 @@
       </accion>
     </acciones>
     <ejecucion tipo="intervalo">
-      <intervalo tipo="segundo">60</intervalo>
+      <intervalo tipo="segundo">300</intervalo>
+      <hora_inicio tipo="time">2:30 pm</hora_inicio>
       <fecha_unica>2019-04-09</fecha_unica>
     </ejecucion>
 
@@ -147,12 +148,13 @@
       </accion>
     </acciones>
     <ejecucion tipo="intervalo">
-      <intervalo tipo="segundo">180</intervalo>
+      <intervalo tipo="segundo">300</intervalo>
+      <hora_inicio tipo="time">2:31 pm</hora_inicio>
       <fecha_unica>2019-04-09</fecha_unica>
     </ejecucion>
 
   </proceso>
-  <!--<proceso id="3">
+  <proceso id="3">
       <nombre>Importar Recibos a Quickbooks</nombre>
       <entrada tipo="quickbase">
         <quickbook></quickbook>
@@ -209,10 +211,11 @@
         </accion>
       </acciones>
       <ejecucion tipo="intervalo">
-        <intervalo tipo="segundo">120</intervalo>
+        <intervalo tipo="segundo">300</intervalo>
+        <hora_inicio tipo="time">2:32 pm</hora_inicio>
         <fecha_unica>2019-04-09</fecha_unica>
       </ejecucion>
-    </proceso>-->
+    </proceso>
 
   <proceso id="1">
     <nombre>Importar Proveedores a quickbase</nombre>
@@ -376,29 +379,7 @@
       <fecha_unica>2019-04-09</fecha_unica>
     </ejecucion>
   </proceso>
-
-
-
 </root>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

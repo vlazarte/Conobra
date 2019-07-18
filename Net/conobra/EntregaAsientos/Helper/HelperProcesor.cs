@@ -146,12 +146,7 @@ namespace SmartQuickbook.Helper
                                             if (ConfiguracionRespuestaSave.Count > 0)
                                             {
                                                 HelperTask.AddConfigSave(ConfiguracionRespuestaSave, llaveQuickbase, ObjectQuickbook, ref err, ref RespuestasSave);
-                                            }
-                                            /*if (ConfiguracionRespuestaLog.Count > 0)
-                                            {
-                                                string log = accion.tipo + accion.quickbookTabla + "," + xmlSend + "," + xmlRecived + "," + "1";
-                                                HelperTask.AddConfigLog(ConfiguracionRespuestaLog, log, ref RespuestasLog);
-                                            }*/
+                                            }                                           
                                         }
                                         else
                                         {
@@ -194,12 +189,7 @@ namespace SmartQuickbook.Helper
 
                                     }
                                     catch (Exception ex)
-                                    {
-                                        //if (ConfiguracionRespuestaLog.Count > 0)
-                                        //{
-                                        //    string log = accion.tipo +" " +accion.quickbookTabla + "," + "Genero excepcion :Al crear el objeto" + "," + ex.Message + "," + "0";
-                                        //    HelperTask.AddConfigLog(ConfiguracionRespuestaLog, log, ref RespuestasLog);
-                                        //}
+                                    {                                        
                                         mostrarMensaje.Append("Error al Procesar los datos: " + ex.Message + Environment.NewLine);
                                         
                                     }
@@ -215,11 +205,8 @@ namespace SmartQuickbook.Helper
                                     }
                                 }
                             }
-
-
-
                         }
-                        HelperTask.ImportToQuickBase(ConfiguracionRespuestaSave, ConfiguracionRespuestaLog, RespuestasSave, RespuestasLog, ref err);
+                     mostrarMensaje.Append(   HelperTask.ImportToQuickBase(ConfiguracionRespuestaSave, ConfiguracionRespuestaLog, RespuestasSave, RespuestasLog, ref err));
 
                     }
                 }
