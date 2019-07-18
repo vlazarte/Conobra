@@ -326,8 +326,49 @@
               <p field="3" >ListID</p>
               <p field="4" type="Class/ListID">ParentRef</p>
               <p field="5">Sublevel</p>
-              <p field="6">IsActive</p>              
-              <p field="7" key="true" type="Configuration">QuickbooksCompania</p>              
+              <p field="6">IsActive</p>
+              <p field="7" key="true" type="Configuration">QuickbooksCompania</p>
+            </parametros>
+          </respuesta>
+        </respuestas>
+      </accion>
+    </acciones>
+    <ejecucion tipo="manual">
+      <intervalo tipo="segundo">60</intervalo>
+      <fecha_unica>2019-04-09</fecha_unica>
+    </ejecucion>
+  </proceso>
+
+  <proceso id="4" includeSublevel="true">
+    <nombre>Importar Proyectos a quickbase</nombre>
+    <entrada tipo="quickbooks">
+      <quickbook></quickbook>
+      <quickbase>
+        <access_token></access_token>
+        <parametros>
+          <p field="B">NOMBRE</p>
+        </parametros>
+      </quickbase>
+    </entrada>
+    <acciones>
+      <accion id="cust001" tipo="add_quickbase">
+        <nombre>Importar Projectos a quickbase</nombre>
+        <quickbook_tabla>Customer</quickbook_tabla>
+        <parametros>
+        </parametros>
+        <respuestas>
+          <respuesta tipo="import_quickbase" categoria="Create">
+            <access_token>3a847e17ba9e87559ad0bb7110000</access_token>
+            <parametros>
+              <p field="1" key="true" type="Configuration">QuickbooksCompania</p>
+              <p field="2">ListID</p>
+              <p field="3">Name</p>
+              <p field="4">FullName</p>
+              <p field="5">IsActive</p>              
+              <p field="6" type="Currency/FullName">CurrencyRef</p>              
+              <p field="7" type="Customer/ListID">ParentRef</p>
+              <p field="8" type="Customer/FullName">ParentRef</p>
+              <p field="9">JobDesc</p>
             </parametros>
           </respuesta>
         </respuestas>

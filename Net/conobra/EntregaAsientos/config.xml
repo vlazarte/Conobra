@@ -1,12 +1,11 @@
 ﻿<?xml version="1.0" standalone="yes"?>
 <root>
-
   <proceso id="1">
     <nombre>Proveedores a Quickbase</nombre>
     <entrada tipo="quickbooks">
       <quickbook></quickbook>
       <quickbase>
-        <access_token>3a847e17ba9e87559ad0bb71fac12000</access_token>
+        <access_token>3a847e17ba9e87559ad0bb71fac13000</access_token>
         <parametros>
           <p field="B">NOMBRE</p>
         </parametros>
@@ -20,7 +19,7 @@
           <p field="RecordID" key ="true">RecordID</p>
           <p field="Name" required="true">Name</p>
           <p field="CompanyName">CompanyName</p>
-          <p field="Custom/Name" type="Custom/ID:">ID</p>
+          <p field="Custom/Name" type="Custom/ID">ID</p>
           <p field="AdditionalContactRef/MainPhone" type="AdditionalContactRef">AdditionalContactRef</p>
           <p field="Email">Email</p>
           <p field="ListID">ListID</p>
@@ -31,12 +30,12 @@
         </parametros>
         <respuestas>
           <respuesta tipo="import_quickbase" categoria="Save">
-            <access_token>3a847e17ba9e87559ad0bb71fac12200</access_token>
+            <access_token>3a847e17ba9e87559ad0bb71fac13001</access_token>
             <parametros>
               <p field="1" key="true">RecordID</p>
               <p field="2">Name</p>
               <p field="3">CompanyName</p>
-              <p field="4" type="Custom/ID:">ID</p>
+              <p field="4" type="Custom/ID">ID</p>
               <p field="5" type="AdditionalContactRef/ContactName" >phone</p>
               <p field="6">Email</p>
               <p field="7" >ListID</p>
@@ -47,11 +46,11 @@
             </parametros>
           </respuesta>
           <respuesta tipo="import_quickbase" categoria="Create">
-            <access_token>3a847e17ba9e87559ad0bb71fac12100</access_token>
+            <access_token>3a847e17ba9e87559ad0bb71fac13002</access_token>
             <parametros>
               <p field="1">Name</p>
               <p field="2">CompanyName</p>
-              <p field="3" type="Custom/ID:">ID</p>
+              <p field="3" type="Custom/ID">ID</p>
               <p field="4" type="AdditionalContactRef/ContactValue">phone</p>
               <p field="5">Email</p>
               <p field="6">ListID</p>
@@ -67,18 +66,17 @@
       </accion>
     </acciones>
     <ejecucion tipo="intervalo">
-      <intervalo tipo="segundo">120</intervalo>
+      <intervalo tipo="segundo">60</intervalo>
       <fecha_unica>2019-04-09</fecha_unica>
     </ejecucion>
 
   </proceso>
-
   <proceso id="2" includeSublevel="false">
     <nombre>Clientes a Quickbase</nombre>
     <entrada tipo="quickbooks">
       <quickbook></quickbook>
       <quickbase>
-        <access_token>3a847e17ba9e87559ad0bb71fac15000</access_token>
+        <access_token>3a847e17ba9e87559ad0bb71fac16000</access_token>
         <parametros>
           <p field="B">NOMBRE</p>
         </parametros>
@@ -91,7 +89,7 @@
         <parametros>
           <p field="RecordID" key ="true">RecordID</p>
           <p field="Name" required="true">Name</p>
-          <p field="Custom/Name" type="Custom/ID:">ID</p>
+          <p field="Custom/Name" type="Custom/ID">ID</p>
           <p field="Address/Addr1" type="Address">BillAddress</p>
           <p field="Email">Email</p>
           <p field="Phone">Phone</p>
@@ -106,11 +104,11 @@
         </parametros>
         <respuestas>
           <respuesta tipo="import_quickbase" categoria="Save">
-            <access_token>3a847e17ba9e87559ad0bb71fac15200</access_token>
+            <access_token>3a847e17ba9e87559ad0bb71fac16200</access_token>
             <parametros>
               <p field="1" key="true">RecordID</p>
               <p field="2">Name</p>
-              <p field="3" type="Custom/ID:">ID</p>
+              <p field="3" type="Custom/ID">ID</p>
               <p field="4" type="Address/Addr1">BillAddress</p>
               <p field="5">Email</p>
               <p field="6">Phone</p>
@@ -126,10 +124,10 @@
             </parametros>
           </respuesta>
           <respuesta tipo="import_quickbase" categoria="Create">
-            <access_token>3a847e17ba9e87559ad0bb71fac15300</access_token>
+            <access_token>3a847e17ba9e87559ad0bb71fac16300</access_token>
             <parametros>
               <p field="1">Name</p>
-              <p field="2" type="Custom/ID:">ID</p>
+              <p field="2" type="Custom/ID">ID</p>
               <p field="3" type="Address/Addr1">BillAddress</p>
               <p field="4">Email</p>
               <p field="5">Phone</p>
@@ -149,72 +147,73 @@
       </accion>
     </acciones>
     <ejecucion tipo="intervalo">
-      <intervalo tipo="segundo">140</intervalo>
+      <intervalo tipo="segundo">180</intervalo>
       <fecha_unica>2019-04-09</fecha_unica>
     </ejecucion>
 
   </proceso>
   <!--<proceso id="3">
-    <nombre>Importar Recibos a Quickbooks</nombre>
-    <entrada tipo="quickbase">
-      <quickbook></quickbook>
-      <quickbase>
-        <access_token>0823871b4f16ca3cd7d6f62596903000</access_token>
-        <parametros>
-          <p field="B">NOMBRE</p>
-        </parametros>
-      </quickbase>
-    </entrada>
-    <acciones>
-      <accion id="cust001" tipo="add_quickbook">
-        <nombre>Crear Bill</nombre>
-        <quickbook_tabla>Bill</quickbook_tabla>
-        <parametros>
-          <p field="RecordID" key="true">RecordID</p>
-          <p field="VendorRef/FullName" type="Vendor" required="true">VendorRef</p>
-          <p field="RefNumber" required="true">RefNumber</p>
-          <p field="txnDate" type="DateTime" required="true">txnDate</p>
-          <p field="QuickbooksCompania" key="true" type="Configuration">QuickbooksCompania</p>
-          <p field="DueDate" type="DateTime" required="false">DueDate</p>
-          <p field="ExchangeRate" required="true" type="Double">ExchangeRate</p>
-          <p field="Memo" required="false">Memo</p>
-        </parametros>
-        <detail>
-          <quickbook_tabla>BillExpenseLine</quickbook_tabla>
+      <nombre>Importar Recibos a Quickbooks</nombre>
+      <entrada tipo="quickbase">
+        <quickbook></quickbook>
+        <quickbase>
+          <access_token>0823871b4f16ca3cd7d6f62596904000</access_token>
           <parametros>
-            <p field="RecordID" key="true" >DET_RID</p>
-            <p field="DET_PADRE" key="true">DET_PADRE</p>
-            <p field="AccountRef/FullName" type="Account" >AccountRef</p>
-            <p field="Amount" type="Double">Amount</p>
-            <p field="CustomerRef/ListID" type="Customer">CustomerRef</p>
-            <p field="ClassRef/FullName" type="Class">ClassRef</p>
+            <p field="B">NOMBRE</p>
           </parametros>
-        </detail>
-        <respuestas>
-          <respuesta tipo="import_quickbase" categoria="Save">
-            <access_token>0823871b4f16ca3cd7d6f62596903100</access_token>
+        </quickbase>
+      </entrada>
+      <acciones>
+        <accion id="cust001" tipo="add_quickbook">
+          <nombre>Crear Bill</nombre>
+          <quickbook_tabla>Bill</quickbook_tabla>
+          <parametros>
+            <p field="RecordID" key="true">RecordID</p>
+            <p field="VendorRef/FullName" type="Vendor" required="true">VendorRef</p>
+            <p field="RefNumber" required="true">RefNumber</p>
+            <p field="txnDate" type="DateTime" required="true">txnDate</p>
+            <p field="QuickbooksCompania" key="true" type="Configuration">QuickbooksCompania</p>
+            <p field="DueDate" type="DateTime" required="false">DueDate</p>
+            <p field="ExchangeRate" required="true" type="Double">ExchangeRate</p>
+            <p field="Memo" required="false">Memo</p>
+          </parametros>
+          <detail>
+            <quickbook_tabla>BillExpenseLine</quickbook_tabla>
             <parametros>
-              <p field="1" key="true">RecordID</p>
-              <p field="2" >ListID</p>
+              <p field="RecordID" key="true" >DET_RID</p>
+              <p field="DET_PADRE" key="true">DET_PADRE</p>
+              <p field="AccountRef/FullName" type="Account" >AccountRef</p>
+              <p field="Amount" type="Double">Amount</p>
+              <p field="CustomerRef/ListID" type="Customer">CustomerRef</p>
+              <p field="ClassRef/FullName" type="Class">ClassRef</p>
             </parametros>
-          </respuesta>
-          <respuesta tipo="import_quickbase" categoria="Log">
-            <access_token>8fc1a0edf52f44ba5cb7c7809613cbdd</access_token>
-            <parametros>
-              <p field="6" key="true">ACCION</p>
-              <p field="7" >SEND</p>
-              <p field="8" >RECIVED</p>
-              <p field="9" >SUCCESS</p>
-            </parametros>
-          </respuesta>
-        </respuestas>
-      </accion>
-    </acciones>
-    <ejecucion tipo="intervalo">
-      <intervalo tipo="segundo">120</intervalo>
-      <fecha_unica>2019-04-09</fecha_unica>
-    </ejecucion>
-  </proceso>-->
+          </detail>
+          <respuestas>
+            <respuesta tipo="import_quickbase" categoria="Save">
+              <access_token>0823871b4f16ca3cd7d6f62596904001</access_token>
+              <parametros>
+                <p field="1" key="true">RecordID</p>
+                <p field="2" >ListID</p>
+              </parametros>
+            </respuesta>
+            <respuesta tipo="import_quickbase" categoria="Log">
+              <access_token>8fc1a0edf52f44ba5cb7c7809613cbdd</access_token>
+              <parametros>
+                <p field="6" key="true">ACCION</p>
+                <p field="7" >SEND</p>
+                <p field="8" >RECIVED</p>
+                <p field="9" >SUCCESS</p>
+              </parametros>
+            </respuesta>
+          </respuestas>
+        </accion>
+      </acciones>
+      <ejecucion tipo="intervalo">
+        <intervalo tipo="segundo">120</intervalo>
+        <fecha_unica>2019-04-09</fecha_unica>
+      </ejecucion>
+    </proceso>-->
+
   <proceso id="1">
     <nombre>Importar Proveedores a quickbase</nombre>
     <entrada tipo="quickbooks">
@@ -238,7 +237,7 @@
             <parametros>
               <p field="1">Name</p>
               <p field="2">CompanyName</p>
-              <p field="3" type="Custom/ID:">ID</p>
+              <p field="3" type="Custom/ID">ID</p>
               <p field="4" type="AdditionalContactRef/ContactValue">phone</p>
               <p field="5">Email</p>
               <p field="6">ListID</p>
@@ -280,7 +279,7 @@
               <p field="1" key="true" type="Configuration">QuickbooksCompania</p>
               <p field="2">ListID</p>
               <p field="3">Name</p>
-              <p field="4" type="Custom/ID:">ID</p>
+              <p field="4" type="Custom/ID">ID</p>
               <p field="5" type="Address/Addr1">BillAddress</p>
               <p field="6">Email</p>
               <p field="7">Phone</p>
@@ -289,7 +288,6 @@
               <p field="10" type="Currency/FullName">CurrencyRef</p>
               <p field="11">IsActive</p>
               <p field="12" type="Terms/FullName">TermsRef</p>
-              <p field="13">CompanyName</p>
             </parametros>
           </respuesta>
         </respuestas>
@@ -338,7 +336,73 @@
       <fecha_unica>2019-04-09</fecha_unica>
     </ejecucion>
   </proceso>
+  <proceso id="4" includeSublevel="true">
+    <nombre>Importar Proyectos a quickbase</nombre>
+    <entrada tipo="quickbooks">
+      <quickbook></quickbook>
+      <quickbase>
+        <access_token></access_token>
+        <parametros>
+          <p field="B">NOMBRE</p>
+        </parametros>
+      </quickbase>
+    </entrada>
+    <acciones>
+      <accion id="cust001" tipo="add_quickbase">
+        <nombre>Importar Projectos a quickbase</nombre>
+        <quickbook_tabla>Customer</quickbook_tabla>
+        <parametros>
+        </parametros>
+        <respuestas>
+          <respuesta tipo="import_quickbase" categoria="Create">
+            <access_token>3a847e17ba9e87559ad0bb7110000</access_token>
+            <parametros>
+              <p field="1" key="true" type="Configuration">QuickbooksCompania</p>
+              <p field="2">ListID</p>
+              <p field="3">Name</p>
+              <p field="4">FullName</p>
+              <p field="5">IsActive</p>
+              <p field="6" type="Currency/FullName">CurrencyRef</p>
+              <p field="7" type="Customer/ListID">ParentRef</p>
+              <p field="8" type="Customer/FullName">ParentRef</p>
+              <p field="9">JobDesc</p>
+            </parametros>
+          </respuesta>
+        </respuestas>
+      </accion>
+    </acciones>
+    <ejecucion tipo="manual">
+      <intervalo tipo="segundo">60</intervalo>
+      <fecha_unica>2019-04-09</fecha_unica>
+    </ejecucion>
+  </proceso>
+
+
+
 </root>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

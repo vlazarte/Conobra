@@ -382,9 +382,32 @@
     </params>
   </access>
 
-  <!--Proceso 3 manual Clases -->
-  
-  
+  <!--Proceso 3 Fin manual Clases -->
+
+  <!--Proceso 4  manual Proyectos -->
+
+  <access id="3a847e17ba9e87559ad0bb7110000">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bpqnu7xg5</dbid>
+    <query>-1</query>
+    <qid>-1</qid>
+    <clist>6.7.8.9.10.11.12.13.14</clist>
+    <params>
+      <p field="6">nombreCompania</p>
+      <p field="7">QuickbookID</p>
+      <p field="8">Name</p>
+      <p field="9">FullName</p>
+      <p field="10">IsActive</p>
+      <p field="11">CurrencyRefFullName</p>      
+      <p field="12">ParentRefListID</p>
+      <p field="13">ParentRefFullName</p>
+      <p field="14">JobDesc</p>    
+    </params>
+  </access>
+
+  <!--Proceso 4 FIN manual Proyectos -->
   
   
   

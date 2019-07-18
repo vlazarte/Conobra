@@ -69,9 +69,9 @@ namespace SmartQuickbook
             btnReference = taskbutton;
             taskbutton.Click += new System.EventHandler(this.btnClick_Click);
             
-            ProcessControl PC = new ProcessControl(proceso);
-            proceso.controlUI = PC;
-            pnlLog.Controls.Add(PC);
+            //ProcessControl PC = new ProcessControl(proceso);
+            //proceso.controlUI = PC;
+           // pnlLog.Controls.Add(PC);
         }
 
         private void pnlTareas_Paint(object sender, PaintEventArgs e)
@@ -136,24 +136,29 @@ namespace SmartQuickbook
             if (proceso.entrada.tipo == "quickbase")
             {
               
-               BeginInvoke((Action)(() =>
+             /*  BeginInvoke((Action)(() =>
                {
                    proceso.controlUI.MostrarMensaje("Buscando datos de Quickbase");
-               }));
+               }));*/
+                lblLog.Text = string.Empty;
+                lblLog.Text = "Buscando datos de Quickbase \n";
                string mensajes = HelperProcesor.ProcesoEjecutarToQuickBase(proceso);
                 
-              
+              /*
                BeginInvoke((Action)(() =>
                {
                    proceso.controlUI.MostrarMensaje(mensajes);
                }));
                 
-              
+              */
+               lblLog.Text += mensajes + "\n";
 
-               BeginInvoke((Action)(() =>
+              /* BeginInvoke((Action)(() =>
                {
                    proceso.controlUI.MostrarMensaje("Finalizo Proceso");
-               }));
+               }));*/
+
+               lblLog.Text += " Finalizo Proceso \n";
             }
             else
             {
@@ -161,21 +166,26 @@ namespace SmartQuickbook
                 if (proceso.entrada.tipo == "quickbooks")
                 {
                     
-                        
+                      /*  
                         BeginInvoke((Action)(() =>
                         {
                             proceso.controlUI.MostrarMensaje("Buscando datos de Quickbooks");
-                        }));
+                        }));*/
+                    lblLog.Text = string.Empty;
+                    lblLog.Text = "Buscando datos de Quickbooks \n";
                         string mensajes = HelperProcesor.ProcesoEjecutarToQuickBook(proceso);
-                        BeginInvoke((Action)(() =>
+
+                        lblLog.Text += mensajes + "\n";
+                        lblLog.Text += " Finalizo Proceso \n";
+                        /*BeginInvoke((Action)(() =>
                         {
                             proceso.controlUI.MostrarMensaje(mensajes);
-                        }));
+                        }));*/
 
-                        BeginInvoke((Action)(() =>
+                    /*    BeginInvoke((Action)(() =>
                         {
                             proceso.controlUI.MostrarMensaje("Finalizo Proceso");
-                        }));
+                        }));*/
                                     
                         
                     

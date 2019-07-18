@@ -33,6 +33,7 @@
             this.lblResultado = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblLog = new System.Windows.Forms.Label();
             this.pnlLog.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,6 +49,7 @@
             // pnlLog
             // 
             this.pnlLog.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnlLog.Controls.Add(this.lblLog);
             this.pnlLog.Controls.Add(this.lblResultado);
             this.pnlLog.Location = new System.Drawing.Point(357, 41);
             this.pnlLog.Name = "pnlLog";
@@ -81,6 +83,15 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "RESULTADO DEL PROCESO";
             // 
+            // lblLog
+            // 
+            this.lblLog.AutoSize = true;
+            this.lblLog.Location = new System.Drawing.Point(3, 13);
+            this.lblLog.Name = "lblLog";
+            this.lblLog.Size = new System.Drawing.Size(35, 13);
+            this.lblLog.TabIndex = 1;
+            this.lblLog.Text = "Iniciar";
+            // 
             // TareasManuales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -107,5 +118,6 @@
         private System.Windows.Forms.Label lblResultado;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblLog;
     }
 }

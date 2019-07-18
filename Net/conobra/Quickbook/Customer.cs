@@ -1115,8 +1115,8 @@ namespace Quickbook
                 if (node["ParentRef"] != null)
                 {
                     toUpdate.ParentRef = new Customer();
-                    toUpdate.ParentRef.ListID = node["ClassRef"].FirstChild.InnerText;
-                    toUpdate.ParentRef.FullName = node["ClassRef"].LastChild.InnerText;
+                    toUpdate.ParentRef.ListID = node["ParentRef"].FirstChild.InnerText;
+                    toUpdate.ParentRef.FullName = node["ParentRef"].LastChild.InnerText;
                 }
                 if (node["CompanyName"] != null)
                 {
