@@ -175,117 +175,118 @@ namespace SmartQuickbook
         public void AsyncOperation_DoWork(object sender, DoWorkEventArgs e)
         {
             Proceso proceso = (Proceso)e.Argument;
-                      
-            
-                proceso.estado = "En ejecucion...";
-                proceso.enEjecucion = true;
-                proceso.ultimaEjecucion = DateTime.Now;
 
-                BeginInvoke((Action)(() =>
+
+            proceso.estado = "En ejecucion...";
+            proceso.enEjecucion = true;
+            proceso.ultimaEjecucion = DateTime.Now;
+
+            BeginInvoke((Action)(() =>
+            {
+                proceso.controlUI.UltimaEjecucion();
+                proceso.controlUI.ImagenLoading(true);
+            }));
+
+            BeginInvoke((Action)(() =>
+            {
+                CargarListaProcesos();
+            }));
+
+            Task taskAsync = null;
+            BackgroundWorker worker = (BackgroundWorker)sender;
+
+            taskAsync = Task.Factory.StartNew(() =>
+            {
+                if (!proceso.esIniciado)
                 {
-                    proceso.controlUI.UltimaEjecucion();
-                    proceso.controlUI.ImagenLoading(true);
-                }));
+                    string hora = DateTime.Now.ToString("h:mm tt");
+                    //MessageBox.Show(proceso.horaInicio.ToUpper() + "-" + hora.ToUpper());
+                    if (proceso.horaInicio.ToUpper() == hora.ToUpper())
+                    {
+                        proceso.esIniciado = true;
+                        EjecutarProceso(proceso);
+                    }
 
+                }
+                else
+                {
+                    EjecutarProceso(proceso);
+                }
+
+
+
+            });
+
+            taskAsync.ContinueWith((Success) =>
+            {
+                proceso.estado = "Terminado";
                 BeginInvoke((Action)(() =>
                 {
                     CargarListaProcesos();
                 }));
 
-                Task taskAsync = null;
-                BackgroundWorker worker = (BackgroundWorker)sender;
-
-                taskAsync = Task.Factory.StartNew(() =>
+                if (proceso.tipoEjecucion == Proceso.TIPO_EJECUCION_INTERVALO)
                 {
-                    if (!proceso.esIniciado)
+                    int segundos = 0;
+                    if (proceso.tipoIntervalo == Proceso.TIPO_INTERVALO_SEGUNDOS)
                     {
-                        string hora = DateTime.Now.ToString("h:mm tt");
-                        //MessageBox.Show(proceso.horaInicio.ToUpper() + "-" + hora.ToUpper());
-                        if (proceso.horaInicio.ToUpper() == hora.ToUpper())
-                        {
-                            proceso.esIniciado = true;
-                            EjecutarProceso(proceso);
-                        }
-                        
-                    }
-                    else {
-                        EjecutarProceso(proceso);
-                    }
 
-
-                    
-                });
-
-                taskAsync.ContinueWith((Success) =>
-                {
-                    proceso.estado = "Terminado";
-                    BeginInvoke((Action)(() =>
-                    {
-                        CargarListaProcesos();
-                    }));
-
-                    if (proceso.tipoEjecucion == Proceso.TIPO_EJECUCION_INTERVALO)
-                    {
-                        int segundos = 0;
-                        if (proceso.tipoIntervalo == Proceso.TIPO_INTERVALO_SEGUNDOS)
+                        if (proceso.esIniciado)
                         {
-                            
-                            if (proceso.esIniciado)
-                            {
-                                segundos = Int32.Parse(proceso.tipoIntervaloValor);
-                                proceso.siguienteEjecucion = DateTime.Now.AddSeconds(double.Parse(proceso.tipoIntervaloValor));
-                            }
-                            else
-                            {
-                                segundos = Int32.Parse("60");
-                                proceso.siguienteEjecucion = DateTime.Now.AddSeconds(double.Parse("60"));
-                            }
-                            
-                        }
-                        else if (proceso.tipoIntervalo == Proceso.TIPO_INTERVALO_MINUTOS)
-                        {
-                            segundos = Int32.Parse(proceso.tipoIntervaloValor) * 60;
-                            proceso.siguienteEjecucion = DateTime.Now.AddMinutes(double.Parse(proceso.tipoIntervaloValor));
-                        }
-                        else if (proceso.tipoIntervalo == Proceso.TIPO_INTERVALO_HORAS)
-                        {
-                            segundos = Int32.Parse(proceso.tipoIntervaloValor) * 3600;
-                            proceso.siguienteEjecucion = DateTime.Now.AddHours(double.Parse(proceso.tipoIntervaloValor));
-                        }
-                        else if (proceso.tipoIntervalo == Proceso.TIPO_INTERVALO_DIAS)
-                        {
-                            segundos = Int32.Parse(proceso.tipoIntervaloValor) * 3600 * 24;
-                            proceso.siguienteEjecucion = DateTime.Now.AddDays(double.Parse(proceso.tipoIntervaloValor));
+                            segundos = Int32.Parse(proceso.tipoIntervaloValor);
+                            proceso.siguienteEjecucion = DateTime.Now.AddSeconds(double.Parse(proceso.tipoIntervaloValor));
                         }
                         else
                         {
-                            segundos = -1;
+                            segundos = Int32.Parse("60");
+                            proceso.siguienteEjecucion = DateTime.Now.AddSeconds(double.Parse("60"));
                         }
 
-                        if (segundos > 0)
-                        {
-                            BeginInvoke((Action)(() =>
-                            {
-                                proceso.controlUI.ProximaEjecucion();
-                                proceso.controlUI.ImagenLoading(false);
-                            }));
-
-                            proceso.enEjecucion = false;
-                            System.Threading.Thread.Sleep(segundos * 1000);
-                            worker.RunWorkerAsync(argument: proceso);
-                        }
+                    }
+                    else if (proceso.tipoIntervalo == Proceso.TIPO_INTERVALO_MINUTOS)
+                    {
+                        segundos = Int32.Parse(proceso.tipoIntervaloValor) * 60;
+                        proceso.siguienteEjecucion = DateTime.Now.AddMinutes(double.Parse(proceso.tipoIntervaloValor));
+                    }
+                    else if (proceso.tipoIntervalo == Proceso.TIPO_INTERVALO_HORAS)
+                    {
+                        segundos = Int32.Parse(proceso.tipoIntervaloValor) * 3600;
+                        proceso.siguienteEjecucion = DateTime.Now.AddHours(double.Parse(proceso.tipoIntervaloValor));
+                    }
+                    else if (proceso.tipoIntervalo == Proceso.TIPO_INTERVALO_DIAS)
+                    {
+                        segundos = Int32.Parse(proceso.tipoIntervaloValor) * 3600 * 24;
+                        proceso.siguienteEjecucion = DateTime.Now.AddDays(double.Parse(proceso.tipoIntervaloValor));
+                    }
+                    else
+                    {
+                        segundos = -1;
                     }
 
+                    if (segundos > 0)
+                    {
+                        BeginInvoke((Action)(() =>
+                        {
+                            proceso.controlUI.ProximaEjecucion();
+                            proceso.controlUI.ImagenLoading(false);
+                        }));
+
+                        proceso.enEjecucion = false;
+                        System.Threading.Thread.Sleep(segundos * 1000);
+                        worker.RunWorkerAsync(argument: proceso);
+                    }
+                }
 
 
 
-                }, TaskContinuationOptions.NotOnFaulted);
 
-                taskAsync.ContinueWith((Fail) =>
-                {
-                    //log the exception i.e.: Fail.Exception.InnerException);
-                }, TaskContinuationOptions.OnlyOnFaulted);
-            
+            }, TaskContinuationOptions.NotOnFaulted);
+
+            taskAsync.ContinueWith((Fail) =>
+            {
+                //log the exception i.e.: Fail.Exception.InnerException);
+            }, TaskContinuationOptions.OnlyOnFaulted);
+
 
         }
         public void AsyncOperation_ProgressChanged(object sender, ProgressChangedEventArgs e)

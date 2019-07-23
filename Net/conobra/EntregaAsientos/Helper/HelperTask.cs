@@ -1071,9 +1071,7 @@ namespace SmartQuickbook.Helper
                 {
                     Dictionary<string, List<string>> RespuestasSave = new Dictionary<string, List<string>>();
                     Dictionary<string, List<string>> RespuestasLog = new Dictionary<string, List<string>>();
-                    string llaveQuickbook = "";
-                    Dictionary<string, string> llaveQuickbase = new Dictionary<string, string>();
-
+                   
                     //obtener los campos de respuesta para los parametros a enviar
                     //el token sera la llave
 
@@ -1092,7 +1090,7 @@ namespace SmartQuickbook.Helper
                         //Get the Values to add to quickbook
                         
                         
-                          HelperTask.GetValuesToAddDetails(accion.details, pairs, ref fieldNames, ref fieldValues, ref fieldNameExternals, ref llaveQuickbase, ref fieldRiquiered, ref Requiered, ref mostrarMensaje, ref err);
+                          HelperTask.GetValuesToAddDetails(accion.details, pairs, ref fieldNames, ref fieldValues, ref fieldNameExternals, ref fieldRiquiered, ref Requiered, ref mostrarMensaje, ref err);
 
                         // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -1139,7 +1137,7 @@ namespace SmartQuickbook.Helper
 
         }
 
-        public static void GetValuesToAddDetails(List<ProcesoParametros> parametrosDetalle, Hashtable pairs, ref List<string> fieldNames, ref  List<object> fieldValues, ref List< string> fieldNameExternals, ref Dictionary<string, string> llaveQuickbase, ref string fieldRiquiered, ref bool Requiered, ref StringBuilder mostrarMensaje, ref string err)
+        public static void GetValuesToAddDetails(List<ProcesoParametros> parametrosDetalle, Hashtable pairs, ref List<string> fieldNames, ref  List<object> fieldValues, ref List< string> fieldNameExternals,  ref string fieldRiquiered, ref bool Requiered, ref StringBuilder mostrarMensaje, ref string err)
         {
             try
             {
@@ -1263,22 +1261,7 @@ namespace SmartQuickbook.Helper
                         }
 
                     }
-                    else
-                    {  //si es el campo llave debe ser igual con fieldNameExternal
-
-
-                        var value = Array.Find(fieldNameExternals.ToArray(), element => element.Equals(parametrosDetalle[i].fieldName));
-
-                        if (value != string.Empty && pairs[value] != null)
-                        {
-                            //valor de la llave externa
-                            
-                                llaveQuickbase.Add(value, pairs[value].ToString());
-                            
-
-                        }
-
-                    }
+                   
 
 
                 }

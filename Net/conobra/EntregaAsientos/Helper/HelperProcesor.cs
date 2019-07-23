@@ -163,8 +163,10 @@ namespace SmartQuickbook.Helper
                                                     xmlRecived = xmlRecived.Replace(",", ".");
                                                     xmlRecived = xmlRecived.Replace(Environment.NewLine, "");
 
+                                                    string accionValue = accion.tipo + accion.quickbookTabla + Properties.Settings.Default.qbook_CompaniaBD;
+                                                    accionValue = accionValue.Replace(" ", "");
 
-                                                    string log = accion.tipo + accion.quickbookTabla + "," + xmlSend + "," + xmlRecived + "," + "0";
+                                                    string log =accionValue + "," + xmlSend + "," + xmlRecived + "," + "0";
                                                     HelperTask.AddConfigLog(ConfiguracionRespuestaLog, log, ref RespuestasLog);
                                                 }
                                             }
@@ -177,8 +179,9 @@ namespace SmartQuickbook.Helper
                                                     xmlSend = xmlSend.Replace(Environment.NewLine, "");
                                                     err = err.Replace(",", ".");
                                                     err = err.Replace(Environment.NewLine, "");
-
-                                                    string log = accion.tipo + accion.quickbookTabla + "," + xmlSend + "," + err + "," + "0";
+                                                    string accionValue = accion.tipo + accion.quickbookTabla + Properties.Settings.Default.qbook_CompaniaBD;
+                                                    accionValue = accionValue.Replace(" ", "");
+                                                    string log = accionValue + "," + xmlSend + "," + err + "," + "0";
                                                     HelperTask.AddConfigLog(ConfiguracionRespuestaLog, log, ref RespuestasLog);
                                                 }
                                             }
@@ -200,7 +203,9 @@ namespace SmartQuickbook.Helper
 
                                     if (ConfiguracionRespuestaLog.Count > 0)
                                     {
-                                        string log = accion.tipo + accion.quickbookTabla + "," + fieldRiquiered + "," + "Se requiere el campo se encuentra vacio o null" + "," + "0";
+                                        string accionValue = accion.tipo + accion.quickbookTabla + Properties.Settings.Default.qbook_CompaniaBD;
+                                        accionValue = accionValue.Replace(" ", "");
+                                        string log = accionValue + "," + fieldRiquiered + "," + "Se requiere el campo se encuentra vacio o null" + "," + "0";
                                         HelperTask.AddConfigLog(ConfiguracionRespuestaLog, log, ref RespuestasLog);
                                     }
                                 }

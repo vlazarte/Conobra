@@ -127,6 +127,7 @@ namespace Quickbook
             CompanyName = string.Empty;
             Salutation = string.Empty;
             FirstName = string.Empty; // optional
+            LastName = string.Empty;
             MiddleName = string.Empty; // optional
             JobDesc = string.Empty;
             JobStartDate = null;
@@ -487,11 +488,11 @@ namespace Quickbook
 
                         xmlRecived = res.InnerXml;
                         xmlRecived = xmlRecived.Replace(",", ".");
-                        if (Config.SaveXML == true)
-                        {
+                        //if (Config.SaveXML == true)
+                       // {
                             string pathFile = Directory.GetCurrentDirectory() + "\\samples\\C_" + ListID + ".xml";
                             File.WriteAllText(pathFile, response);
-                        }
+                        //}
 
                         qbook.Disconnect();
                     }
@@ -507,7 +508,7 @@ namespace Quickbook
                 {
                     string pathFile = Directory.GetCurrentDirectory() + "\\samples\\NewCustomer_" + DateTime.Now.Ticks + ".xml";
                     File.WriteAllText(pathFile, xml);
-                }
+                 }
 
                 string code = "";
                 string statusMessage = "";

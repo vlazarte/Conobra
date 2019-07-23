@@ -35,33 +35,20 @@ namespace SmartQuickbook.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("CONOBRA LTDA.")]
-        public string qbook_CompaniaBD {
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://smartstrategyonline.com/Cloud/WebServices/IntegracionesQuickbook/WService." +
+            "asmx")]
+        public string SmartQuickbook_wClient_WService {
             get {
-                return ((string)(this["qbook_CompaniaBD"]));
-            }
-            set {
-                this["qbook_CompaniaBD"] = value;
+                return ((string)(this["SmartQuickbook_wClient_WService"]));
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("CONOBRA LTDA. - Quickbooks Factura Electrónica Costa Rica.")]
-        public string qbook_Compania {
-            get {
-                return ((string)(this["qbook_Compania"]));
-            }
-            set {
-                this["qbook_Compania"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("CONOBRA LTDA SmartStrategy - Quickbook Connector v2.4")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Clean Construction LTDA. SmartStrategy - Quickbook Connector v2.4")]
         public string qbook_app_name {
             get {
                 return ((string)(this["qbook_app_name"]));
@@ -73,7 +60,7 @@ namespace SmartQuickbook.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Quickbooks db\\Conobra\\Conobra Limitada.qbw")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Quickbooks db\\Cleanco\\Cleanco.qbw")]
         public string qbook_file {
             get {
                 return ((string)(this["qbook_file"]));
@@ -83,14 +70,51 @@ namespace SmartQuickbook.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://smartstrategyonline.com/Cloud/WebServices/IntegracionesQuickbook/WService." +
-            "asmx")]
-        public string SmartQuickbook_wClient_WService {
+        [global::System.Configuration.DefaultSettingValueAttribute("Clean Construction LTDA.")]
+        public string qbook_CompaniaBD {
             get {
-                return ((string)(this["SmartQuickbook_wClient_WService"]));
+                return ((string)(this["qbook_CompaniaBD"]));
+            }
+            set {
+                this["qbook_CompaniaBD"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Clean Construction LTDA. - Quickbooks Factura Electrónica Costa Rica.")]
+        public string qbook_Compania {
+            get {
+                return ((string)(this["qbook_Compania"]));
+            }
+            set {
+                this["qbook_Compania"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("4 a.m.")]
+        public string TimeStart {
+            get {
+                return ((string)(this["TimeStart"]));
+            }
+            set {
+                this["TimeStart"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5 a.m.")]
+        public string TimeEnd {
+            get {
+                return ((string)(this["TimeEnd"]));
+            }
+            set {
+                this["TimeEnd"] = value;
             }
         }
     }

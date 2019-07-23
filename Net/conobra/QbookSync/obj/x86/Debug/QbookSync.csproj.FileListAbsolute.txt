@@ -43,3 +43,4 @@ D:\Vanesa\smartstrategy\Conobra Nueva version\Net\conobra\QbookSync\obj\x86\Debu
 D:\Vanesa\smartstrategy\Conobra Nueva version\Net\conobra\QbookSync\obj\x86\Debug\QbookSync.csproj.GenerateResource.Cache
 D:\Vanesa\smartstrategy\Conobra Nueva version\Net\conobra\QbookSync\obj\x86\Debug\QbookSync.exe
 D:\Vanesa\smartstrategy\Conobra Nueva version\Net\conobra\QbookSync\obj\x86\Debug\QbookSync.pdb
+D:\smartStrategy\Conobra\Conobra Nueva version\Net\conobra\QbookSync\bin\Debug\Quickbook.pdb

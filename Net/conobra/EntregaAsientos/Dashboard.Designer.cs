@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iniciarProcesoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reiniciarProcesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ClasesProyectosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,6 +42,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.button2 = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
             this.dgListProcess = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,7 +52,6 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgListProcess)).BeginInit();
@@ -73,7 +74,8 @@
             // 
             this.inicioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.salirToolStripMenuItem,
-            this.iniciarProcesoToolStripMenuItem});
+            this.iniciarProcesoToolStripMenuItem,
+            this.reiniciarProcesosToolStripMenuItem});
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
             this.inicioToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.inicioToolStripMenuItem.Text = "Inicio";
@@ -81,15 +83,22 @@
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             // 
             // iniciarProcesoToolStripMenuItem
             // 
             this.iniciarProcesoToolStripMenuItem.Name = "iniciarProcesoToolStripMenuItem";
-            this.iniciarProcesoToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.iniciarProcesoToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.iniciarProcesoToolStripMenuItem.Text = "Iniciar Procesos";
             this.iniciarProcesoToolStripMenuItem.Click += new System.EventHandler(this.iniciarProcesoToolStripMenuItem_Click);
+            // 
+            // reiniciarProcesosToolStripMenuItem
+            // 
+            this.reiniciarProcesosToolStripMenuItem.Name = "reiniciarProcesosToolStripMenuItem";
+            this.reiniciarProcesosToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.reiniciarProcesosToolStripMenuItem.Text = "Reiniciar Procesos";
+            
             // 
             // procesosToolStripMenuItem
             // 
@@ -158,6 +167,14 @@
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(275, 232);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 55;
+            // 
             // dgListProcess
             // 
             this.dgListProcess.AllowUserToAddRows = false;
@@ -173,14 +190,14 @@
             this.Column7,
             this.Column5,
             this.Column6});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgListProcess.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgListProcess.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgListProcess.Location = new System.Drawing.Point(3, 3);
             this.dgListProcess.MultiSelect = false;
             this.dgListProcess.Name = "dgListProcess";
@@ -250,14 +267,6 @@
             this.tabControl1.Size = new System.Drawing.Size(876, 516);
             this.tabControl1.TabIndex = 55;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(275, 232);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 55;
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,5 +320,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem reiniciarProcesosToolStripMenuItem;
     }
 }

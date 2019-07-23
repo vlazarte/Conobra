@@ -484,11 +484,10 @@ namespace Quickbook
 
                         xmlRecived = res.InnerXml;
                         xmlRecived = xmlRecived.Replace(",", ".");
-                        if (Config.SaveXML == true)
-                        {
+                       
                             string pathFile = Directory.GetCurrentDirectory() + "\\samples\\B_" + DateTime.Now.Ticks + ".xml";
                             File.WriteAllText(pathFile, response);
-                        }
+                       
 
                         qbook.Disconnect();
                     }

@@ -5,20 +5,26 @@
     <Setting Name="qbook_production" Type="System.String" Scope="User">
       <Value Profile="(Default)">b4f16ca3cd7d_</Value>
     </Setting>
-    <Setting Name="qbook_CompaniaBD" Type="System.String" Scope="User">
-      <Value Profile="(Default)">CONOBRA LTDA.</Value>
-    </Setting>
-    <Setting Name="qbook_Compania" Type="System.String" Scope="User">
-      <Value Profile="(Default)">CONOBRA LTDA. - Quickbooks Factura Electrónica Costa Rica.</Value>
-    </Setting>
-    <Setting Name="qbook_app_name" Type="System.String" Scope="User">
-      <Value Profile="(Default)">CONOBRA LTDA SmartStrategy - Quickbook Connector v2.4</Value>
-    </Setting>
-    <Setting Name="qbook_file" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Quickbooks db\Conobra\Conobra Limitada.qbw</Value>
-    </Setting>
     <Setting Name="SmartQuickbook_wClient_WService" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://smartstrategyonline.com/Cloud/WebServices/IntegracionesQuickbook/WService.asmx</Value>
+    </Setting>
+    <Setting Name="qbook_app_name" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Clean Construction LTDA. SmartStrategy - Quickbook Connector v2.4</Value>
+    </Setting>
+    <Setting Name="qbook_file" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Quickbooks db\Cleanco\Cleanco.qbw</Value>
+    </Setting>
+    <Setting Name="qbook_CompaniaBD" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Clean Construction LTDA.</Value>
+    </Setting>
+    <Setting Name="qbook_Compania" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Clean Construction LTDA. - Quickbooks Factura Electrónica Costa Rica.</Value>
+    </Setting>
+    <Setting Name="TimeStart" Type="System.String" Scope="User">
+      <Value Profile="(Default)">4 a.m.</Value>
+    </Setting>
+    <Setting Name="TimeEnd" Type="System.String" Scope="User">
+      <Value Profile="(Default)">5 a.m.</Value>
     </Setting>
   </Settings>
 </SettingsFile>
