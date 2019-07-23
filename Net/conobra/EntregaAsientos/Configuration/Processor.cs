@@ -35,10 +35,11 @@ namespace SmartQuickbook.Configuration
                     Proceso P = new Proceso();
                     P.id = node.Attributes["id"].Value;
                     P.nombre = node["nombre"].InnerText;
-                    if (node.Attributes["includeSublevel"] != null) {
+                    if (node.Attributes["includeSublevel"] != null)
+                    {
                         P.includeSublevel = (node.Attributes["includeSublevel"].Value == "true" ? true : false);
                     }
-                    
+
 
                     if (node["ejecucion"] != null)
                     {
@@ -47,12 +48,26 @@ namespace SmartQuickbook.Configuration
                         {
                             P.tipoIntervalo = node["ejecucion"]["intervalo"].Attributes["tipo"].Value;
                             P.tipoIntervaloValor = node["ejecucion"]["intervalo"].InnerText;
-                            if (node["ejecucion"]["hora_inicio"] != null) {
+                            if (node["ejecucion"]["hora_inicio"] != null)
+                            {
                                 P.horaInicio = node["ejecucion"]["hora_inicio"].InnerText;
                             }
-                            
+
                         }
                     }
+
+                    if (node["subprocesos"] != null)
+                    {
+                        XmlNodeList fieldsListSubproceso = node.SelectNodes("subprocesos/item");
+                        P.subProcesos = new List<string>();
+                        foreach (XmlNode subproceso in fieldsListSubproceso)
+                        {
+                            P.subProcesos.Add(subproceso.FirstChild.Value);
+                        }
+                    }
+
+
+
 
                     XmlNodeList nodoList = node.SelectNodes("acciones/accion");
                     P.acciones = new List<ProcesoAccion>();
@@ -61,7 +76,7 @@ namespace SmartQuickbook.Configuration
                         ProcesoAccion acccion = new ProcesoAccion();
                         acccion.tipo = pNode.Attributes["tipo"].Value;
                         acccion.nombre = pNode["nombre"].InnerText;
-                        
+
                         if (pNode["quickbook_tabla"] != null)
                             acccion.quickbookTabla = pNode["quickbook_tabla"].InnerText;
 
@@ -139,7 +154,7 @@ namespace SmartQuickbook.Configuration
                             ProcesoRespuesta respuesta = new ProcesoRespuesta();
                             respuesta.tipo = paramNode.Attributes["tipo"].Value;
                             respuesta.categoria = paramNode.Attributes["categoria"].Value;
-                            respuesta.quickbaseAccessToken = paramNode["access_token"].InnerText;                            
+                            respuesta.quickbaseAccessToken = paramNode["access_token"].InnerText;
 
                             var paramNodoList2 = paramNode.SelectNodes("parametros/p");
                             respuesta.parametros = new List<ProcesoParametros>();
@@ -247,7 +262,7 @@ namespace SmartQuickbook.Configuration
         public string tipo = "";
         public string nombre = "";
         public string quickbookTabla = "";
-        
+
         public List<ProcesoParametros> parametros;
         public List<ProcesoParametros> details;
         public string quickbookTablaDetalle = "";
@@ -258,7 +273,7 @@ namespace SmartQuickbook.Configuration
     {
         public string tipo = "";
         public string categoria = "";
-        public string quickbaseAccessToken = "";       
+        public string quickbaseAccessToken = "";
         public List<ProcesoParametros> parametros;
     }
 
@@ -268,6 +283,7 @@ namespace SmartQuickbook.Configuration
         public string nombre;
         public bool includeSublevel = false;
         public ProcesoEntrada entrada;
+        public List<string> subProcesos;
         public List<ProcesoAccion> acciones;
 
         public static string TIPO_EJECUCION_MANUAL = "manual";

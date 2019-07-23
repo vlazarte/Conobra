@@ -13,7 +13,7 @@ namespace Quickbook
         {
             return float.Parse("" + val, NumberStyles.Any, CultureInfo.CurrentCulture);
         }
-
+        
         public static decimal ParseDecimal(string val)
         {
             return decimal.Parse("" + val, NumberStyles.Any, CultureInfo.CurrentCulture);
@@ -41,7 +41,9 @@ namespace Quickbook
                 return val;
 
             string c = val;
-            
+            c = c.Replace("&", "&amp;");
+            c = c.Replace(">", "&gt;");
+            c = c.Replace("<", "&lt;");
             c = c.Replace("á", "&#225;");
             c = c.Replace("é", "&#233;");
             c = c.Replace("í", "&#237;");
@@ -57,9 +59,7 @@ namespace Quickbook
             c = c.Replace("ñ", "&#241;");
             c = c.Replace("Ñ", "&#209;");
 
-            c = c.Replace("&", "&amp;");
-            c = c.Replace(">", "&gt;");
-            c = c.Replace("<", "&lt;");
+           
 
             return c;
         }

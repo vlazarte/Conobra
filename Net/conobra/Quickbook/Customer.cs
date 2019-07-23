@@ -552,7 +552,7 @@ namespace Quickbook
             if (!isValid())
                 return null;
             string xml = "";
-            XmlElement ele = (new XmlDocument()).CreateElement("test");
+            
 
 
             xml += "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
@@ -561,10 +561,9 @@ namespace Quickbook
             xml += "<QBXMLMsgsRq onError=\"stopOnError\">";
             xml += "<CustomerAddRq>";
             xml += "<CustomerAdd>";
-
-            ele.InnerText = Name + "";
-
-            xml += "<Name >" + ele.InnerXml + "</Name>";
+                        
+            string value = Functions.htmlEntity(Name);
+            xml += "<Name >" + value + "</Name>";
             if (IsActive != null)
                 xml += "<IsActive >" + (active == true ? "true" : "false") + "</IsActive>";
             if (ClassRef != null)
@@ -578,38 +577,39 @@ namespace Quickbook
                 }
                 if (ParentRef.FullName != string.Empty)
                 {
-                    ele.InnerText = ParentRef.FullName + "";
-                    xml += "<FullName >" + ele.InnerXml + "</FullName>";
+                    
+                    string value2 = Functions.htmlEntity(ParentRef.FullName);
+                    xml += "<FullName >" + value2 + "</FullName>";
                 }
 
                 xml += "</ParentRef>";
             }
             if (CompanyName != "")
-            {
-                ele.InnerText = CompanyName + "";
-                xml += "<CompanyName >" + ele.InnerXml + "</CompanyName>";
+            {                
+                string value2 = Functions.htmlEntity(CompanyName);
+                xml += "<CompanyName >" + value2 + "</CompanyName>";
             }
             if (Salutation != "")
                 xml += "<Salutation >" + Salutation + "</Salutation>";
             if (FirstName != "")
-            {
-                ele.InnerText = FirstName + "";
-                xml += "<FirstName >" + ele.InnerXml + "</FirstName>";
+            {                
+                string value2 = Functions.htmlEntity(FirstName);
+                xml += "<FirstName >" + value2 + "</FirstName>";
             }
             if (MiddleName != "")
-            {
-                ele.InnerText = MiddleName + "";
-                xml += "<MiddleName >" + ele.InnerXml + "</MiddleName>";
+            {                
+                string value2 = Functions.htmlEntity(MiddleName);
+                xml += "<MiddleName >" + value2 + "</MiddleName>";
             }
             if (LastName != "")
-            {
-                ele.InnerText = LastName + "";
-                xml += "<LastName >" + LastName + "</LastName>";
+            {                
+                string value2 = Functions.htmlEntity(LastName);
+                xml += "<LastName >" + value2 + "</LastName>";
             }
             if (JobTitle != "")
-            {
-                ele.InnerText = JobTitle + "";
-                xml += "<JobTitle >" + ele.InnerXml + "</JobTitle>";
+            {                
+                string value2 = Functions.htmlEntity(JobTitle);
+                xml += "<JobTitle >" + value2 + "</JobTitle>";
             }
 
             if (BillAddress != null)
@@ -718,9 +718,9 @@ namespace Quickbook
 
 
             if (JobDesc != "")
-            {
-                ele.InnerText = JobDesc + "";
-                xml += "<JobDesc >" + ele.InnerXml + "</JobDesc>";
+            {                
+                string value2 = Functions.htmlEntity(JobDesc);
+                xml += "<JobDesc >" + value2 + "</JobDesc>";
             }
 
 
@@ -730,9 +730,9 @@ namespace Quickbook
             }
 
             if (Notes != "")
-            {
-                ele.InnerText = Notes + "";
-                xml += "<Notes >" + ele.InnerXml + "</Notes>";
+            {                
+                string value2 = Functions.htmlEntity(Notes);
+                xml += "<Notes >" + value2 + "</Notes>";
             }
 
             for (int i = 0; i < AdditionalNotes.Count; i++)
@@ -769,17 +769,16 @@ namespace Quickbook
         public string toXmlRef()
         {
 
-            StringBuilder xml = new StringBuilder();
-            XmlElement ele = (new XmlDocument()).CreateElement("test");
+            StringBuilder xml = new StringBuilder();            
             xml.Append("<CustomerRef>");
             if (ListID != string.Empty)
             {
                 xml.Append(Environment.NewLine + "<ListID >" + ListID + "</ListID>");
             }
             if (FullName != string.Empty)
-            {
-                ele.InnerText = FullName + "";
-                xml.Append(Environment.NewLine + "<FullName>" + ele.InnerXml + "</FullName>"); //-- required -->
+            {                
+                string value = Functions.htmlEntity(FullName);
+                xml.Append(Environment.NewLine + "<FullName>" + value + "</FullName>"); //-- required -->
             }
 
             xml.Append("</CustomerRef>");
@@ -790,7 +789,7 @@ namespace Quickbook
         public string ToXMlParentRef()
         {
             StringBuilder xml = new StringBuilder();
-            XmlElement ele = (new XmlDocument()).CreateElement("test");
+            
             xml.Append("<ParentRef>");
             if (ListID != string.Empty)
             {
@@ -798,9 +797,8 @@ namespace Quickbook
             }
             if (FullName != string.Empty)
             {
-
-                ele.InnerText = FullName + "";
-                xml.Append("<FullName>" + ele.InnerXml + "</FullName>");
+                string value = Functions.htmlEntity(FullName);                
+                xml.Append("<FullName>" + value + "</FullName>");
             }
 
             xml.Append("</ParentRef>");

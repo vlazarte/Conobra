@@ -200,7 +200,7 @@ namespace Quickbook
         public string toXmlRef()
         {
             StringBuilder xml = new StringBuilder();
-            XmlElement ele = (new XmlDocument()).CreateElement("test");
+            
             xml.Append("<TermsRef>");
             if (ListID != string.Empty)
             {
@@ -208,8 +208,9 @@ namespace Quickbook
             }
             if (FullName != string.Empty)
             {
-                ele.InnerText = FullName + "";
-                xml.Append("<FullName>" + ele.InnerXml + "</FullName>");
+                
+                string value = Functions.htmlEntity(FullName);
+                xml.Append("<FullName>" + value + "</FullName>");
             }
 
             xml.Append("</TermsRef>");

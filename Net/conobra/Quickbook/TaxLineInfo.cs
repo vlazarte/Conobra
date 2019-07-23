@@ -15,16 +15,16 @@ namespace Quickbook
         {
 
             StringBuilder xml = new StringBuilder();
-            XmlElement ele = (new XmlDocument()).CreateElement("test");
+            
             xml.Append("<TaxLineInfoRet>");
             if (ListID != string.Empty)
             {
                 xml.Append("<TaxLineID>" + ListID + "</TaxLineID>");
             }
             if (FullName != string.Empty)
-            {
-                ele.InnerText = FullName + "";
-                xml.Append("<TaxLineName>" + ele.InnerXml + "</TaxLineName>"); //-- required -->
+            {                
+                string value = Functions.htmlEntity(FullName);
+                xml.Append("<TaxLineName>" + value + "</TaxLineName>"); //-- required -->
             }
 
             xml.Append("</TaxLineInfoRet>");

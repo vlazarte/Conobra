@@ -67,9 +67,15 @@
     </acciones>
     <ejecucion tipo="intervalo">
       <intervalo tipo="segundo">300</intervalo>
-      <hora_inicio tipo="time">12:49 pm</hora_inicio>
+      <hora_inicio tipo="time">8:21 am</hora_inicio>
       <fecha_unica>2019-04-09</fecha_unica>
     </ejecucion>
+    <subprocesos>
+      <item>2</item>
+      <item>3</item>
+      <item>4</item>
+      <item>5</item>
+    </subprocesos>
 
   </proceso>
   <proceso id="2" includeSublevel="false">
@@ -147,9 +153,9 @@
         </respuestas>
       </accion>
     </acciones>
-    <ejecucion tipo="intervalo">
+    <ejecucion tipo="subproceso">
       <intervalo tipo="segundo">300</intervalo>
-      <hora_inicio tipo="time">12:51 pm</hora_inicio>
+      <hora_inicio tipo="time">8:23 am</hora_inicio>
       <fecha_unica>2019-04-09</fecha_unica>
     </ejecucion>
 
@@ -210,9 +216,9 @@
         </respuestas>
       </accion>
     </acciones>
-    <ejecucion tipo="intervalo">
+    <ejecucion tipo="subproceso">
       <intervalo tipo="segundo">300</intervalo>
-      <hora_inicio tipo="time">12:53 pm</hora_inicio>
+      <hora_inicio tipo="time">8:25 am</hora_inicio>
       <fecha_unica>2019-04-09</fecha_unica>
     </ejecucion>
   </proceso>
@@ -260,13 +266,75 @@
         </respuestas>
       </accion>
     </acciones>
-    <ejecucion tipo="intervalo">
+    <ejecucion tipo="subproceso">
       <intervalo tipo="segundo">360</intervalo>
-      <hora_inicio tipo="time">12:55 pm</hora_inicio>
+      <hora_inicio tipo="time">8:27 am</hora_inicio>
       <fecha_unica>2019-04-09</fecha_unica>
     </ejecucion>
   </proceso>
-
+  <proceso id="5">
+    <nombre>Importar Facturas de Caja chica a Quickbooks</nombre>
+    <entrada tipo="quickbase">
+      <quickbook></quickbook>
+      <quickbase>
+        <access_token>0823871b4f16ca3cd7d6f62596904200</access_token>
+        <parametros>
+          <p field="B">NOMBRE</p>
+        </parametros>
+      </quickbase>
+    </entrada>
+    <acciones>
+      <accion id="cust001" tipo="add_quickbook">
+        <nombre>Crear Bill</nombre>
+        <quickbook_tabla>Bill</quickbook_tabla>
+        <parametros>
+          <p field="RecordID" key="true">RecordID</p>
+          <p field="VendorRef/FullName" type="Vendor" required="true">VendorRef</p>
+          <p field="RefNumber" required="true">RefNumber</p>
+          <p field="txnDate" type="DateTime" required="true">txnDate</p>
+          <p field="QuickbooksCompania" key="true" type="Configuration">QuickbooksCompania</p>
+          <p field="DueDate" type="DateTime" required="false">DueDate</p>
+          <p field="ExchangeRate" required="true" type="Double">ExchangeRate</p>
+          <p field="Memo" required="false">Memo</p>
+        </parametros>
+        <detail>
+          <quickbook_tabla>BillExpenseLine</quickbook_tabla>
+          <parametros>
+            <p field="RecordID" key="true" >DET_RID</p>
+            <p field="DET_PADRE" key="true">DET_PADRE</p>
+            <p field="AccountRef/FullName" type="Account" >AccountRef</p>
+            <p field="Amount" type="Double">Amount</p>
+            <p field="CustomerRef/ListID" type="Customer">CustomerRef</p>
+            <p field="ClassRef/FullName" type="Class">ClassRef</p>
+          </parametros>
+        </detail>
+        <respuestas>
+          <respuesta tipo="import_quickbase" categoria="Save">
+            <access_token>0823871b4f16ca3cd7d6f62596904201</access_token>
+            <parametros>
+              <p field="1" key="true">RecordID</p>
+              <p field="2" >ListID</p>
+              <p field="3" >ListID</p>
+            </parametros>
+          </respuesta>
+          <respuesta tipo="import_quickbase" categoria="Log">
+            <access_token>8fc1a0edf52f44ba5cb7c7809613cbdd</access_token>
+            <parametros>
+              <p field="6" key="true">ACCION</p>
+              <p field="7" >SEND</p>
+              <p field="8" >RECIVED</p>
+              <p field="9" >SUCCESS</p>
+            </parametros>
+          </respuesta>
+        </respuestas>
+      </accion>
+    </acciones>
+    <ejecucion tipo="subproceso">
+      <intervalo tipo="segundo">300</intervalo>
+      <hora_inicio tipo="time">8:20 am</hora_inicio>
+      <fecha_unica>2019-04-09</fecha_unica>
+    </ejecucion>
+  </proceso>
   <proceso id="1">
     <nombre>Importar Proveedores a quickbase</nombre>
     <entrada tipo="quickbooks">
@@ -430,6 +498,28 @@
     </ejecucion>
   </proceso>
 </root>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

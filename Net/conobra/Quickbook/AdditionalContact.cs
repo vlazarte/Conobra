@@ -20,17 +20,17 @@ namespace Quickbook
       public string toXmlRef()
       {
           StringBuilder xml = new StringBuilder();
-          XmlElement ele = (new XmlDocument()).CreateElement("test");
+          
           xml.Append("<AdditionalContactRef>");
           if (ContactName != string.Empty)
-          {
-              ele.InnerText = ContactName + "";
-              xml.Append("<ContactName>" + ele.InnerXml + "</ContactName>");
+          {   
+              string value = Functions.htmlEntity(ContactName);
+              xml.Append("<ContactName>" + value + "</ContactName>");
           }
           if (ContactValue != string.Empty)
           {
-              ele.InnerText = ContactValue + "";
-              xml.Append("<ContactValue>" + ele.InnerXml + "</ContactValue>"); 
+              string value = Functions.htmlEntity(ContactValue);
+              xml.Append("<ContactValue>" + value + "</ContactValue>"); 
           }
 
           xml.Append("</AdditionalContactRef>");

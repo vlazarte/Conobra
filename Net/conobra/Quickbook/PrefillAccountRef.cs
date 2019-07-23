@@ -24,8 +24,8 @@ namespace Quickbook
             }
             if (FullName != string.Empty)
             {
-                ele.InnerText = FullName + "";
-                xml.Append("<FullName>" + ele.InnerXml + "</FullName>"); 
+                string value = Functions.htmlEntity(FullName);
+                xml.Append("<FullName>" + value + "</FullName>"); 
             }
 
             xml.Append("</PrefillAccountRef>");

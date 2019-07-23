@@ -17,37 +17,38 @@ namespace Quickbook
         public List<AdditionalContact> AdicionalContacRef { get; set; }
         public string toXmlRef()
         {
-            StringBuilder xml = new StringBuilder();
-            XmlElement ele = (new XmlDocument()).CreateElement("test");
+            StringBuilder xml = new StringBuilder();            
             xml.Append("<Contacts>");
             if (Salutation != string.Empty)
             {
-                  ele.InnerText = Salutation + "";
-                xml.Append("<Salutation >" + ele.InnerXml  + "</Salutation>");
+                  
+                  string value = Functions.htmlEntity(Salutation);
+                  xml.Append("<Salutation >" + value + "</Salutation>");
             }
             if (FirstName != string.Empty)
-            {
-                ele.InnerText = FirstName + "";
-                xml.Append("<FirstName>" + ele.InnerXml + "</FirstName>"); //-- required -->
+            {               
+                string value = Functions.htmlEntity(FirstName);
+                xml.Append("<FirstName>" + value + "</FirstName>"); //-- required -->
             }
 
               if (MiddleName != string.Empty)
-            {
-                ele.InnerText = MiddleName + "";
-                xml.Append("<MiddleName>" + ele.InnerXml + "</MiddleName>"); //-- required -->
+            {                
+                string value = Functions.htmlEntity(MiddleName);
+                xml.Append("<MiddleName>" + value + "</MiddleName>"); //-- required -->
             }
 
               if (LastName != string.Empty)
-            {
-                ele.InnerText = LastName + "";
-                xml.Append("<LastName>" + ele.InnerXml + "</LastName>"); //-- required -->
+            {                
+                string value = Functions.htmlEntity(LastName);
+                xml.Append("<LastName>" + value + "</LastName>"); //-- required -->
             }
 
 
                if (JobTitle != string.Empty)
             {
-                ele.InnerText = LastName + "";
-                xml.Append("<JobTitle>" + ele.InnerXml + "</JobTitle>"); //-- required -->
+                
+                string value = Functions.htmlEntity(JobTitle);
+                xml.Append("<JobTitle>" + value + "</JobTitle>"); //-- required -->
             }
 
              if (AdicionalContacRef!=null && AdicionalContacRef.Count>0)

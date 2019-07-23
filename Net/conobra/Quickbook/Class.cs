@@ -53,7 +53,7 @@ namespace Quickbook
             if (!isValid())
                 return null;
 
-            XmlElement ele = (new XmlDocument()).CreateElement("test");
+            
 
             StringBuilder toXML = new StringBuilder();
 
@@ -64,9 +64,9 @@ namespace Quickbook
             toXML.Append("<ClassAddRq>");
             toXML.Append("<ClassAdd>");
             if (FullName != string.Empty)
-            {
-                ele.InnerText = FullName + "";
-                toXML.Append("<Name>" + ele.InnerXml + "</Name>"); //-- required -->
+            {                
+                string value = Functions.htmlEntity(FullName);
+                toXML.Append("<Name>" + value + "</Name>"); //-- required -->
             }
 
             if (active != null)
@@ -86,8 +86,7 @@ namespace Quickbook
         }
         public string toXmlRef()
         {
-            StringBuilder xml = new StringBuilder();
-            XmlElement ele = (new XmlDocument()).CreateElement("test");
+            StringBuilder xml = new StringBuilder();            
             xml.Append("<ClassRef>");
             if (ListID != string.Empty)
             {
@@ -95,8 +94,8 @@ namespace Quickbook
             }
             if (FullName != string.Empty)
             {
-                ele.InnerText = FullName + "";
-                xml.Append("<FullName>" + ele.InnerXml + "</FullName>"); //-- required -->
+                string value = Functions.htmlEntity(FullName);
+                xml.Append("<FullName>" + value + "</FullName>"); //-- required -->
             }
 
             xml.Append("</ClassRef>");
@@ -113,9 +112,9 @@ namespace Quickbook
                 xml.Append("<ListID >" + ListID + "</ListID>");
             }
             if (FullName != string.Empty)
-            {
-                ele.InnerText = FullName + "";
-                xml.Append("<FullName >" + ele.InnerXml + "</FullName>");
+            {              
+                string value = Functions.htmlEntity(FullName);
+                xml.Append("<FullName >" + value + "</FullName>");
             }
             xml.Append("</ParentRef>");
             return xml.ToString();

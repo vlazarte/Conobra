@@ -22,61 +22,65 @@ namespace Quickbook
 
         public string toXmlRef()
         {
-            StringBuilder xml = new StringBuilder();
-            XmlElement ele = (new XmlDocument()).CreateElement("test");
+            StringBuilder xml = new StringBuilder();            
             xml.Append("<VendorAddress>");
             if (Addr1 != string.Empty)
             {
-                 ele.InnerText = Addr1 + "";
-                xml.Append("<Addr1>" + ele.InnerXml + "</Addr1>");
+                 
+                 string value = Functions.htmlEntity(Addr1);
+                 xml.Append("<Addr1>" + value + "</Addr1>");
             }
             if (Addr2 != string.Empty)
             {
-                ele.InnerText = Addr2 + "";
-                xml.Append("<Addr2>" + ele.InnerXml + "</Addr2>");
+                
+                string value = Functions.htmlEntity(Addr2);
+                xml.Append("<Addr2>" + value + "</Addr2>");
             }
             if (Addr3 != string.Empty)
-            {
-                ele.InnerText = Addr3 + "";
-                xml.Append("<Addr3>" + ele.InnerXml + "</Addr3>");
+            {                
+                string value = Functions.htmlEntity(Addr3);
+                xml.Append("<Addr3>" + value + "</Addr3>");
             }
 
              if (Addr4 != string.Empty)
             {
-                ele.InnerText = Addr4 + "";
-                xml.Append("<Addr4>" + ele.InnerXml + "</Addr4>");
+                
+                string value = Functions.htmlEntity(Addr4);
+                xml.Append("<Addr4>" + value + "</Addr4>");
             }
 
              if (Addr5 != string.Empty)
             {
-                ele.InnerText = Addr5 + "";
-                xml.Append("<Addr5>" + ele.InnerXml + "</Addr5>");
+                string value = Functions.htmlEntity(Addr5);
+                xml.Append("<Addr5>" + value + "</Addr5>");
             }
              if (City != string.Empty)
             {
-                ele.InnerText = City + "";
-                xml.Append("<City>" + ele.InnerXml + "</City>");
+
+                string value = Functions.htmlEntity(City);
+                xml.Append("<City>" + value + "</City>");
             }
              if (State != string.Empty)
-            {
-                ele.InnerText = State + "";
-                xml.Append("<State>" + ele.InnerXml + "</State>");
+            {                
+                string value = Functions.htmlEntity(State);
+                xml.Append("<State>" + value + "</State>");
             }
               if (PostalCode != string.Empty)
-            {
-                ele.InnerText = PostalCode + "";
-                xml.Append("<PostalCode>" + ele.InnerXml + "</PostalCode>");
+            {                
+                string value = Functions.htmlEntity(PostalCode);
+                xml.Append("<PostalCode>" + value + "</PostalCode>");
             }
 
               if (Country != string.Empty)
             {
-                ele.InnerText = Country + "";
-                xml.Append("<Country>" + ele.InnerXml + "</Country>");
+                
+                string value = Functions.htmlEntity(Country);
+                xml.Append("<Country>" + value + "</Country>");
             }
             if (Note != string.Empty)
-            {
-                ele.InnerText = Note + "";
-                xml.Append("<Note>" + ele.InnerXml + "</Note>");
+            {                
+                string value = Functions.htmlEntity(Note);
+                xml.Append("<Note>" + value + "</Note>");
             }
 
             xml.Append("</VendorAddress>");

@@ -20,8 +20,9 @@ namespace Quickbook
             }
             if (FullName != string.Empty)
             {
-                ele.InnerText = FullName + "";
-                xml.Append("<FullName>" + ele.InnerXml + "</FullName>"); //-- required -->
+                
+                string value = Functions.htmlEntity(FullName);
+                xml.Append("<FullName>" + value + "</FullName>"); //-- required -->
             }
 
             xml.Append("</PreferredPaymentMethodRef>");

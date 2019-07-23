@@ -77,7 +77,7 @@ namespace SmartQuickbook
             for (int i = 0; i < processor.procesos.Count; i++)
             {
                 Proceso P = processor.procesos[i];
-                if (P.tipoEjecucion == "intervalo")
+                if (P.tipoEjecucion == "intervalo" || P.tipoEjecucion == "subproceso")
                 {
                     CrearTabProceso(P, ref tabControl1);
                 }
@@ -92,7 +92,7 @@ namespace SmartQuickbook
             {
                 Proceso P = processor.procesos[i];
 
-                if (P.tipoEjecucion == "intervalo")
+                if (P.tipoEjecucion == "intervalo" || P.tipoEjecucion == "subproceso")
                 {
                     string accion = "";
                     foreach (ProcesoAccion A in P.acciones)
@@ -134,7 +134,7 @@ namespace SmartQuickbook
                 {
                     proceso.controlUI.MostrarMensaje("Buscando datos de Quickbase");
                 }));
-                string mensajes = HelperProcesor.ProcesoEjecutarToQuickBase(proceso);
+                string mensajes =  HelperProcesor.ProcesoEjecutarToQuickBase(proceso);
 
                 BeginInvoke((Action)(() =>
                 {
@@ -156,7 +156,7 @@ namespace SmartQuickbook
                     {
                         proceso.controlUI.MostrarMensaje("Buscando datos de Quickbooks");
                     }));
-                    string mensajes = HelperProcesor.ProcesoEjecutarToQuickBook(proceso);
+                    string mensajes =  HelperProcesor.ProcesoEjecutarToQuickBook(proceso);
 
                     BeginInvoke((Action)(() =>
                     {
@@ -196,23 +196,26 @@ namespace SmartQuickbook
             BackgroundWorker worker = (BackgroundWorker)sender;
 
             taskAsync = Task.Factory.StartNew(() =>
-            {
-                if (!proceso.esIniciado)
-                {
-                    string hora = DateTime.Now.ToString("h:mm tt");
-                    //MessageBox.Show(proceso.horaInicio.ToUpper() + "-" + hora.ToUpper());
-                    if (proceso.horaInicio.ToUpper() == hora.ToUpper())
-                    {
-                        proceso.esIniciado = true;
-                        EjecutarProceso(proceso);
-                    }
+            {               
+                
 
-                }
-                else
-                {
                     EjecutarProceso(proceso);
-                }
 
+                    //termino proceso
+                    if (proceso.subProcesos.Count > 0) {
+
+                        foreach (string id in proceso.subProcesos)
+                        {
+                            Proceso p = processor.procesos.Find(d => d.id == id);
+                            {
+                                EjecutarProceso(p);
+                                BeginInvoke((Action)(() =>
+                                {
+                                    p.controlUI.UltimaEjecucion();                                    
+                                }));
+                            }
+                        }                       
+                    }
 
 
             });
@@ -231,16 +234,9 @@ namespace SmartQuickbook
                     if (proceso.tipoIntervalo == Proceso.TIPO_INTERVALO_SEGUNDOS)
                     {
 
-                        if (proceso.esIniciado)
-                        {
+                       
                             segundos = Int32.Parse(proceso.tipoIntervaloValor);
-                            proceso.siguienteEjecucion = DateTime.Now.AddSeconds(double.Parse(proceso.tipoIntervaloValor));
-                        }
-                        else
-                        {
-                            segundos = Int32.Parse("60");
-                            proceso.siguienteEjecucion = DateTime.Now.AddSeconds(double.Parse("60"));
-                        }
+                            proceso.siguienteEjecucion = DateTime.Now.AddSeconds(double.Parse(proceso.tipoIntervaloValor));                        
 
                     }
                     else if (proceso.tipoIntervalo == Proceso.TIPO_INTERVALO_MINUTOS)

@@ -471,6 +471,119 @@
 
   <!--Proceso 3 FIN Recibos Clenco-->
 
+
+  <!--Proceso 5 Caja chica Conobra-->
+
+  <access id="0823871b4f16ca3cd7d6f62596907000">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>doquery_complex</type>
+    <dbid>bn8txn27m</dbid>
+    <query>{'72'.EX.'CONOBRA LTDA.'}</query>
+    <qid>11</qid>
+    <clist>3.34.8.7.72.60.62.66</clist>
+    <params>
+    </params>
+    <response>
+      <p fid="3" >RecordID</p>
+      <p fid="34" >VendorRef</p>
+      <p fid="8" >RefNumber</p>
+      <p fid="7" >txnDate</p>
+      <p fid="72">QuickbooksCompania</p>
+      <p fid="60">DueDate</p>
+      <p fid="62">ExchangeRate</p>
+      <p fid="66">Memo</p>
+    </response>
+    <detail>
+      <dbid>bn8txn27s</dbid>
+      <query>{'7'.EX.'__RecordID__'}</query>
+      <clist>3.7.46.13.47.48</clist>
+      <params>
+      </params>
+      <response>
+        <p fid="3" >DET_RID</p>
+        <p fid="7" >DET_PADRE</p>
+        <p fid="46">AccountRef</p>
+        <p fid="13">Amount</p>
+        <p fid="47">CustomerRef</p>
+        <p fid="48">ClassRef</p>
+      </response>
+    </detail>
+  </access>
+
+  <access id="0823871b4f16ca3cd7d6f62596907001">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bn8txn27m</dbid>
+    <query></query>
+    <qid>-1</qid>
+    <clist>3.58.71</clist>
+    <params>
+      <p field="3">RecordID</p>
+      <p field="58">QuickbookID</p>
+      <p field="71">QuickbookID</p>
+    </params>
+  </access>
+
+  <!--Proceso 5 FIN caja chica Conobra-->
+
+  <!--Proceso 5 Caja chica Cleanco-->
+
+  <access id="0823871b4f16ca3cd7d6f62596904200">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>doquery_complex</type>
+    <dbid>bn8txn27m</dbid>
+    <query>{'72'.EX.'Clean Construction LTDA.'}</query>
+    <qid>11</qid>
+    <clist>3.34.8.7.72.60.62.66</clist>
+    <params>
+    </params>
+    <response>
+      <p fid="3" >RecordID</p>
+      <p fid="34" >VendorRef</p>
+      <p fid="8" >RefNumber</p>
+      <p fid="7" >txnDate</p>
+      <p fid="72">QuickbooksCompania</p>
+      <p fid="60">DueDate</p>
+      <p fid="62">ExchangeRate</p>
+      <p fid="66">Memo</p>
+    </response>
+    <detail>
+      <dbid>bn8txn27s</dbid>
+      <query>{'7'.EX.'__RecordID__'}</query>
+      <clist>3.7.46.13.47.48</clist>
+      <params>
+      </params>
+      <response>
+        <p fid="3" >DET_RID</p>
+        <p fid="7" >DET_PADRE</p>
+        <p fid="46">AccountRef</p>
+        <p fid="13">Amount</p>
+        <p fid="47">CustomerRef</p>
+        <p fid="48">ClassRef</p>
+      </response>
+    </detail>
+  </access>
+
+  <access id="0823871b4f16ca3cd7d6f62596904201">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bn8txn27m</dbid>
+    <query></query>
+    <qid>-1</qid>
+    <clist>3.58.71</clist>
+    <params>
+      <p field="3">RecordID</p>
+      <p field="58">QuickbookID</p>
+      <p field="71">QuickbookID</p>
+    </params>
+  </access>
+
+  <!--Proceso 6 FIN caja chica Cleanco-->
+
   <!--Proceso 3 manual Clases -->
 
   <access id="0823871b4f16ca3cd7d6f6259690c003">
