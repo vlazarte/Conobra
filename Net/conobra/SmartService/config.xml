@@ -368,9 +368,9 @@
     <realm>conobra</realm>
     <type>doquery_complex</type>
     <dbid>bn8txn25q</dbid>
-    <query>{'304'.EX.'CONOBRA LTDA.'}</query>
+    <query>{'304'.EX.'CONOBRA LTDA.'}AND{'86'.EX.''}</query>
     <qid>27</qid>
-    <clist>3.339.6.7.304.313.315.316</clist>
+    <clist>3.339.6.7.304.313.315.316.340</clist>
     <params>
     </params>
     <response>
@@ -382,6 +382,7 @@
       <p fid="313">DueDate</p>
       <p fid="315">ExchangeRate</p>
       <p fid="316">Memo</p>
+      <p fid="340">APAccountRef</p>
     </response>
     <detail>
       <dbid>bn8txn26i</dbid>
@@ -423,9 +424,9 @@
     <realm>conobra</realm>
     <type>doquery_complex</type>
     <dbid>bn8txn25q</dbid>
-    <query>{'304'.EX.'Clean Construction LTDA.'}</query>
+    <query>{'304'.EX.'Clean Construction LTDA.'}AND{'86'.EX.''}</query>
     <qid>27</qid>
-    <clist>3.339.6.7.304.313.315.316</clist>
+    <clist>3.339.6.7.304.313.315.316.340</clist>
     <params>
     </params>
     <response>
@@ -437,6 +438,7 @@
       <p fid="313">DueDate</p>
       <p fid="315">ExchangeRate</p>
       <p fid="316">Memo</p>
+      <p fid="340">APAccountRef</p>
     </response>
     <detail>
       <dbid>bn8txn26i</dbid>
@@ -481,7 +483,7 @@
     <dbid>bn8txn27m</dbid>
     <query>{'72'.EX.'CONOBRA LTDA.'}</query>
     <qid>11</qid>
-    <clist>3.34.8.7.72.60.62.66</clist>
+    <clist>3.34.8.7.72.60.62.66.76</clist>
     <params>
     </params>
     <response>
@@ -493,6 +495,7 @@
       <p fid="60">DueDate</p>
       <p fid="62">ExchangeRate</p>
       <p fid="66">Memo</p>
+      <p fid="76">APAccountRef</p>
     </response>
     <detail>
       <dbid>bn8txn27s</dbid>
@@ -537,7 +540,7 @@
     <dbid>bn8txn27m</dbid>
     <query>{'72'.EX.'Clean Construction LTDA.'}</query>
     <qid>11</qid>
-    <clist>3.34.8.7.72.60.62.66</clist>
+    <clist>3.34.8.7.72.60.62.66.76</clist>
     <params>
     </params>
     <response>
@@ -549,6 +552,7 @@
       <p fid="60">DueDate</p>
       <p fid="62">ExchangeRate</p>
       <p fid="66">Memo</p>
+      <p fid="76">APAccountRef</p>
     </response>
     <detail>
       <dbid>bn8txn27s</dbid>

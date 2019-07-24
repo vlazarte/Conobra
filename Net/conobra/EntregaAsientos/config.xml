@@ -184,6 +184,7 @@
           <p field="DueDate" type="DateTime" required="false">DueDate</p>
           <p field="ExchangeRate" required="true" type="Double">ExchangeRate</p>
           <p field="Memo" required="false">Memo</p>
+          <p field="APAccountRef/FullName" type="Account" required="false">APAccountRef</p>
         </parametros>
         <detail>
           <quickbook_tabla>BillExpenseLine</quickbook_tabla>
@@ -296,6 +297,7 @@
           <p field="DueDate" type="DateTime" required="false">DueDate</p>
           <p field="ExchangeRate" required="true" type="Double">ExchangeRate</p>
           <p field="Memo" required="false">Memo</p>
+          <p field="APAccountRef/FullName" type="Account" required="false">APAccountRef</p>
         </parametros>
         <detail>
           <quickbook_tabla>BillExpenseLine</quickbook_tabla>
@@ -498,58 +500,3 @@
     </ejecucion>
   </proceso>
 </root>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

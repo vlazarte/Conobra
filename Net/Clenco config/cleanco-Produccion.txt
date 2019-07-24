@@ -66,9 +66,16 @@
       </accion>
     </acciones>
     <ejecucion tipo="intervalo">
-      <intervalo tipo="segundo">120</intervalo>
+      <intervalo tipo="segundo">300</intervalo>
+      <hora_inicio tipo="time">8:21 am</hora_inicio>
       <fecha_unica>2019-04-09</fecha_unica>
     </ejecucion>
+    <subprocesos>
+      <item>2</item>
+      <item>3</item>
+      <item>4</item>
+      <item>5</item>
+    </subprocesos>
 
   </proceso>
   <proceso id="2" includeSublevel="false">
@@ -146,74 +153,190 @@
         </respuestas>
       </accion>
     </acciones>
-    <ejecucion tipo="intervalo">
-      <intervalo tipo="segundo">140</intervalo>
+    <ejecucion tipo="subproceso">
+      <intervalo tipo="segundo">300</intervalo>
+      <hora_inicio tipo="time">8:23 am</hora_inicio>
       <fecha_unica>2019-04-09</fecha_unica>
     </ejecucion>
 
   </proceso>
-  <proceso id="4">
-      <nombre>Importar Recibos a Quickbooks</nombre>
-      <entrada tipo="quickbase">
-        <quickbook></quickbook>
-        <quickbase>
-          <access_token>0823871b4f16ca3cd7d6f62596904000</access_token>
+  <proceso id="3">
+    <nombre>Importar Recibos a Quickbooks</nombre>
+    <entrada tipo="quickbase">
+      <quickbook></quickbook>
+      <quickbase>
+        <access_token>0823871b4f16ca3cd7d6f62596904000</access_token>
+        <parametros>
+          <p field="B">NOMBRE</p>
+        </parametros>
+      </quickbase>
+    </entrada>
+    <acciones>
+      <accion id="cust001" tipo="add_quickbook">
+        <nombre>Crear Bill</nombre>
+        <quickbook_tabla>Bill</quickbook_tabla>
+        <parametros>
+          <p field="RecordID" key="true">RecordID</p>
+          <p field="VendorRef/FullName" type="Vendor" required="true">VendorRef</p>
+          <p field="RefNumber" required="true">RefNumber</p>
+          <p field="txnDate" type="DateTime" required="true">txnDate</p>
+          <p field="QuickbooksCompania" key="true" type="Configuration">QuickbooksCompania</p>
+          <p field="DueDate" type="DateTime" required="false">DueDate</p>
+          <p field="ExchangeRate" required="true" type="Double">ExchangeRate</p>
+          <p field="Memo" required="false">Memo</p>
+          <p field="APAccountRef/FullName" type="Account" required="false">APAccountRef</p>
+        </parametros>
+        <detail>
+          <quickbook_tabla>BillExpenseLine</quickbook_tabla>
           <parametros>
-            <p field="B">NOMBRE</p>
+            <p field="RecordID" key="true" >DET_RID</p>
+            <p field="DET_PADRE" key="true">DET_PADRE</p>
+            <p field="AccountRef/FullName" type="Account" >AccountRef</p>
+            <p field="Amount" type="Double">Amount</p>
+            <p field="CustomerRef/ListID" type="Customer">CustomerRef</p>
+            <p field="ClassRef/FullName" type="Class">ClassRef</p>
           </parametros>
-        </quickbase>
-      </entrada>
-      <acciones>
-        <accion id="cust001" tipo="add_quickbook">
-          <nombre>Crear Bill</nombre>
-          <quickbook_tabla>Bill</quickbook_tabla>
-          <parametros>
-            <p field="RecordID" key="true">RecordID</p>
-            <p field="VendorRef/FullName" type="Vendor" required="true">VendorRef</p>
-            <p field="RefNumber" required="true">RefNumber</p>
-            <p field="txnDate" type="DateTime" required="true">txnDate</p>
-            <p field="QuickbooksCompania" key="true" type="Configuration">QuickbooksCompania</p>
-            <p field="DueDate" type="DateTime" required="false">DueDate</p>
-            <p field="ExchangeRate" required="true" type="Double">ExchangeRate</p>
-            <p field="Memo" required="false">Memo</p>
-          </parametros>
-          <detail>
-            <quickbook_tabla>BillExpenseLine</quickbook_tabla>
+        </detail>
+        <respuestas>
+          <respuesta tipo="import_quickbase" categoria="Save">
+            <access_token>0823871b4f16ca3cd7d6f62596904001</access_token>
             <parametros>
-              <p field="RecordID" key="true" >DET_RID</p>
-              <p field="DET_PADRE" key="true">DET_PADRE</p>
-              <p field="AccountRef/FullName" type="Account" >AccountRef</p>
-              <p field="Amount" type="Double">Amount</p>
-              <p field="CustomerRef/ListID" type="Customer">CustomerRef</p>
-              <p field="ClassRef/FullName" type="Class">ClassRef</p>
+              <p field="1" key="true">RecordID</p>
+              <p field="2" >ListID</p>
             </parametros>
-          </detail>
-          <respuestas>
-            <respuesta tipo="import_quickbase" categoria="Save">
-              <access_token>0823871b4f16ca3cd7d6f62596904001</access_token>
-              <parametros>
-                <p field="1" key="true">RecordID</p>
-                <p field="2" >ListID</p>
-              </parametros>
-            </respuesta>
-            <respuesta tipo="import_quickbase" categoria="Log">
-              <access_token>8fc1a0edf52f44ba5cb7c7809613cbdd</access_token>
-              <parametros>
-                <p field="6" key="true">ACCION</p>
-                <p field="7" >SEND</p>
-                <p field="8" >RECIVED</p>
-                <p field="9" >SUCCESS</p>
-              </parametros>
-            </respuesta>
-          </respuestas>
-        </accion>
-      </acciones>
-      <ejecucion tipo="intervalo">
-        <intervalo tipo="segundo">120</intervalo>
-        <fecha_unica>2019-04-09</fecha_unica>
-      </ejecucion>
-    </proceso>
-
+          </respuesta>
+          <respuesta tipo="import_quickbase" categoria="Log">
+            <access_token>8fc1a0edf52f44ba5cb7c7809613cbdd</access_token>
+            <parametros>
+              <p field="6" key="true">ACCION</p>
+              <p field="7" >SEND</p>
+              <p field="8" >RECIVED</p>
+              <p field="9" >SUCCESS</p>
+            </parametros>
+          </respuesta>
+        </respuestas>
+      </accion>
+    </acciones>
+    <ejecucion tipo="subproceso">
+      <intervalo tipo="segundo">300</intervalo>
+      <hora_inicio tipo="time">8:25 am</hora_inicio>
+      <fecha_unica>2019-04-09</fecha_unica>
+    </ejecucion>
+  </proceso>
+  <proceso id="4" includeSublevel="true">
+    <nombre>Proyectos a Quickbooks</nombre>
+    <entrada tipo="quickbase">
+      <quickbook></quickbook>
+      <quickbase>
+        <access_token>0823871b4f16ca3cd7d6f625970000</access_token>
+        <parametros>
+          <p field="B">NOMBRE</p>
+        </parametros>
+      </quickbase>
+    </entrada>
+    <acciones>
+      <accion id="cust001" tipo="add_quickbook">
+        <nombre>Crear Proyecto</nombre>
+        <quickbook_tabla>Customer</quickbook_tabla>
+        <parametros>
+          <p field="Customer/ListID" type="Customer" required="true">ParentRef</p>
+          <p field="Name" required="true">Name</p>
+          <p field="IsActive" required="false">IsActive</p>
+          <p field="QuickbooksCompania" key="true" type="Configuration">QuickbooksCompania</p>
+          <p field="Currency/FullName" type="Currency">CurrencyRef</p>
+          <p field="RecordID" key="true">RecordID</p>
+          <p field="JobStartDate" type="DateTime" required="false">JobStartDate</p>
+        </parametros>
+        <respuestas>
+          <respuesta tipo="import_quickbase" categoria="Save">
+            <access_token>0823871b4f16ca3cd7d6f62596901000</access_token>
+            <parametros>
+              <p field="1" key="true">RecordID</p>
+              <p field="2" >ListID</p>
+            </parametros>
+          </respuesta>
+          <respuesta tipo="import_quickbase" categoria="Log">
+            <access_token>8fc1a0edf52f44ba5cb7c7809613cbdd</access_token>
+            <parametros>
+              <p field="6" key="true">ACCION</p>
+              <p field="7" >SEND</p>
+              <p field="8" >RECIVED</p>
+              <p field="9" >SUCCESS</p>
+            </parametros>
+          </respuesta>
+        </respuestas>
+      </accion>
+    </acciones>
+    <ejecucion tipo="subproceso">
+      <intervalo tipo="segundo">360</intervalo>
+      <hora_inicio tipo="time">8:27 am</hora_inicio>
+      <fecha_unica>2019-04-09</fecha_unica>
+    </ejecucion>
+  </proceso>
+  <proceso id="5">
+    <nombre>Importar Facturas de Caja chica a Quickbooks</nombre>
+    <entrada tipo="quickbase">
+      <quickbook></quickbook>
+      <quickbase>
+        <access_token>0823871b4f16ca3cd7d6f62596904200</access_token>
+        <parametros>
+          <p field="B">NOMBRE</p>
+        </parametros>
+      </quickbase>
+    </entrada>
+    <acciones>
+      <accion id="cust001" tipo="add_quickbook">
+        <nombre>Crear Bill</nombre>
+        <quickbook_tabla>Bill</quickbook_tabla>
+        <parametros>
+          <p field="RecordID" key="true">RecordID</p>
+          <p field="VendorRef/FullName" type="Vendor" required="true">VendorRef</p>
+          <p field="RefNumber" required="true">RefNumber</p>
+          <p field="txnDate" type="DateTime" required="true">txnDate</p>
+          <p field="QuickbooksCompania" key="true" type="Configuration">QuickbooksCompania</p>
+          <p field="DueDate" type="DateTime" required="false">DueDate</p>
+          <p field="ExchangeRate" required="true" type="Double">ExchangeRate</p>
+          <p field="Memo" required="false">Memo</p>
+          <p field="APAccountRef/FullName" type="Account" required="false">APAccountRef</p>
+        </parametros>
+        <detail>
+          <quickbook_tabla>BillExpenseLine</quickbook_tabla>
+          <parametros>
+            <p field="RecordID" key="true" >DET_RID</p>
+            <p field="DET_PADRE" key="true">DET_PADRE</p>
+            <p field="AccountRef/FullName" type="Account" >AccountRef</p>
+            <p field="Amount" type="Double">Amount</p>
+            <p field="CustomerRef/ListID" type="Customer">CustomerRef</p>
+            <p field="ClassRef/FullName" type="Class">ClassRef</p>
+          </parametros>
+        </detail>
+        <respuestas>
+          <respuesta tipo="import_quickbase" categoria="Save">
+            <access_token>0823871b4f16ca3cd7d6f62596904201</access_token>
+            <parametros>
+              <p field="1" key="true">RecordID</p>
+              <p field="2" >ListID</p>
+              <p field="3" >ListID</p>
+            </parametros>
+          </respuesta>
+          <respuesta tipo="import_quickbase" categoria="Log">
+            <access_token>8fc1a0edf52f44ba5cb7c7809613cbdd</access_token>
+            <parametros>
+              <p field="6" key="true">ACCION</p>
+              <p field="7" >SEND</p>
+              <p field="8" >RECIVED</p>
+              <p field="9" >SUCCESS</p>
+            </parametros>
+          </respuesta>
+        </respuestas>
+      </accion>
+    </acciones>
+    <ejecucion tipo="subproceso">
+      <intervalo tipo="segundo">300</intervalo>
+      <hora_inicio tipo="time">8:20 am</hora_inicio>
+      <fecha_unica>2019-04-09</fecha_unica>
+    </ejecucion>
+  </proceso>
   <proceso id="1">
     <nombre>Importar Proveedores a quickbase</nombre>
     <entrada tipo="quickbooks">
@@ -336,30 +459,44 @@
       <fecha_unica>2019-04-09</fecha_unica>
     </ejecucion>
   </proceso>
-
-
-
-
+  <proceso id="4" includeSublevel="true">
+    <nombre>Importar Proyectos a quickbase</nombre>
+    <entrada tipo="quickbooks">
+      <quickbook></quickbook>
+      <quickbase>
+        <access_token></access_token>
+        <parametros>
+          <p field="B">NOMBRE</p>
+        </parametros>
+      </quickbase>
+    </entrada>
+    <acciones>
+      <accion id="cust001" tipo="add_quickbase">
+        <nombre>Importar Projectos a quickbase</nombre>
+        <quickbook_tabla>Customer</quickbook_tabla>
+        <parametros>
+        </parametros>
+        <respuestas>
+          <respuesta tipo="import_quickbase" categoria="Create">
+            <access_token>3a847e17ba9e87559ad0bb7110000</access_token>
+            <parametros>
+              <p field="1" key="true" type="Configuration">QuickbooksCompania</p>
+              <p field="2">ListID</p>
+              <p field="3">Name</p>
+              <p field="4">FullName</p>
+              <p field="5">IsActive</p>
+              <p field="6" type="Currency/FullName">CurrencyRef</p>
+              <p field="7" type="Customer/ListID">ParentRef</p>
+              <p field="8" type="Customer/FullName">ParentRef</p>
+              <p field="9">JobDesc</p>
+            </parametros>
+          </respuesta>
+        </respuestas>
+      </accion>
+    </acciones>
+    <ejecucion tipo="manual">
+      <intervalo tipo="segundo">60</intervalo>
+      <fecha_unica>2019-04-09</fecha_unica>
+    </ejecucion>
+  </proceso>
 </root>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
