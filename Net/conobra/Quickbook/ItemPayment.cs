@@ -58,7 +58,7 @@ namespace Quickbook
                 {
                     string response = qbook.sendRequest(xml);
                     doc.LoadXml(response);
-                    if (Config.SaveXML == true)
+                    if (Config.SaveLogXML == true)
                     {
                         string pathFile = Directory.GetCurrentDirectory() + "\\samples\\ItemPayment.xml";
                         File.WriteAllText(pathFile, response);

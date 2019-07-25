@@ -48,43 +48,7 @@ namespace SmartQuickbook.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Clean Construction LTDA. SmartStrategy - Quickbook Connector v2.4")]
-        public string qbook_app_name {
-            get {
-                return ((string)(this["qbook_app_name"]));
-            }
-            set {
-                this["qbook_app_name"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Quickbooks db\\Cleanco\\Cleanco.qbw")]
-        public string qbook_file {
-            get {
-                return ((string)(this["qbook_file"]));
-            }
-            set {
-                this["qbook_file"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Clean Construction LTDA.")]
-        public string qbook_CompaniaBD {
-            get {
-                return ((string)(this["qbook_CompaniaBD"]));
-            }
-            set {
-                this["qbook_CompaniaBD"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Clean Construction LTDA. - Quickbooks Factura Electrónica Costa Rica.")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Quickbooks Factura Electrónica Costa Rica.")]
         public string qbook_Compania {
             get {
                 return ((string)(this["qbook_Compania"]));
@@ -96,25 +60,25 @@ namespace SmartQuickbook.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("4 a.m.")]
-        public string TimeStart {
+        [global::System.Configuration.DefaultSettingValueAttribute("SmartStrategy - Quickbook Connector v2.4")]
+        public string qbook_app_name {
             get {
-                return ((string)(this["TimeStart"]));
+                return ((string)(this["qbook_app_name"]));
             }
             set {
-                this["TimeStart"] = value;
+                this["qbook_app_name"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("5 a.m.")]
-        public string TimeEnd {
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool qbook_save_log {
             get {
-                return ((string)(this["TimeEnd"]));
+                return ((bool)(this["qbook_save_log"]));
             }
             set {
-                this["TimeEnd"] = value;
+                this["qbook_save_log"] = value;
             }
         }
     }

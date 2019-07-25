@@ -33,11 +33,12 @@
             this.button2 = new System.Windows.Forms.Button();
             this.txtConection = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(393, 64);
+            this.textBox2.Location = new System.Drawing.Point(336, 143);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
@@ -46,7 +47,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(77, 64);
+            this.textBox1.Location = new System.Drawing.Point(65, 143);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -55,12 +56,12 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(305, 129);
+            this.button2.Location = new System.Drawing.Point(80, 50);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(56, 65);
+            this.button2.Size = new System.Drawing.Size(200, 69);
             this.button2.TabIndex = 60;
-            this.button2.Text = "Ejecutar XML";
+            this.button2.Text = "Ejecutar XML Conobra";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -81,11 +82,23 @@
             this.label1.Text = "App File";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(324, 50);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(200, 69);
+            this.button1.TabIndex = 65;
+            this.button1.Text = "Ejecutar XML Clenco";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ExecuteXML
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 551);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtConection);
             this.Controls.Add(this.textBox2);
@@ -107,5 +120,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtConection;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

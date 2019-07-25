@@ -484,10 +484,12 @@ namespace Quickbook
 
                         xmlRecived = res.InnerXml;
                         xmlRecived = xmlRecived.Replace(",", ".");
-                       
+
+                        if (Config.SaveLogXML) {
                             string pathFile = Directory.GetCurrentDirectory() + "\\samples\\B_" + DateTime.Now.Ticks + ".xml";
-                            File.WriteAllText(pathFile, response);
-                       
+                            File.WriteAllText(pathFile, response);                       
+                        }
+                        
 
                         qbook.Disconnect();
                     }
@@ -501,8 +503,11 @@ namespace Quickbook
                 }
                 else
                 {
-                    string pathFile = Directory.GetCurrentDirectory() + "\\samples\\Bill_" + DateTime.Now.Ticks + ".xml";
-                    File.WriteAllText(pathFile, xml);
+                    if (Config.SaveLogXML)
+                    {
+                        string pathFile = Directory.GetCurrentDirectory() + "\\samples\\Bill_" + DateTime.Now.Ticks + ".xml";
+                        File.WriteAllText(pathFile, xml);
+                    }
                 }
 
                 string code = "";

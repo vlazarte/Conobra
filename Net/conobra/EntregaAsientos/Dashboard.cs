@@ -128,35 +128,15 @@ namespace SmartQuickbook
 
         private void EjecutarProceso(Proceso proceso)
         {
-            if (proceso.entrada.tipo == "quickbase")
+            if (proceso.tipoEjecucion == "intervalo" || proceso.tipoEjecucion == "subproceso")
             {
-                BeginInvoke((Action)(() =>
-                {
-                    proceso.controlUI.MostrarMensaje("Buscando datos de Quickbase");
-                }));
-                string mensajes =  HelperProcesor.ProcesoEjecutarToQuickBase(proceso);
-
-                BeginInvoke((Action)(() =>
-                {
-                    proceso.controlUI.MostrarMensaje(mensajes);
-                }));
-
-                BeginInvoke((Action)(() =>
-                {
-                    proceso.controlUI.MostrarMensaje("Finalizo Proceso");
-                }));
-
-            }
-            else
-            {
-
-                if (proceso.entrada.tipo == "quickbooks")
+                if (proceso.entrada.tipo == "quickbase")
                 {
                     BeginInvoke((Action)(() =>
                     {
-                        proceso.controlUI.MostrarMensaje("Buscando datos de Quickbooks");
+                        proceso.controlUI.MostrarMensaje("Buscando datos de Quickbase");
                     }));
-                    string mensajes =  HelperProcesor.ProcesoEjecutarToQuickBook(proceso);
+                    string mensajes = HelperProcesor.ProcesoEjecutarToQuickBase(proceso);
 
                     BeginInvoke((Action)(() =>
                     {
@@ -167,8 +147,32 @@ namespace SmartQuickbook
                     {
                         proceso.controlUI.MostrarMensaje("Finalizo Proceso");
                     }));
+
+                }
+                else
+                {
+
+                    if (proceso.entrada.tipo == "quickbooks")
+                    {
+                        BeginInvoke((Action)(() =>
+                        {
+                            proceso.controlUI.MostrarMensaje("Buscando datos de Quickbooks");
+                        }));
+                        string mensajes = HelperProcesor.ProcesoEjecutarToQuickBook(proceso);
+
+                        BeginInvoke((Action)(() =>
+                        {
+                            proceso.controlUI.MostrarMensaje(mensajes);
+                        }));
+
+                        BeginInvoke((Action)(() =>
+                        {
+                            proceso.controlUI.MostrarMensaje("Finalizo Proceso");
+                        }));
+                    }
                 }
             }
+           
         }
 
 

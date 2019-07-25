@@ -222,7 +222,7 @@ namespace Quickbook
                  {
                      string response = qbook.sendRequest(xml);
 
-                     if (Config.SaveXML == true)
+                     if (Config.SaveLogXML == true)
                      {
                          string path = Directory.GetCurrentDirectory() + "\\samples\\I_" + ref_number + ".xml";
                          File.WriteAllText(path, response);

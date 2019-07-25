@@ -394,7 +394,7 @@ namespace Quickbook
                         string response = qbook.sendRequest(xml);
                         res.LoadXml(response);
 
-                        if (Config.SaveXML == true)
+                        if (Config.SaveLogXML == true)
                         {
                             string pathFile = Directory.GetCurrentDirectory() + "\\samples\\V_" + DateTime.Now.Ticks + ".xml";
                             File.WriteAllText(pathFile, response);
@@ -482,7 +482,7 @@ namespace Quickbook
                         string response = qbook.sendRequest(xml);
                         res.LoadXml(response);
 
-                        if (Config.SaveXML == true)
+                        if (Config.SaveLogXML == true)
                         {
                             string pathFile = Directory.GetCurrentDirectory() + "\\samples\\V_" + DateTime.Now.Ticks + ".xml";
                             File.WriteAllText(pathFile, response);
@@ -496,11 +496,16 @@ namespace Quickbook
                     }
                 }
                 else {
+                    if (Config.SaveLogXML == true)
+                    {
+                        string pathFile = Directory.GetCurrentDirectory() + "\\samples\\V_" + DateTime.Now.Ticks + ".xml";
+                        File.WriteAllText(pathFile, xml);
+                    }
                     //Datos de prueba
-                    string pathFile = Directory.GetCurrentDirectory() + "\\samples\\NewVendor_Test.xml";
-                    string response = File.ReadAllText(pathFile);
+                  //  string pathFile = Directory.GetCurrentDirectory() + "\\samples\\NewVendor_Test.xml";
+                  //  string response = File.ReadAllText(pathFile);
 
-                    res.LoadXml(response);
+                    //res.LoadXml(response);
                 }
                 
 

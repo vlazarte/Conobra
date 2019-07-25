@@ -39,7 +39,9 @@ namespace SmartQuickbook.Helper
             string resp = ws.doQuery(proceso.entrada.quickbaseAccessToken, null, out err);
 
             Quickbook.Config.App_Name = Properties.Settings.Default.qbook_app_name;
-            Quickbook.Config.File = Properties.Settings.Default.qbook_file;
+            Quickbook.Config.File = proceso.file;
+            Quickbook.Config.CompaniaDB = proceso.companiaDB;
+
             Quickbook.Config.IsProduction = true;
 
             if (err != string.Empty)
@@ -163,7 +165,7 @@ namespace SmartQuickbook.Helper
                                                     xmlRecived = xmlRecived.Replace(",", ".");
                                                     xmlRecived = xmlRecived.Replace(Environment.NewLine, "");
 
-                                                    string accionValue = accion.tipo + accion.quickbookTabla + Properties.Settings.Default.qbook_CompaniaBD;
+                                                    string accionValue = accion.tipo + accion.nombre;
                                                     accionValue = accionValue.Replace(" ", "");
 
                                                     string log =accionValue + "," + xmlSend + "," + xmlRecived + "," + "0";
@@ -179,7 +181,7 @@ namespace SmartQuickbook.Helper
                                                     xmlSend = xmlSend.Replace(Environment.NewLine, "");
                                                     err = err.Replace(",", ".");
                                                     err = err.Replace(Environment.NewLine, "");
-                                                    string accionValue = accion.tipo + accion.quickbookTabla + Properties.Settings.Default.qbook_CompaniaBD;
+                                                    string accionValue = accion.tipo + accion.nombre;
                                                     accionValue = accionValue.Replace(" ", "");
                                                     string log = accionValue + "," + xmlSend + "," + err + "," + "0";
                                                     HelperTask.AddConfigLog(ConfiguracionRespuestaLog, log, ref RespuestasLog);
@@ -187,9 +189,6 @@ namespace SmartQuickbook.Helper
                                             }
 
                                         }
-
-
-
                                     }
                                     catch (Exception ex)
                                     {                                        
@@ -203,7 +202,7 @@ namespace SmartQuickbook.Helper
 
                                     if (ConfiguracionRespuestaLog.Count > 0)
                                     {
-                                        string accionValue = accion.tipo + accion.quickbookTabla + Properties.Settings.Default.qbook_CompaniaBD;
+                                        string accionValue = accion.tipo + accion.nombre;
                                         accionValue = accionValue.Replace(" ", "");
                                         string log = accionValue + "," + fieldRiquiered + "," + "Se requiere el campo se encuentra vacio o null" + "," + "0";
                                         HelperTask.AddConfigLog(ConfiguracionRespuestaLog, log, ref RespuestasLog);
@@ -226,9 +225,11 @@ namespace SmartQuickbook.Helper
             // Procesar Entrada..
             StringBuilder mostrarMensaje = new StringBuilder();
 
-            Quickbook.Config.App_Name = Properties.Settings.Default.qbook_app_name;
-            Quickbook.Config.File = Properties.Settings.Default.qbook_file;
+            Quickbook.Config.App_Name = Properties.Settings.Default.qbook_app_name;            
+            Quickbook.Config.File = proceso.file;
+            Quickbook.Config.CompaniaDB = proceso.companiaDB;
             Quickbook.Config.IsProduction = true;
+            Quickbook.Config.SaveLogXML = Properties.Settings.Default.qbook_save_log;
 
             foreach (ProcesoAccion accion in proceso.acciones)
             {

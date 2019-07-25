@@ -176,7 +176,7 @@ namespace SmartQuickbook.Configuration
 
                         if (parametros[i].Type == "Configuration")
                         {
-                            fieldValues.Add(Properties.Settings.Default.qbook_CompaniaBD);
+                            fieldValues.Add(Config.CompaniaDB);
                         }
                         else
                         {

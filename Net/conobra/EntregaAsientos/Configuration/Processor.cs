@@ -67,7 +67,14 @@ namespace SmartQuickbook.Configuration
                     }
 
 
-
+                    if (node["conexion"] != null)
+                    {                        
+                        if (node["conexion"]["file"] != null)
+                        {
+                            P.file = node["conexion"]["file"].InnerText;
+                            P.companiaDB = node["conexion"]["companiaBD"].InnerText;
+                        }
+                    }
 
                     XmlNodeList nodoList = node.SelectNodes("acciones/accion");
                     P.acciones = new List<ProcesoAccion>();
@@ -285,6 +292,8 @@ namespace SmartQuickbook.Configuration
         public ProcesoEntrada entrada;
         public List<string> subProcesos;
         public List<ProcesoAccion> acciones;
+        public string file = string.Empty;
+        public string companiaDB = string.Empty;
 
         public static string TIPO_EJECUCION_MANUAL = "manual";
         public static string TIPO_EJECUCION_INTERVALO = "intervalo";

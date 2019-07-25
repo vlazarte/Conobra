@@ -181,7 +181,7 @@ namespace Quickbook
                     string response = qbook.sendRequest(xml);
                     doc.LoadXml(response);
 
-                    if (Config.SaveXML == true)
+                    if (Config.SaveLogXML == true)
                     {
                         string pathFile = Directory.GetCurrentDirectory() + "\\samples\\C_" + ListID + ".xml";
                         File.WriteAllText(pathFile, response);
@@ -197,8 +197,11 @@ namespace Quickbook
             }
             else
             {
-                string pathFile = Directory.GetCurrentDirectory() + "\\samples\\C_" + ListID + ".xml";
-                doc.Load(@pathFile);
+                if (Config.SaveLogXML == true)
+                {
+                    string pathFile = Directory.GetCurrentDirectory() + "\\samples\\C_" + ListID + ".xml";
+                    doc.Load(@pathFile);
+                }
             }
 
             string code = "";
@@ -488,11 +491,11 @@ namespace Quickbook
 
                         xmlRecived = res.InnerXml;
                         xmlRecived = xmlRecived.Replace(",", ".");
-                        //if (Config.SaveXML == true)
-                       // {
+                        if (Config.SaveLogXML == true)
+                        {
                             string pathFile = Directory.GetCurrentDirectory() + "\\samples\\C_" + ListID + ".xml";
                             File.WriteAllText(pathFile, response);
-                        //}
+                        }
 
                         qbook.Disconnect();
                     }
@@ -506,8 +509,11 @@ namespace Quickbook
                 }
                 else
                 {
-                    string pathFile = Directory.GetCurrentDirectory() + "\\samples\\NewCustomer_" + DateTime.Now.Ticks + ".xml";
-                    File.WriteAllText(pathFile, xml);
+                    if (Config.SaveLogXML == true)
+                    {
+                        string pathFile = Directory.GetCurrentDirectory() + "\\samples\\NewCustomer_" + DateTime.Now.Ticks + ".xml";
+                        File.WriteAllText(pathFile, xml);
+                    }
                  }
 
                 string code = "";
@@ -829,9 +835,9 @@ namespace Quickbook
                         string response = qbook.sendRequest(xml);
                         res.LoadXml(response);
 
-                        if (Config.SaveXML == true)
+                        if (Config.SaveLogXML == true)
                         {
-                            string pathFile = Directory.GetCurrentDirectory() + "\\samples\\V_" + DateTime.Now.Ticks + ".xml";
+                            string pathFile = Directory.GetCurrentDirectory() + "\\samples\\C_" + DateTime.Now.Ticks + ".xml";
                             File.WriteAllText(pathFile, response);
                         }
                         qbook.Disconnect();
@@ -844,11 +850,17 @@ namespace Quickbook
                 }
                 else
                 {
-                    //Datos de prueba
-                    string pathFile = Directory.GetCurrentDirectory() + "\\samples\\NewCustomer_Test.xml";
-                    string response = File.ReadAllText(pathFile);
+                    if (Config.SaveLogXML == true)
+                    {
 
-                    res.LoadXml(response);
+                        string pathFile = Directory.GetCurrentDirectory() + "\\samples\\NewCustomer_" + DateTime.Now.Ticks + ".xml";
+                        File.WriteAllText(pathFile, xml);
+                        //Datos de prueba
+                        //string pathFile = Directory.GetCurrentDirectory() + "\\samples\\NewCustomer_Test.xml";
+                       // string response = File.ReadAllText(pathFile);
+
+                        //res.LoadXml(response);
+                    }
                 }
 
 
@@ -910,7 +922,7 @@ namespace Quickbook
                         string response = qbook.sendRequest(xml);
                         res.LoadXml(response);
 
-                        if (Config.SaveXML == true)
+                        if (Config.SaveLogXML == true)
                         {
                             string pathFile = Directory.GetCurrentDirectory() + "\\samples\\C_" + DateTime.Now.Ticks + ".xml";
                             File.WriteAllText(pathFile, response);

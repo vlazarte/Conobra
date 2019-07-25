@@ -30,15 +30,16 @@
         {
             this.pnlTareas = new System.Windows.Forms.Panel();
             this.pnlLog = new System.Windows.Forms.Panel();
+            this.lblLog = new System.Windows.Forms.Label();
             this.lblResultado = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblLog = new System.Windows.Forms.Label();
             this.pnlLog.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTareas
             // 
+            this.pnlTareas.AutoScroll = true;
             this.pnlTareas.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pnlTareas.Location = new System.Drawing.Point(28, 41);
             this.pnlTareas.Name = "pnlTareas";
@@ -56,6 +57,15 @@
             this.pnlLog.Size = new System.Drawing.Size(690, 522);
             this.pnlLog.TabIndex = 1;
             this.pnlLog.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // lblLog
+            // 
+            this.lblLog.AutoSize = true;
+            this.lblLog.Location = new System.Drawing.Point(3, 13);
+            this.lblLog.Name = "lblLog";
+            this.lblLog.Size = new System.Drawing.Size(35, 13);
+            this.lblLog.TabIndex = 1;
+            this.lblLog.Text = "Iniciar";
             // 
             // lblResultado
             // 
@@ -82,15 +92,6 @@
             this.label2.Size = new System.Drawing.Size(152, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "RESULTADO DEL PROCESO";
-            // 
-            // lblLog
-            // 
-            this.lblLog.AutoSize = true;
-            this.lblLog.Location = new System.Drawing.Point(3, 13);
-            this.lblLog.Name = "lblLog";
-            this.lblLog.Size = new System.Drawing.Size(35, 13);
-            this.lblLog.TabIndex = 1;
-            this.lblLog.Text = "Iniciar";
             // 
             // TareasManuales
             // 

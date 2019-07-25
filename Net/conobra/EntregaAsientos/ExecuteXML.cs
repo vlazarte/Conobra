@@ -37,7 +37,7 @@ namespace SmartQuickbook
             {
                 Quickbook.Config.IsProduction = true;//(Properties.Settings.Default.qbook_production == "b4f16ca3cd7d");
                 //  Properties.Settings.Default.qbook_file = txtConection.Text;
-                var qbook = new Connector(Properties.Settings.Default.qbook_app_name, Properties.Settings.Default.qbook_file);
+                var qbook = new Connector(Properties.Settings.Default.qbook_app_name, "C:\\Quickbooks db\\Conobra\\Conobra Limitada.qbw");
                 label1.Text = "Conectando";
                 if (qbook.Connect())
                 {
@@ -55,7 +55,7 @@ namespace SmartQuickbook
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error no se pudo conectar a: " + Properties.Settings.Default.qbook_file + ex.Message);
+                MessageBox.Show("Error no se pudo conectar a: " + "C:\\Quickbooks db\\Conobra\\Conobra Limitada.qbw" + ex.Message);
                 
             }
            
@@ -69,6 +69,35 @@ namespace SmartQuickbook
         private void ExecuteXML_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Quickbook.Config.IsProduction = true;//(Properties.Settings.Default.qbook_production == "b4f16ca3cd7d");
+                //  Properties.Settings.Default.qbook_file = txtConection.Text;
+                var qbook = new Connector(Properties.Settings.Default.qbook_app_name, "C:\\Quickbooks db\\Cleanco\\Cleanco.qbw");
+                label1.Text = "Conectando";
+                if (qbook.Connect())
+                {
+                    label1.Text = "Conecto con exito";
+
+                    if (textBox1.Text != string.Empty)
+                    {
+                        string xmlResponse = qbook.sendRequest(textBox1.Text);
+                        textBox2.Text = xmlResponse;
+                    }
+                    qbook.Disconnect();
+                    label1.Text += "Desconecto!";
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error no se pudo conectar a: " + "C:\\Quickbooks db\\Cleanco\\Cleanco.qbw" + ex.Message);
+
+            }
         }
 
      

@@ -39,7 +39,7 @@ namespace Quickbook
 
                     string response = qbook.sendRequest(xml);
                     res.LoadXml(response);
-                    if (Config.SaveXML == true)
+                    if (Config.SaveLogXML == true)
                     {
                         string pathFile = Directory.GetCurrentDirectory() + "\\samples\\BaseUnits.xml";
                         File.WriteAllText(pathFile, response);

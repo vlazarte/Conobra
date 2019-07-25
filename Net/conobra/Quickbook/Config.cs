@@ -8,7 +8,8 @@ namespace Quickbook
     public class Config
     {
         public static bool IsProduction = true;
-        public static bool SaveXML = false;
+        public static bool SaveLogXML = false;
+        public static string CompaniaDB = "";
 
         //public static bool IsProduction = false;
         //public static bool SaveXML = false;

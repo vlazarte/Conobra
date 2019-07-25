@@ -457,19 +457,6 @@
     </detail>
   </access>
 
-  <access id="0823871b4f16ca3cd7d6f62596904001">
-    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
-    <realm>conobra</realm>
-    <type>import</type>
-    <dbid>bn8txn25q</dbid>
-    <query></query>
-    <qid>-1</qid>
-    <clist>3.86</clist>
-    <params>
-      <p field="3">RecordID</p>
-      <p field="86">QuickbookID</p>
-    </params>
-  </access>
 
   <!--Proceso 3 FIN Recibos Clenco-->
 
@@ -571,22 +558,110 @@
     </detail>
   </access>
 
-  <access id="0823871b4f16ca3cd7d6f62596904201">
+
+  <!--Proceso 6 FIN caja chica Cleanco-->
+
+
+
+  <!--Proceso 11 Solicitudes de pago Cronobra-->
+
+  <access id="0823871b4f16ca3cd7d6f625969050000">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>doquery_complex</type>
+    <dbid>bn8txn23v</dbid>
+    <query>{'432'.EX.'CONOBRA LTDA.'}</query>
+    <qid>38</qid>
+    <clist>3.119.9.11.432.430.429.433.441</clist>
+    <params>
+    </params>
+    <response>
+      <p fid="3" >RecordID</p>
+      <p fid="119" >VendorRef</p>
+      <p fid="9" >RefNumber</p>
+      <p fid="11" >txnDate</p>
+      <p fid="432">QuickbooksCompania</p>
+      <p fid="430">DueDate</p>
+      <p fid="429">ExchangeRate</p>
+      <p fid="433">Memo</p>
+      <p fid="441">APAccountRef</p>
+    </response>
+    <detail>
+      <dbid>bn8txn24b</dbid>
+      <query>{'7'.EX.'__RecordID__'}</query>
+      <clist>3.7.162.107.163.166</clist>
+      <params>
+      </params>
+      <response>
+        <p fid="3" >DET_RID</p>
+        <p fid="7" >DET_PADRE</p>
+        <p fid="162">AccountRef</p>
+        <p fid="107">Amount</p>
+        <p fid="163">CustomerRef</p>
+        <p fid="166">ClassRef</p>
+      </response>
+    </detail>
+  </access>
+
+  <access id="0823871b4f16ca3cd7d6f625969050001">
     <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
     <realm>conobra</realm>
     <type>import</type>
-    <dbid>bn8txn27m</dbid>
+    <dbid>bn8txn23v</dbid>
     <query></query>
     <qid>-1</qid>
-    <clist>3.58.71</clist>
+    <clist>3.431</clist>
     <params>
       <p field="3">RecordID</p>
-      <p field="58">QuickbookID</p>
-      <p field="71">QuickbookID</p>
+      <p field="431">QuickbookID</p>      
     </params>
   </access>
 
-  <!--Proceso 6 FIN caja chica Cleanco-->
+  <!--Proceso 11 FIN Solicitudes de pago Cronobra-->
+
+
+  <!--Proceso 12 Solicitudes de pago Cleanco-->
+
+  <access id="0823871b4f16ca3cd7d6f625969060000">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>doquery_complex</type>
+    <dbid>bn8txn23v</dbid>
+    <query>{'432'.EX.'Clean Construction LTDA.'}</query>
+    <qid>38</qid>
+    <clist>3.119.9.11.432.430.429.433.441</clist>
+    <params>
+    </params>
+    <response>
+      <p fid="3" >RecordID</p>
+      <p fid="119" >VendorRef</p>
+      <p fid="9" >RefNumber</p>
+      <p fid="11" >txnDate</p>
+      <p fid="432">QuickbooksCompania</p>
+      <p fid="430">DueDate</p>
+      <p fid="429">ExchangeRate</p>
+      <p fid="433">Memo</p>
+      <p fid="441">APAccountRef</p>
+    </response>
+    <detail>
+      <dbid>bn8txn24b</dbid>
+      <query>{'7'.EX.'__RecordID__'}</query>
+      <clist>3.7.162.107.163.166</clist>
+      <params>
+      </params>
+      <response>
+        <p fid="3" >DET_RID</p>
+        <p fid="7" >DET_PADRE</p>
+        <p fid="162">AccountRef</p>
+        <p fid="107">Amount</p>
+        <p fid="163">CustomerRef</p>
+        <p fid="166">ClassRef</p>
+      </response>
+    </detail>
+  </access>
+
+  <!--Proceso 12 FIN Solicitudes de pago Cleanco-->
+    
 
   <!--Proceso 3 manual Clases -->
 
@@ -703,29 +778,9 @@
       <p fid="1022">ListID</p>
     </params>
   </access>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <!--Por confirmar-->
-  
-  
-  
-  
-  
-  
- 
-  <!--proceso creacion de jobs Cleanco-->
+
+
+  <!--proceso creacion de Proyecto Cleanco-->
   <access id="0823871b4f16ca3cd7d6f625970000">
     <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
     <realm>conobra</realm>
@@ -746,10 +801,9 @@
       <p fid="9">JobStartDate</p>
     </response>
   </access>
-  <!--proceso creacion de jobs Cleanco FIN-->
-  
-  <!--Proceso creacion de jobs Conobra-->
+  <!--proceso creacion de Proyecto Cleanco FIN-->
 
+  <!--Proceso creacion de PRoyecto Conobra-->
 
   <access id="0823871b4f16ca3cd7d6f6259690ca20">
     <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
@@ -797,13 +851,12 @@
 
   </access>
 
-  <!--Proceso creacion de jobs Conobra FIN-->
-
- 
- 
- 
-
-
+  <!--Proceso creacion de Proyecto Conobra FIN-->
+  
+  
+  <!--Por confirmar-->
+  
+  
   <access id="3a847e17ba9e87559ad0bb71fac10002">
     <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
     <realm>conobra</realm>

@@ -47,7 +47,7 @@ namespace Quickbook
                 {
                     string response = qbook.sendRequest(xml);
 
-                    if (Config.SaveXML == true)
+                    if (Config.SaveLogXML == true)
                     {
                         string path = Directory.GetCurrentDirectory() + "\\samples\\TermsList.xml";
                         System.IO.File.WriteAllText(path, response);
@@ -133,7 +133,7 @@ namespace Quickbook
                 {
                     string response = qbook.sendRequest(xml);
 
-                    if (Config.SaveXML == true)
+                    if (Config.SaveLogXML == true)
                     {
                         string path = Directory.GetCurrentDirectory() + "\\samples\\T_" + ListID + ".xml";
                         System.IO.File.WriteAllText(path, response);
