@@ -168,11 +168,10 @@ namespace Quickbook
 
                 if (Config.IsProduction == true)
                 {
-                    var qbook = new Connector(Quickbook.Config.App_Name, Quickbook.Config.File);
-
-                    if (qbook.Connect())
+                    
+                    if (Config.quickbooks.isOpen())
                     {
-                        string response = qbook.sendRequest(xml);
+                        string response = Config.quickbooks.sendRequest(xml);
                         xmlSend = xml.Replace(",", ".");
 
                         res.LoadXml(response);
@@ -184,7 +183,7 @@ namespace Quickbook
                             string pathFile = Directory.GetCurrentDirectory() + "\\samples\\C_" + ListID + ".xml";
                             File.WriteAllText(pathFile, response);
                         }
-                        qbook.Disconnect();
+                        
 
                     }
                     else
@@ -255,18 +254,17 @@ namespace Quickbook
 
                 if (Config.IsProduction == true)
                 {
-                    var qbook = new Connector(Quickbook.Config.App_Name, Quickbook.Config.File);
 
-                    if (qbook.Connect())
+
+                    if (Config.quickbooks.isOpen())
                     {
-                        string response = qbook.sendRequest(xml);
+                        string response = Config.quickbooks.sendRequest(xml);
                         res.LoadXml(response);
                         if (Config.SaveLogXML == true)
                         {
                             string pathFile = Directory.GetCurrentDirectory() + "\\samples\\C_" + DateTime.Now.Ticks + ".xml";
                             File.WriteAllText(pathFile, response);
                         }
-                        qbook.Disconnect();
 
                     }
                     else
@@ -333,14 +331,13 @@ namespace Quickbook
 
                 if (Config.IsProduction == true)
                 {
-                    var qbook = new Connector(Quickbook.Config.App_Name, Quickbook.Config.File);
 
-                    if (qbook.Connect())
+
+                    if (Config.quickbooks.isOpen())
                     {
-                        string response = qbook.sendRequest(xml);
+                        string response = Config.quickbooks.sendRequest(xml);
                         res.LoadXml(response);
-
-                        qbook.Disconnect();
+                                                
 
                     }
                     else

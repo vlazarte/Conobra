@@ -120,13 +120,13 @@ namespace Quickbook
                 xml += "</CreditMemoQueryRq >";
                 xml += "</QBXMLMsgsRq>";
                 xml += "</QBXML>";
-                var qbook = new Connector(Quickbook.Config.App_Name, Quickbook.Config.File);
+               
 
-                if (qbook.Connect())
+                if (Config.quickbooks.isOpen())
                 {
-                    string response = qbook.sendRequest(xml);
+                    string response = Config.quickbooks.sendRequest(xml);
                     doc.LoadXml(response);
-                    qbook.Disconnect();
+                   
 
                 }
                 else

@@ -74,146 +74,157 @@ namespace SmartQuickbook.Helper
             if (data != null && data.Count > 0)
             {
                 // Inicializar Conexion a Quickbook
-
-                foreach (ProcesoAccion accion in proceso.acciones)
+                Config.quickbooks =new Connector(Quickbook.Config.App_Name, Quickbook.Config.File);
+                if (Config.quickbooks.Connect())
                 {
-                    //Revisando si tenemos respuesta creada a esta altura
-                    if (accion.tipo == "add_quickbook")
+                    foreach (ProcesoAccion accion in proceso.acciones)
                     {
-
-                        mostrarMensaje.Append("Ejecutando accion " + accion.nombre + Environment.NewLine);
-
-
-                        //creando la coleccion que almacenara las respuestas de la accion.
-                        List<ProcesoRespuesta> ConfiguracionRespuestaSave = accion.respuestas.FindAll(d => d.categoria == "Save");
-                        List<ProcesoRespuesta> ConfiguracionRespuestaLog = accion.respuestas.FindAll(d => d.categoria == "Log");
-                        Dictionary<string, List<string>> RespuestasSave = new Dictionary<string, List<string>>();
-                        Dictionary<string, List<string>> RespuestasLog = new Dictionary<string, List<string>>();
-                        string llaveQuickbook = "";
-                        Dictionary<string, string> llaveQuickbase = new Dictionary<string, string>();
-
-                        //obtener los campos de respuesta para los parametros a enviar
-                        //el token sera la llave
-                        Dictionary<string, string> fieldNameExternals = HelperTask.GetFieldNameKeyExternal(ConfiguracionRespuestaSave);
-
-
-
-
-                        for (int j = 0; j < data.Count; j++)
+                        //Revisando si tenemos respuesta creada a esta altura
+                        if (accion.tipo == "add_quickbook")
                         {
 
-                            // Para Key => Value retornado desde Quickbase ;
-                            Hashtable pairs = Generic.getPairValues(data[j]);
-
-                            // Obtener la coleccion Fields => Value que se asignara al Objeto
-                            List<string> fieldNames = new List<string>();
-                            List<object> fieldValues = new List<object>();
-                            string fieldRiquiered = string.Empty;
-                            bool Requiered = false;
-                            //Get the Values to add to quickbook
-                            HelperTask.GetValuesToAdd(accion, pairs, ref fieldNames, ref fieldValues, ref fieldNameExternals, ref llaveQuickbase, ref fieldRiquiered, ref Requiered, ref mostrarMensaje, ref err);
-
-                            // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-                            string xmlSend = string.Empty;
-                            string xmlRecived = string.Empty;
+                            mostrarMensaje.Append("Ejecutando accion " + accion.nombre + Environment.NewLine);
 
 
-                            if (accion.quickbookTabla != string.Empty)
+                            //creando la coleccion que almacenara las respuestas de la accion.
+                            List<ProcesoRespuesta> ConfiguracionRespuestaSave = accion.respuestas.FindAll(d => d.categoria == "Save");
+                            List<ProcesoRespuesta> ConfiguracionRespuestaLog = accion.respuestas.FindAll(d => d.categoria == "Log");
+                            Dictionary<string, List<string>> RespuestasSave = new Dictionary<string, List<string>>();
+                            Dictionary<string, List<string>> RespuestasLog = new Dictionary<string, List<string>>();
+                            string llaveQuickbook = "";
+                            Dictionary<string, string> llaveQuickbase = new Dictionary<string, string>();
+
+                            //obtener los campos de respuesta para los parametros a enviar
+                            //el token sera la llave
+                            Dictionary<string, string> fieldNameExternals = HelperTask.GetFieldNameKeyExternal(ConfiguracionRespuestaSave);
+
+
+
+
+                            for (int j = 0; j < data.Count; j++)
                             {
-                                if (Requiered == false)
+
+                                // Para Key => Value retornado desde Quickbase ;
+                                Hashtable pairs = Generic.getPairValues(data[j]);
+
+                                // Obtener la coleccion Fields => Value que se asignara al Objeto
+                                List<string> fieldNames = new List<string>();
+                                List<object> fieldValues = new List<object>();
+                                string fieldRiquiered = string.Empty;
+                                bool Requiered = false;
+                                //Get the Values to add to quickbook
+                                HelperTask.GetValuesToAdd(accion, pairs, ref fieldNames, ref fieldValues, ref fieldNameExternals, ref llaveQuickbase, ref fieldRiquiered, ref Requiered, ref mostrarMensaje, ref err);
+
+                                // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+                                string xmlSend = string.Empty;
+                                string xmlRecived = string.Empty;
+
+
+                                if (accion.quickbookTabla != string.Empty)
                                 {
-
-                                    try
+                                    if (Requiered == false)
                                     {
-                                        string fullPath = System.IO.Directory.GetCurrentDirectory();
 
-                                        Assembly testAssembly = Assembly.LoadFile(fullPath + "\\Quickbook.dll");
-
-                                        Type difineType = testAssembly.GetType("Quickbook." + accion.quickbookTabla);
-
-                                        // create instance of class Calculator
-                                        object objQuickbookInstance = Activator.CreateInstance(difineType);
-                                        Abstract ObjectQuickbook = (Abstract)Generic.SetFields(fieldNames, fieldValues, objQuickbookInstance, ref err);
-                                        if (ObjectQuickbook.HasChild) {
-                                            if (pairs["CHILDS"] != null) {
-                                                string pairsDetails = pairs["CHILDS"].ToString();
-                                              
-                                                HelperTask.CargadoDetalle(ObjectQuickbook,accion, pairsDetails, ref err);
-                                            }                                            
-                                        }
-                                        if (ObjectQuickbook != null && ObjectQuickbook.AddRecord(ref err, ref xmlSend, ref xmlRecived))
+                                        try
                                         {
+                                            string fullPath = System.IO.Directory.GetCurrentDirectory();
 
-                                            if (ConfiguracionRespuestaSave.Count > 0)
-                                            {
-                                                HelperTask.AddConfigSave(ConfiguracionRespuestaSave, llaveQuickbase, ObjectQuickbook, ref err, ref RespuestasSave);
-                                            }                                           
-                                        }
-                                        else
-                                        {
+                                            Assembly testAssembly = Assembly.LoadFile(fullPath + "\\Quickbook.dll");
 
-                                            if (err == string.Empty)
+                                            Type difineType = testAssembly.GetType("Quickbook." + accion.quickbookTabla);
+
+                                            // create instance of class Calculator
+                                            object objQuickbookInstance = Activator.CreateInstance(difineType);
+                                            Abstract ObjectQuickbook = (Abstract)Generic.SetFields(fieldNames, fieldValues, objQuickbookInstance, ref err);
+                                            if (ObjectQuickbook.HasChild)
                                             {
-                                                if (ConfiguracionRespuestaLog.Count > 0)
+                                                if (pairs["CHILDS"] != null)
                                                 {
-                                                    xmlSend = xmlSend.Replace(",", ".");
-                                                    xmlSend = xmlSend.Replace(Environment.NewLine, "");
+                                                    string pairsDetails = pairs["CHILDS"].ToString();
 
+                                                    HelperTask.CargadoDetalle(ObjectQuickbook, accion, pairsDetails, ref err);
+                                                }
+                                            }
+                                            if (ObjectQuickbook != null && ObjectQuickbook.AddRecord(ref err, ref xmlSend, ref xmlRecived))
+                                            {
 
-
-                                                    xmlRecived = xmlRecived.Replace(",", ".");
-                                                    xmlRecived = xmlRecived.Replace(Environment.NewLine, "");
-
-                                                    string accionValue = accion.tipo + accion.nombre;
-                                                    accionValue = accionValue.Replace(" ", "");
-
-                                                    string log =accionValue + "," + xmlSend + "," + xmlRecived + "," + "0";
-                                                    HelperTask.AddConfigLog(ConfiguracionRespuestaLog, log, ref RespuestasLog);
+                                                if (ConfiguracionRespuestaSave.Count > 0)
+                                                {
+                                                    HelperTask.AddConfigSave(ConfiguracionRespuestaSave, llaveQuickbase, ObjectQuickbook, ref err, ref RespuestasSave);
                                                 }
                                             }
                                             else
                                             {
 
-                                                if (ConfiguracionRespuestaLog.Count > 0)
+                                                if (err == string.Empty)
                                                 {
-                                                    xmlSend = xmlSend.Replace(",", ".");
-                                                    xmlSend = xmlSend.Replace(Environment.NewLine, "");
-                                                    err = err.Replace(",", ".");
-                                                    err = err.Replace(Environment.NewLine, "");
-                                                    string accionValue = accion.tipo + accion.nombre;
-                                                    accionValue = accionValue.Replace(" ", "");
-                                                    string log = accionValue + "," + xmlSend + "," + err + "," + "0";
-                                                    HelperTask.AddConfigLog(ConfiguracionRespuestaLog, log, ref RespuestasLog);
+                                                    if (ConfiguracionRespuestaLog.Count > 0)
+                                                    {
+                                                        xmlSend = xmlSend.Replace(",", ".");
+                                                        xmlSend = xmlSend.Replace(Environment.NewLine, "");
+
+
+
+                                                        xmlRecived = xmlRecived.Replace(",", ".");
+                                                        xmlRecived = xmlRecived.Replace(Environment.NewLine, "");
+
+                                                        string accionValue = accion.tipo + proceso.nombre;
+                                                        accionValue = accionValue.Replace(" ", "");
+
+                                                        string log = accionValue + "," + xmlSend + "," + xmlRecived + "," + "0";
+                                                        HelperTask.AddConfigLog(ConfiguracionRespuestaLog, log, ref RespuestasLog);
+                                                    }
                                                 }
+                                                else
+                                                {
+
+                                                    if (ConfiguracionRespuestaLog.Count > 0)
+                                                    {
+                                                        xmlSend = xmlSend.Replace(",", ".");
+                                                        xmlSend = xmlSend.Replace(Environment.NewLine, "");
+                                                        err = err.Replace(",", ".");
+                                                        err = err.Replace(Environment.NewLine, "");
+                                                        string accionValue = accion.tipo + proceso.nombre;
+                                                        accionValue = accionValue.Replace(" ", "");
+                                                        string log = accionValue + "," + xmlSend + "," + err + "," + "0";
+                                                        HelperTask.AddConfigLog(ConfiguracionRespuestaLog, log, ref RespuestasLog);
+                                                    }
+                                                }
+
                                             }
+                                        }
+                                        catch (Exception ex)
+                                        {
+                                            mostrarMensaje.Append("Error al Procesar los datos: " + ex.Message + Environment.NewLine);
 
                                         }
-                                    }
-                                    catch (Exception ex)
-                                    {                                        
-                                        mostrarMensaje.Append("Error al Procesar los datos: " + ex.Message + Environment.NewLine);
-                                        
-                                    }
 
-                                }
-                                else
-                                {
-
-                                    if (ConfiguracionRespuestaLog.Count > 0)
+                                    }
+                                    else
                                     {
-                                        string accionValue = accion.tipo + accion.nombre;
-                                        accionValue = accionValue.Replace(" ", "");
-                                        string log = accionValue + "," + fieldRiquiered + "," + "Se requiere el campo se encuentra vacio o null" + "," + "0";
-                                        HelperTask.AddConfigLog(ConfiguracionRespuestaLog, log, ref RespuestasLog);
+
+                                        if (ConfiguracionRespuestaLog.Count > 0)
+                                        {
+                                            string accionValue = accion.tipo + proceso.nombre;
+                                            accionValue = accionValue.Replace(" ", "");
+                                            string log = accionValue + "," + fieldRiquiered + "," + "Se requiere el campo se encuentra vacio o null" + "," + "0";
+                                            HelperTask.AddConfigLog(ConfiguracionRespuestaLog, log, ref RespuestasLog);
+                                        }
                                     }
                                 }
                             }
-                        }
-                     mostrarMensaje.Append(   HelperTask.ImportToQuickBase(ConfiguracionRespuestaSave, ConfiguracionRespuestaLog, RespuestasSave, RespuestasLog, ref err));
+                            mostrarMensaje.Append(HelperTask.ImportToQuickBase(ConfiguracionRespuestaSave, ConfiguracionRespuestaLog, RespuestasSave, RespuestasLog, ref err));
 
+                        }
                     }
+                    Config.quickbooks.Disconnect();
                 }
+                else
+                {
+                    mostrarMensaje.Append("Error no conecto a Quickbooks");
+                }
+               
 
                 //  Fin conexion a Quickbook
             }
@@ -221,74 +232,96 @@ namespace SmartQuickbook.Helper
         }
         public static string ProcesoEjecutarToQuickBook(Proceso proceso)
         {
-            //  Access
-            // Procesar Entrada..
-            StringBuilder mostrarMensaje = new StringBuilder();
-
-            Quickbook.Config.App_Name = Properties.Settings.Default.qbook_app_name;            
-            Quickbook.Config.File = proceso.file;
-            Quickbook.Config.CompaniaDB = proceso.companiaDB;
-            Quickbook.Config.IsProduction = true;
-            Quickbook.Config.SaveLogXML = Properties.Settings.Default.qbook_save_log;
-
-            foreach (ProcesoAccion accion in proceso.acciones)
+            try
             {
-                //Revisando si tenemos respuesta creada a esta altura
-                if (accion.tipo == "add_quickbase")
+                StringBuilder mostrarMensaje = new StringBuilder();
+
+
+                Quickbook.Config.IsProduction = true;
+                Quickbook.Config.SaveLogXML = Properties.Settings.Default.qbook_save_log;
+                Quickbook.Config.App_Name = Properties.Settings.Default.qbook_app_name;
+                Quickbook.Config.File = proceso.file;
+                Quickbook.Config.CompaniaDB = proceso.companiaDB;
+
+                Quickbook.Config.quickbooks = new Connector(Quickbook.Config.App_Name, Quickbook.Config.File);
+                if (Config.quickbooks.Connect())
                 {
-
-                    mostrarMensaje.Append("Ejecutando accion " + accion.nombre + Environment.NewLine);
-
-                    if (accion.quickbookTabla != string.Empty)
+                    foreach (ProcesoAccion accion in proceso.acciones)
                     {
 
-                        try
+
+                        //Revisando si tenemos respuesta creada a esta altura
+                        if (accion.tipo == "add_quickbase")
                         {
-                            string fullPath = System.IO.Directory.GetCurrentDirectory();
 
-                            Assembly testAssembly = Assembly.LoadFile(fullPath + "\\Quickbook.dll");
+                            mostrarMensaje.Append("Ejecutando accion " + accion.nombre + Environment.NewLine);
 
-                            Type difineType = testAssembly.GetType("Quickbook." + accion.quickbookTabla);
-
-                            // create instance of class Calculator
-                            object objQuickbookInstance = Activator.CreateInstance(difineType);
-                            //que campos
-                            string err = string.Empty;
-                            List<Abstract> Records=new List<Abstract>();
-                            if (proceso.tipoEjecucion == "manual")
-                            {//TODO:AComodar GEnerico
-
-                                Records = ((Abstract)objQuickbookInstance).GetRecordsCVS(ref err, proceso.includeSublevel);
-                            }
-                            else {
-                                Records = ((Abstract)objQuickbookInstance).GetRecords(ref err, proceso.includeSublevel);
-                            }
-                             
-
-                            if (Records.Count > 0)
+                            if (accion.quickbookTabla != string.Empty)
                             {
-                                //obtener el listado de quickbase, separar los que tienen listID
-                                string mensaje = HelperProcesor.ProcesarRegistros(proceso, Records);
 
-                                return mensaje;
+                                try
+                                {
+                                    string fullPath = System.IO.Directory.GetCurrentDirectory();
+
+                                    Assembly testAssembly = Assembly.LoadFile(fullPath + "\\Quickbook.dll");
+
+                                    Type difineType = testAssembly.GetType("Quickbook." + accion.quickbookTabla);
+
+                                    // create instance of class Calculator
+                                    object objQuickbookInstance = Activator.CreateInstance(difineType);
+                                    //que campos
+                                    string err = string.Empty;
+                                    List<Abstract> Records = new List<Abstract>();
+
+                                    if (proceso.tipoEjecucion == "manual")
+                                    {//TODO:AComodar GEnerico
+
+                                        Records = ((Abstract)objQuickbookInstance).GetRecordsCVS(ref err, proceso.includeSublevel);
+                                    }
+                                    else
+                                    {
+                                        Records = ((Abstract)objQuickbookInstance).GetRecords(ref err, proceso.includeSublevel);
+                                    }
+
+
+                                    if (Records.Count > 0)
+                                    {
+                                        //obtener el listado de quickbase, separar los que tienen listID
+                                        mostrarMensaje.Append( HelperProcesor.ProcesarRegistros(proceso, Records));
+                                                                                
+                                    }
+                                    else
+                                    {
+                                        mostrarMensaje.Append("No se encontraron registros para sincronizar" + Environment.NewLine);
+                                    }
+                                }
+                                catch (Exception ex)
+                                {
+                                    mostrarMensaje.Append("Error al procesar:" + ex.Message + Environment.NewLine);
+
+                                }
+
                             }
-                            else
-                            {
-                                mostrarMensaje.Append("No se encontraron registros para sincronizar" + Environment.NewLine);
-                            }
-
-
                         }
-                        catch (Exception ex)
-                        {
-                            mostrarMensaje.Append("Error al procesar:" + ex.Message+Environment.NewLine);
-                            
-                        }
-
                     }
+
+                    mostrarMensaje.Append("desconectando.....");
+                    Config.quickbooks.Disconnect();
                 }
+                else
+                {
+                    mostrarMensaje.Append("Error no conecto a Quickbooks");
+                }
+                return mostrarMensaje.ToString();
+            
             }
-            return mostrarMensaje.ToString();
+            catch (Exception e)
+            {
+
+                return e.Message;
+            }
+           
+           
 
 
         }

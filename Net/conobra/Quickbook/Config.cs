@@ -10,7 +10,7 @@ namespace Quickbook
         public static bool IsProduction = true;
         public static bool SaveLogXML = false;
         public static string CompaniaDB = "";
-
+        public static Connector quickbooks=null;
         //public static bool IsProduction = false;
         //public static bool SaveXML = false;
 

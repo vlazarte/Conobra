@@ -45,7 +45,7 @@ namespace Quickbook
             apaAccount = null;
             expenseLines = new List<BillExpenseLine>();
             itemLines = new List<BillItemLine>();
-            qb = instance;
+            qb = Config.quickbooks;
 
             exists = false;
 

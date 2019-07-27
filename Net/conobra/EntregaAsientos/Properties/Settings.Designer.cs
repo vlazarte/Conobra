@@ -35,17 +35,6 @@ namespace SmartQuickbook.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://smartstrategyonline.com/Cloud/WebServices/IntegracionesQuickbook/WService." +
-            "asmx")]
-        public string SmartQuickbook_wClient_WService {
-            get {
-                return ((string)(this["SmartQuickbook_wClient_WService"]));
-            }
-        }
-        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Quickbooks Factura Electrónica Costa Rica.")]
@@ -79,6 +68,17 @@ namespace SmartQuickbook.Properties {
             }
             set {
                 this["qbook_save_log"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://smartstrategyonline.com/Cloud/WebServices/IntegracionesQuickbook/WService." +
+            "asmx")]
+        public string SmartQuickbook_wClient_WService {
+            get {
+                return ((string)(this["SmartQuickbook_wClient_WService"]));
             }
         }
     }

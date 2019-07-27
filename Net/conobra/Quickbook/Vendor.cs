@@ -388,10 +388,10 @@ namespace Quickbook
 
                 if (Config.IsProduction == true)
                 {
-                    var qbook = new Connector(Quickbook.Config.App_Name, Quickbook.Config.File);
-                    if (qbook.Connect())
+                   
+                    if (Config.quickbooks.isOpen())
                     {
-                        string response = qbook.sendRequest(xml);
+                        string response = Config.quickbooks.sendRequest(xml);
                         res.LoadXml(response);
 
                         if (Config.SaveLogXML == true)
@@ -399,7 +399,7 @@ namespace Quickbook
                             string pathFile = Directory.GetCurrentDirectory() + "\\samples\\V_" + DateTime.Now.Ticks + ".xml";
                             File.WriteAllText(pathFile, response);
                         }
-                        qbook.Disconnect();
+                        
 
                     }
                     else
@@ -475,19 +475,20 @@ namespace Quickbook
 
                 if (Config.IsProduction == true)
                 {
-                    var qbook = new Connector(Quickbook.Config.App_Name, Quickbook.Config.File);
+                    var qbook = Config.quickbooks;
 
-                    if (qbook.Connect())
+                    if (qbook.isOpen())
                     {
                         string response = qbook.sendRequest(xml);
                         res.LoadXml(response);
 
                         if (Config.SaveLogXML == true)
                         {
-                            string pathFile = Directory.GetCurrentDirectory() + "\\samples\\V_" + DateTime.Now.Ticks + ".xml";
+                            string NameCustomerByDay = Config.CompaniaDB + DateTime.Now.ToString("MM-dd-yyyy");
+                            string pathFile = Directory.GetCurrentDirectory() + "\\samples\\V_" + NameCustomerByDay + ".xml";
                             File.WriteAllText(pathFile, response);
                         }
-                        qbook.Disconnect();
+                       
 
                     }
                     else

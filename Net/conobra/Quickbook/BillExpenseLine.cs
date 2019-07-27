@@ -37,35 +37,47 @@ namespace Quickbook
 
         public string toXmlAdd()
         {
-            string xml = Environment.NewLine + "<ExpenseLineAdd>";
-            if (AccountRef != null)
+            if (Amount > 0)
             {
-                xml += Environment.NewLine + AccountRef.toXmlRef();               
-            }
+                string xml = Environment.NewLine + "<ExpenseLineAdd>";
+                if (AccountRef != null)
+                {
+                    xml += Environment.NewLine + AccountRef.toXmlRef();
+                }
 
-            System.Globalization.CultureInfo myInfo = System.Globalization.CultureInfo.CreateSpecificCulture("en-GB");
-            
-            xml += Environment.NewLine + "<Amount>" + Amount.ToString("0.00", myInfo) + "</Amount>";
-            if (Memo != string.Empty)
+                System.Globalization.CultureInfo myInfo = System.Globalization.CultureInfo.CreateSpecificCulture("en-GB");
+
+                xml += Environment.NewLine + "<Amount>" + Amount.ToString("0.00", myInfo) + "</Amount>";
+                if (Memo != string.Empty)
+                {
+                    xml += Environment.NewLine + "<Memo>" + Memo + "</Memo>";
+                }
+
+                if (CustomerRef != null)
+                {
+                    xml += CustomerRef.toXmlRef();
+                }
+                if (ClassRef != null)
+                {
+                    xml += ClassRef.toXmlRef();
+                }
+
+                if (BillableStatus != null && BillableStatus != string.Empty)
+                {
+                    xml += Environment.NewLine + "<BillableStatus>" + BillableStatus + "</BillableStatus> ";
+                }
+
+
+                xml += Environment.NewLine + "</ExpenseLineAdd>";
+                return xml;
+            }
+            else
             {
-                xml += Environment.NewLine + "<Memo>" + Memo + "</Memo>";
+                return string.Empty;
             }
+           
 
-            if (CustomerRef != null) {
-                xml += CustomerRef.toXmlRef();
-            }
-            if (ClassRef != null) {
-                xml += ClassRef.toXmlRef();
-            }
-
-            if (BillableStatus != null &&  BillableStatus!=string.Empty) {
-                xml += Environment.NewLine + "<BillableStatus>" + BillableStatus + "</BillableStatus> ";            
-            }
-
-
-            xml += Environment.NewLine + "</ExpenseLineAdd>";
-
-            return xml;
+          
         }
 
         public string toXmlMod()

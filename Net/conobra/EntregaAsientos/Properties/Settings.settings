@@ -5,9 +5,6 @@
     <Setting Name="qbook_production" Type="System.String" Scope="User">
       <Value Profile="(Default)">b4f16ca3cd7d_</Value>
     </Setting>
-    <Setting Name="SmartQuickbook_wClient_WService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://smartstrategyonline.com/Cloud/WebServices/IntegracionesQuickbook/WService.asmx</Value>
-    </Setting>
     <Setting Name="qbook_Compania" Type="System.String" Scope="User">
       <Value Profile="(Default)">Quickbooks Factura Electrónica Costa Rica.</Value>
     </Setting>
@@ -16,6 +13,9 @@
     </Setting>
     <Setting Name="qbook_save_log" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="SmartQuickbook_wClient_WService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://smartstrategyonline.com/Cloud/WebServices/IntegracionesQuickbook/WService.asmx</Value>
     </Setting>
   </Settings>
 </SettingsFile>

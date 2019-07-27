@@ -441,7 +441,7 @@ namespace Quickbook
 
             foreach (BillItemLine line in itemLines)
             {
-                 toXML.Append( Environment.NewLine + line.toXml());
+                 toXML.Append( line.toXml());
             }
 
             toXML.Append( "</BillAdd>");
@@ -472,9 +472,9 @@ namespace Quickbook
                 {
 
 
-                    var qbook = new Connector(Quickbook.Config.App_Name, Quickbook.Config.File);
+                    var qbook = Config.quickbooks;
 
-                    if (qbook.Connect())
+                    if (qbook.isOpen())
                     {
 
                         string response = qbook.sendRequest(xml);
@@ -486,12 +486,10 @@ namespace Quickbook
                         xmlRecived = xmlRecived.Replace(",", ".");
 
                         if (Config.SaveLogXML) {
-                            string pathFile = Directory.GetCurrentDirectory() + "\\samples\\B_" + DateTime.Now.Ticks + ".xml";
+                            string pathFile = Directory.GetCurrentDirectory() + "\\samples\\B_"+Config.CompaniaDB + DateTime.Now.Ticks + ".xml";
                             File.WriteAllText(pathFile, response);                       
                         }
-                        
-
-                        qbook.Disconnect();
+                       
                     }
                     else
                     {

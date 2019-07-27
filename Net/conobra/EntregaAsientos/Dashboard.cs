@@ -86,6 +86,7 @@ namespace SmartQuickbook
 
         public void CargarListaProcesos()
         {
+          
             dgListProcess.Rows.Clear();
 
             for (int i = 0; i < processor.procesos.Count; i++)
@@ -210,7 +211,7 @@ namespace SmartQuickbook
 
                         foreach (string id in proceso.subProcesos)
                         {
-                            Proceso p = processor.procesos.Find(d => d.id == id);
+                            Proceso p = processor.procesos.Find(d => d.id == id && d.tipoEjecucion == "subproceso");
                             {
                                 EjecutarProceso(p);
                                 BeginInvoke((Action)(() =>

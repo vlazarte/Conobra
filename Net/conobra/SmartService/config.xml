@@ -368,8 +368,8 @@
     <realm>conobra</realm>
     <type>doquery_complex</type>
     <dbid>bn8txn25q</dbid>
-    <query>{'304'.EX.'CONOBRA LTDA.'}AND{'86'.EX.''}</query>
-    <qid>27</qid>
+    <query>{'304'.EX.'CONOBRA LTDA.'}AND{'86'.EX.''}AND{'295'.EX.'1'}</query>
+    <qid>-1</qid>
     <clist>3.339.6.7.304.313.315.316.340</clist>
     <params>
     </params>
@@ -424,8 +424,8 @@
     <realm>conobra</realm>
     <type>doquery_complex</type>
     <dbid>bn8txn25q</dbid>
-    <query>{'304'.EX.'Clean Construction LTDA.'}AND{'86'.EX.''}</query>
-    <qid>27</qid>
+    <query>{'304'.EX.'Clean Construction LTDA.'}AND{'86'.EX.''}AND{'295'.EX.'1'}</query>
+    <qid>-1</qid>
     <clist>3.339.6.7.304.313.315.316.340</clist>
     <params>
     </params>
@@ -468,8 +468,8 @@
     <realm>conobra</realm>
     <type>doquery_complex</type>
     <dbid>bn8txn27m</dbid>
-    <query>{'72'.EX.'CONOBRA LTDA.'}</query>
-    <qid>11</qid>
+    <query>{'72'.EX.'CONOBRA LTDA.'}AND{'58'.EX.''}AND{'71'.EX.''}AND{'63'.EX.'1'}</query>
+    <qid>-1</qid>
     <clist>3.34.8.7.72.60.62.66.76</clist>
     <params>
     </params>
@@ -525,8 +525,8 @@
     <realm>conobra</realm>
     <type>doquery_complex</type>
     <dbid>bn8txn27m</dbid>
-    <query>{'72'.EX.'Clean Construction LTDA.'}</query>
-    <qid>11</qid>
+    <query>{'72'.EX.'Clean Construction LTDA.'}AND{'58'.EX.''}AND{'71'.EX.''}AND{'63'.EX.'1'}</query>
+    <qid>-1</qid>
     <clist>3.34.8.7.72.60.62.66.76</clist>
     <params>
     </params>
@@ -570,8 +570,8 @@
     <realm>conobra</realm>
     <type>doquery_complex</type>
     <dbid>bn8txn23v</dbid>
-    <query>{'432'.EX.'CONOBRA LTDA.'}</query>
-    <qid>38</qid>
+    <query>{'432'.EX.'CONOBRA LTDA.'}AND{'431'.EX.''}AND{'434'.EX.'1'}</query>
+    <qid>-1</qid>
     <clist>3.119.9.11.432.430.429.433.441</clist>
     <params>
     </params>
@@ -627,8 +627,8 @@
     <realm>conobra</realm>
     <type>doquery_complex</type>
     <dbid>bn8txn23v</dbid>
-    <query>{'432'.EX.'Clean Construction LTDA.'}</query>
-    <qid>38</qid>
+    <query>{'432'.EX.'Clean Construction LTDA.'}AND{'431'.EX.''}AND{'434'.EX.'1'}</query>
+    <qid>-1</qid>
     <clist>3.119.9.11.432.430.429.433.441</clist>
     <params>
     </params>
@@ -734,60 +734,17 @@
 
   <!--Proceso 5 Fin automatico Clases clientes a quickbase -->
 
+ 
 
 
-
-
-
-
-
-
-
-
-
-
-
-  <!--Proceso 5 FIN manual clase Proyecto crear -->
-
-  <access id="89bb73b8911978456775bfebfaa945c6">
-    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
-    <realm>conobra</realm>
-    <type>doquery</type>
-    <dbid>bn8txn2we</dbid>
-    <query>{'642'.EX.'CONOBRA LTDA.'}AND{'1022'.EX.''}</query>
-    <qid>167</qid>
-    <clist>3.6.1020</clist>
-    <params>
-    </params>
-    <response>
-      <p fid="3">RecordID</p>
-      <p fid="6">Name</p>            
-      <p fid="1020">ParentRef</p>      
-    </response>
-  </access>
-  <access id="3a847e17ba9e87559ad0bb71fac10a3e">
-    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
-    <realm>conobra</realm>
-    <type>import</type>
-    <dbid>bn8txn2we</dbid>
-    <query>-1</query>
-    <qid>-1</qid>
-    <clist>3.1022</clist>
-    <params>
-      <p fid="3">Record_ID</p>
-      <p fid="1022">ListID</p>
-    </params>
-  </access>
-
-
-  <!--proceso creacion de Proyecto Cleanco-->
+  <!--proceso creacion automatico de Proyecto Cleanco-->
   <access id="0823871b4f16ca3cd7d6f625970000">
     <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
     <realm>conobra</realm>
     <type>doquery</type>
     <dbid>bn8txn2we</dbid>
-    <query>{'642'.EX.'Clean Construction LTDA.'}</query>
-    <qid>162</qid>
+    <query>{'642'.EX.'Clean Construction LTDA.'}AND{'130'.EX.'1'}AND{'748'.EX.''}</query>
+    <qid>-1</qid>
     <clist>1002.6.902.642.909.3.9</clist>
     <params>
     </params>
@@ -803,15 +760,15 @@
   </access>
   <!--proceso creacion de Proyecto Cleanco FIN-->
 
-  <!--Proceso creacion de PRoyecto Conobra-->
+  <!--Proceso creacion automatico de PRoyecto Conobra-->
 
   <access id="0823871b4f16ca3cd7d6f6259690ca20">
     <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
     <realm>conobra</realm>
     <type>doquery</type>
     <dbid>bn8txn2we</dbid>
-    <query>{'642'.EX.'CONOBRA LTDA.'}</query>
-    <qid>162</qid>
+    <query>{'642'.EX.'CONOBRA LTDA.'}AND{'130'.EX.'1'}AND{'748'.EX.''}</query>
+    <qid>-1</qid>
     <clist>1002.6.902.642.909.3.9</clist>
     <params>
     </params>
@@ -855,7 +812,37 @@
   
   
   <!--Por confirmar-->
-  
+  <!--Proceso 5 FIN manual clase Proyecto crear NO SE USA-->
+
+  <access id="89bb73b8911978456775bfebfaa945c6">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>doquery</type>
+    <dbid>bn8txn2we</dbid>
+    <query>{'642'.EX.'CONOBRA LTDA.'}AND{'1022'.EX.''}</query>
+    <qid>167</qid>
+    <clist>3.6.1020</clist>
+    <params>
+    </params>
+    <response>
+      <p fid="3">RecordID</p>
+      <p fid="6">Name</p>
+      <p fid="1020">ParentRef</p>
+    </response>
+  </access>
+  <access id="3a847e17ba9e87559ad0bb71fac10a3e">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bn8txn2we</dbid>
+    <query>-1</query>
+    <qid>-1</qid>
+    <clist>3.1022</clist>
+    <params>
+      <p fid="3">Record_ID</p>
+      <p fid="1022">ListID</p>
+    </params>
+  </access>
   
   <access id="3a847e17ba9e87559ad0bb71fac10002">
     <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
@@ -1232,9 +1219,4 @@
   </access>
   
   
-  
- 
-
-  
-
 </root>

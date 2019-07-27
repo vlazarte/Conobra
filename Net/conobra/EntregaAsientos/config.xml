@@ -161,8 +161,8 @@
       <intervalo tipo="segundo">300</intervalo>
       <hora_inicio tipo="time">8:21 am</hora_inicio>
       <fecha_unica>2019-04-09</fecha_unica>
-    </ejecucion>    
-  </proceso> 
+    </ejecucion>
+  </proceso>
   <proceso id="3" includeSublevel="false">
     <nombre>Clientes_Conobra_a_Quickbase</nombre>
     <conexion>
@@ -247,7 +247,7 @@
       <hora_inicio tipo="time">8:23 am</hora_inicio>
       <fecha_unica>2019-04-09</fecha_unica>
     </ejecucion>
-  </proceso>  
+  </proceso>
   <proceso id="4" includeSublevel="false">
     <nombre>Clientes_Cleanco_a_Quickbase</nombre>
     <conexion>
@@ -333,7 +333,7 @@
       <fecha_unica>2019-04-09</fecha_unica>
     </ejecucion>
   </proceso>
-  
+
   <proceso id="5">
     <nombre>Importar_Recibos_Conobra_a_Quickbooks</nombre>
     <conexion>
@@ -467,7 +467,7 @@
       <hora_inicio tipo="time">8:25 am</hora_inicio>
       <fecha_unica>2019-04-09</fecha_unica>
     </ejecucion>
-  </proceso>    
+  </proceso>
   <proceso id="7" includeSublevel="true">
     <nombre>Proyectos_conobra_a_Quickbooks</nombre>
     <conexion>
@@ -575,17 +575,17 @@
       <hora_inicio tipo="time">8:27 am</hora_inicio>
       <fecha_unica>2019-04-09</fecha_unica>
     </ejecucion>
-  </proceso>  
+  </proceso>
   <proceso id="9">
     <nombre>Importar_CajaChica_Conobra_de_a_Quickbooks</nombre>
     <conexion>
       <file>C:\Quickbooks db\Conobra\Conobra Limitada.qbw</file>
       <companiaBD>CONOBRA LTDA.</companiaBD>
-    </conexion>    
+    </conexion>
     <entrada tipo="quickbase">
       <quickbook></quickbook>
       <quickbase>
-        <access_token>0823871b4f16ca3cd7d6f62596907000</access_token>        
+        <access_token>0823871b4f16ca3cd7d6f62596907000</access_token>
         <parametros>
           <p field="B">NOMBRE</p>
         </parametros>
@@ -721,7 +721,7 @@
     <entrada tipo="quickbase">
       <quickbook></quickbook>
       <quickbase>
-        <access_token>0823871b4f16ca3cd7d6f625969050000</access_token>        
+        <access_token>0823871b4f16ca3cd7d6f625969050000</access_token>
         <parametros>
           <p field="B">NOMBRE</p>
         </parametros>
@@ -758,7 +758,7 @@
             <access_token>0823871b4f16ca3cd7d6f625969050001</access_token>
             <parametros>
               <p field="1" key="true">RecordID</p>
-              <p field="2" >ListID</p>              
+              <p field="2" >ListID</p>
             </parametros>
           </respuesta>
           <respuesta tipo="import_quickbase" categoria="Log">
@@ -825,7 +825,7 @@
             <access_token>0823871b4f16ca3cd7d6f625969050001</access_token>
             <parametros>
               <p field="1" key="true">RecordID</p>
-              <p field="2" >ListID</p>             
+              <p field="2" >ListID</p>
             </parametros>
           </respuesta>
           <respuesta tipo="import_quickbase" categoria="Log">
@@ -846,8 +846,8 @@
       <fecha_unica>2019-04-09</fecha_unica>
     </ejecucion>
   </proceso>
-  
-  
+
+
   <proceso id="1">
     <nombre>Importar_Conobra_Proveedores_a_quickbase</nombre>
     <conexion>
@@ -937,7 +937,7 @@
       <intervalo tipo="segundo">60</intervalo>
       <fecha_unica>2019-04-09</fecha_unica>
     </ejecucion>
-  </proceso>  
+  </proceso>
   <proceso id="3" includeSublevel="false">
     <nombre>Importar_Conobra_Clientes_a_quickbase</nombre>
     <conexion>
@@ -1116,7 +1116,7 @@
       <intervalo tipo="segundo">60</intervalo>
       <fecha_unica>2019-04-09</fecha_unica>
     </ejecucion>
-  </proceso>  
+  </proceso>
   <proceso id="7" includeSublevel="true">
     <nombre>Importar_Conobra_Proyectos_a_quickbase</nombre>
     <conexion>
@@ -1204,5 +1204,5 @@
       <intervalo tipo="segundo">60</intervalo>
       <fecha_unica>2019-04-09</fecha_unica>
     </ejecucion>
-  </proceso>  
+  </proceso>
 </root>

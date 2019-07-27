@@ -94,11 +94,10 @@ namespace Quickbook
                 xml += "</QBXMLMsgsRq>";
                 xml += "</QBXML>";
 
-                var qbook = new Connector(Quickbook.Config.App_Name, Quickbook.Config.File);
-
-                if (qbook.Connect())
+                
+                if (Config.quickbooks.isOpen())
                 {
-                    string response = qbook.sendRequest(xml);
+                    string response = Config.quickbooks.sendRequest(xml);
 
                     XmlDocument res = new XmlDocument();
                     res.LoadXml(response);
@@ -118,7 +117,7 @@ namespace Quickbook
                         err = statusMessage;
                         
                     }
-                    qbook.Disconnect();
+                   // qbook.Disconnect();
 
                 }
                 else
@@ -174,11 +173,11 @@ namespace Quickbook
                 xml += "</QBXMLMsgsRq>";
                 xml += "</QBXML>";
 
-                 var qbook = new Connector(Quickbook.Config.App_Name, Quickbook.Config.File);
+                
 
-                 if (qbook.Connect())
+                 if ( Config.quickbooks.isOpen())
                  {
-                     string response = qbook.sendRequest(xml);
+                     string response = Config.quickbooks.sendRequest(xml);
 
                      XmlDocument res = new XmlDocument();
                      res.LoadXml(response);
@@ -198,7 +197,7 @@ namespace Quickbook
                          err = statusMessage;
                          
                      }
-                     qbook.Disconnect();
+                     Config.quickbooks.Disconnect();
 
                  }
                  else
