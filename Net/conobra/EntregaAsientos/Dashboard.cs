@@ -207,7 +207,8 @@ namespace SmartQuickbook
                     EjecutarProceso(proceso);
 
                     //termino proceso
-                    if (proceso.subProcesos.Count > 0) {
+                    if (proceso.subProcesos!=null && proceso.subProcesos.Count > 0)
+                    {
 
                         foreach (string id in proceso.subProcesos)
                         {

@@ -661,8 +661,105 @@
   </access>
 
   <!--Proceso 12 FIN Solicitudes de pago Cleanco-->
-    
 
+  <!--Proceso 13 Notas de Credito pago Cronobra-->
+
+  <access id="0823871b4f16ca3cd7d6f62596905fk1">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>doquery_complex</type>
+    <dbid>bn8txn3ix</dbid>
+    <query>{'167'.EX.'CONOBRA LTDA.'}AND{'35'.EX.''}AND{'166'.EX.'1'}</query>
+    <qid>-1</qid>
+    <clist>3.68.6.7.167.168.169.173.170</clist>
+    <params>
+    </params>
+    <response>
+      <p fid="3" >RecordID</p>
+      <p fid="68" >VendorRef</p>
+      <p fid="6" >RefNumber</p>
+      <p fid="7" >txnDate</p>
+      <p fid="167">QuickbooksCompania</p>
+      <p fid="168">DueDate</p>
+      <p fid="169">ExchangeRate</p>
+      <p fid="173">Memo</p>
+      <p fid="170">APAccountRef</p>
+    </response>
+    <detail>
+      <dbid>bn8txn3jq</dbid>
+      <query>{'7'.EX.'__RecordID__'}</query>
+      <clist>3.7.59.25.61.64</clist>
+      <params>
+      </params>
+      <response>
+        <p fid="3" >DET_RID</p>
+        <p fid="7" >DET_PADRE</p>
+        <p fid="59">AccountRef</p>
+        <p fid="25">Amount</p>
+        <p fid="61">CustomerRef</p>
+        <p fid="64">ClassRef</p>
+      </response>
+    </detail>
+  </access>
+
+  <access id="0823871b4f16ca3cd7d6f62596905fk11">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>import</type>
+    <dbid>bn8txn3ix</dbid>
+    <query></query>
+    <qid>-1</qid>
+    <clist>3.35</clist>
+    <params>
+      <p field="3">RecordID</p>
+      <p field="35">QuickbookID</p>
+    </params>
+  </access>
+
+  <!--Proceso 13 FIN Notas Credito Cronobra-->
+  <!--Proceso 14 Notas Credito Conobra-->
+
+  <access id="0823871b4f16ca3cd7d6f62596905fk12">
+    <token>c5iu3b9dp3ctu2ckqe7sed7mp2xa</token>
+    <realm>conobra</realm>
+    <type>doquery_complex</type>
+    <dbid>bn8txn3ix</dbid>
+    <query>{'167'.EX.'Clean Construction LTDA.'}AND{'35'.EX.''}AND{'166'.EX.'1'}</query>
+    <qid>-1</qid>
+    <clist>3.68.6.7.167.168.169.173.170</clist>
+    <params>
+    </params>
+    <response>
+      <p fid="3" >RecordID</p>      
+      <p fid="68" >VendorRef</p>
+      <p fid="6" >RefNumber</p>
+      <p fid="7" >txnDate</p>
+      <p fid="167">QuickbooksCompania</p>
+      <p fid="168">DueDate</p>
+      <p fid="169">ExchangeRate</p>
+      <p fid="173">Memo</p>
+      <p fid="170">APAccountRef</p>
+    </response>
+    <detail>
+      <dbid>bn8txn3jq</dbid>
+      <query>{'7'.EX.'__RecordID__'}</query>
+      <clist>3.7.59.25.61.64</clist>
+      <params>
+      </params>
+      <response>
+        <p fid="3" >DET_RID</p>
+        <p fid="7" >DET_PADRE</p>
+        <p fid="59">AccountRef</p>
+        <p fid="25">Amount</p>
+        <p fid="61">CustomerRef</p>
+        <p fid="64">ClassRef</p>
+      </response>
+    </detail>
+  </access>
+
+  <!--Proceso 14 FIN Notas Credito Cleanco-->
+  
+  
   <!--Proceso 3 manual Clases -->
 
   <access id="0823871b4f16ca3cd7d6f6259690c003">
